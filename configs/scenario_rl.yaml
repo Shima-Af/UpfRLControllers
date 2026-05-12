@@ -1,52 +1,67 @@
-# Minimal RL scenario configuration.
+# RL scenario configuration.
 #
-# NOTE: All values in this file are placeholders. They will be refined as the
-# single-site Gymnasium environment and the PPO trainer take shape. Treat
-# anything here as a starting point, not a tuned hyperparameter set.
+# This file is consumed by two consumers:
+#   1. The RL side (reward weights, training placeholders, action wiring).
+#   2. The UpfDigitalTwin's `DigitalTwin` class, which expects nested
+#      `traffic`, `upf`, and `upf_switching` blocks. Keeping a single file
+#      avoids drift between the two views of "the scenario".
+#
+# All values are placeholders for Phase 0/Phase 1 scaffolding. Replace
+# `traffic.alpha` with the real Gbps-per-normalized-unit factor used by
+# UpfTrafficForecaster before training on real data.
 
 seed: 42
 
-# Traffic service to optimise for (matches a service tracked by the
-# UpfDigitalTwin traffic forecaster).
-traffic_service: "video"
+traffic:
+  service: "video"
+  selected_k: 8
+  time_step_minutes: 15
+  # Normalization factor: Gbps per 1.0 of normalized forecaster output.
+  # Placeholder — override once the forecaster's scaler is known.
+  alpha: 1.0
 
-# Number of representative base-station clusters / sites selected from the
-# forecaster's cluster assignments. Used by both single-site and multi-site
-# experiments.
-selected_k: 8
+upf:
+  qos_budget:
+    delay_budget_us: 200.0
+    max_loss_pkts_per_interval: 0.0
 
-# Discrete control step in minutes. The digital twin advances one step per
-# environment step.
-time_step_minutes: 15
+upf_switching:
+  accounting: "sub_step"
+  prewarm:
+    enabled: false
+    standby_power_watts: 0.0
 
-# Initial action applied at episode start, before the policy takes over.
-initial_action:
-  dpdk: 1
-  usr: 1
+# Initial UPF at episode start. Must be "DPDK" or "USR".
+initial_action: "DPDK"
 
-# Discrete action space exposed by the environment. Each component is an
-# integer index into the corresponding option list.
+# Discrete action space exposed by SingleSiteUPFEnv.
+# Mapping is fixed; this block is informational so callers can read it
+# without importing the env module.
 action_space:
-  dpdk: [0, 1, 2, 3]   # number of DPDK cores / fast-path units
-  usr: [0, 1, 2, 3]    # number of USR (user-space router) workers
+  type: "Discrete"
+  n: 2
+  mapping:
+    0: "DPDK"
+    1: "USR"
 
-# Reward = -(energy_weight * energy + qos_weight * qos_violation
-#           + switching_weight * action_switch_cost)
-# Placeholder weights — to be tuned once the env returns calibrated values.
+# Reward = -(energy_weight * energy_wh
+#           + qos_weight * unsafe_penalty
+#           + switching_weight * switching_energy_wh)
+# Placeholder weights — to be tuned during Phase 2 PPO sanity checks.
 reward_weights:
   energy_weight: 1.0
   qos_weight: 1.0
   switching_weight: 0.1
 
-# Training placeholders. These values are deliberately conservative so a
-# sanity-check run finishes quickly; real experiments will override them.
+# Training placeholders. Conservative values so a sanity-check run
+# finishes quickly; real experiments will override them.
 training:
   total_timesteps: 100000
   n_envs: 1
   algorithm: "PPO"
 
 notes: |
-  These values are placeholders for the Phase 0 scaffold. They are intended
-  only to let scripts/check_setup.py load a valid config. Reward weights,
-  action-space granularity, total_timesteps, and the algorithm choice will
-  all be revisited once the single-site environment (Phase 1) is in place.
+  Phase 1 binary single-site env: action space is Discrete(2) with
+  0=DPDK, 1=USR. Reward weights, alpha, and training settings are
+  placeholders that will be revised once the env is exercised against
+  real artifacts and PPO is wired up in Phase 2.

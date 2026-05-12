@@ -87,12 +87,52 @@ UpfRLControllers/
   notebooks/                Exploratory notebooks
 ```
 
+## Phase 1: single-site environment
+
+The first concrete piece of RL infrastructure is [src/envs/single_site_upf_env.py](src/envs/single_site_upf_env.py),
+which exposes a Gymnasium `Env` for one traffic cluster at a fixed forecast
+horizon.
+
+- **Action space**: `Discrete(2)` — `0 = DPDK`, `1 = USR`.
+- **Observation**: `Box((6,))` =
+  `[actual_load_gbps, predicted_load_gbps, prev_action, prev_power_watts,
+  prev_safety_flag, timestep_progress]`. The predicted load is the
+  forecaster's estimate for the current decision step; no future values are
+  exposed.
+- **Reward**: `-(energy_weight * energy_wh + qos_weight * unsafe_penalty +
+  switching_weight * switching_energy_wh)`, with weights from
+  [configs/scenario_rl.yaml](configs/scenario_rl.yaml). Switching energy
+  comes from `DigitalTwin.compute_step`.
+
+Minimal usage:
+
+```python
+from src.envs.single_site_upf_env import SingleSiteUPFEnv
+
+env = SingleSiteUPFEnv(cluster_idx=0, horizon_idx=0)
+obs, info = env.reset(seed=42)
+obs, reward, terminated, truncated, info = env.step(0)  # 0=DPDK, 1=USR
+```
+
+To smoke-test the env without writing any training code:
+
+```bash
+python scripts/smoke_test_single_site_env.py
+```
+
+This resets the env, takes 10 random actions, and prints observation shape,
+per-step rewards, and the `info` dict keys. It exits cleanly with a warning
+if the digital-twin artifacts are missing.
+
+PPO / MAPPO are intentionally not part of Phase 1 — they live in Phase 2
+and beyond.
+
 ## Development roadmap
 
-- **Phase 0** — Repository setup and artifact loading (this commit).
+- **Phase 0** — Repository setup and artifact loading.
 - **Phase 1** — Single-site Gymnasium environment wrapping the digital
-  twin. **This is the first technical target after Phase 0** — do not jump
-  straight to MAPPO.
+  twin (this section). **This is the first technical target after Phase 0**
+  — do not jump straight to MAPPO.
 - **Phase 2** — Single-site PPO sanity check on the Phase 1 environment.
 - **Phase 3** — Multi-site centralized PPO.
 - **Phase 4** — Independent per-site PPO baseline (IPPO).
