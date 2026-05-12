@@ -1,0 +1,14 @@
+numpy
+pandas
+pyyaml
+scikit-learn
+matplotlib
+gymnasium
+stable-baselines3
+torch
+tensorboard
+tqdm
+pyarrow
+dvc[s3]
+boto3
+git+https://github.com/Shima-Af/UpfDigitalTwin.git

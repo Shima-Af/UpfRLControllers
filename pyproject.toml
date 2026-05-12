@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "upf-rl-controllers"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy",
+  "pandas",
+  "pyyaml",
+  "scikit-learn",
+  "matplotlib",
+  "gymnasium",
+  "stable-baselines3",
+  "torch",
+  "tensorboard",
+  "tqdm",
+  "pyarrow",
+  "upf-digital-twin @ git+https://github.com/Shima-Af/UpfDigitalTwin.git@v0.1.0",
+]
+
+[project.optional-dependencies]
+dev = ["jupyter", "ipykernel", "pytest"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]

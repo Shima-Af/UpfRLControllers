@@ -1,0 +1,52 @@
+# Minimal RL scenario configuration.
+#
+# NOTE: All values in this file are placeholders. They will be refined as the
+# single-site Gymnasium environment and the PPO trainer take shape. Treat
+# anything here as a starting point, not a tuned hyperparameter set.
+
+seed: 42
+
+# Traffic service to optimise for (matches a service tracked by the
+# UpfDigitalTwin traffic forecaster).
+traffic_service: "video"
+
+# Number of representative base-station clusters / sites selected from the
+# forecaster's cluster assignments. Used by both single-site and multi-site
+# experiments.
+selected_k: 8
+
+# Discrete control step in minutes. The digital twin advances one step per
+# environment step.
+time_step_minutes: 15
+
+# Initial action applied at episode start, before the policy takes over.
+initial_action:
+  dpdk: 1
+  usr: 1
+
+# Discrete action space exposed by the environment. Each component is an
+# integer index into the corresponding option list.
+action_space:
+  dpdk: [0, 1, 2, 3]   # number of DPDK cores / fast-path units
+  usr: [0, 1, 2, 3]    # number of USR (user-space router) workers
+
+# Reward = -(energy_weight * energy + qos_weight * qos_violation
+#           + switching_weight * action_switch_cost)
+# Placeholder weights — to be tuned once the env returns calibrated values.
+reward_weights:
+  energy_weight: 1.0
+  qos_weight: 1.0
+  switching_weight: 0.1
+
+# Training placeholders. These values are deliberately conservative so a
+# sanity-check run finishes quickly; real experiments will override them.
+training:
+  total_timesteps: 100000
+  n_envs: 1
+  algorithm: "PPO"
+
+notes: |
+  These values are placeholders for the Phase 0 scaffold. They are intended
+  only to let scripts/check_setup.py load a valid config. Reward weights,
+  action-space granularity, total_timesteps, and the algorithm choice will
+  all be revisited once the single-site environment (Phase 1) is in place.

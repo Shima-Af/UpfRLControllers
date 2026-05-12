@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+data/external/*
+!data/external/.gitkeep
+results/*
+!results/.gitkeep
+experiments/*
+!experiments/.gitkeep
+notebooks/.ipynb_checkpoints/
+logs/
+outputs/
+mlruns/
+.env
+.DS_Store
