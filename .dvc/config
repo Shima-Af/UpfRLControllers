@@ -1,0 +1,8 @@
+[core]
+    remote = forecaster
+['remote "forecaster"']
+    url = s3://upf-trafficforecaster-dvc-857754128372-eu-north-1-an
+    region = eu-north-1
+['remote "profiling"']
+    url = s3://upf-profiling-dvc-857754128372-eu-north-1-an
+    region = eu-north-1

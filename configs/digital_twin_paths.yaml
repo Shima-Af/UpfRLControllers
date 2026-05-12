@@ -1,9 +1,15 @@
 # Paths to digital twin artifacts.
 #
-# These artifacts are produced by the separate UpfDigitalTwin repository
-# (https://github.com/Shima-Af/UpfDigitalTwin) and are not stored in this
-# repository. They are expected to be pulled from S3 into data/external/
-# before training or evaluation begins.
+# Most files here come from two upstream pipelines:
+#   - UpfTrafficForecaster (Netflix service, K=10 currently)
+#   - UpfProfilingCampaign
+#
+# They land under data/external/ via two mechanisms:
+#   1. `dvc pull` for files that are tracked in those pipelines' S3 remotes
+#      (see `.dvc/config` and the `.dvc` import files under data/external/).
+#   2. `python scripts/bootstrap_external_data.py` for files that exist
+#      only as local pipeline byproducts upstream (predictions/targets) or
+#      hand-authored configs (switching_costs.yaml).
 #
 # All paths below are relative to the repository root.
 
@@ -12,9 +18,9 @@ traffic_forecaster:
   predictions: data/external/traffic_forecaster/predictions_test.npy
   targets: data/external/traffic_forecaster/targets_test.npy
   cluster_series: data/external/traffic_forecaster/cluster_series.npy
-  cluster_assignments: data/external/traffic_forecaster/cluster_assignments.csv
-  cluster_bs_map: data/external/traffic_forecaster/cluster_bs_map.csv
-  bs_locations: data/external/traffic_forecaster/bs_locations.csv
+  cluster_assignments: data/external/traffic_forecaster/cluster_assignments.parquet
+  cluster_bs_map: data/external/traffic_forecaster/cluster_bs_map.json
+  bs_locations: data/external/traffic_forecaster/bs_locations.parquet
   forecast_eval_summary: data/external/traffic_forecaster/forecast_eval_summary.json
 
 profiling_twin:
@@ -22,4 +28,4 @@ profiling_twin:
   params: data/external/profiling_twin/params.yaml
   manifest: data/external/profiling_twin/models/manifest.json
   models: data/external/profiling_twin/models
-  switching_costs: data/external/profiling_twin/switching_costs.json
+  switching_costs: data/external/profiling_twin/switching_costs.yaml

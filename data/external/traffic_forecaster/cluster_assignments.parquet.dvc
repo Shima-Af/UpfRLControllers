@@ -1,0 +1,9 @@
+# Pointer to data/cluster_first/Netflix/K10/cluster_assignments.parquet in
+# https://github.com/Shima-Af/UpfTrafficForecaster.git
+# (commit 020373a, branch feature/cluster-first-stgnn).
+# Run `dvc pull` to fetch it from the `forecaster` S3 remote.
+outs:
+- md5: 27b3ea7b5e2bfd803658d8d666962083
+  hash: md5
+  path: cluster_assignments.parquet
+  remote: forecaster

@@ -1,0 +1,14 @@
+md5: 2e307afd3194508e9880c4f74ebf0755
+frozen: true
+deps:
+- path: models
+  repo:
+    url: https://github.com/Shima-Af/UpfProfilingCampaign.git
+    rev: a73870fe369f04df269bd554c46daa98f5f9639a
+    rev_lock: a73870fe369f04df269bd554c46daa98f5f9639a
+outs:
+- md5: a92ad2caa7f058b85e582261594b17b4.dir
+  size: 48886108
+  nfiles: 32
+  hash: md5
+  path: models

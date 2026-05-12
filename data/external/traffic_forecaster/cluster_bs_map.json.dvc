@@ -1,0 +1,9 @@
+# Pointer to data/cluster_first/Netflix/K10/cluster_bs_map.json in
+# https://github.com/Shima-Af/UpfTrafficForecaster.git
+# (commit 020373a, branch feature/cluster-first-stgnn).
+# Run `dvc pull` to fetch it from the `forecaster` S3 remote.
+outs:
+- md5: c4f8d936f478478c5f9a90c35f48a4d3
+  hash: md5
+  path: cluster_bs_map.json
+  remote: forecaster

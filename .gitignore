@@ -1,9 +1,18 @@
 .venv/
 __pycache__/
 *.pyc
+*.egg-info/
 .ipynb_checkpoints/
-data/external/*
+
+# data/external/ holds digital-twin artifacts. Ignore everything inside,
+# but keep the directory structure, .dvc pointer files, and .gitkeep so
+# `dvc pull` + the bootstrap script can re-populate it on any machine.
+data/external/**
+!data/external/
+!data/external/**/
+!data/external/**/*.dvc
 !data/external/.gitkeep
+
 results/*
 !results/.gitkeep
 experiments/*

@@ -1,0 +1,13 @@
+md5: 0b52d08c6223836b0ec66c609b667895
+frozen: true
+deps:
+- path: data/graphs/bs_locations.parquet
+  repo:
+    url: https://github.com/Shima-Af/UpfTrafficForecaster.git
+    rev: 020373a00880838990fc46e7a0445e22f937e2c6
+    rev_lock: 020373a00880838990fc46e7a0445e22f937e2c6
+outs:
+- md5: 9ed38632e61f671e7097a4ddadde1523
+  size: 17836
+  hash: md5
+  path: bs_locations.parquet

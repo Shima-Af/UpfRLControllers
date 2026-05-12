@@ -47,15 +47,41 @@ vendored from the digital-twin repo.
    This installs `UpfDigitalTwin` directly from GitHub. There are no git
    submodules and no vendored copies of the digital-twin source.
 
-4. **Pull artifacts from S3 into [data/external/](data/external/)**
+4. **Populate [data/external/](data/external/) with digital-twin artifacts**
+
+   This is a two-step pull because not every required file lives in S3.
+
+   **(a) DVC-tracked files** — pulled from two S3 remotes configured in
+   [.dvc/config](.dvc/config) (`forecaster` and `profiling`). AWS
+   credentials with read access to both buckets must be in your
+   environment.
 
    ```bash
-   aws s3 sync s3://YOUR_BUCKET/YOUR_PREFIX/ data/external/
+   dvc pull
    ```
 
-   Replace `YOUR_BUCKET/YOUR_PREFIX` with the bucket and prefix that hold
-   the digital-twin outputs. The expected layout under `data/external/` is
-   described in [configs/digital_twin_paths.yaml](configs/digital_twin_paths.yaml).
+   This resolves the `.dvc` pointer files under [data/external/](data/external/) and
+   downloads:
+   - `traffic_forecaster/bs_locations.parquet`
+   - `traffic_forecaster/cluster_series.npy`
+   - `traffic_forecaster/cluster_assignments.parquet`
+   - `traffic_forecaster/cluster_bs_map.json`
+   - `profiling_twin/models/` (entire surrogate-model tree + `manifest.json`)
+
+   **(b) Non-DVC files** — five files that the upstream pipelines either
+   don't track in DVC (`predictions_test.npy`, `targets_test.npy`,
+   `forecast_eval_summary.json`) or that are hand-authored
+   (`switching_costs.yaml`, `params.yaml`). These are copied from a peer
+   directory laid out like `data/external/`. The default source is
+   `/home/ubuntu/UPF_NDT/data/external`; override with `--source`.
+
+   ```bash
+   python scripts/bootstrap_external_data.py
+   ```
+
+   See [scripts/bootstrap_external_data.py](scripts/bootstrap_external_data.py)
+   for the exact file list and the rationale. The script is idempotent —
+   existing files are left alone unless `--force` is passed.
 
 5. **Run the setup check**
 

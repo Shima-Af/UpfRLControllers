@@ -1,0 +1,9 @@
+# Pointer to data/cluster_first/Netflix/K10/cluster_series.npy in
+# https://github.com/Shima-Af/UpfTrafficForecaster.git
+# (commit 020373a, branch feature/cluster-first-stgnn).
+# Run `dvc pull` to fetch it from the `forecaster` S3 remote.
+outs:
+- md5: d80395e995e372ce3fc9fc9ca473f03c
+  hash: md5
+  path: cluster_series.npy
+  remote: forecaster

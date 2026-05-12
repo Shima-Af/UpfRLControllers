@@ -84,21 +84,19 @@ def check_artifact_dirs(dt_paths: dict) -> None:
 def check_digital_twin_import() -> None:
     """Best-effort import of the digital-twin dependency."""
     try:
-        from src.twin.digital_twin import DigitalTwin  # type: ignore  # noqa: F401
+        from upf_digital_twin import DigitalTwin  # type: ignore  # noqa: F401
 
-        _ok("Imported DigitalTwin from src.twin.digital_twin")
+        _ok("Imported DigitalTwin from upf_digital_twin")
         return
     except Exception as e:
-        _warn(f"Could not import src.twin.digital_twin.DigitalTwin: {e}")
+        _warn(f"Could not import upf_digital_twin.DigitalTwin: {e}")
 
     _info(
-        "UpfDigitalTwin may not be packaged yet for installation. Options:\n"
-        "        - Install it editable from a local clone:\n"
-        "            pip install -e /path/to/UpfDigitalTwin\n"
-        "        - Or add a setup.py/pyproject.toml to UpfDigitalTwin so the\n"
-        "          git+https URL in requirements.txt installs as a package.\n"
-        "        This is expected on a fresh checkout and does not block "
-        "Phase 0 setup."
+        "Install the digital twin into the active environment:\n"
+        "          pip install -r requirements.txt\n"
+        "        (this picks up git+https://github.com/Shima-Af/UpfDigitalTwin.git)\n"
+        "        or, for local development:\n"
+        "          pip install -e /path/to/UpfDigitalTwin"
     )
 
 
