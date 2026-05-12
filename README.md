@@ -153,6 +153,50 @@ if the digital-twin artifacts are missing.
 PPO / MAPPO are intentionally not part of Phase 1 — they live in Phase 2
 and beyond.
 
+## Phase 2: single-site PPO sanity check
+
+[src/trainers/ppo_single_site.py](src/trainers/ppo_single_site.py) trains
+a feed-forward Stable-Baselines3 PPO policy on `SingleSiteUPFEnv` and
+exposes adapters for four policies that
+[scripts/train_ppo_single_site.py](scripts/train_ppo_single_site.py)
+compares on a fresh env instance: **PPO** (deterministic), **random**,
+**always-DPDK**, **always-USR**.
+
+The scope here is *sanity*: verify the env is wired correctly and that
+PPO can at least avoid the obviously-bad policies. It is intentionally
+minimal — `MlpPolicy` only, single env, no `VecNormalize`, no LSTM, no
+curriculum. Phase 3+ will build the real training stack on top.
+
+Run a short sanity check:
+
+```bash
+python scripts/train_ppo_single_site.py \
+  --total-timesteps 2048 --n-steps 512 --max-eval-steps 300
+```
+
+This trains for 4 PPO updates (~7 min) and rolls out 300 steps per
+policy (~4 min). Output lands in
+`experiments/ppo_single_site_seed<seed>_<utc-ts>/` — a saved model zip,
+TensorBoard logs, and a `summary.txt` comparison table.
+
+Example output on cluster 0 (USR's high failure rate makes DPDK the safe
+choice — PPO discovers this in 4 updates and ties always-DPDK):
+
+```
+  PPO          total_r= -61.47  energy_Wh= 61.47  switch_Wh= 0.00  unsafe=0.000  DPDK=1.00  USR=0.00  flips=  0
+  random       total_r=-207.00  energy_Wh= 63.95  switch_Wh= 0.52  unsafe=0.477  DPDK=0.52  USR=0.48  flips=166
+  always-DPDK  total_r= -61.47  energy_Wh= 61.47  switch_Wh= 0.00  unsafe=0.000  DPDK=1.00  USR=0.00  flips=  0
+  always-USR   total_r=-240.62  energy_Wh= 64.62  switch_Wh= 0.00  unsafe=0.587  DPDK=0.00  USR=1.00  flips=  0
+```
+
+**Wall-time caveat** — the digital twin runs at ~5 env steps/s on this
+machine (~195 ms/step), so any meaningful training (tens of thousands of
+steps, dozens of PPO updates) is hours, not minutes. The 50 000-step
+default in the trainer docstring is a placeholder, not a recommended
+training budget. Phase 3+ will either profile and speed up
+`DigitalTwin.compute_step`, parallelise via `SubprocVecEnv` across
+clusters, or accept multi-hour runs.
+
 ## Development roadmap
 
 - **Phase 0** — Repository setup and artifact loading.
