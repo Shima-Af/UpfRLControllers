@@ -27,14 +27,17 @@ interface Props {
     | "actual_load_gbps"
     | "predicted_load_gbps"
     | "power_watts"
+    | "sec_w_per_mbps"
     | "delay_us"
     | "predicted_loss"
-    | "performance"
+    | "q_score"
     | "cumulative_reward"
     | "action"
     | "steps_since_switch"
-    | "type_switch_penalty"
-    | "cooldown_penalty";
+    | "switch_penalty"
+    | "cooldown_penalty"
+    | "energy_term"
+    | "qos_penalty";
   rollouts: RolloutResponse[];
   /** Horizontal reference line (e.g. delay budget). */
   refLine?: { y: number; label: string };

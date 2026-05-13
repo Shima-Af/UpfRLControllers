@@ -1,18 +1,25 @@
-"""Phase 2 sanity check: train PPO on SingleSiteUPFEnv + compare baselines.
+"""Train PPO on SingleSiteUPFEnv under the paper-aligned reward.
+
+Focus: verify PPO learns the intended energy-aware policy. The
+comparison section reports the trained PPO alongside two reference
+baselines (always-DPDK and the rule-based threshold) so we can see
+both whether learning happened and how the trained policy stacks up
+against the simplest reasonable controllers. Random / always-USR are
+omitted from the headline — they exist mainly to sanity-check the
+sign of the QoS penalty and were obscuring the comparison.
 
 Usage:
-    python scripts/train_ppo_single_site.py --total-timesteps 50000
+    python scripts/train_ppo_single_site.py \\
+        --total-timesteps 200000 --n-steps 1024 \\
+        --ent-coef 0.15 --learning-rate 1e-4
 
-Trains a small feed-forward PPO policy on one cluster, then rolls out four
-policies on a fresh env instance and prints a comparison table:
-
-    PPO (deterministic)
-    random
-    always DPDK
-    always USR
+Defaults follow Table 3 of COMCOM-S-26-00430.
 
 Output directory layout (default `experiments/ppo_single_site_<seed>_<ts>`):
-    ppo_single_site.zip       trained SB3 model
+    best_model.zip            best deterministic eval return during training
+    ppo_single_site.zip       same as best_model (stable name)
+    ppo_single_site_final.zip final-step checkpoint
+    evaluations.npz           EvalCallback eval history
     tb/                       TensorBoard logs
     summary.txt               comparison table (also printed to stdout)
 """
@@ -32,7 +39,6 @@ from src.trainers.ppo_single_site import (  # noqa: E402
     constant_policy,
     ppo_policy,
     predicted_load_threshold_policy,
-    random_policy,
     rollout_episode,
     train_ppo_single_site,
 )
@@ -42,7 +48,7 @@ def _parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     p.add_argument("--cluster-idx", type=int, default=0)
     p.add_argument("--horizon-idx", type=int, default=0)
-    p.add_argument("--total-timesteps", type=int, default=50_000)
+    p.add_argument("--total-timesteps", type=int, default=200_000)
     p.add_argument("--seed", type=int, default=42)
     p.add_argument(
         "--out-dir",
@@ -61,53 +67,51 @@ def _parse_args() -> argparse.Namespace:
         default=None,
         help=(
             "Truncate each comparison rollout at this many env steps. "
-            "Useful because the digital twin runs at ~5 steps/s, so a full "
-            "1009-step episode per policy is ~3 minutes."
+            "Default: full 1009-step episode."
         ),
     )
     p.add_argument(
-        "--n-steps",
-        type=int,
-        default=1024,
-        help="PPO rollout length per update (default 1024).",
+        "--n-steps", type=int, default=1024,
+        help="PPO rollout length per update (paper: 1024).",
     )
     p.add_argument(
         "--threshold-gbps",
         type=float,
-        default=0.05,
+        default=0.0905,
         help=(
-            "Predicted-load threshold for the threshold baseline policy "
-            "(USR if predicted_load < threshold, else DPDK). 0.05 Gbps "
-            "is the empirical sweet spot for cluster 0 — tune per cluster."
+            "Predicted-load threshold for the rule-based baseline "
+            "(USR if predicted_load < threshold). Default 0.0905 Gbps "
+            "matches the paper's profiling-derived DPDK<->USR boundary "
+            "(90.47 Mbps)."
         ),
     )
     p.add_argument(
-        "--ent-coef",
-        type=float,
-        default=0.01,
-        help=(
-            "PPO entropy coefficient. Lower values push the policy to "
-            "commit (sharper argmax); higher values keep exploration. "
-            "Default 0.01."
-        ),
+        "--ent-coef", type=float, default=0.15,
+        help="PPO entropy coefficient (paper: 0.15).",
     )
     p.add_argument(
-        "--learning-rate",
-        type=float,
-        default=1e-4,
-        help="PPO learning rate (default 1e-4).",
+        "--learning-rate", type=float, default=1e-4,
+        help="PPO learning rate (paper: 1e-4).",
+    )
+    p.add_argument(
+        "--gamma", type=float, default=0.995,
+        help="PPO discount factor (paper: 0.995).",
+    )
+    p.add_argument(
+        "--gae-lambda", type=float, default=0.9,
+        help="GAE lambda (paper: 0.9).",
     )
     return p.parse_args()
 
 
 def _format_row(name: str, m: dict) -> str:
     return (
-        f"  {name:<16s} "
+        f"  {name:<14s} "
         f"total_r={m['total_reward']:>10.2f}  "
-        f"mean_r={m['mean_reward']:>7.4f}  "
         f"energy_Wh={m['total_energy_wh']:>7.2f}  "
-        f"switch_Wh={m['total_switch_wh']:>6.2f}  "
-        f"unsafe={m['unsafe_rate']:.3f}  "
+        f"mean_SEC={m['mean_sec']:>8.5f}  "
+        f"mean_Q={m['mean_q']:>5.3f}  "
+        f"viol_rate={m['qos_violation_rate']:.3f}  "
         f"DPDK={m['dpdk_rate']:.2f}  "
         f"USR={m['usr_rate']:.2f}  "
         f"flips={m['n_switches']:>3d}"
@@ -130,6 +134,8 @@ def main() -> int:
     print(f"Horizon idx:      {args.horizon_idx}")
     print(f"Total timesteps:  {args.total_timesteps:,}")
     print(f"Seed:             {args.seed}")
+    print(f"ent_coef:         {args.ent_coef}")
+    print(f"learning_rate:    {args.learning_rate}")
     print(f"Output dir:       {args.out_dir}")
     print("-" * 70)
     print("Training PPO...")
@@ -147,17 +153,17 @@ def main() -> int:
         batch_size=min(64, args.n_steps),
         ent_coef=args.ent_coef,
         learning_rate=args.learning_rate,
+        gamma=args.gamma,
+        gae_lambda=args.gae_lambda,
     )
 
     print("-" * 70)
     print("Rolling out one episode per policy on a fresh env instance...")
 
     policies = {
-        "PPO":              ppo_policy(model, deterministic=True),
-        "random":           random_policy(seed=args.seed),
-        "always-DPDK":      constant_policy(0),
-        "always-USR":       constant_policy(1),
-        f"USR<{args.threshold_gbps:.2f}":
+        "PPO":         ppo_policy(model, deterministic=True),
+        "always-DPDK": constant_policy(0),
+        f"USR<{args.threshold_gbps:.3f}":
             predicted_load_threshold_policy(args.threshold_gbps),
     }
 
@@ -171,13 +177,14 @@ def main() -> int:
             max_steps=args.max_eval_steps,
         )
 
-    table_lines = ["Comparison (single rollout, deterministic where applicable):"]
+    table_lines = [
+        "Comparison (single rollout, PPO deterministic):",
+    ]
     for name, m in results.items():
         table_lines.append(_format_row(name, m))
     table = "\n".join(table_lines)
     print(table)
 
-    # Best-by-total-reward callout.
     best_name = max(results, key=lambda k: results[k]["total_reward"])
     summary = (
         f"\nBest by total reward: {best_name}  "

@@ -144,12 +144,18 @@ export default function App() {
                     refLine={{ y: 5, label: "5 pkts budget" }}
                   />
                   <TimeSeriesChart
-                    title="Performance score"
+                    title="QoS score Q"
                     yLabel="[0, 1]"
-                    field="performance"
+                    field="q_score"
                     rollouts={rollouts}
-                    refLine={{ y: 0.9, label: "0.9 threshold" }}
+                    refLine={{ y: 0.9, label: "τ = 0.9" }}
                     domain={[0, 1]}
+                  />
+                  <TimeSeriesChart
+                    title="Specific energy (SEC)"
+                    yLabel="W/Mbps"
+                    field="sec_w_per_mbps"
+                    rollouts={rollouts}
                   />
                   <TimeSeriesChart
                     title="Cumulative reward"

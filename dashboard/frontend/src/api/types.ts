@@ -32,15 +32,17 @@ export interface StepRecord {
   actual_load_gbps: number;
   predicted_load_gbps: number;
   power_watts: number;
+  sec_w_per_mbps: number;
   delay_us: number;
   predicted_loss: number;
-  performance: number;
+  q_score: number;
   qos_penalty: number;
   switching_energy_wh: number;
-  type_switch_penalty: number;
+  switch_penalty: number;
   cooldown_penalty: number;
   steps_since_switch: number;
   is_safe: boolean;
+  energy_term: number;
   reward: number;
   cumulative_reward: number;
 }

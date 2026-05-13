@@ -65,15 +65,17 @@ class StepRecord(BaseModel):
     actual_load_gbps: float
     predicted_load_gbps: float
     power_watts: float
+    sec_w_per_mbps: float = 0.0
     delay_us: float
     predicted_loss: float
-    performance: float
+    q_score: float
     qos_penalty: float
     switching_energy_wh: float
-    type_switch_penalty: float = 0.0
+    switch_penalty: float = 0.0
     cooldown_penalty: float = 0.0
     steps_since_switch: int = 0
     is_safe: bool
+    energy_term: float = 0.0
     reward: float
     cumulative_reward: float
 

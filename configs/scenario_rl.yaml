@@ -1,14 +1,14 @@
 # RL scenario configuration.
 #
-# This file is consumed by two consumers:
-#   1. The RL side (reward weights, training placeholders, action wiring).
-#   2. The UpfDigitalTwin's `DigitalTwin` class, which expects nested
-#      `traffic`, `upf`, and `upf_switching` blocks. Keeping a single file
-#      avoids drift between the two views of "the scenario".
+# Reward shape is aligned with COMCOM-S-26-00430 (Section 4.5), adapted
+# to a binary action space (DPDK vs USR; horizontal scaling is left for
+# a later phase) and to a soft cooldown (the paper uses a hard guard).
 #
-# All values are placeholders for Phase 0/Phase 1 scaffolding. Replace
-# `traffic.alpha` with the real Gbps-per-normalized-unit factor used by
-# UpfTrafficForecaster before training on real data.
+# This file is consumed by two consumers:
+#   1. The RL side (reward weights, observation parameters, training).
+#   2. The UpfDigitalTwin's `DigitalTwin` class, which expects nested
+#      `traffic`, `upf`, and `upf_switching` blocks. Keeping a single
+#      file avoids drift between the two views of "the scenario".
 
 seed: 42
 
@@ -22,12 +22,12 @@ traffic:
 
 upf:
   qos_budget:
+    # Twin's binary `is_safe` thresholds. The reward no longer uses
+    # `is_safe` directly; instead it uses a continuous QoS score
+    # derived from `delay_us` and `predicted_loss` against these
+    # budgets. They are still used as the normalisation base for that
+    # score, so the values here matter.
     delay_budget_us: 200.0
-    # Was 0.0 — but the surrogate predicts continuous fractional losses
-    # (~0.1–2 pkts/interval at low loads, jumping to >1000 at the cliff
-    # near 0.5 Gbps for USR). 5.0 sits above the surrogate's noise floor
-    # and well below the catastrophic-loss cliff, so it isolates real
-    # QoS failure rather than firing on every step.
     max_loss_pkts_per_interval: 5.0
 
 upf_switching:
@@ -40,8 +40,7 @@ upf_switching:
 initial_action: "DPDK"
 
 # Discrete action space exposed by SingleSiteUPFEnv.
-# Mapping is fixed; this block is informational so callers can read it
-# without importing the env module.
+# Informational; the env hard-codes the same mapping.
 action_space:
   type: "Discrete"
   n: 2
@@ -49,77 +48,45 @@ action_space:
     0: "DPDK"
     1: "USR"
 
-# Reward (graded QoS + flat switching cost + soft cooldown, modelled on
-# the prior in-house controller):
+# Reward — paper-aligned (COMCOM-S-26-00430, Section 4.5):
 #
-#   delay_score = max(0, 1 - max(0, delay_us - delay_budget_us) / delay_budget_us)
-#   loss_score  = max(0, 1 - max(0, predicted_loss - max_loss_pkts) / max_loss_pkts)
-#   performance = min(delay_score, loss_score)           # in [0, 1]
-#   qos_penalty = qos_lambda * max(0, performance_threshold - performance)
+#   SEC_t  = P_t / max(load_mbps, eps)                  # specific energy (W/Mbps)
+#   Q_t    = min(delay_score, loss_score) in [0, 1]     # from twin surrogates
+#   L_QoS  = lambda_qos * max(0, tau - Q_t)             # graded QoS penalty
+#   L_SW   = c_dpdk if switched->DPDK else c_usr if switched->USR else 0
+#   L_CD   = soft cooldown surcharge (our extension)
 #
-#   switched     = action != prev_action
-#   in_cooldown  = switched AND steps_since_last_switch < cooldown_period
-#   type_pen     = type_switch_cost  * switched
-#   cooldown_pen = cooldown_cost     * in_cooldown
+#   reward = -(alpha * SEC_t + L_QoS + L_SW + L_CD)
 #
-#   reward = -(energy_weight  * energy_wh
-#              + qos_penalty
-#              + switching_weight * switching_energy_wh      # physical spike
-#              + type_pen                                    # flat ops cost
-#              + cooldown_pen)                               # soft min-dwell
-#
-# Why graded QoS: the digital twin's `is_safe` is a hard AND of two
-# thresholds — any time the surrogate's continuous loss prediction
-# strayed above the threshold the agent paid the full penalty, no
-# gradient between "barely safe" and "barely unsafe."
-#
-# Why a flat switching cost: the twin's `switching_energy_wh` is the
-# physical activation spike (~0.005 Wh per switch), too small to
-# register against ~0.21 Wh/step energy. Operationally, switching a
-# UPF has costs the energy spike alone doesn't capture (control-plane
-# disruption, monitoring noise, etc.). type_switch_cost is that
-# operational cost expressed as reward units.
-#
-# Why soft cooldown: instead of hard-masking switches inside a cooldown
-# window (the EnergyAwareUPF approach), we expose
-# steps_since_last_switch to the agent in the observation and charge a
-# graded penalty if it switches inside the window. PPO can then decide
-# when a fast switch is worth the cost, rather than having the
-# constraint imposed from outside.
+# Magnitudes chosen so PPO sees a real gradient toward USR at low loads
+# without being terrified of switching:
+#   - per-step DPDK SEC contribution ~0.6-0.8 reward at typical load.
+#   - safe-USR SEC contribution      ~0.3-0.5 — USR saves ~0.3/step.
+#   - QoS penalty bites at up to lambda_qos * tau = 27 if Q -> 0.
+#   - one DPDK switch costs 0.03; one USR switch 0.012.
 reward_weights:
-  energy_weight: 1.0
-  qos_lambda: 5.0
-  performance_threshold: 0.90
-  # switching_weight is applied to the twin's `sw_energy` (activation
-  # spike, in Wh). Set to 1.0 so the spike is treated on equal footing
-  # with steady-state energy — that's what makes physical sense.
-  # Was 0.1, which dropped switching contribution to ~0.03 reward
-  # across 110 flips (effectively unmodelled).
-  switching_weight: 1.0
-  # No flat per-switch penalty: the twin's `sw_energy` and its
-  # activation-duration accounting already capture the physical cost
-  # of switching (energy spike + UPF unavailable during startup).
-  # Adding a flat cost on top would double-count.
-  type_switch_cost: 0.0
-  # Minimum desired dwell time after a switch, in steps (15 min each).
-  # 4 steps = 1 hour. This is operational policy, NOT physics — the
-  # twin doesn't model "don't flap" by itself.
-  cooldown_period: 4
-  # Penalty for switching while still inside the cooldown window,
-  # scaled linearly by how deep into the cooldown we still are. At 0
-  # steps since last switch you pay cooldown_cost; at the boundary,
-  # you pay (1/cooldown_period) * cooldown_cost.
-  cooldown_cost: 0.5
+  alpha:         100.0    # SEC scaler (paper Table 3: 100)
+  lambda_qos:    30.0     # QoS penalty weight (paper: 30)
+  tau:           0.90     # QoS compliance target (paper: 0.9)
+  c_dpdk:        0.03     # cost of switching INTO DPDK (paper: 0.03)
+  c_usr:         0.012    # cost of switching INTO USR (paper: 0.012)
+  cooldown_period: 4      # minimum-dwell window, in 15-min steps
+  cooldown_cost:   0.5    # extra penalty for switching inside the window
 
-# Training placeholders. Conservative values so a sanity-check run
-# finishes quickly; real experiments will override them.
+# Observation construction. Matches the paper's "history-augmented"
+# schema (Section 4.3) — current load + the last W actual loads +
+# 1-step forecast + minimal deployment context. Multi-step forecast
+# is intentionally NOT used: we decide for one step at a time.
+observation:
+  history_window: 8       # number of past actual loads to include
+
+# Training placeholders. The trainer CLI overrides these.
 training:
-  total_timesteps: 100000
+  total_timesteps: 200000
   n_envs: 1
   algorithm: "PPO"
 
 notes: |
-  Phase 1 binary single-site env: action space is Discrete(2) with
-  0=DPDK, 1=USR. Reward weights, alpha, and training settings are
-  placeholders that will be revised once the env is exercised against
-  real artifacts and PPO is wired up in Phase 2.
+  Binary single-site env. Reward & observation are aligned with the
+  paper's design adapted to a binary action space. Multi-instance
+  scaling (paper's k > 1 USR) is a future extension.
