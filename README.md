@@ -202,7 +202,28 @@ QoS violations. Crucially the trained policy is not a static threshold:
 it makes 110 switches vs the rule's 61, exploiting load fluctuations
 the rule can't see.
 
-**Performance note** — env.step() runs in ~10 μs because
+### Interactive dashboard
+
+A FastAPI + React dashboard at [dashboard/](dashboard/) lets a
+supervisor (or you) replay episodes and compare policies in the browser
+— same backend code paths as the CLI, just an HTTP layer. See
+[dashboard/README.md](dashboard/README.md) for run instructions. Quick
+start, two terminals from repo root:
+
+```bash
+# backend
+pip install -r dashboard/backend/requirements.txt
+uvicorn dashboard.backend.app.main:app --reload --port 8000
+
+# frontend
+cd dashboard/frontend && npm install && npm run dev
+```
+
+Then open <http://localhost:5173>.
+
+### Performance note
+
+env.step() runs in ~10 μs because
 `SingleSiteUPFEnv.__init__` batch-evaluates the surrogate models for
 the entire episode upfront via `DigitalTwin.evaluate_batch`. Per-step
 calls to the sklearn cascade (~195 ms) were the original bottleneck;
