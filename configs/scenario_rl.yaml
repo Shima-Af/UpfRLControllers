@@ -23,7 +23,12 @@ traffic:
 upf:
   qos_budget:
     delay_budget_us: 200.0
-    max_loss_pkts_per_interval: 0.0
+    # Was 0.0 — but the surrogate predicts continuous fractional losses
+    # (~0.1–2 pkts/interval at low loads, jumping to >1000 at the cliff
+    # near 0.5 Gbps for USR). 5.0 sits above the surrogate's noise floor
+    # and well below the catastrophic-loss cliff, so it isolates real
+    # QoS failure rather than firing on every step.
+    max_loss_pkts_per_interval: 5.0
 
 upf_switching:
   accounting: "sub_step"
