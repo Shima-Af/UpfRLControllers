@@ -127,6 +127,9 @@ class SingleSiteUPFEnv(gym.Env):
         # --- Digital twin (imported lazily so the module imports even if the
         # dependency is missing on a fresh checkout) ---
         from upf_digital_twin import DigitalTwin  # noqa: WPS433 — lazy on purpose
+        from upf_digital_twin.twin.upf_profile import UPFResult  # noqa: WPS433
+
+        self._UPFResult = UPFResult  # stash for _result_at()
 
         self._twin = DigitalTwin(
             scenario_cfg=self.scenario_cfg,
@@ -134,6 +137,20 @@ class SingleSiteUPFEnv(gym.Env):
             project_root=self._root,
         )
         self._step_h = float(self._twin.step_h)
+
+        # --- Pre-compute surrogate predictions for the entire episode ---
+        # The surrogate models (sklearn pipelines) are the dominant cost
+        # of env.step() — ~95 ms per evaluate_action() call. Since the
+        # load trajectory is fixed at __init__, we can batch all 1009
+        # steps' worth of predictions once and look them up in O(1)
+        # during step(). compute_step() still runs per-step for its
+        # stateful switching-cost accounting.
+        self._dpdk_batch = self._twin.evaluate_batch(
+            "DPDK", self._actual_gbps
+        )
+        self._usr_batch = self._twin.evaluate_batch(
+            "USR", self._actual_gbps
+        )
 
         # --- Reward weights ---
         rw = self.scenario_cfg.get("reward_weights", {})
@@ -205,9 +222,9 @@ class SingleSiteUPFEnv(gym.Env):
         load = float(self._actual_gbps[self._t])
         predicted = float(self._predicted_gbps[self._t])
 
-        old_r = self._twin.evaluate_action(self._current_action, load)
+        old_r = self._result_at(self._current_action, self._t)
         new_r = (
-            self._twin.evaluate_action(requested, load)
+            self._result_at(requested, self._t)
             if requested != self._current_action
             else old_r
         )
@@ -272,6 +289,24 @@ class SingleSiteUPFEnv(gym.Env):
     # ------------------------------------------------------------------
     # Internal helpers
     # ------------------------------------------------------------------
+
+    def _result_at(self, action: str, t: int) -> Any:
+        """Reconstruct a UPFResult from the precomputed batch arrays.
+
+        Equivalent to ``self._twin.evaluate_action(action, load[t])`` but
+        without re-running the sklearn surrogate at every step.
+        """
+        b = self._dpdk_batch if action == "DPDK" else self._usr_batch
+        return self._UPFResult(
+            upf_type=action,
+            load_gbps=float(self._actual_gbps[t]),
+            power_watts=float(b["power_watts"][t]),
+            delay_us=float(b["delay_us"][t]),
+            throughput_gbps=float(b["throughput_gbps"][t]),
+            predicted_loss=float(b["predicted_loss"][t]),
+            is_safe=bool(b["is_safe"][t]),
+            is_efficient=False,
+        )
 
     def _obs(self) -> np.ndarray:
         actual = float(self._actual_gbps[self._t])

@@ -110,6 +110,21 @@ def random_policy(seed: int = 0) -> PolicyFn:
     return _fn
 
 
+def predicted_load_threshold_policy(threshold_gbps: float) -> PolicyFn:
+    """USR (1) when ``predicted_load_gbps`` < threshold, else DPDK (0).
+
+    Reads ``obs[1]``, which the env defines as the forecaster's load
+    estimate for the current decision step. Mirrors the structure of the
+    threshold baselines used in prior in-house work.
+    """
+
+    def _fn(obs: np.ndarray) -> int:
+        predicted = float(obs[1])
+        return 1 if predicted < threshold_gbps else 0
+
+    return _fn
+
+
 # ----------------------------------------------------------------------
 # Single-episode rollout used to compare policies
 # ----------------------------------------------------------------------

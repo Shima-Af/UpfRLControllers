@@ -31,6 +31,7 @@ if str(REPO_ROOT) not in sys.path:
 from src.trainers.ppo_single_site import (  # noqa: E402
     constant_policy,
     ppo_policy,
+    predicted_load_threshold_policy,
     random_policy,
     rollout_episode,
     train_ppo_single_site,
@@ -70,12 +71,22 @@ def _parse_args() -> argparse.Namespace:
         default=1024,
         help="PPO rollout length per update (default 1024).",
     )
+    p.add_argument(
+        "--threshold-gbps",
+        type=float,
+        default=0.05,
+        help=(
+            "Predicted-load threshold for the threshold baseline policy "
+            "(USR if predicted_load < threshold, else DPDK). 0.05 Gbps "
+            "is the empirical sweet spot for cluster 0 — tune per cluster."
+        ),
+    )
     return p.parse_args()
 
 
 def _format_row(name: str, m: dict) -> str:
     return (
-        f"  {name:<14s} "
+        f"  {name:<16s} "
         f"total_r={m['total_reward']:>10.2f}  "
         f"mean_r={m['mean_reward']:>7.4f}  "
         f"energy_Wh={m['total_energy_wh']:>7.2f}  "
@@ -124,10 +135,12 @@ def main() -> int:
     print("Rolling out one episode per policy on a fresh env instance...")
 
     policies = {
-        "PPO":         ppo_policy(model, deterministic=True),
-        "random":      random_policy(seed=args.seed),
-        "always-DPDK": constant_policy(0),
-        "always-USR":  constant_policy(1),
+        "PPO":              ppo_policy(model, deterministic=True),
+        "random":           random_policy(seed=args.seed),
+        "always-DPDK":      constant_policy(0),
+        "always-USR":       constant_policy(1),
+        f"USR<{args.threshold_gbps:.2f}":
+            predicted_load_threshold_policy(args.threshold_gbps),
     }
 
     results = {}
