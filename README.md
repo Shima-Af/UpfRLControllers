@@ -179,23 +179,35 @@ policy (~4 min). Output lands in
 `experiments/ppo_single_site_seed<seed>_<utc-ts>/` — a saved model zip,
 TensorBoard logs, and a `summary.txt` comparison table.
 
-Example output on cluster 0 (USR's high failure rate makes DPDK the safe
-choice — PPO discovers this in 4 updates and ties always-DPDK):
+For a real run, use:
 
-```
-  PPO          total_r= -61.47  energy_Wh= 61.47  switch_Wh= 0.00  unsafe=0.000  DPDK=1.00  USR=0.00  flips=  0
-  random       total_r=-207.00  energy_Wh= 63.95  switch_Wh= 0.52  unsafe=0.477  DPDK=0.52  USR=0.48  flips=166
-  always-DPDK  total_r= -61.47  energy_Wh= 61.47  switch_Wh= 0.00  unsafe=0.000  DPDK=1.00  USR=0.00  flips=  0
-  always-USR   total_r=-240.62  energy_Wh= 64.62  switch_Wh= 0.00  unsafe=0.587  DPDK=0.00  USR=1.00  flips=  0
+```bash
+python scripts/train_ppo_single_site.py \
+  --total-timesteps 200000 --n-steps 2048 --max-eval-steps 1009 \
+  --ent-coef 0.001 --learning-rate 3e-4
 ```
 
-**Wall-time caveat** — the digital twin runs at ~5 env steps/s on this
-machine (~195 ms/step), so any meaningful training (tens of thousands of
-steps, dozens of PPO updates) is hours, not minutes. The 50 000-step
-default in the trainer docstring is a placeholder, not a recommended
-training budget. Phase 3+ will either profile and speed up
-`DigitalTwin.compute_step`, parallelise via `SubprocVecEnv` across
-clusters, or accept multi-hour runs.
+Demonstrated result on cluster 0 (200k steps, ~12 min wall):
+
+```
+  PPO          total_r=-173.89  energy_Wh=173.86  unsafe=0.000  DPDK=0.75  USR=0.25  flips=110
+  USR<0.05     total_r=-194.95  energy_Wh=180.22  unsafe=0.004  DPDK=0.78  USR=0.22  flips= 61
+  always-DPDK  total_r=-206.76  energy_Wh=206.76  unsafe=0.000  DPDK=1.00  USR=0.00  flips=  0
+  random       total_r=-822.65  energy_Wh=219.09  unsafe=0.164  DPDK=0.49  USR=0.51  flips=511
+  always-USR   total_r=-1027.55 energy_Wh=230.77  unsafe=0.217  DPDK=0.00  USR=1.00  flips=  0
+```
+
+PPO beats the threshold rule by 11% and always-DPDK by 16%, with zero
+QoS violations. Crucially the trained policy is not a static threshold:
+it makes 110 switches vs the rule's 61, exploiting load fluctuations
+the rule can't see.
+
+**Performance note** — env.step() runs in ~10 μs because
+`SingleSiteUPFEnv.__init__` batch-evaluates the surrogate models for
+the entire episode upfront via `DigitalTwin.evaluate_batch`. Per-step
+calls to the sklearn cascade (~195 ms) were the original bottleneck;
+the cached path is ~30 000× faster. With env time negligible, PPO's
+optimizer is now the limit (~12 min for 200k timesteps).
 
 ## Development roadmap
 

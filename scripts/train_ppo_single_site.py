@@ -81,6 +81,22 @@ def _parse_args() -> argparse.Namespace:
             "is the empirical sweet spot for cluster 0 — tune per cluster."
         ),
     )
+    p.add_argument(
+        "--ent-coef",
+        type=float,
+        default=0.01,
+        help=(
+            "PPO entropy coefficient. Lower values push the policy to "
+            "commit (sharper argmax); higher values keep exploration. "
+            "Default 0.01."
+        ),
+    )
+    p.add_argument(
+        "--learning-rate",
+        type=float,
+        default=1e-4,
+        help="PPO learning rate (default 1e-4).",
+    )
     return p.parse_args()
 
 
@@ -129,6 +145,8 @@ def main() -> int:
         verbose=1,
         n_steps=args.n_steps,
         batch_size=min(64, args.n_steps),
+        ent_coef=args.ent_coef,
+        learning_rate=args.learning_rate,
     )
 
     print("-" * 70)
