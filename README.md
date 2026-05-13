@@ -202,6 +202,14 @@ QoS violations. Crucially the trained policy is not a static threshold:
 it makes 110 switches vs the rule's 61, exploiting load fluctuations
 the rule can't see.
 
+### Phase 2 supervisor report
+
+A one-paragraph writeup with embedded figures and the KPI table lives
+at [reports/phase-2/README.md](reports/phase-2/README.md). Figures are
+generated from the same data as the dashboard via
+`python scripts/generate_phase2_report_figures.py` and are tracked in
+git so they render directly on GitHub.
+
 ### Interactive dashboard
 
 A FastAPI + React dashboard at [dashboard/](dashboard/) lets a
