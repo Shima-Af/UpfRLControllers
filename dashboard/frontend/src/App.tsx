@@ -165,6 +165,13 @@ export default function App() {
                     domain={[-0.1, 1.1]}
                     height={140}
                   />
+                  <TimeSeriesChart
+                    title="Steps since last switch"
+                    yLabel="steps"
+                    field="steps_since_switch"
+                    rollouts={rollouts}
+                    refLine={{ y: 4, label: "cooldown period" }}
+                  />
                 </div>
               </>
             )}

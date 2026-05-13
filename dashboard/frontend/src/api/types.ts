@@ -37,6 +37,9 @@ export interface StepRecord {
   performance: number;
   qos_penalty: number;
   switching_energy_wh: number;
+  type_switch_penalty: number;
+  cooldown_penalty: number;
+  steps_since_switch: number;
   is_safe: boolean;
   reward: number;
   cumulative_reward: number;

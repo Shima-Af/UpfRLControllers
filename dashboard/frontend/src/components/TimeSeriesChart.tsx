@@ -31,7 +31,10 @@ interface Props {
     | "predicted_loss"
     | "performance"
     | "cumulative_reward"
-    | "action";
+    | "action"
+    | "steps_since_switch"
+    | "type_switch_penalty"
+    | "cooldown_penalty";
   rollouts: RolloutResponse[];
   /** Horizontal reference line (e.g. delay budget). */
   refLine?: { y: number; label: string };

@@ -49,28 +49,67 @@ action_space:
     0: "DPDK"
     1: "USR"
 
-# Reward (graded QoS, modelled on the prior in-house controller):
+# Reward (graded QoS + flat switching cost + soft cooldown, modelled on
+# the prior in-house controller):
 #
-#   delay_score = max(0, 1 - delay_us / delay_budget_us)
-#   loss_score  = max(0, 1 - predicted_loss / max_loss_pkts_per_interval)
+#   delay_score = max(0, 1 - max(0, delay_us - delay_budget_us) / delay_budget_us)
+#   loss_score  = max(0, 1 - max(0, predicted_loss - max_loss_pkts) / max_loss_pkts)
 #   performance = min(delay_score, loss_score)           # in [0, 1]
 #   qos_penalty = qos_lambda * max(0, performance_threshold - performance)
 #
-#   reward = -(energy_weight * energy_wh
-#              + qos_penalty
-#              + switching_weight * switching_energy_wh)
+#   switched     = action != prev_action
+#   in_cooldown  = switched AND steps_since_last_switch < cooldown_period
+#   type_pen     = type_switch_cost  * switched
+#   cooldown_pen = cooldown_cost     * in_cooldown
 #
-# Why graded: the digital twin's `is_safe` is a hard AND of two
-# thresholds, so any time the surrogate predicted loss strayed above the
-# threshold the agent paid the full penalty — no gradient between
-# "barely safe" and "barely unsafe." Graded penalty restores the smooth
-# signal the old model trained against. qos_lambda is the slope; at
-# performance=0 it bites at most qos_lambda * performance_threshold.
+#   reward = -(energy_weight  * energy_wh
+#              + qos_penalty
+#              + switching_weight * switching_energy_wh      # physical spike
+#              + type_pen                                    # flat ops cost
+#              + cooldown_pen)                               # soft min-dwell
+#
+# Why graded QoS: the digital twin's `is_safe` is a hard AND of two
+# thresholds — any time the surrogate's continuous loss prediction
+# strayed above the threshold the agent paid the full penalty, no
+# gradient between "barely safe" and "barely unsafe."
+#
+# Why a flat switching cost: the twin's `switching_energy_wh` is the
+# physical activation spike (~0.005 Wh per switch), too small to
+# register against ~0.21 Wh/step energy. Operationally, switching a
+# UPF has costs the energy spike alone doesn't capture (control-plane
+# disruption, monitoring noise, etc.). type_switch_cost is that
+# operational cost expressed as reward units.
+#
+# Why soft cooldown: instead of hard-masking switches inside a cooldown
+# window (the EnergyAwareUPF approach), we expose
+# steps_since_last_switch to the agent in the observation and charge a
+# graded penalty if it switches inside the window. PPO can then decide
+# when a fast switch is worth the cost, rather than having the
+# constraint imposed from outside.
 reward_weights:
   energy_weight: 1.0
   qos_lambda: 5.0
   performance_threshold: 0.90
-  switching_weight: 0.1
+  # switching_weight is applied to the twin's `sw_energy` (activation
+  # spike, in Wh). Set to 1.0 so the spike is treated on equal footing
+  # with steady-state energy — that's what makes physical sense.
+  # Was 0.1, which dropped switching contribution to ~0.03 reward
+  # across 110 flips (effectively unmodelled).
+  switching_weight: 1.0
+  # No flat per-switch penalty: the twin's `sw_energy` and its
+  # activation-duration accounting already capture the physical cost
+  # of switching (energy spike + UPF unavailable during startup).
+  # Adding a flat cost on top would double-count.
+  type_switch_cost: 0.0
+  # Minimum desired dwell time after a switch, in steps (15 min each).
+  # 4 steps = 1 hour. This is operational policy, NOT physics — the
+  # twin doesn't model "don't flap" by itself.
+  cooldown_period: 4
+  # Penalty for switching while still inside the cooldown window,
+  # scaled linearly by how deep into the cooldown we still are. At 0
+  # steps since last switch you pay cooldown_cost; at the boundary,
+  # you pay (1/cooldown_period) * cooldown_cost.
+  cooldown_cost: 0.5
 
 # Training placeholders. Conservative values so a sanity-check run
 # finishes quickly; real experiments will override them.

@@ -70,6 +70,9 @@ class StepRecord(BaseModel):
     performance: float
     qos_penalty: float
     switching_energy_wh: float
+    type_switch_penalty: float = 0.0
+    cooldown_penalty: float = 0.0
+    steps_since_switch: int = 0
     is_safe: bool
     reward: float
     cumulative_reward: float

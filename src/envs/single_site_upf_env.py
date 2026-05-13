@@ -27,9 +27,14 @@ _UPF_TO_ACTION: dict[str, int] = {"DPDK": 0, "USR": 1}
 class SingleSiteUPFEnv(gym.Env):
     """Discrete-action env wrapping one cluster of the UPF digital twin.
 
-    Observation (Box, shape (6,), float32):
+    Observation (Box, shape (7,), float32):
         [actual_load_gbps, predicted_load_gbps, prev_action,
-         prev_power_watts, prev_safety_flag, timestep_progress]
+         prev_power_watts, prev_safety_flag, timestep_progress,
+         cooldown_progress]
+
+        ``cooldown_progress`` = min(1, steps_since_last_switch / cooldown_period)
+        — 0.0 immediately after a switch, 1.0 once the agent is "free"
+        to switch again without paying the soft-cooldown surcharge.
 
     Action (Discrete(2)):
         0 -> DPDK, 1 -> USR
@@ -158,6 +163,11 @@ class SingleSiteUPFEnv(gym.Env):
         self._qos_lambda = float(rw.get("qos_lambda", 5.0))
         self._perf_threshold = float(rw.get("performance_threshold", 0.90))
         self._w_switch = float(rw.get("switching_weight", 0.1))
+        self._type_switch_cost = float(rw.get("type_switch_cost", 0.0))
+        self._cooldown_period = int(rw.get("cooldown_period", 0))
+        self._cooldown_cost = float(rw.get("cooldown_cost", 0.0))
+        if self._cooldown_period < 0:
+            raise ValueError("cooldown_period must be >= 0")
 
         # --- QoS budgets, used to normalize delay/loss into [0, 1] ---
         qos_cfg = self.scenario_cfg.get("upf", {}).get("qos_budget", {})
@@ -179,8 +189,8 @@ class SingleSiteUPFEnv(gym.Env):
         # --- Spaces ---
         self.action_space = spaces.Discrete(2)
         # Generous finite bounds; load and power are non-negative in practice.
-        high = np.array([1e3, 1e3, 1.0, 1e3, 1.0, 1.0], dtype=np.float32)
-        low = np.zeros(6, dtype=np.float32)
+        high = np.array([1e3, 1e3, 1.0, 1e3, 1.0, 1.0, 1.0], dtype=np.float32)
+        low = np.zeros(7, dtype=np.float32)
         self.observation_space = spaces.Box(low=low, high=high, dtype=np.float32)
 
         # --- Episode state ---
@@ -188,6 +198,9 @@ class SingleSiteUPFEnv(gym.Env):
         self._t: int = 0
         self._prev_power: float = 0.0
         self._prev_safety: float = 1.0
+        # Cooldown bookkeeping: how many steps have elapsed since the last
+        # observed UPF type change. Starts large so the first step is free.
+        self._steps_since_switch: int = max(1, self._cooldown_period)
 
     # ------------------------------------------------------------------
     # Gymnasium API
@@ -204,6 +217,7 @@ class SingleSiteUPFEnv(gym.Env):
         self._t = 0
         self._prev_power = 0.0
         self._prev_safety = 1.0
+        self._steps_since_switch = max(1, self._cooldown_period)
         info = {
             "cluster_idx": self.cluster_idx,
             "horizon_idx": self.horizon_idx,
@@ -232,8 +246,28 @@ class SingleSiteUPFEnv(gym.Env):
             self._current_action, requested, old_r, new_r,
         )
         realised = self._current_action if pending else requested
+        prev_realised = self._current_action
         if not pending:
             self._current_action = new_current
+
+        # Did the *realised* UPF type change on this step? Use the realised
+        # action so a pending activation (which the twin masks internally)
+        # does not count as a switch.
+        type_changed = realised != prev_realised
+
+        # Soft cooldown: penalty when switching while still within the
+        # cooldown window, scaled linearly so it tapers to zero as we
+        # approach the end of the window.
+        if self._cooldown_period > 0 and type_changed:
+            steps_left = max(
+                0, self._cooldown_period - self._steps_since_switch
+            )
+            cooldown_pen = (
+                self._cooldown_cost * steps_left / self._cooldown_period
+            )
+        else:
+            cooldown_pen = 0.0
+        type_switch_pen = self._type_switch_cost if type_changed else 0.0
 
         energy_wh = float(composite.power_watts) * self._step_h
 
@@ -257,6 +291,8 @@ class SingleSiteUPFEnv(gym.Env):
             self._w_energy * energy_wh
             + qos_penalty
             + self._w_switch * float(sw_energy)
+            + type_switch_pen
+            + cooldown_pen
         )
 
         info: dict[str, Any] = {
@@ -270,6 +306,9 @@ class SingleSiteUPFEnv(gym.Env):
             "performance": performance,
             "qos_penalty": qos_penalty,
             "switching_energy_wh": float(sw_energy),
+            "type_switch_penalty": type_switch_pen,
+            "cooldown_penalty": cooldown_pen,
+            "steps_since_switch": int(self._steps_since_switch),
             "is_safe": bool(composite.is_safe),
             "timestep": int(self._t),
             "cluster_idx": int(self.cluster_idx),
@@ -278,6 +317,11 @@ class SingleSiteUPFEnv(gym.Env):
         # Bookkeeping for the *next* observation.
         self._prev_power = float(composite.power_watts)
         self._prev_safety = 1.0 if bool(composite.is_safe) else 0.0
+        # Cooldown counter: reset on a realised switch, otherwise +1.
+        if type_changed:
+            self._steps_since_switch = 0
+        else:
+            self._steps_since_switch += 1
         self._t += 1
 
         terminated = False
@@ -308,6 +352,11 @@ class SingleSiteUPFEnv(gym.Env):
             is_efficient=False,
         )
 
+    def _cooldown_progress(self) -> float:
+        if self._cooldown_period <= 0:
+            return 1.0
+        return min(1.0, self._steps_since_switch / self._cooldown_period)
+
     def _obs(self) -> np.ndarray:
         actual = float(self._actual_gbps[self._t])
         predicted = float(self._predicted_gbps[self._t])
@@ -321,6 +370,7 @@ class SingleSiteUPFEnv(gym.Env):
                 self._prev_power,
                 self._prev_safety,
                 progress,
+                self._cooldown_progress(),
             ],
             dtype=np.float32,
         )
@@ -328,6 +378,14 @@ class SingleSiteUPFEnv(gym.Env):
     def _terminal_obs(self) -> np.ndarray:
         prev_action_flag = float(_UPF_TO_ACTION[self._current_action])
         return np.array(
-            [0.0, 0.0, prev_action_flag, self._prev_power, self._prev_safety, 1.0],
+            [
+                0.0,
+                0.0,
+                prev_action_flag,
+                self._prev_power,
+                self._prev_safety,
+                1.0,
+                self._cooldown_progress(),
+            ],
             dtype=np.float32,
         )
