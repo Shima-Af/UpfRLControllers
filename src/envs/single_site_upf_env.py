@@ -36,9 +36,24 @@ class SingleSiteUPFEnv(gym.Env):
 
     Reward:
         -(energy_weight * energy_wh
-          + qos_weight * unsafe_penalty
+          + qos_lambda * max(0, performance_threshold - performance)
           + switching_weight * switching_energy_wh)
-        where unsafe_penalty = 0 if composite.is_safe else 1.
+
+        ``performance`` is a continuous [0, 1] score derived from the
+        digital twin's continuous outputs. It is 1.0 while delay and loss
+        are inside budget, then declines linearly with how far they
+        exceed it:
+
+            delay_excess = max(0, delay_us - delay_budget_us)
+            delay_score  = max(0, 1 - delay_excess / delay_budget_us)
+            loss_excess  = max(0, predicted_loss - max_loss_pkts_per_interval)
+            loss_score   = max(0, 1 - loss_excess / max_loss_pkts_per_interval)
+            performance  = min(delay_score, loss_score)
+
+        This mirrors the graded QoS shape used by prior in-house models —
+        a small dip below threshold incurs a small penalty, not a cliff,
+        and being inside budget incurs no QoS penalty at all. The twin's
+        binary ``is_safe`` flag remains available in ``info`` for logging.
     """
 
     metadata = {"render_modes": []}
@@ -123,8 +138,20 @@ class SingleSiteUPFEnv(gym.Env):
         # --- Reward weights ---
         rw = self.scenario_cfg.get("reward_weights", {})
         self._w_energy = float(rw.get("energy_weight", 1.0))
-        self._w_qos = float(rw.get("qos_weight", 1.0))
+        self._qos_lambda = float(rw.get("qos_lambda", 5.0))
+        self._perf_threshold = float(rw.get("performance_threshold", 0.90))
         self._w_switch = float(rw.get("switching_weight", 0.1))
+
+        # --- QoS budgets, used to normalize delay/loss into [0, 1] ---
+        qos_cfg = self.scenario_cfg.get("upf", {}).get("qos_budget", {})
+        self._delay_budget_us = float(qos_cfg.get("delay_budget_us", 200.0))
+        self._max_loss_pkts = float(qos_cfg.get("max_loss_pkts_per_interval", 5.0))
+        if self._delay_budget_us <= 0 or self._max_loss_pkts <= 0:
+            raise ValueError(
+                "delay_budget_us and max_loss_pkts_per_interval must be > 0 "
+                "to normalize QoS scores; got "
+                f"{self._delay_budget_us=}, {self._max_loss_pkts=}"
+            )
 
         # --- Initial action ---
         ia = self.scenario_cfg.get("initial_action", "DPDK")
@@ -192,10 +219,26 @@ class SingleSiteUPFEnv(gym.Env):
             self._current_action = new_current
 
         energy_wh = float(composite.power_watts) * self._step_h
-        unsafe_penalty = 0.0 if bool(composite.is_safe) else 1.0
+
+        # Graded QoS score: continuous performance ∈ [0, 1] derived from
+        # the twin's continuous delay/loss predictions. Score is 1.0
+        # while we're inside budget (any headroom is fine), then declines
+        # linearly with how far we've exceeded budget. min() picks the
+        # limiting metric.
+        delay_us = float(composite.delay_us)
+        loss_pkts = float(composite.predicted_loss)
+        delay_excess = max(0.0, delay_us - self._delay_budget_us)
+        loss_excess = max(0.0, loss_pkts - self._max_loss_pkts)
+        delay_score = max(0.0, 1.0 - delay_excess / self._delay_budget_us)
+        loss_score = max(0.0, 1.0 - loss_excess / self._max_loss_pkts)
+        performance = min(delay_score, loss_score)
+        qos_penalty = self._qos_lambda * max(
+            0.0, self._perf_threshold - performance
+        )
+
         reward = -(
             self._w_energy * energy_wh
-            + self._w_qos * unsafe_penalty
+            + qos_penalty
             + self._w_switch * float(sw_energy)
         )
 
@@ -205,6 +248,10 @@ class SingleSiteUPFEnv(gym.Env):
             "actual_load_gbps": load,
             "predicted_load_gbps": predicted,
             "power_watts": float(composite.power_watts),
+            "delay_us": delay_us,
+            "predicted_loss": loss_pkts,
+            "performance": performance,
+            "qos_penalty": qos_penalty,
             "switching_energy_wh": float(sw_energy),
             "is_safe": bool(composite.is_safe),
             "timestep": int(self._t),

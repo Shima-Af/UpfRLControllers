@@ -49,13 +49,27 @@ action_space:
     0: "DPDK"
     1: "USR"
 
-# Reward = -(energy_weight * energy_wh
-#           + qos_weight * unsafe_penalty
-#           + switching_weight * switching_energy_wh)
-# Placeholder weights — to be tuned during Phase 2 PPO sanity checks.
+# Reward (graded QoS, modelled on the prior in-house controller):
+#
+#   delay_score = max(0, 1 - delay_us / delay_budget_us)
+#   loss_score  = max(0, 1 - predicted_loss / max_loss_pkts_per_interval)
+#   performance = min(delay_score, loss_score)           # in [0, 1]
+#   qos_penalty = qos_lambda * max(0, performance_threshold - performance)
+#
+#   reward = -(energy_weight * energy_wh
+#              + qos_penalty
+#              + switching_weight * switching_energy_wh)
+#
+# Why graded: the digital twin's `is_safe` is a hard AND of two
+# thresholds, so any time the surrogate predicted loss strayed above the
+# threshold the agent paid the full penalty — no gradient between
+# "barely safe" and "barely unsafe." Graded penalty restores the smooth
+# signal the old model trained against. qos_lambda is the slope; at
+# performance=0 it bites at most qos_lambda * performance_threshold.
 reward_weights:
   energy_weight: 1.0
-  qos_weight: 1.0
+  qos_lambda: 5.0
+  performance_threshold: 0.90
   switching_weight: 0.1
 
 # Training placeholders. Conservative values so a sanity-check run
