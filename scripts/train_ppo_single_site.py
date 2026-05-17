@@ -113,7 +113,7 @@ def _parse_args() -> argparse.Namespace:
             "Forecaster slice used by EvalCallback to select the best "
             "checkpoint. Default 'val'. Do not use 'test' here — the "
             "test slice is reserved for the headline number reported "
-            "via scripts/evaluate_test_split.py."
+            "via research/phase2/evaluate_test_split.py."
         ),
     )
     p.add_argument(
@@ -156,7 +156,7 @@ def main() -> int:
     if args.eval_split == "test" or args.rollout_split == "test":
         raise SystemExit(
             "Refusing to use the test split during training or end-of-run "
-            "rollout. Use scripts/evaluate_test_split.py for the test set."
+            "rollout. Use research/phase2/evaluate_test_split.py for the test set."
         )
 
     print(f"Cluster idx:      {args.cluster_idx}")

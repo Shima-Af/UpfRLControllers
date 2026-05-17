@@ -5,7 +5,7 @@ best-of-val checkpoint to:
 
     experiments/ppo_single_site_ensemble_<ts>/cluster_<k>/ppo_single_site.zip
 
-``scripts/evaluate_multi_site_test.py --ensemble-dir <that dir>`` then
+``research/phase3/evaluate_test_split.py --ensemble-dir <that dir>`` then
 stacks them into a joint policy for the head-to-head against the
 centralised PPO.
 
@@ -133,7 +133,7 @@ def main() -> int:
     print("-" * 60)
     print(f"Ensemble dir: {args.out_dir}")
     print(
-        "Next: python scripts/evaluate_multi_site_test.py "
+        "Next: python research/phase3/evaluate_test_split.py "
         f"--ensemble-dir {args.out_dir.relative_to(REPO_ROOT)}"
     )
     return 0

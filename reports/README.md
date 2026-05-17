@@ -7,12 +7,12 @@ section.
 | Phase | Status | Report |
 |---|---|---|
 | 2 — Single-site PPO sanity check | done | [phase-2/](phase-2/README.md) |
-| 3 — Multi-site centralized PPO | pending | — |
-| 4 — Independent per-site PPO | pending | — |
-| 5 — PettingZoo multi-agent env | pending | — |
-| 6 — MAPPO / CTDE | pending | — |
-| 7 — Final comparison | pending | — |
+| 3 — Multi-site PPO (centralised + ensemble) | done | [phase-3/](phase-3/README.md) |
+| 6 — MAPPO / CTDE | done | [phase-6/](phase-6/README.md) |
+| 7 — Final multi-seed comparison | done | [phase-7/](phase-7/README.md) |
 
-Each phase has a `scripts/generate_phaseN_report_figures.py` that regenerates
+Paper artifacts: [paper-draft/](paper-draft/README.md), [paper-letters/](paper-letters/README.md).
+
+Each phase has a `research/phaseN/generate_figures.py` that regenerates
 the figures from the current code + trained models. Re-run after any
 reward-shape or hyperparameter change to keep the report in sync.

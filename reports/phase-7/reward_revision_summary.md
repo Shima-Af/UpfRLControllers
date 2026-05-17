@@ -6,8 +6,8 @@ Reward magnitudes are NOT directly comparable across v1 and v2 (switching cost m
 
 | Controller | Reward v1 (flat) | Reward v2 (physics) | Unsafe v1 % | Unsafe v2 % | Flips v1 | Flips v2 |
 |---|---:|---:|---:|---:|---:|---:|
-| MAPPO | -5610 ± 43 | -5667 ± 136 | 0.51 | 0.55 | 282 | 294 |
-| IPPO-ensemble | -5787 ± 66 | -5757 ± 100 | 0.56 | 0.56 | 190 | 198 |
+| MAPPO | -5610 ± 43 | -5633 ± 100 | 0.51 | 0.52 | 282 | 297 |
+| IPPO-ensemble | -5787 ± 66 | -5787 ± 89 | 0.56 | 0.57 | 190 | 203 |
 | centralised-PPO | -12269 ± 5186 | -14458 ± 4509 | 2.73 | 3.73 | 67 | 169 |
 | always-DPDK | -7201 ± 0 | -7201 ± 0 | 0.38 | 0.38 | 0 | 0 |
 | threshold(derived=81.0Mbps) | -7626 ± 0 | -7623 ± 0 | 1.42 | 1.42 | 425 | 425 |
@@ -21,8 +21,8 @@ Reward magnitudes are NOT directly comparable across v1 and v2 (switching cost m
 | 1 | MAPPO | MAPPO |
 | 2 | IPPO-ensemble | IPPO-ensemble |
 | 3 | hysteresis(t_up=81,t_down=61,cd=1) | hysteresis(t_up=81,t_down=61,cd=1) |
-| 4 | always-DPDK | hysteresis(t_up=81,t_down=0,cd=1) |
-| 5 | hysteresis(t_up=81,t_down=0,cd=1) | always-DPDK |
+| 4 | always-DPDK | always-DPDK |
+| 5 | hysteresis(t_up=81,t_down=0,cd=1) | hysteresis(t_up=81,t_down=0,cd=1) |
 | 6 | threshold(derived=81.0Mbps) | threshold(derived=81.0Mbps) |
 | 7 | centralised-PPO | centralised-PPO |
 

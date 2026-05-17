@@ -16,7 +16,7 @@ penalty.
 > slice. Once the upstream forecaster started emitting
 > `predictions_{train,val,test}.npy`, we wired the env's new `split=`
 > argument and retrained from scratch. Headline numbers below are
-> now produced by [`scripts/evaluate_test_split.py`](../../scripts/evaluate_test_split.py),
+> now produced by [`research/phase2/evaluate_test_split.py`](../../research/phase2/evaluate_test_split.py),
 > which is the *only* script in the repo allowed to touch the test
 > slice for PPO. The trainer and `EvalCallback` are pinned to
 > train/val.
@@ -127,7 +127,7 @@ python scripts/train_ppo_single_site.py \
 One-shot held-out test evaluation, the source of the headline numbers:
 
 ```bash
-python scripts/evaluate_test_split.py
+python research/phase2/evaluate_test_split.py
 # writes reports/phase-2/test_split_summary.json
 ```
 
@@ -135,7 +135,7 @@ Static figures (use `--split test` for the report, `--split val`
 to debug the checkpoint-selection criterion):
 
 ```bash
-python scripts/generate_phase2_report_figures.py --split test
+python research/phase2/generate_figures.py --split test
 ```
 
 Interactive exploration — the FastAPI + React dashboard:

@@ -3,20 +3,20 @@
     {
       "controller": "MAPPO",
       "reward_v1": -5609.634736083821,
-      "reward_v2": -5666.689619375344,
+      "reward_v2": -5633.009162540169,
       "unsafe_v1": 0.5128840436075323,
-      "unsafe_v2": 0.5450941526263627,
+      "unsafe_v2": 0.5215559960356788,
       "flips_v1": 282.5,
-      "flips_v2": 294.5
+      "flips_v2": 297.25
     },
     {
       "controller": "IPPO-ensemble",
       "reward_v1": -5787.139313404752,
-      "reward_v2": -5756.549399335575,
+      "reward_v2": -5787.152716091352,
       "unsafe_v1": 0.5574826560951437,
-      "unsafe_v2": 0.5550049554013875,
+      "unsafe_v2": 0.5673934588701685,
       "flips_v1": 190.0,
-      "flips_v2": 198.25
+      "flips_v2": 202.875
     },
     {
       "controller": "centralised-PPO",
@@ -30,7 +30,7 @@
     {
       "controller": "always-DPDK",
       "reward_v1": -7201.084827726416,
-      "reward_v2": -7201.084827726417,
+      "reward_v2": -7201.084827726416,
       "unsafe_v1": 0.37661050545094155,
       "unsafe_v2": 0.37661050545094155,
       "flips_v1": 0.0,

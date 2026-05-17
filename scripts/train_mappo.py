@@ -2,7 +2,7 @@
 
 Defaults: train on `split="train"`, val-based best-checkpoint
 selection, refuses to touch the test split (use
-``scripts/evaluate_mappo_test.py`` for that).
+``research/phase6/evaluate_test_split.py`` for that).
 
 Usage:
     python scripts/train_mappo.py --total-timesteps 200000
@@ -73,7 +73,7 @@ def main() -> int:
     if args.eval_split == "test":
         raise SystemExit(
             "Refusing to use the test split for EvalCallback. Use "
-            "scripts/evaluate_mappo_test.py for the test-set headline number."
+            "research/phase6/evaluate_test_split.py for the test-set headline number."
         )
 
     ts = dt.datetime.utcnow().strftime("%Y%m%dT%H%M%S")

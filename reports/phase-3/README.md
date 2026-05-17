@@ -17,7 +17,7 @@ controller today. The centralised approach is parked pending more
 training compute and architectural changes (see "Next steps" below).
 
 > **Methodology.** All numbers below are produced by
-> [`scripts/evaluate_multi_site_test.py`](../../scripts/evaluate_multi_site_test.py),
+> [`research/phase3/evaluate_test_split.py`](../../research/phase3/evaluate_test_split.py),
 > the only script in the repo allowed to touch the test slice for
 > multi-site PPO. Centralised PPO is trained on `split="train"`
 > (5073 steps × 10 clusters), best-checkpoint selected against
@@ -203,7 +203,7 @@ python scripts/train_ppo_ensemble.py \
 One-shot test evaluation (the source of the headline numbers):
 
 ```bash
-python scripts/evaluate_multi_site_test.py \
+python research/phase3/evaluate_test_split.py \
   --ensemble-dir experiments/ppo_single_site_ensemble_<ts>
 # writes reports/phase-3/test_split_summary.json
 ```
@@ -211,5 +211,5 @@ python scripts/evaluate_multi_site_test.py \
 Static figures:
 
 ```bash
-python scripts/generate_phase3_report_figures.py --split test
+python research/phase3/generate_figures.py --split test
 ```

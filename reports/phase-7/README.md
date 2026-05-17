@@ -20,7 +20,7 @@ combined standard deviation** (~78), and the **worst MAPPO seed
 (−5657) still beats the best IPPO-ensemble seed (−5707)**.
 
 > **Methodology.** All numbers from
-> [`scripts/evaluate_phase7_multiseed.py`](../../scripts/evaluate_phase7_multiseed.py)
+> [`research/phase7/evaluate_multiseed.py`](../../research/phase7/evaluate_multiseed.py)
 > running each checkpoint once on `split="test"` (cluster_0..9, full
 > 1009-step episode, deterministic policy). Trained controllers were
 > trained on `split="train"` with `EvalCallback`-equivalent
@@ -205,12 +205,12 @@ done
 # Multi-seed test evaluation (auto-derives the threshold + hysteresis
 # operating points from the twin's surrogate, then evaluates all
 # checkpoints on the test slice):
-python scripts/evaluate_phase7_multiseed.py
+python research/phase7/evaluate_multiseed.py
 # writes reports/phase-7/multiseed_summary.json
 
 # Override the hysteresis band for sensitivity sweeps:
-python scripts/evaluate_phase7_multiseed.py --tuned-band-mbps 50
+python research/phase7/evaluate_multiseed.py --tuned-band-mbps 50
 
 # Figures:
-python scripts/generate_phase7_report_figures.py
+python research/phase7/generate_figures.py
 ```

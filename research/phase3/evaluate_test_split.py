@@ -1,6 +1,6 @@
 """One-shot evaluation of multi-site PPO on the held-out test slice.
 
-Mirrors ``scripts/evaluate_test_split.py`` but for Phase 3.
+Mirrors ``research/phase2/evaluate_test_split.py`` but for Phase 3.
 
 Compares:
     - multi-PPO (centralised, joint MultiDiscrete action)
@@ -29,7 +29,7 @@ from stable_baselines3 import PPO
 
 warnings.filterwarnings("ignore")
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 

@@ -96,22 +96,43 @@ vendored from the digital-twin repo.
 
 ## Repository layout
 
+The repo is split into a **library** (reusable, tested), **canonical CLIs**
+(setup + trainers), **research one-offs** (per-phase evaluators, figure
+generators, sweeps — frozen for reproducibility), and **artifact dirs**.
+
 ```
 UpfRLControllers/
-  configs/                  YAML configs (digital-twin paths, RL scenario)
-  data/external/            Digital-twin artifacts pulled from S3 (gitignored)
-  src/
+  src/                      LIBRARY — importable from research/ and dashboard/
     envs/                   Gymnasium / PettingZoo environments
-    rewards/                Reward function modules
     trainers/               PPO / MAPPO trainers
-    evaluation/             Evaluation utilities and metrics
-    baselines/              Static, threshold, hysteresis controllers
-    utils/                  Helpers (config loading, etc.)
-  scripts/                  Entry-point scripts (setup checks, training)
+    baselines/              Threshold + hysteresis controllers
+    rewards/                (reserved — empty for now)
+    evaluation/             (reserved — empty for now)
+    utils/                  Config loading, project paths
+  scripts/                  CANONICAL CLIs (still actively used)
+    bootstrap_external_data.py, check_setup.py, smoke_test_single_site_env.py
+    train_ppo_single_site.py, train_ppo_multi_site.py,
+    train_ppo_ensemble.py, train_mappo.py
+  research/                 ONE-OFFS — see research/README.md
+    phase2/ phase3/ phase6/ phase7/ paper-letters/
+  tests/                    pytest suite for src/
+  dashboard/                FastAPI + React replay/comparison dashboard
+  configs/                  YAML configs (digital-twin paths, RL scenario)
+  reports/                  Supervisor-facing writeups + paper drafts
+  data/external/            Digital-twin artifacts pulled from S3 (gitignored)
   experiments/              Per-experiment outputs (gitignored)
   results/                  Aggregated results and figures (gitignored)
   notebooks/                Exploratory notebooks
 ```
+
+Run the test suite:
+
+```bash
+pytest -q
+```
+
+Tests skip cleanly when `data/external/` is empty, so they are safe on a
+fresh checkout before `dvc pull`.
 
 ## Phase 1 — Single-site Gymnasium environment ✓
 
@@ -143,7 +164,7 @@ slice the episode draws from. Per-step surrogate calls are pre-cached at
 a feed-forward PPO on `SingleSiteUPFEnv`. Training uses `split="train"`
 (5073 steps, ~53 days); `EvalCallback` selects the best checkpoint on
 `split="val"`; the headline number is evaluated once on `split="test"` by
-[scripts/evaluate_test_split.py](scripts/evaluate_test_split.py).
+[research/phase2/evaluate_test_split.py](research/phase2/evaluate_test_split.py).
 
 **Test-split result on cluster 0** (200k steps, ~20 min wall):
 
@@ -214,20 +235,21 @@ python scripts/train_ppo_multi_site.py --total-timesteps 200000
 python scripts/train_ppo_ensemble.py --total-timesteps 200000 --n-parallel 4
 
 # Evaluate both on test split
-python scripts/evaluate_multi_site_test.py \
+python research/phase3/evaluate_test_split.py \
   --ensemble-dir experiments/ppo_single_site_ensemble_<ts>
 ```
 
 ## Development roadmap
 
-| Phase | Description | Status |
-|---|---|---|
-| Phase 0 | Repository setup and artifact loading | ✓ done |
-| Phase 1 | Single-site Gymnasium environment | ✓ done |
-| Phase 2 | Single-site PPO (paper-aligned, train/val/test split) | ✓ done |
-| Phase 3a | Centralised multi-site PPO | ✓ done (negative result) |
-| Phase 3b | Per-cluster ensemble (deployable deliverable) | ✓ done |
-| Phase 4 | Switching-cost physics + cooldown sensitivity sweep | pending |
-| Phase 5 | PettingZoo-style multi-agent environment | pending |
-| Phase 6 | MAPPO / CTDE | pending |
-| Phase 7 | Final comparison across all controllers | pending |
+| Phase | Description | Status | Report |
+|---|---|---|---|
+| Phase 0 | Repository setup and artifact loading | ✓ done | — |
+| Phase 1 | Single-site Gymnasium environment | ✓ done | — |
+| Phase 2 | Single-site PPO (paper-aligned, train/val/test split) | ✓ done | [reports/phase-2/](reports/phase-2/) |
+| Phase 3a | Centralised multi-site PPO | ✓ done (negative result) | [reports/phase-3/](reports/phase-3/) |
+| Phase 3b | Per-cluster ensemble (deployable deliverable) | ✓ done | [reports/phase-3/](reports/phase-3/) |
+| Phase 4 | Switching-cost physics + cooldown sensitivity sweep | ✓ done | folded into [reports/phase-7/](reports/phase-7/) |
+| Phase 5 | PettingZoo-style multi-agent environment | ✓ done | — ([src/envs/multi_agent_upf_env.py](src/envs/multi_agent_upf_env.py)) |
+| Phase 6 | MAPPO / CTDE | ✓ done | [reports/phase-6/](reports/phase-6/) |
+| Phase 7 | Final multi-seed comparison across all controllers | ✓ done | [reports/phase-7/](reports/phase-7/) |
+| Paper | COMCOM draft + letters version | ✓ drafted | [reports/paper-draft/](reports/paper-draft/), [reports/paper-letters/](reports/paper-letters/) |

@@ -27,3 +27,10 @@ dev = ["jupyter", "ipykernel", "pytest"]
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["src*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = [
+  "ignore::sklearn.exceptions.InconsistentVersionWarning",
+  "ignore::DeprecationWarning",
+]

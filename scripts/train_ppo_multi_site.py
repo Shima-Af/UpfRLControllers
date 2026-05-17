@@ -2,7 +2,7 @@
 
 Defaults: trains on the forecaster's training slice, selects best
 checkpoint against the validation slice, refuses to touch ``test``
-(use ``scripts/evaluate_multi_site_test.py`` for that).
+(use ``research/phase3/evaluate_test_split.py`` for that).
 
 Usage:
     python scripts/train_ppo_multi_site.py \\
@@ -94,7 +94,7 @@ def main() -> int:
     if args.eval_split == "test" or args.rollout_split == "test":
         raise SystemExit(
             "Refusing to use the test split during training or end-of-run "
-            "rollout. Use scripts/evaluate_multi_site_test.py for the test set."
+            "rollout. Use research/phase3/evaluate_test_split.py for the test set."
         )
 
     ts = dt.datetime.utcnow().strftime("%Y%m%dT%H%M%S")

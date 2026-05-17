@@ -346,7 +346,7 @@ centralised case; total training budget is `K × 200 k = 2M` env steps
 ### 5.3. Evaluation protocol
 
 All controllers are evaluated once on `split = test` using
-[`scripts/evaluate_phase7_multiseed.py`](../../scripts/evaluate_phase7_multiseed.py).
+[`research/phase7/evaluate_multiseed.py`](../../research/phase7/evaluate_multiseed.py).
 The script (i) discovers all checkpoints under
 `models/{phase}/seed_*/`, (ii) auto-derives the threshold and
 hysteresis operating points from the twin's surrogate, (iii) runs
@@ -384,7 +384,7 @@ MAPPO is the best controller on mean reward, energy, and unsafe
 rate. A paired bootstrap on the 8 seed-matched MAPPO − IPPO deltas
 gives a mean gap of **+154 reward units, 95 % CI [+28, +262],
 one-sided $p = 0.009$** (script:
-[`scripts/paired_bootstrap_mappo_vs_ippo.py`](../../scripts/paired_bootstrap_mappo_vs_ippo.py)).
+[`research/phase7/paired_bootstrap.py`](../../research/phase7/paired_bootstrap.py)).
 The MAPPO architectural win over IPPO is therefore significant at
 the 0.01 level under the physics-grounded reward. The gap to the
 strongest classical baseline (hysteresis at the band that optimises
@@ -698,11 +698,11 @@ for s in 42 7 13 99; do
 done
 
 # One-shot test evaluation (auto-derives classical operating points)
-python scripts/evaluate_phase7_multiseed.py
+python research/phase7/evaluate_multiseed.py
 #   -> reports/phase-7/multiseed_summary.json
 
 # Paper figures
-python scripts/generate_phase7_report_figures.py
+python research/phase7/generate_figures.py
 ```
 
 Interactive dashboard:

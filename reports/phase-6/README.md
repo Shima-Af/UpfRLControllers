@@ -16,7 +16,7 @@ empirical evidence that the right answer at this scale is CTDE, not
 either of (a) one MLP doing everything or (b) ten independent MLPs.
 
 > **Methodology.** Numbers below are produced by
-> [`scripts/evaluate_mappo_test.py`](../../scripts/evaluate_mappo_test.py),
+> [`research/phase6/evaluate_test_split.py`](../../research/phase6/evaluate_test_split.py),
 > the only script in the repo allowed to touch the test slice for
 > MAPPO. Training: 200 k env steps on `split="train"`, val-based
 > best-checkpoint selection (`split="val"`), one-shot test
@@ -182,9 +182,9 @@ In priority order:
 python scripts/train_mappo.py --total-timesteps 200000 --n-steps 1024
 
 # Test-set evaluation (the source of the headline number)
-python scripts/evaluate_mappo_test.py
+python research/phase6/evaluate_test_split.py
 # writes reports/phase-6/test_split_summary.json
 
 # Static figures
-python scripts/generate_phase6_report_figures.py --split test
+python research/phase6/generate_figures.py --split test
 ```

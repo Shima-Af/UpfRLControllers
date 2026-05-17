@@ -20,7 +20,7 @@ from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = Path(__file__).resolve().parents[2]
 PHASE7 = REPO_ROOT / "reports/phase-7"
 OUT_DIR = REPO_ROOT / "reports/paper-letters"
 

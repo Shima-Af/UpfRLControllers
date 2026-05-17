@@ -64,7 +64,7 @@ strictly a compression — not a different result.
    so a single primary code is the cleanest pick. NL1.8.1 listed
    as fallback if the editor requests a secondary.
 3. ✅ **Figure 1.** Generated; embedded in `paper.md`. Source:
-   `scripts/generate_letters_figure1.py`, reproducible from
+   `research/paper-letters/generate_figure1.py`, reproducible from
    `reports/phase-7/paired_bootstrap_mappo_vs_ippo.json` and
    `multiseed_summary.json`.
 4. **Bibliography.** User will handle. Twelve `[TODO]` entries

@@ -77,7 +77,7 @@ def train_ppo_multi_site(
     Split semantics mirror Phase 2: ``train_split`` drives the rollout
     buffer; ``eval_split`` drives best-model selection; the test
     slice is reserved for the headline evaluation in
-    ``scripts/evaluate_multi_site_test.py``.
+    ``research/phase3/evaluate_test_split.py``.
     """
     env = DummyVecEnv(
         [_make_env(horizon_idx, seed, train_split, cluster_indices)]

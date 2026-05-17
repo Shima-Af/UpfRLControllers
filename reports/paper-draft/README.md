@@ -3,7 +3,7 @@
 **Status.** v0.1 draft of the conference paper, written from the
 Phase 7 multi-seed results. All numbers in the draft are pulled from
 [`reports/phase-7/multiseed_summary.json`](../phase-7/multiseed_summary.json)
-and are reproducible via `scripts/evaluate_phase7_multiseed.py`.
+and are reproducible via `research/phase7/evaluate_multiseed.py`.
 
 ## Files
 
@@ -18,8 +18,8 @@ and are reproducible via `scripts/evaluate_phase7_multiseed.py`.
   (v2)** — switching cost is now driven by the twin's measured
   spike energy folded into SEC, not by a flat constant.
 - All numbers in tables are live — re-run
-  `scripts/evaluate_phase7_multiseed.py` and
-  `scripts/compare_reward_revisions.py` and they refresh
+  `research/phase7/evaluate_multiseed.py` and
+  `research/phase7/compare_reward_revisions.py` and they refresh
   automatically.
 - §6.6 includes the v1 (flat) vs v2 (physics) delta table and a
   cooldown sensitivity sweep on MAPPO.
@@ -57,7 +57,7 @@ and are reproducible via `scripts/evaluate_phase7_multiseed.py`.
    deltas: mean **+154 reward units, 95 % CI [+28, +262],
    one-sided $p = 0.009$**. The architectural win is significant
    at α = 0.01. 7/8 MAPPO seeds beat IPPO. Script:
-   [`scripts/paired_bootstrap_mappo_vs_ippo.py`](../../scripts/paired_bootstrap_mappo_vs_ippo.py).
+   [`research/phase7/paired_bootstrap.py`](../../research/phase7/paired_bootstrap.py).
 7. ✅ **Physics-grounded switching cost** (DONE 2026-05-17).
    `c_DPDK / c_USR` flat constants removed; twin's `sw_energy_wh`
    folded into the SEC term as `P_switch = E_sw / Δt`. All three
