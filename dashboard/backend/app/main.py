@@ -28,11 +28,17 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
+from .multi_policies import MultiPolicyRegistry, run_multi_rollout  # noqa: E402
 from .policies import PolicyRegistry, run_rollout  # noqa: E402
 from .schemas import (  # noqa: E402
     ClusterInfo,
     CompareRequest,
     CompareResponse,
+    MultiClusterRolloutResponse,
+    MultiCompareRequest,
+    MultiCompareResponse,
+    MultiPolicyInfo,
+    MultiRolloutRequest,
     PolicyInfo,
     RolloutRequest,
     RolloutResponse,
@@ -53,6 +59,7 @@ app.add_middleware(
 )
 
 registry = PolicyRegistry(repo_root=REPO_ROOT)
+multi_registry = MultiPolicyRegistry(repo_root=REPO_ROOT)
 
 
 # Cached load-statistics computation. Built lazily once and reused.
@@ -119,7 +126,10 @@ def post_rollout(req: RolloutRequest) -> RolloutResponse:
             horizon_idx=req.horizon_idx,
             seed=req.seed,
             threshold_gbps=req.threshold_gbps,
+            hysteresis_band_mbps=req.hysteresis_band_mbps,
+            hysteresis_cooldown_steps=req.hysteresis_cooldown_steps,
             max_steps=req.max_steps,
+            split=req.split,
         )
     except FileNotFoundError as e:
         raise HTTPException(status_code=400, detail=str(e)) from e
@@ -142,7 +152,10 @@ def post_compare(req: CompareRequest) -> CompareResponse:
                     horizon_idx=req.horizon_idx,
                     seed=req.seed,
                     threshold_gbps=req.threshold_gbps,
+                    hysteresis_band_mbps=req.hysteresis_band_mbps,
+                    hysteresis_cooldown_steps=req.hysteresis_cooldown_steps,
                     max_steps=req.max_steps,
+                    split=req.split,
                 )
             )
         except FileNotFoundError as e:
@@ -152,5 +165,79 @@ def post_compare(req: CompareRequest) -> CompareResponse:
     return CompareResponse(
         cluster_idx=req.cluster_idx,
         horizon_idx=req.horizon_idx,
+        rollouts=rollouts,
+    )
+
+
+# ---------------------------------------------------------------------------
+# Multi-cluster (Phase 7) endpoints
+# ---------------------------------------------------------------------------
+
+
+@app.get("/multi/policies", response_model=list[MultiPolicyInfo])
+def list_multi_policies() -> list[MultiPolicyInfo]:
+    return multi_registry.list_policies()
+
+
+@app.get("/multi/derived")
+def get_derived_thresholds() -> dict:
+    """Expose the twin-derived threshold operating points (Mbps/Gbps)."""
+    try:
+        return multi_registry.derived_thresholds()
+    except FileNotFoundError as e:
+        raise HTTPException(status_code=400, detail=str(e)) from e
+
+
+@app.post("/multi/rollout", response_model=MultiClusterRolloutResponse)
+def post_multi_rollout(req: MultiRolloutRequest) -> MultiClusterRolloutResponse:
+    try:
+        return run_multi_rollout(
+            multi_registry,
+            policy_id=req.policy,
+            horizon_idx=req.horizon_idx,
+            split=req.split,
+            seed=req.seed,
+            max_steps=req.max_steps,
+            threshold_gbps=req.threshold_gbps,
+            hysteresis_band_mbps=req.hysteresis_band_mbps,
+            hysteresis_cooldown_steps=req.hysteresis_cooldown_steps,
+        )
+    except FileNotFoundError as e:
+        raise HTTPException(status_code=400, detail=str(e)) from e
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e)) from e
+
+
+@app.post("/multi/compare", response_model=MultiCompareResponse)
+def post_multi_compare(req: MultiCompareRequest) -> MultiCompareResponse:
+    if not req.policies:
+        raise HTTPException(
+            status_code=400, detail="Must request at least one policy."
+        )
+    rollouts: list[MultiClusterRolloutResponse] = []
+    K: int | None = None
+    for pid in req.policies:
+        try:
+            r = run_multi_rollout(
+                multi_registry,
+                policy_id=pid,
+                horizon_idx=req.horizon_idx,
+                split=req.split,
+                seed=req.seed,
+                max_steps=req.max_steps,
+                threshold_gbps=req.threshold_gbps,
+                hysteresis_band_mbps=req.hysteresis_band_mbps,
+                hysteresis_cooldown_steps=req.hysteresis_cooldown_steps,
+            )
+        except FileNotFoundError as e:
+            raise HTTPException(status_code=400, detail=str(e)) from e
+        except ValueError as e:
+            raise HTTPException(status_code=400, detail=str(e)) from e
+        rollouts.append(r)
+        K = r.summary.K
+    return MultiCompareResponse(
+        horizon_idx=req.horizon_idx,
+        split=req.split,
+        K=K or 10,
         rollouts=rollouts,
     )

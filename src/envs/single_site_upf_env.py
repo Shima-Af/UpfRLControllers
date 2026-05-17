@@ -9,6 +9,14 @@ One episode = one cluster's full time series at a fixed forecast
 horizon. At each step the agent picks a UPF type (0=DPDK, 1=USR); the
 digital twin evaluates power and QoS for the realised load and applies
 switching-cost accounting via ``DigitalTwin.compute_step``.
+
+Switching cost (revised — physics-grounded). Earlier revisions used a
+flat reward constant per switch event (``c_dpdk``, ``c_usr``) running
+parallel to the twin's measured ``sw_energy_wh``; the two paths could
+drift. This version folds ``sw_energy_wh`` directly into the step's
+effective power by averaging it over the step duration, so the SEC
+term carries both steady-state and transition energy. The flat
+constants are kept in the config as a fallback (default 0.0).
 """
 
 from __future__ import annotations
@@ -43,8 +51,12 @@ class SingleSiteUPFEnv(gym.Env):
         index history_window+4               : previous SEC (W/Mbps)
         index history_window+5               : cooldown progress in [0, 1]
 
-    Reward (paper-aligned, Section 4.5):
-        SEC_t  = P_t / max(load_mbps, eps)
+    Reward (paper-aligned, Section 4.5; switching cost revised to
+    physics-grounded form):
+        P_steady_t   = composite.power_watts        # twin steady-state W
+        P_switch_t   = sw_energy_wh / step_h        # transition energy averaged over step (W)
+        P_eff_t      = P_steady_t + P_switch_t
+        SEC_t        = P_eff_t / max(load_mbps, eps)
         delay_excess = max(0, delay_us - delay_budget_us)
         loss_excess  = max(0, predicted_loss - max_loss_pkts_per_interval)
         delay_score  = max(0, 1 - delay_excess / delay_budget_us)
@@ -52,12 +64,14 @@ class SingleSiteUPFEnv(gym.Env):
         Q_t          = min(delay_score, loss_score)
         L_QoS        = lambda_qos * max(0, tau - Q_t)
         L_SW         = c_dpdk if realised switched->DPDK else
-                       c_usr  if realised switched->USR else 0
+                       c_usr  if realised switched->USR else 0  (default 0)
         L_CD         = soft cooldown surcharge (our extension)
         reward       = -(alpha * SEC_t + L_QoS + L_SW + L_CD)
     """
 
     metadata = {"render_modes": []}
+
+    _VALID_SPLITS = ("train", "val", "test")
 
     def __init__(
         self,
@@ -66,9 +80,15 @@ class SingleSiteUPFEnv(gym.Env):
         scenario_cfg: dict | None = None,
         paths_cfg: dict | None = None,
         project_root_dir: str | Path | None = None,
+        split: str = "test",
     ) -> None:
         super().__init__()
 
+        if split not in self._VALID_SPLITS:
+            raise ValueError(
+                f"split must be one of {self._VALID_SPLITS}, got {split!r}"
+            )
+        self.split = split
         self.cluster_idx = int(cluster_idx)
         self.horizon_idx = int(horizon_idx)
 
@@ -81,19 +101,34 @@ class SingleSiteUPFEnv(gym.Env):
         )
 
         # --- Traffic artifacts (predictions / targets) ---
+        # Resolution order for the per-split arrays:
+        #   1. paths_cfg["traffic_forecaster"]["predictions_<split>"]
+        #   2. legacy "predictions" / "targets" (test slice only — refuse
+        #      to silently use it for train/val to avoid leakage)
+        #   3. hard-coded default under data/external/...
         tf = self.paths_cfg.get("traffic_forecaster", {})
-        pred_rel = tf.get(
-            "predictions", "data/external/traffic_forecaster/predictions_test.npy"
-        )
-        targ_rel = tf.get(
-            "targets", "data/external/traffic_forecaster/targets_test.npy"
-        )
+        pred_key = f"predictions_{split}"
+        targ_key = f"targets_{split}"
+        default_pred = f"data/external/traffic_forecaster/predictions_{split}.npy"
+        default_targ = f"data/external/traffic_forecaster/targets_{split}.npy"
+        if split == "test":
+            pred_rel = tf.get(pred_key, tf.get("predictions", default_pred))
+            targ_rel = tf.get(targ_key, tf.get("targets", default_targ))
+        else:
+            pred_rel = tf.get(pred_key, default_pred)
+            targ_rel = tf.get(targ_key, default_targ)
         pred_path = self._root / pred_rel
         targ_path = self._root / targ_rel
         if not pred_path.exists():
-            raise FileNotFoundError(f"Traffic predictions not found: {pred_path}")
+            raise FileNotFoundError(
+                f"Traffic predictions for split={split!r} not found: {pred_path}. "
+                "Run `python scripts/bootstrap_external_data.py` or copy the "
+                "matching predictions_<split>.npy from the forecaster repo."
+            )
         if not targ_path.exists():
-            raise FileNotFoundError(f"Traffic targets not found: {targ_path}")
+            raise FileNotFoundError(
+                f"Traffic targets for split={split!r} not found: {targ_path}"
+            )
 
         predictions_norm = np.load(pred_path)
         targets_norm = np.load(targ_path)
@@ -229,6 +264,7 @@ class SingleSiteUPFEnv(gym.Env):
             "episode_length": self._N,
             "initial_action": self._initial_action,
             "history_window": self._history_window,
+            "split": self.split,
         }
         return self._obs(), info
 
@@ -256,9 +292,15 @@ class SingleSiteUPFEnv(gym.Env):
         if not pending:
             self._current_action = new_current
 
-        # --- Specific energy consumption (paper Eq. 5) ---
+        # --- Specific energy consumption (paper Eq. 5, revised) ---
+        # Steady-state power from the twin's composite UPF result + the
+        # switching spike from this step amortised over the step duration.
+        # The two are summed BEFORE SEC so a single physical quantity drives
+        # the energy term (no parallel flat constants).
         load_mbps = max(load_gbps * 1000.0, _EPS)
-        power_w = float(composite.power_watts)
+        power_w_steady = float(composite.power_watts)
+        power_w_switch = float(sw_energy_wh) / self._step_h if self._step_h > 0 else 0.0
+        power_w = power_w_steady + power_w_switch
         sec = power_w / load_mbps  # W/Mbps
         energy_term = self._alpha * sec
 
@@ -297,7 +339,9 @@ class SingleSiteUPFEnv(gym.Env):
             "requested_upf": requested,
             "actual_load_gbps": load_gbps,
             "predicted_load_gbps": predicted,
-            "power_watts": power_w,
+            "power_watts": power_w,            # effective (steady + amortised switch spike)
+            "power_watts_steady": power_w_steady,
+            "power_watts_switch": power_w_switch,
             "sec_w_per_mbps": sec,
             "delay_us": delay_us,
             "predicted_loss": loss_pkts,

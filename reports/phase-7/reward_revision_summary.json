@@ -1,0 +1,67 @@
+{
+  "deltas": [
+    {
+      "controller": "MAPPO",
+      "reward_v1": -5609.634736083821,
+      "reward_v2": -5666.689619375344,
+      "unsafe_v1": 0.5128840436075323,
+      "unsafe_v2": 0.5450941526263627,
+      "flips_v1": 282.5,
+      "flips_v2": 294.5
+    },
+    {
+      "controller": "IPPO-ensemble",
+      "reward_v1": -5787.139313404752,
+      "reward_v2": -5756.549399335575,
+      "unsafe_v1": 0.5574826560951437,
+      "unsafe_v2": 0.5550049554013875,
+      "flips_v1": 190.0,
+      "flips_v2": 198.25
+    },
+    {
+      "controller": "centralised-PPO",
+      "reward_v1": -12268.600940332968,
+      "reward_v2": -14457.873491170098,
+      "unsafe_v1": 2.732903865213082,
+      "unsafe_v2": 3.726461843409316,
+      "flips_v1": 67.25,
+      "flips_v2": 168.75
+    },
+    {
+      "controller": "always-DPDK",
+      "reward_v1": -7201.084827726416,
+      "reward_v2": -7201.084827726417,
+      "unsafe_v1": 0.37661050545094155,
+      "unsafe_v2": 0.37661050545094155,
+      "flips_v1": 0.0,
+      "flips_v2": 0.0
+    },
+    {
+      "controller": "threshold(derived=81.0Mbps)",
+      "reward_v1": -7626.479107919347,
+      "reward_v2": -7623.376384178891,
+      "unsafe_v1": 1.417244796828543,
+      "unsafe_v2": 1.417244796828543,
+      "flips_v1": 425.0,
+      "flips_v2": 425.0
+    },
+    {
+      "controller": "hysteresis(t_up=81,t_down=0,cd=1)",
+      "reward_v1": -7201.084827726416,
+      "reward_v2": -7201.084827726416,
+      "unsafe_v1": 0.37661050545094155,
+      "unsafe_v2": 0.37661050545094155,
+      "flips_v1": 0.0,
+      "flips_v2": 0.0
+    },
+    {
+      "controller": "hysteresis(t_up=81,t_down=61,cd=1)",
+      "reward_v1": -6544.453977730032,
+      "reward_v2": -6543.04292604159,
+      "unsafe_v1": 0.9415262636273538,
+      "unsafe_v2": 0.9415262636273538,
+      "flips_v1": 215.0,
+      "flips_v2": 215.0
+    }
+  ]
+}

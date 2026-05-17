@@ -1,4 +1,9 @@
-import type { ClusterInfo, PolicyId, PolicyInfo } from "../api/types";
+import type {
+  ClusterInfo,
+  PolicyId,
+  PolicyInfo,
+  SplitId,
+} from "../api/types";
 
 interface Props {
   policies: PolicyInfo[];
@@ -11,6 +16,12 @@ interface Props {
   setHorizonIdx: (v: number) => void;
   thresholdGbps: number;
   setThresholdGbps: (v: number) => void;
+  hysteresisBandMbps: number;
+  setHysteresisBandMbps: (v: number) => void;
+  hysteresisCooldown: number;
+  setHysteresisCooldown: (v: number) => void;
+  split: SplitId;
+  setSplit: (s: SplitId) => void;
   maxSteps: number | null;
   setMaxSteps: (v: number | null) => void;
   loading: boolean;
@@ -22,7 +33,8 @@ const POLICY_DOT: Record<string, string> = {
   random: "bg-slate-400",
   "always-dpdk": "bg-emerald-500",
   "always-usr": "bg-amber-500",
-  threshold: "bg-purple-500",
+  threshold: "bg-pink-500",
+  hysteresis: "bg-purple-500",
 };
 
 export function Controls(props: Props) {
@@ -89,18 +101,17 @@ export function Controls(props: Props) {
         </div>
         <div className="md:col-span-2">
           <label className="block text-xs font-medium uppercase tracking-wide text-slate-500">
-            Threshold (Gbps)
+            Split
           </label>
-          <input
-            type="number"
-            step={0.01}
-            min={0}
-            value={props.thresholdGbps}
-            onChange={(e) =>
-              props.setThresholdGbps(Number(e.target.value) || 0)
-            }
+          <select
             className="mt-1 w-full rounded-md border border-slate-200 bg-slate-50 px-2 py-1.5 text-sm"
-          />
+            value={props.split}
+            onChange={(e) => props.setSplit(e.target.value as SplitId)}
+          >
+            <option value="train">train (5073)</option>
+            <option value="val">val (1009)</option>
+            <option value="test">test (1009)</option>
+          </select>
         </div>
         <div className="flex items-end md:col-span-3">
           <button
@@ -110,6 +121,55 @@ export function Controls(props: Props) {
           >
             {props.loading ? "Running rollouts…" : "Run comparison"}
           </button>
+        </div>
+      </div>
+
+      <div className="mt-3 grid gap-3 md:grid-cols-12">
+        <div className="md:col-span-3">
+          <label className="block text-xs font-medium uppercase tracking-wide text-slate-500">
+            Threshold (Gbps)
+          </label>
+          <input
+            type="number"
+            step={0.001}
+            min={0}
+            value={props.thresholdGbps}
+            onChange={(e) =>
+              props.setThresholdGbps(Number(e.target.value) || 0)
+            }
+            className="mt-1 w-full rounded-md border border-slate-200 bg-slate-50 px-2 py-1.5 text-sm"
+          />
+        </div>
+        <div className="md:col-span-3">
+          <label className="block text-xs font-medium uppercase tracking-wide text-slate-500">
+            Hyst. band (Mbps)
+          </label>
+          <input
+            type="number"
+            min={0}
+            value={props.hysteresisBandMbps}
+            onChange={(e) =>
+              props.setHysteresisBandMbps(Number(e.target.value) || 0)
+            }
+            className="mt-1 w-full rounded-md border border-slate-200 bg-slate-50 px-2 py-1.5 text-sm"
+          />
+        </div>
+        <div className="md:col-span-2">
+          <label className="block text-xs font-medium uppercase tracking-wide text-slate-500">
+            Hyst. cooldown
+          </label>
+          <input
+            type="number"
+            min={0}
+            value={props.hysteresisCooldown}
+            onChange={(e) =>
+              props.setHysteresisCooldown(Number(e.target.value) || 0)
+            }
+            className="mt-1 w-full rounded-md border border-slate-200 bg-slate-50 px-2 py-1.5 text-sm"
+          />
+        </div>
+        <div className="flex items-end md:col-span-4 text-xs text-slate-500">
+          Threshold + hysteresis tunables apply only to those policies.
         </div>
       </div>
 

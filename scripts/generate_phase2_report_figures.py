@@ -15,6 +15,7 @@ gitignore-friendly location (reports/phase-2/figures/ tracked in git).
 
 from __future__ import annotations
 
+import argparse
 import sys
 import warnings
 from pathlib import Path
@@ -61,12 +62,33 @@ def _setup_axes(ax: plt.Axes, title: str, xlabel: str, ylabel: str) -> None:
     ax.grid(True, which="major", linestyle=":", linewidth=0.6, alpha=0.5)
 
 
+def _parse_args() -> argparse.Namespace:
+    p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    p.add_argument(
+        "--split", type=str, default="test",
+        choices=["train", "val", "test"],
+        help=(
+            "Forecaster slice to evaluate on. The supervisor-facing "
+            "headline numbers should use 'test' (default). 'val' is "
+            "useful for debugging checkpoint selection."
+        ),
+    )
+    p.add_argument("--cluster-idx", type=int, default=0)
+    p.add_argument("--horizon-idx", type=int, default=0)
+    return p.parse_args()
+
+
 def main() -> int:
-    print(f"Generating Phase 2 figures in {OUT_DIR}")
+    args = _parse_args()
+    print(f"Generating Phase 2 figures in {OUT_DIR} (split={args.split!r})")
 
     registry = PolicyRegistry(repo_root=REPO_ROOT)
 
-    print("Running rollouts (cluster_idx=0, horizon_idx=0, full episode)...")
+    print(
+        f"Running rollouts (cluster_idx={args.cluster_idx}, "
+        f"horizon_idx={args.horizon_idx}, full episode, "
+        f"split={args.split!r})..."
+    )
     rollouts = {}
     for pid in POLICY_ORDER:
         info = next(p for p in registry.list_policies() if p.id == pid)
@@ -76,11 +98,12 @@ def main() -> int:
         r = run_rollout(
             registry,
             policy_id=pid,
-            cluster_idx=0,
-            horizon_idx=0,
+            cluster_idx=args.cluster_idx,
+            horizon_idx=args.horizon_idx,
             seed=42,
             threshold_gbps=0.05,
             max_steps=None,
+            split=args.split,
         )
         rollouts[pid] = r
         print(
@@ -107,7 +130,8 @@ def main() -> int:
     )
     _setup_axes(
         ax,
-        "Cluster 0 — offered load over the test episode (1009 steps)",
+        f"Cluster {args.cluster_idx} — offered load over the "
+        f"{args.split} episode ({len(t)} steps)",
         "timestep",
         "load (Gbps)",
     )
@@ -136,7 +160,8 @@ def main() -> int:
     ax.invert_yaxis()  # best (least negative) at top
     _setup_axes(
         ax,
-        "Total reward per policy on cluster 0 (full episode)",
+        f"Total reward per policy on cluster {args.cluster_idx} "
+        f"({args.split} split, full episode)",
         "total reward (closer to 0 is better)",
         "",
     )

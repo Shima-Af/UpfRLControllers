@@ -1,72 +1,30 @@
-import { useEffect, useMemo, useState } from "react";
-import { useMutation, useQuery } from "@tanstack/react-query";
-import { api } from "./api/client";
-import type { CompareResponse, PolicyId } from "./api/types";
-import { Controls } from "./components/Controls";
-import { SummaryTable } from "./components/SummaryTable";
-import { TimeSeriesChart } from "./components/TimeSeriesChart";
+import { useState } from "react";
+import { MultiSitePage } from "./pages/MultiSitePage";
+import { SingleSitePage } from "./pages/SingleSitePage";
 
-const DEFAULT_SELECTED: PolicyId[] = ["ppo", "threshold", "always-dpdk"];
+type Tab = "single" | "multi";
+
+const TABS: { id: Tab; label: string; subtitle: string }[] = [
+  {
+    id: "single",
+    label: "Single-site",
+    subtitle: "One cluster · per-step diagnostics · Phase 2 PPO",
+  },
+  {
+    id: "multi",
+    label: "Multi-cluster",
+    subtitle: "K=10 clusters · MAPPO vs baselines · Phase 7",
+  },
+];
 
 export default function App() {
-  const policiesQ = useQuery({
-    queryKey: ["policies"],
-    queryFn: api.listPolicies,
-  });
-  const clustersQ = useQuery({
-    queryKey: ["clusters"],
-    queryFn: api.listClusters,
-  });
-
-  const [clusterIdx, setClusterIdx] = useState<number>(0);
-  const [horizonIdx, setHorizonIdx] = useState<number>(0);
-  const [thresholdGbps, setThresholdGbps] = useState<number>(0.05);
-  const [maxSteps, setMaxSteps] = useState<number | null>(300);
-  const [selectedPolicies, setSelectedPolicies] =
-    useState<PolicyId[]>(DEFAULT_SELECTED);
-  const [result, setResult] = useState<CompareResponse | null>(null);
-
-  const compare = useMutation({
-    mutationFn: api.compare,
-    onSuccess: (data) => setResult(data),
-  });
-
-  // Auto-deselect a "ppo" policy if no checkpoint is present.
-  useEffect(() => {
-    if (!policiesQ.data) return;
-    const ppoEntry = policiesQ.data.find((p) => p.id === "ppo");
-    if (ppoEntry && !ppoEntry.model_loaded) {
-      setSelectedPolicies((prev) => prev.filter((p) => p !== "ppo"));
-    }
-  }, [policiesQ.data]);
-
-  const togglePolicy = (p: PolicyId) =>
-    setSelectedPolicies((prev) =>
-      prev.includes(p) ? prev.filter((x) => x !== p) : [...prev, p],
-    );
-
-  const runCompare = () => {
-    compare.mutate({
-      cluster_idx: clusterIdx,
-      horizon_idx: horizonIdx,
-      policies: selectedPolicies,
-      threshold_gbps: thresholdGbps,
-      max_steps: maxSteps ?? null,
-      seed: 42,
-    });
-  };
-
-  const summaries = useMemo(
-    () => (result ? result.rollouts.map((r) => r.summary) : []),
-    [result],
-  );
-  const rollouts = result?.rollouts ?? [];
+  const [tab, setTab] = useState<Tab>("multi");
 
   return (
     <div className="min-h-full bg-slate-50 px-6 pb-10 pt-6">
-      <header className="mx-auto mb-6 max-w-7xl">
+      <header className="mx-auto mb-4 max-w-7xl">
         <h1 className="text-2xl font-bold text-slate-900">
-          UPF RL Controllers — Single-Site Digital Twin Dashboard
+          UPF RL Controllers — Digital Twin Dashboard
         </h1>
         <p className="mt-1 text-sm text-slate-600">
           Replay one episode under each selected policy and compare KPIs.
@@ -74,121 +32,33 @@ export default function App() {
         </p>
       </header>
 
-      <main className="mx-auto max-w-7xl space-y-4">
-        {policiesQ.isLoading || clustersQ.isLoading ? (
-          <div className="rounded-xl border border-slate-200 bg-white p-4 text-sm text-slate-600 shadow-sm">
-            Loading metadata from backend…
-          </div>
-        ) : policiesQ.isError || clustersQ.isError ? (
-          <div className="rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-700 shadow-sm">
-            Backend unreachable. Start it with{" "}
-            <code className="rounded bg-rose-100 px-1">
-              uvicorn dashboard.backend.app.main:app --port 8000
-            </code>{" "}
-            and refresh.
-          </div>
-        ) : (
-          <>
-            <Controls
-              policies={policiesQ.data!}
-              clusters={clustersQ.data!}
-              selectedPolicies={selectedPolicies}
-              onTogglePolicy={togglePolicy}
-              clusterIdx={clusterIdx}
-              setClusterIdx={setClusterIdx}
-              horizonIdx={horizonIdx}
-              setHorizonIdx={setHorizonIdx}
-              thresholdGbps={thresholdGbps}
-              setThresholdGbps={setThresholdGbps}
-              maxSteps={maxSteps}
-              setMaxSteps={setMaxSteps}
-              loading={compare.isPending}
-              onRun={runCompare}
-            />
-
-            {compare.isError && (
-              <div className="rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-700 shadow-sm">
-                Rollout failed:{" "}
-                {(compare.error as Error)?.message ?? "unknown error"}
+      <nav className="mx-auto mb-4 max-w-7xl">
+        <div className="flex gap-1 rounded-xl border border-slate-200 bg-white p-1 shadow-sm">
+          {TABS.map((t) => (
+            <button
+              key={t.id}
+              onClick={() => setTab(t.id)}
+              className={`flex-1 rounded-lg px-3 py-2 text-left transition ${
+                tab === t.id
+                  ? "bg-slate-900 text-white shadow-sm"
+                  : "text-slate-700 hover:bg-slate-100"
+              }`}
+            >
+              <div className="text-sm font-semibold">{t.label}</div>
+              <div
+                className={`text-xs ${
+                  tab === t.id ? "text-slate-300" : "text-slate-500"
+                }`}
+              >
+                {t.subtitle}
               </div>
-            )}
+            </button>
+          ))}
+        </div>
+      </nav>
 
-            {result && (
-              <>
-                <SummaryTable summaries={summaries} />
-                <div className="grid gap-4 xl:grid-cols-2">
-                  <TimeSeriesChart
-                    title="Offered load"
-                    yLabel="Gbps"
-                    field="actual_load_gbps"
-                    rollouts={rollouts}
-                  />
-                  <TimeSeriesChart
-                    title="Power consumed"
-                    yLabel="watts"
-                    field="power_watts"
-                    rollouts={rollouts}
-                  />
-                  <TimeSeriesChart
-                    title="Predicted delay"
-                    yLabel="μs"
-                    field="delay_us"
-                    rollouts={rollouts}
-                    refLine={{ y: 200, label: "200 μs budget" }}
-                  />
-                  <TimeSeriesChart
-                    title="Predicted packet loss"
-                    yLabel="pkts/interval"
-                    field="predicted_loss"
-                    rollouts={rollouts}
-                    refLine={{ y: 5, label: "5 pkts budget" }}
-                  />
-                  <TimeSeriesChart
-                    title="QoS score Q"
-                    yLabel="[0, 1]"
-                    field="q_score"
-                    rollouts={rollouts}
-                    refLine={{ y: 0.9, label: "τ = 0.9" }}
-                    domain={[0, 1]}
-                  />
-                  <TimeSeriesChart
-                    title="Specific energy (SEC)"
-                    yLabel="W/Mbps"
-                    field="sec_w_per_mbps"
-                    rollouts={rollouts}
-                  />
-                  <TimeSeriesChart
-                    title="Cumulative reward"
-                    yLabel="reward"
-                    field="cumulative_reward"
-                    rollouts={rollouts}
-                  />
-                  <TimeSeriesChart
-                    title="Action (0 = DPDK, 1 = USR)"
-                    yLabel="discrete"
-                    field="action"
-                    rollouts={rollouts}
-                    domain={[-0.1, 1.1]}
-                    height={140}
-                  />
-                  <TimeSeriesChart
-                    title="Steps since last switch"
-                    yLabel="steps"
-                    field="steps_since_switch"
-                    rollouts={rollouts}
-                    refLine={{ y: 4, label: "cooldown period" }}
-                  />
-                </div>
-              </>
-            )}
-
-            {!result && !compare.isPending && (
-              <div className="rounded-xl border border-dashed border-slate-300 bg-white/50 p-8 text-center text-sm text-slate-500">
-                Pick policies and click <strong>Run comparison</strong>.
-              </div>
-            )}
-          </>
-        )}
+      <main className="mx-auto max-w-7xl">
+        {tab === "single" ? <SingleSitePage /> : <MultiSitePage />}
       </main>
     </div>
   );

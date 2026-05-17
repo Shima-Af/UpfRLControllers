@@ -15,6 +15,17 @@
 
 traffic_forecaster:
   dir: data/external/traffic_forecaster
+  # Per-split arrays from the forecaster's chronological train/val/test
+  # split (~50 / ~10.5 / ~10.5 days). All three are emitted by the
+  # `evaluate_forecast` stage upstream.
+  predictions_train: data/external/traffic_forecaster/predictions_train.npy
+  targets_train: data/external/traffic_forecaster/targets_train.npy
+  predictions_val: data/external/traffic_forecaster/predictions_val.npy
+  targets_val: data/external/traffic_forecaster/targets_val.npy
+  predictions_test: data/external/traffic_forecaster/predictions_test.npy
+  targets_test: data/external/traffic_forecaster/targets_test.npy
+  # Legacy aliases (kept so older callers without an explicit `split=`
+  # argument still resolve to the test slice as before).
   predictions: data/external/traffic_forecaster/predictions_test.npy
   targets: data/external/traffic_forecaster/targets_test.npy
   cluster_series: data/external/traffic_forecaster/cluster_series.npy

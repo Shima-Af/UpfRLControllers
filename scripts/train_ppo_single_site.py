@@ -101,6 +101,29 @@ def _parse_args() -> argparse.Namespace:
         "--gae-lambda", type=float, default=0.9,
         help="GAE lambda (paper: 0.9).",
     )
+    p.add_argument(
+        "--train-split", type=str, default="train",
+        choices=["train", "val", "test"],
+        help="Forecaster slice to train on. Default 'train'.",
+    )
+    p.add_argument(
+        "--eval-split", type=str, default="val",
+        choices=["train", "val", "test"],
+        help=(
+            "Forecaster slice used by EvalCallback to select the best "
+            "checkpoint. Default 'val'. Do not use 'test' here — the "
+            "test slice is reserved for the headline number reported "
+            "via scripts/evaluate_test_split.py."
+        ),
+    )
+    p.add_argument(
+        "--rollout-split", type=str, default="val",
+        choices=["train", "val", "test"],
+        help=(
+            "Slice used for the end-of-run policy comparison table. "
+            "Default 'val'. Test rollouts belong in evaluate_test_split.py."
+        ),
+    )
     return p.parse_args()
 
 
@@ -130,12 +153,21 @@ def main() -> int:
     tb_dir = args.out_dir / "tb"
     tb_dir.mkdir(exist_ok=True)
 
+    if args.eval_split == "test" or args.rollout_split == "test":
+        raise SystemExit(
+            "Refusing to use the test split during training or end-of-run "
+            "rollout. Use scripts/evaluate_test_split.py for the test set."
+        )
+
     print(f"Cluster idx:      {args.cluster_idx}")
     print(f"Horizon idx:      {args.horizon_idx}")
     print(f"Total timesteps:  {args.total_timesteps:,}")
     print(f"Seed:             {args.seed}")
     print(f"ent_coef:         {args.ent_coef}")
     print(f"learning_rate:    {args.learning_rate}")
+    print(f"Train split:      {args.train_split}")
+    print(f"Eval split:       {args.eval_split}")
+    print(f"Rollout split:    {args.rollout_split}")
     print(f"Output dir:       {args.out_dir}")
     print("-" * 70)
     print("Training PPO...")
@@ -149,6 +181,8 @@ def main() -> int:
         tensorboard_log=tb_dir,
         progress_bar=not args.no_progress,
         verbose=1,
+        train_split=args.train_split,
+        eval_split=args.eval_split,
         n_steps=args.n_steps,
         batch_size=min(64, args.n_steps),
         ent_coef=args.ent_coef,
@@ -158,7 +192,9 @@ def main() -> int:
     )
 
     print("-" * 70)
-    print("Rolling out one episode per policy on a fresh env instance...")
+    print(
+        f"Rolling out one episode per policy on split={args.rollout_split!r}..."
+    )
 
     policies = {
         "PPO":         ppo_policy(model, deterministic=True),
@@ -175,6 +211,7 @@ def main() -> int:
             policy=pol,
             seed=args.seed,
             max_steps=args.max_eval_steps,
+            split=args.rollout_split,
         )
 
     table_lines = [

@@ -13,6 +13,7 @@ from typing import Callable
 import numpy as np
 from stable_baselines3 import PPO
 
+from src.baselines.hysteresis import HysteresisPolicy
 from src.envs.single_site_upf_env import SingleSiteUPFEnv
 from src.trainers.ppo_single_site import (
     constant_policy,
@@ -40,6 +41,7 @@ POLICY_LABELS: dict[PolicyId, str] = {
     "always-dpdk": "Always DPDK",
     "always-usr": "Always USR",
     "threshold": "Threshold (USR<x)",
+    "hysteresis": "Hysteresis (band, cooldown)",
 }
 
 POLICY_DESCRIPTIONS: dict[PolicyId, str] = {
@@ -48,6 +50,11 @@ POLICY_DESCRIPTIONS: dict[PolicyId, str] = {
     "always-dpdk": "Always DPDK — the safe baseline.",
     "always-usr": "Always USR — the energy-greedy baseline.",
     "threshold": "USR if predicted_load < threshold_gbps, else DPDK.",
+    "hysteresis": (
+        "Two-threshold + cooldown controller from UPF_NDT. "
+        "USR→DPDK when forecast ≥ t_up; DPDK→USR when forecast ≤ t_down; "
+        "locked-in for cooldown_steps after any switch."
+    ),
 }
 
 
@@ -93,6 +100,8 @@ class PolicyRegistry:
         *,
         seed: int,
         threshold_gbps: float,
+        hysteresis_band_mbps: float = 20.0,
+        hysteresis_cooldown_steps: int = 1,
     ) -> Callable[[np.ndarray], int]:
         if policy_id == "ppo":
             if self._ppo_path is None:
@@ -111,6 +120,22 @@ class PolicyRegistry:
             return constant_policy(1)
         if policy_id == "threshold":
             return predicted_load_threshold_policy(threshold_gbps)
+        if policy_id == "hysteresis":
+            t_up = threshold_gbps
+            t_down = max(0.0, threshold_gbps - hysteresis_band_mbps / 1000.0)
+            controller = HysteresisPolicy(
+                t_up_gbps=t_up,
+                t_down_gbps=t_down,
+                cooldown_steps=hysteresis_cooldown_steps,
+            )
+
+            # Adapt to the single-site PolicyFn signature: obs -> int action.
+            # Reads the forecast at obs index 9 (same schema as the
+            # multi-agent threshold/hysteresis baselines).
+            def _fn(obs: np.ndarray) -> int:
+                return controller.act(float(obs[9]))
+
+            return _fn
         raise ValueError(f"Unknown policy_id: {policy_id}")
 
 
@@ -128,6 +153,9 @@ def run_rollout(
     seed: int,
     threshold_gbps: float,
     max_steps: int | None,
+    split: str = "test",
+    hysteresis_band_mbps: float = 20.0,
+    hysteresis_cooldown_steps: int = 1,
 ) -> RolloutResponse:
     """Execute one episode and return the structured response.
 
@@ -135,11 +163,21 @@ def run_rollout(
     changes work without state. Cost is dominated by the env's
     one-time surrogate batch precompute (~1.3s); the per-step lookup
     that follows is microseconds.
+
+    ``split`` selects which forecaster slice the rollout uses.
+    Defaults to ``"test"`` to keep the dashboard's headline numbers
+    aligned with the held-out evaluation that the report quotes.
     """
-    env = SingleSiteUPFEnv(cluster_idx=cluster_idx, horizon_idx=horizon_idx)
+    env = SingleSiteUPFEnv(
+        cluster_idx=cluster_idx, horizon_idx=horizon_idx, split=split
+    )
     obs, _info = env.reset(seed=seed)
     policy = registry.get_policy(
-        policy_id, seed=seed, threshold_gbps=threshold_gbps
+        policy_id,
+        seed=seed,
+        threshold_gbps=threshold_gbps,
+        hysteresis_band_mbps=hysteresis_band_mbps,
+        hysteresis_cooldown_steps=hysteresis_cooldown_steps,
     )
 
     step_h = env._step_h  # noqa: SLF001 — read-only accessor

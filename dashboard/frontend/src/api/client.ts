@@ -3,6 +3,12 @@ import type {
   ClusterInfo,
   CompareRequest,
   CompareResponse,
+  DerivedThresholds,
+  MultiClusterRolloutResponse,
+  MultiCompareRequest,
+  MultiCompareResponse,
+  MultiPolicyInfo,
+  MultiRolloutRequest,
   PolicyInfo,
   RolloutResponse,
 } from "./types";
@@ -10,7 +16,7 @@ import type {
 // Vite proxies /api/* to http://localhost:8000 (see vite.config.ts).
 const http = axios.create({
   baseURL: "/api",
-  timeout: 60_000,
+  timeout: 120_000,
 });
 
 export const api = {
@@ -31,10 +37,39 @@ export const api = {
     horizon_idx: number;
     policy: string;
     threshold_gbps?: number;
+    hysteresis_band_mbps?: number;
+    hysteresis_cooldown_steps?: number;
     max_steps?: number | null;
     seed?: number;
+    split?: string;
   }): Promise<RolloutResponse> {
     const { data } = await http.post<RolloutResponse>("/rollout", req);
+    return data;
+  },
+
+  // ----- Multi-cluster (Phase 7) -----
+  async listMultiPolicies(): Promise<MultiPolicyInfo[]> {
+    const { data } = await http.get<MultiPolicyInfo[]>("/multi/policies");
+    return data;
+  },
+  async derivedThresholds(): Promise<DerivedThresholds> {
+    const { data } = await http.get<DerivedThresholds>("/multi/derived");
+    return data;
+  },
+  async multiRollout(
+    req: MultiRolloutRequest,
+  ): Promise<MultiClusterRolloutResponse> {
+    const { data } = await http.post<MultiClusterRolloutResponse>(
+      "/multi/rollout",
+      req,
+    );
+    return data;
+  },
+  async multiCompare(req: MultiCompareRequest): Promise<MultiCompareResponse> {
+    const { data } = await http.post<MultiCompareResponse>(
+      "/multi/compare",
+      req,
+    );
     return data;
   },
 };

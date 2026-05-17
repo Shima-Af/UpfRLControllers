@@ -4,6 +4,7 @@ pyyaml
 scikit-learn
 matplotlib
 gymnasium
+pettingzoo
 stable-baselines3
 torch
 tensorboard

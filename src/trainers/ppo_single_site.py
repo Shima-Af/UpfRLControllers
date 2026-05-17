@@ -24,9 +24,13 @@ from stable_baselines3.common.vec_env import DummyVecEnv
 from src.envs.single_site_upf_env import SingleSiteUPFEnv
 
 
-def _make_env(cluster_idx: int, horizon_idx: int, seed: int) -> Callable:
+def _make_env(
+    cluster_idx: int, horizon_idx: int, seed: int, split: str = "train"
+) -> Callable:
     def _thunk() -> Monitor:
-        env = SingleSiteUPFEnv(cluster_idx=cluster_idx, horizon_idx=horizon_idx)
+        env = SingleSiteUPFEnv(
+            cluster_idx=cluster_idx, horizon_idx=horizon_idx, split=split
+        )
         env = Monitor(env)
         env.reset(seed=seed)
         return env
@@ -41,6 +45,8 @@ def train_ppo_single_site(
     seed: int = 42,
     out_dir: str | Path | None = None,
     *,
+    train_split: str = "train",
+    eval_split: str = "val",
     learning_rate: float = 1e-4,
     n_steps: int = 1024,
     batch_size: int = 64,
@@ -64,9 +70,21 @@ def train_ppo_single_site(
     Defaults follow the paper (Section 6.2 / Table 3): ent_coef=0.15,
     n_steps=1024, gae_lambda=0.9, gamma=0.995. ``learning_rate=1e-4``
     is the paper's choice; the CLI exposes it for sweeps.
+
+    Split semantics:
+        - ``train_split`` is the rollout distribution the policy is
+          updated on (default ``"train"`` — the forecaster's 5073-step
+          training slice).
+        - ``eval_split`` is the held-out distribution used by
+          ``EvalCallback`` to select the best checkpoint (default
+          ``"val"`` — the 1009-step validation slice). Keep this
+          separate from the test slice; that slice is reserved for the
+          one-shot headline number reported in Phase 2.
     """
-    env = DummyVecEnv([_make_env(cluster_idx, horizon_idx, seed)])
-    eval_env = DummyVecEnv([_make_env(cluster_idx, horizon_idx, seed + 1)])
+    env = DummyVecEnv([_make_env(cluster_idx, horizon_idx, seed, train_split)])
+    eval_env = DummyVecEnv(
+        [_make_env(cluster_idx, horizon_idx, seed + 1, eval_split)]
+    )
 
     model = PPO(
         "MlpPolicy",
@@ -177,12 +195,17 @@ def rollout_episode(
     policy: PolicyFn,
     seed: int = 0,
     max_steps: int | None = None,
+    split: str = "test",
 ) -> dict[str, float]:
     """Run one full episode under ``policy`` and report summary metrics.
 
-    ``max_steps`` truncates the rollout early.
+    ``max_steps`` truncates the rollout early. ``split`` selects which
+    forecaster slice the rollout uses; defaults to ``"test"`` because
+    this helper drives reported numbers in the Phase 2 evaluation.
     """
-    env = SingleSiteUPFEnv(cluster_idx=cluster_idx, horizon_idx=horizon_idx)
+    env = SingleSiteUPFEnv(
+        cluster_idx=cluster_idx, horizon_idx=horizon_idx, split=split
+    )
     obs, _info = env.reset(seed=seed)
 
     total_reward = 0.0
