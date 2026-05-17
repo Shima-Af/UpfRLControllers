@@ -6,23 +6,35 @@ load 0.108 Gbps). Does **not** touch multi-site, MAPPO, or the
 [Letters paper draft](../reports/paper-letters/). The Letters paper
 work continues independently on `main` / `chore/cleanup-research-vs-library`.
 
-## Pipeline (Slice 0 — no LLM yet)
+## Pipeline (Slice 0 — no LLM yet, no predicate yet)
 
 ```
 canonical Plan (hand-written)
     │
-    ├─▶ compile.plan_to_weights   → reward_weights dict
-    │       └▶ finetune.finetune_c0  (short PPO fine-tune from existing c0 checkpoint)
-    │             └▶ verify.twin_replay  → metrics dict (normalised vocabulary)
-    │
-    └─▶ compile.plan_to_predicate → Predicate (AND of comparisons)
-            └▶ verify.evaluate(metrics) → {satisfied, witness}
+    └─▶ compile.plan_to_weights → reward_weights dict
+            │
+            └▶ finetune.finetune_c0  (short PPO fine-tune from existing c0 checkpoint)
+                  │
+                  └▶ verify.twin_replay → metrics dict (normalised vocabulary)
 ```
 
-Slice 0 hand-writes the Plans. Slice 1 will swap the hand-writing for
-an LLM call (`intent/llm/`, not yet created) that emits a Plan from a
-natural-language intent. Slice 2 will add the LLM as a runtime
-explainer / auditor for predicate failures.
+Slice 0 hand-writes the Plans and reports the resulting metrics — no
+automated accept/reject. Whether the fine-tune produced the intended
+shift is a human's call, by inspecting `usr_rate`, `energy_wh`,
+`unsafe_pct`, `flips`, etc. against the base checkpoint's numbers.
+
+The Predicate DSL is defined in [schema/predicate.py](schema/predicate.py)
+but is **not** wired into the Slice 0 CLI. It is reserved for Slice 2,
+where the LLM will emit thresholds grounded in observed performance
+rather than guessed-in-advance numbers.
+
+## Slices
+
+| Slice | Status | Adds |
+|---|---|---|
+| 0 | ✅ done | Hand-written Plan → deterministic weights → fine-tune → replay → metrics |
+| 1 | next  | LLM client + `intent_to_plan` prompt; `examples/intents.yaml` paraphrase eval set |
+| 2 | later | Predicate emitter (LLM emits thresholds from intent + observed base numbers); explainer for failures; dashboard hook |
 
 ## Quick smoke
 
@@ -36,28 +48,21 @@ pytest tests/test_intent.py -q
 python -m intent.cli --plan balanced --skip-finetune
 ```
 
-For a real fine-tune run (slow — ~5–10 min for 20k steps on CPU):
+For a real fine-tune run (~2–3 min on CPU for 20k steps):
 
 ```bash
 python -m intent.cli --plan energy_greedy --finetune-steps 20000
 ```
 
-The CLI exits 0 if the compiled predicate is satisfied, 1 otherwise.
+The CLI always exits 0; reading the printed metrics is on you.
 
 ## Layout
 
 ```
-schema/        Plan, Predicate, metric vocabulary (pydantic v2)
-compile/       Plan -> weights, Plan -> predicate (deterministic Python)
-verify/        twin replay + predicate evaluator
+schema/        Plan, metric vocabulary (pydantic v2). Predicate DSL also lives here, dormant.
+compile/       Plan -> weights (deterministic Python)
+verify/        twin replay
 finetune/      short PPO fine-tune from an existing c0 checkpoint
-examples/      canonical hand-written Plans (used until Slice 1)
+examples/      canonical hand-written Plans (used until Slice 1 LLM lands)
 cli.py         end-to-end driver
 ```
-
-## Why pydantic for both Plan and Predicate
-
-When Slice 1 lands the LLM, the same `Plan` schema becomes the
-function-calling/structured-output target. Validating the LLM's emit
-against pydantic is one line; logging it as JSON for the workshop
-paper's "intent translation audit" is one more.

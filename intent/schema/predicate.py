@@ -1,16 +1,22 @@
-"""Predicate DSL — conjunction of leaf comparisons over the metric vocabulary.
+"""Predicate DSL — conjunction of leaf comparisons over the metric
+vocabulary.
 
-Slice 0 supports AND-of-comparisons only. If intents later demand OR /
-NOT we'll extend; for now a flat AND is enough for every canonical
-plan in `intent/examples` and keeps the evaluator trivially auditable.
+DORMANT in Slice 0 (not wired into the CLI or canonical Plans). The
+DSL lives here so Slice 2's LLM explainer / runtime auditor has a
+ready acceptance-criterion language to consume. AND-of-comparisons
+is intentionally the simplest defensible shape; extend to OR / NOT
+only when an intent actually demands it.
 """
 
 from __future__ import annotations
 
+from typing import Literal
+
 from pydantic import BaseModel, ConfigDict, Field
 
 from intent.schema.metrics import MetricName
-from intent.schema.plan import ComparisonOp
+
+ComparisonOp = Literal["<", "<=", ">", ">=", "==", "!="]
 
 
 class Comparison(BaseModel):

@@ -2,6 +2,10 @@
 
 No checkpoint loading, no env construction here — those live behind the
 twin-artifacts gate in `conftest.py` and would slow the suite down.
+
+Predicate DSL tests stay in place even though the Predicate is not
+wired into the Slice 0 CLI — the DSL is the contract Slice 2's LLM
+will emit against, and keeping it test-covered avoids drift.
 """
 
 from __future__ import annotations
@@ -9,30 +13,21 @@ from __future__ import annotations
 import pytest
 from pydantic import ValidationError
 
-from intent.compile.plan_to_predicate import compile_predicate
 from intent.compile.plan_to_weights import BASE, compile_weights
 from intent.examples.canonical_plans import CANONICAL_PLANS
 from intent.schema.metrics import METRIC_VOCAB, normalize_metrics
-from intent.schema.plan import HardConstraint, Plan
+from intent.schema.plan import Plan
 from intent.schema.predicate import Comparison, Predicate
 
 
 # ----------------------------------------------------------------------
-# Schema validation
+# Plan schema
 # ----------------------------------------------------------------------
 
 class TestPlanValidation:
     def test_canonical_plans_all_validate(self):
         for name, plan in CANONICAL_PLANS.items():
             assert isinstance(plan, Plan), name
-
-    def test_invalid_metric_rejected(self):
-        with pytest.raises(ValidationError):
-            HardConstraint(metric="not_a_real_metric", op="<", threshold=1.0)
-
-    def test_invalid_op_rejected(self):
-        with pytest.raises(ValidationError):
-            HardConstraint(metric="unsafe_pct", op="~~", threshold=1.0)
 
     def test_invalid_goal_rejected(self):
         with pytest.raises(ValidationError):
@@ -42,6 +37,10 @@ class TestPlanValidation:
         # extra="forbid" on the model_config — guard against silent typos.
         with pytest.raises(ValidationError):
             Plan(goal="balance", made_up_field=42)
+
+    def test_invalid_soft_pref_rejected(self):
+        with pytest.raises(ValidationError):
+            Plan(goal="balance", soft=["not_a_real_pref"])
 
 
 # ----------------------------------------------------------------------
@@ -64,28 +63,21 @@ class TestWeightCompiler:
         assert w["lambda_qos"] > BASE["lambda_qos"]
         assert w["tau"] >= BASE["tau"]
 
-    def test_soft_pref_overrides_goal_delta(self):
-        # Build a Plan where a soft pref should beat the goal delta.
-        # minimize_unsafe sets lambda_qos to 60; maintain_qos_headroom
-        # also sets it to 60, so this is just a no-op sanity check that
-        # later-write-wins doesn't regress to BASE.
-        plan = Plan(
-            goal="minimize_unsafe",
-            soft=["maintain_qos_headroom"],
-        )
+    def test_soft_pref_can_override_goal_delta(self):
+        # `maintain_qos_headroom` sets lambda_qos=60 — same as minimize_unsafe.
+        # Confirms later-write-wins doesn't regress to BASE.
+        plan = Plan(goal="minimize_unsafe", soft=["maintain_qos_headroom"])
         w = compile_weights(plan)
         assert w["lambda_qos"] == 60.0
 
 
 # ----------------------------------------------------------------------
-# Predicate compiler + evaluator
+# Predicate DSL — dormant in Slice 0 but kept tested for Slice 2.
 # ----------------------------------------------------------------------
 
 class TestPredicate:
-    def test_empty_plan_compiles_to_trivially_true_predicate(self):
-        plan = Plan(goal="balance")
-        pred = compile_predicate(plan)
-        assert pred.evaluate({}).satisfied
+    def test_empty_predicate_is_trivially_satisfied(self):
+        assert Predicate().evaluate({}).satisfied
 
     def test_satisfied_when_all_leaves_pass(self):
         pred = Predicate(
@@ -115,6 +107,14 @@ class TestPredicate:
         pred = Predicate(leaves=[Comparison(metric="mean_q", op=">", threshold=0.9)])
         with pytest.raises(KeyError):
             pred.evaluate({"unsafe_pct": 0.5})
+
+    def test_invalid_op_rejected(self):
+        with pytest.raises(ValidationError):
+            Comparison(metric="unsafe_pct", op="~~", threshold=1.0)
+
+    def test_invalid_metric_rejected(self):
+        with pytest.raises(ValidationError):
+            Comparison(metric="not_a_real_metric", op="<", threshold=1.0)
 
     @pytest.mark.parametrize("op,v,thr,expect", [
         ("<",  1.0, 2.0, True),
@@ -155,6 +155,5 @@ class TestNormalizeMetrics:
         assert out["flips"] == 42.0
         assert out["unsafe_pct"] == pytest.approx(0.5)
         assert out["qos_violation_pct"] == pytest.approx(1.0)
-        # Every canonical metric name should be present.
         for name in METRIC_VOCAB:
             assert name in out, name
