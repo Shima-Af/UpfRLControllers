@@ -1,0 +1,7 @@
+# Sweep point: tight budget (~USR p25 on val split).
+# Cap binds most steps — policy pushed hard toward DPDK at peak load.
+# May force unavoidable QoS violations if too tight; watch the eval.
+pool:
+  power_cap_w: 10.0
+  lambda_pool: 0.05
+  enforce: "soft"

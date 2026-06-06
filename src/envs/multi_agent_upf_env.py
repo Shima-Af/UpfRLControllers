@@ -11,6 +11,14 @@ This sets up the API surface for Phase-6 MAPPO (centralised training,
 decentralised execution): the trainer can collect per-agent
 trajectories from this env, while a centralised critic still has
 access to the joint state via ``state()``.
+
+Shared fleet-power pool (optional, configured via
+``configs/scenario_rl.yaml`` -> ``pool``). When ``power_cap_w`` is set,
+the overrun ``max(0, sum_k P_steady_k - power_cap_w)`` is multiplied
+by ``lambda_pool`` and the penalty is distributed uniformly across
+the K per-agent rewards (each agent loses ``L_pool / K``). The
+uniform split keeps each agent's reward simple; the centralised
+critic learns cluster-specific credit assignment from joint state.
 """
 
 from __future__ import annotations
@@ -110,6 +118,20 @@ class MultiAgentUPFEnv(ParallelEnv):
             if int(e.observation_space.shape[0]) != self._obs_dim_per:
                 raise ValueError("Sub-env obs dims differ.")
 
+        # Shared fleet-power pool (instant soft penalty). Disabled when null.
+        pool_cfg = self.scenario_cfg.get("pool", {})
+        cap = pool_cfg.get("power_cap_w", None)
+        self._pool_cap_w: float | None = float(cap) if cap is not None else None
+        self._lambda_pool = float(pool_cfg.get("lambda_pool", 0.0))
+
+        # Integrated energy budget (telecom-realistic kWh-style). Disabled
+        # when null. Tracks cumulative steady-state energy per episode.
+        budget_cfg = self.scenario_cfg.get("budget", {})
+        b = budget_cfg.get("budget_wh", None)
+        self._budget_wh: float | None = float(b) if b is not None else None
+        self._lambda_budget = float(budget_cfg.get("lambda_budget", 0.0))
+        self._cumulative_energy_wh: float = 0.0
+
         self._t = 0
 
     # ------------------------------------------------------------------
@@ -136,6 +158,7 @@ class MultiAgentUPFEnv(ParallelEnv):
             infos[agent] = i
         self.agents = list(self.possible_agents)
         self._t = 0
+        self._cumulative_energy_wh = 0.0
         return obs, infos
 
     def step(
@@ -169,6 +192,42 @@ class MultiAgentUPFEnv(ParallelEnv):
             truncations[agent] = bool(trunc)
             infos[agent] = info
             any_truncated = any_truncated or trunc
+
+        # Shared fleet-power pool — soft penalty distributed uniformly.
+        if self._pool_cap_w is not None and self.agents:
+            p_total_w = float(
+                sum(infos[a]["power_watts_steady"] for a in self.agents)
+            )
+            pool_overrun_w = max(0.0, p_total_w - self._pool_cap_w)
+            pool_penalty = self._lambda_pool * pool_overrun_w
+            per_agent_penalty = pool_penalty / float(self.K)
+            for agent in self.agents:
+                rewards[agent] -= per_agent_penalty
+                infos[agent]["pool_power_w"] = p_total_w
+                infos[agent]["pool_cap_w"] = self._pool_cap_w
+                infos[agent]["pool_overrun_w"] = pool_overrun_w
+                infos[agent]["pool_penalty_share"] = per_agent_penalty
+
+        # Integrated energy budget — penalty grows with running excess,
+        # distributed uniformly across agents (centralised critic handles
+        # cluster-specific credit).
+        if self.agents:
+            p_total_w_step = float(
+                sum(infos[a]["power_watts_steady"] for a in self.agents)
+            )
+            step_energy_wh = p_total_w_step * self.step_h
+            self._cumulative_energy_wh += step_energy_wh
+            if self._budget_wh is not None:
+                target = self._budget_wh * (self._t + 1) / max(1, self._N)
+                excess = max(0.0, self._cumulative_energy_wh - target)
+                total_penalty = self._lambda_budget * excess
+                share = total_penalty / float(self.K)
+                for agent in self.agents:
+                    rewards[agent] -= share
+                    infos[agent]["budget_wh"] = self._budget_wh
+                    infos[agent]["cumulative_energy_wh"] = self._cumulative_energy_wh
+                    infos[agent]["budget_excess_wh"] = excess
+                    infos[agent]["budget_penalty_share"] = share
 
         self._t += 1
         if any_truncated:

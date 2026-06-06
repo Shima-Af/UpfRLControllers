@@ -1,0 +1,7 @@
+# Sweep point: mildly sub-floor.
+# Cap = 7.0 W needs ~1.2 W of consistent USR savings — forces ~2
+# clusters into USR at low-load periods, or 1 cluster at very low load.
+pool:
+  power_cap_w: 7.0
+  lambda_pool: 1.0
+  enforce: "soft"

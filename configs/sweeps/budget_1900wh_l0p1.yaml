@@ -1,0 +1,4 @@
+# Same budget as budget_1900wh.yaml but with 5x stronger penalty.
+budget:
+  budget_wh: 1900.0
+  lambda_budget: 0.1

@@ -1,0 +1,5 @@
+# Same budget as budget_2000wh.yaml but with 5x stronger penalty.
+# Tests whether last round's null behaviour change was a penalty-strength issue.
+budget:
+  budget_wh: 2000.0
+  lambda_budget: 0.1

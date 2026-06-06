@@ -1,0 +1,5 @@
+# Sweep point: 1900 Wh per episode (~3.5% below current).
+# Forces meaningful USR adoption at low-load periods.
+budget:
+  budget_wh: 1900.0
+  lambda_budget: 0.02

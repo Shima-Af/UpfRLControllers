@@ -1,0 +1,6 @@
+# Sweep point: moderate budget (between USR p75 and p90 on val).
+# Cap binds on a non-trivial fraction of high-load steps.
+pool:
+  power_cap_w: 20.0
+  lambda_pool: 0.05
+  enforce: "soft"

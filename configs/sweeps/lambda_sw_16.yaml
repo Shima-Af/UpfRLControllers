@@ -1,0 +1,4 @@
+# Sweep point: very high switching-cost weight.
+# Expect near-static policies — switches only when QoS forces it.
+reward_weights:
+  lambda_sw: 16.0

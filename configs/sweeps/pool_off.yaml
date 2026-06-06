@@ -1,0 +1,5 @@
+# Sweep point: pool DISABLED (control / never-bind reference).
+# Same as default scenario_rl.yaml but explicit for sweep manifests.
+pool:
+  power_cap_w: null
+  lambda_pool: 0.0

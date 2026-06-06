@@ -1,0 +1,5 @@
+# Cooldown sensitivity sweep point.
+# Longer dwell window, baseline cost — tests sensitivity to window length.
+reward_weights:
+  cooldown_period: 8
+  cooldown_cost:   0.5

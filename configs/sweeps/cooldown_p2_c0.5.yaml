@@ -1,0 +1,5 @@
+# Cooldown sensitivity sweep point.
+# Shorter dwell window, baseline cost.
+reward_weights:
+  cooldown_period: 2
+  cooldown_cost:   0.5

@@ -1,0 +1,7 @@
+# Sweep point: loose budget (~USR p90 on val split).
+# Cap binds only at peak hours — mild coordination requirement.
+# Re-calibrate from train-split probe before final paper runs.
+pool:
+  power_cap_w: 25.0
+  lambda_pool: 0.05
+  enforce: "soft"

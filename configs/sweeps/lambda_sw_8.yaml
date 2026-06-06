@@ -1,0 +1,4 @@
+# Sweep point: higher switching-cost weight.
+# Expect fewer switches than the 4.0 baseline.
+reward_weights:
+  lambda_sw: 8.0

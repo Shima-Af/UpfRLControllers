@@ -1,0 +1,5 @@
+# Cooldown sensitivity sweep point.
+# Default window, strong cost — tests sensitivity to cost magnitude.
+reward_weights:
+  cooldown_period: 4
+  cooldown_cost:   1.0

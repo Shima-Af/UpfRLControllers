@@ -1,0 +1,5 @@
+# Cooldown sensitivity sweep point.
+# Default window, weak cost — near-no-cooldown control.
+reward_weights:
+  cooldown_period: 4
+  cooldown_cost:   0.1

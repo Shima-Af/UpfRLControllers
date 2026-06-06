@@ -1,0 +1,6 @@
+# Sweep point: 2000 Wh per episode (~all-DPDK baseline).
+# Barely tight. Current policy at ~1968 Wh, so this is just above today's
+# operating point — light pressure to keep consumption from drifting up.
+budget:
+  budget_wh: 2000.0
+  lambda_budget: 0.02

@@ -48,37 +48,77 @@ action_space:
     0: "DPDK"
     1: "USR"
 
-# Reward — paper-aligned (COMCOM-S-26-00430, Section 4.5), with the
-# switching-cost term revised to a physics-grounded form (P1 #7):
+# Reward — paper-aligned (COMCOM-S-26-00430, Section 4.5). The
+# switching-cost term is physics-grounded and attributed to L_SW
+# (cost-of-action), not to SEC (steady-state efficiency):
 #
-#   P_steady_t = composite.power_watts                  # twin steady-state W
-#   P_switch_t = sw_energy_wh / step_h                  # transition energy averaged over step (W)
-#   P_eff_t    = P_steady_t + P_switch_t
-#   SEC_t      = P_eff_t / max(load_mbps, eps)          # specific energy (W/Mbps)
+#   SEC_t      = composite.power_watts / max(load_mbps, eps)
+#                # steady-state specific energy (W/Mbps)
 #   Q_t        = min(delay_score, loss_score) in [0, 1] # from twin surrogates
 #   L_QoS      = lambda_qos * max(0, tau - Q_t)         # graded QoS penalty
-#   L_SW       = c_dpdk if switched->DPDK else c_usr if switched->USR else 0
-#                (default 0.0 — physical switching cost is folded into SEC)
+#   L_SW       = lambda_sw * sw_energy_wh   if realised type changed
+#                0                          otherwise
+#                # twin's transition energy carries DPDK/USR asymmetry
 #   L_CD       = soft cooldown surcharge (our extension)
 #
 #   reward = -(alpha * SEC_t + L_QoS + L_SW + L_CD)
 #
-# Magnitudes:
+# Rationale (vs. previous "fold into SEC" revision):
+#   * SEC measures mode efficiency only — clean credit assignment.
+#   * No load-coupling: a switch at low load no longer gets amplified
+#     by the 1/load term.
+#   * Direction asymmetry is captured by sw_energy_wh itself (the twin
+#     gives different values for DPDK->USR vs USR->DPDK), so the flat
+#     c_dpdk / c_usr constants are gone.
+#
+# Magnitudes (calibrated to keep magnitudes comparable to the prior
+# revision at ~100 Mbps load):
 #   - per-step DPDK SEC contribution ~0.6-0.8 reward at typical load.
 #   - safe-USR SEC contribution      ~0.3-0.5 — USR saves ~0.3/step.
 #   - QoS penalty bites at up to lambda_qos * tau = 27 if Q -> 0.
-#   - DPDK switch contributes via P_switch_t scaled by load: at 100 Mbps
-#     load and 24 s activation, P_switch ≈ 1 W → adds ≈1 reward unit on
-#     that step (load-dependent, no longer a flat constant).
-#   - USR switch (3.3 s activation) adds ≈0.03 reward units at 100 Mbps.
+#   - DPDK switch (sw_energy_wh ~0.25 Wh from twin) at lambda_sw=4.0
+#     contributes ≈1 reward unit on the switch step (load-independent).
+#   - USR switch (sw_energy_wh ~0.03 Wh) contributes ≈0.12 reward units.
+# lambda_sw is a tunable; sweep it if switch frequency looks off.
 reward_weights:
   alpha:         100.0    # SEC scaler (paper Table 3: 100)
   lambda_qos:    30.0     # QoS penalty weight (paper: 30)
   tau:           0.90     # QoS compliance target (paper: 0.9)
-  c_dpdk:        0.0      # legacy flat cost (now folded into SEC; kept for fallback)
-  c_usr:         0.0      # legacy flat cost (now folded into SEC; kept for fallback)
+  lambda_sw:     4.0      # switching-energy weight (multiplies sw_energy_wh, Wh)
   cooldown_period: 4      # minimum-dwell window, in 15-min steps
   cooldown_cost:   0.5    # extra penalty for switching inside the window
+
+# Shared fleet-level power budget — couples cluster decisions to motivate
+# MAPPO over IPPO. Applied only by the multi-site / multi-agent wrappers;
+# single-site env ignores this block. When `power_cap_w` is null, the
+# pool is disabled and behaviour matches prior MAPPO runs exactly.
+#
+# Soft-penalty form (first cut):
+#   P_total = sum over k of composite.power_watts_steady at step t
+#   overrun = max(0, P_total - power_cap_w)        # Watts
+#   L_pool  = lambda_pool * overrun                # subtracted from reward
+# Multi-site: L_pool subtracted from the load-weighted joint reward.
+# Multi-agent: L_pool / K subtracted from each agent's per-step reward
+# (uniform distribution — let the centralised critic handle credit).
+pool:
+  power_cap_w:   null     # null = disabled. Float = fleet-wide steady-state W cap.
+  lambda_pool:   0.05     # penalty weight per Watt of overrun
+  enforce:       "soft"   # "soft" only for now; "projection" planned next
+
+# Integrated energy budget (telecom-realistic). The total fleet energy
+# consumed over the episode is capped in Wh; the policy can "bank"
+# savings at low-load periods (USR cheap) to spend at high-load periods
+# (DPDK cheaper than USR). Penalty is applied per step in proportion to
+# how far cumulative consumption is above a linearly-pacing target.
+#
+# Per step t:
+#   E_cum_t      = sum_{s=1..t} P_steady_s * step_h           # Wh consumed so far
+#   E_target_t   = budget_wh * t / T                          # linear-pace target
+#   excess_t     = max(0, E_cum_t - E_target_t)               # Wh "ahead of pace"
+#   L_budget_t   = lambda_budget * excess_t                   # reward penalty this step
+budget:
+  budget_wh:     null     # null = disabled. Float = total fleet Wh allowed per episode.
+  lambda_budget: 0.02     # penalty weight per Wh of running excess (per step)
 
 # Observation construction. Matches the paper's "history-augmented"
 # schema (Section 4.3) — current load + the last W actual loads +

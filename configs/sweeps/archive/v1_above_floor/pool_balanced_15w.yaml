@@ -1,0 +1,6 @@
+# Sweep point: balanced budget (~USR p50 on val split).
+# Cap binds ~half the time — strongest expected MAPPO-vs-IPPO gap.
+pool:
+  power_cap_w: 15.0
+  lambda_pool: 0.05
+  enforce: "soft"

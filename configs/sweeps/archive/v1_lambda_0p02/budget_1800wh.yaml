@@ -1,0 +1,6 @@
+# Sweep point: 1800 Wh per episode (~8% below current).
+# Substantial pressure — needs systematic USR adoption at low load to
+# bank savings for high-load periods. Real coordination signal expected.
+budget:
+  budget_wh: 1800.0
+  lambda_budget: 0.02

@@ -29,6 +29,28 @@ if str(REPO_ROOT) not in sys.path:
 
 from src.envs.multi_agent_upf_env import MultiAgentUPFEnv  # noqa: E402
 from src.trainers.mappo import MAPPO, MAPPOConfig  # noqa: E402
+from src.utils.config import load_yaml  # noqa: E402
+
+
+def _deep_merge(base: dict, overlay: dict) -> dict:
+    """Recursively merge ``overlay`` into ``base`` (non-destructive)."""
+    import copy
+    result = copy.deepcopy(base)
+    for k, v in overlay.items():
+        if isinstance(v, dict) and isinstance(result.get(k), dict):
+            result[k] = _deep_merge(result[k], v)
+        else:
+            result[k] = v
+    return result
+
+
+def _resolve_scenario_cfg(overlay_paths: list[Path]) -> dict:
+    """Load base scenario config, then apply each overlay in order."""
+    cfg = load_yaml(REPO_ROOT / "configs" / "scenario_rl.yaml")
+    for overlay_path in overlay_paths:
+        overlay = load_yaml(overlay_path)
+        cfg = _deep_merge(cfg, overlay)
+    return cfg
 
 
 def _parse_args() -> argparse.Namespace:
@@ -65,6 +87,23 @@ def _parse_args() -> argparse.Namespace:
         "--no-progress", action="store_true",
         help="Disable the tqdm progress bar.",
     )
+    p.add_argument(
+        "--config-overlay", type=Path, action="append", default=[],
+        help=(
+            "Path to a scenario-config overlay YAML. Repeatable; later "
+            "overlays override earlier ones. Merged on top of "
+            "configs/scenario_rl.yaml. Use for sweeps: e.g. "
+            "--config-overlay configs/sweeps/pool_15w.yaml"
+        ),
+    )
+    p.add_argument(
+        "--cluster-indices", type=str, default=None,
+        help=(
+            "Comma-separated list of cluster indices to train on, e.g. "
+            "'0,1,2,3,4,5,6,7'. If unset, uses all K clusters. Used for "
+            "cross-cluster generalization experiments."
+        ),
+    )
     return p.parse_args()
 
 
@@ -83,16 +122,36 @@ def main() -> int:
         )
     args.out_dir.mkdir(parents=True, exist_ok=True)
 
+    scenario_cfg = _resolve_scenario_cfg(args.config_overlay)
+    pool_cap = scenario_cfg.get("pool", {}).get("power_cap_w", None)
+    lambda_sw = scenario_cfg.get("reward_weights", {}).get("lambda_sw", None)
+
     print(f"Total timesteps: {args.total_timesteps:,}")
     print(f"Train split:     {args.train_split}")
     print(f"Eval split:      {args.eval_split}")
     print(f"Reward scale:    {args.reward_scale}")
     print(f"Device:          {args.device}")
     print(f"Output dir:      {args.out_dir}")
+    if args.config_overlay:
+        print(f"Config overlays: {[str(p) for p in args.config_overlay]}")
+    print(f"  pool.power_cap_w = {pool_cap}    lambda_sw = {lambda_sw}")
     print("-" * 70)
 
-    env = MultiAgentUPFEnv(split=args.train_split)
-    eval_env = MultiAgentUPFEnv(split=args.eval_split)
+    cluster_indices = None
+    if args.cluster_indices is not None:
+        cluster_indices = [int(x) for x in args.cluster_indices.split(",") if x.strip()]
+        print(f"Cluster subset:  {cluster_indices}  (K={len(cluster_indices)})")
+
+    env = MultiAgentUPFEnv(
+        split=args.train_split,
+        scenario_cfg=scenario_cfg,
+        cluster_indices=cluster_indices,
+    )
+    eval_env = MultiAgentUPFEnv(
+        split=args.eval_split,
+        scenario_cfg=scenario_cfg,
+        cluster_indices=cluster_indices,
+    )
 
     cfg = MAPPOConfig(
         total_timesteps=args.total_timesteps,

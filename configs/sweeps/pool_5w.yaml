@@ -1,0 +1,8 @@
+# Sweep point: tight sub-floor.
+# Cap = 5.0 W is close to the physical lower bound (all-USR min = 4.8 W
+# on test). Almost certainly forces unsafe periods at peak load — that
+# is the point: shows where the energy/QoS Pareto frontier bends.
+pool:
+  power_cap_w: 5.0
+  lambda_pool: 1.0
+  enforce: "soft"

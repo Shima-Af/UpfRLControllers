@@ -10,13 +10,21 @@ horizon. At each step the agent picks a UPF type (0=DPDK, 1=USR); the
 digital twin evaluates power and QoS for the realised load and applies
 switching-cost accounting via ``DigitalTwin.compute_step``.
 
-Switching cost (revised — physics-grounded). Earlier revisions used a
-flat reward constant per switch event (``c_dpdk``, ``c_usr``) running
+Switching cost (revised — physics-grounded, attributed to action).
+Earlier revisions used flat constants (``c_dpdk``, ``c_usr``) running
 parallel to the twin's measured ``sw_energy_wh``; the two paths could
-drift. This version folds ``sw_energy_wh`` directly into the step's
-effective power by averaging it over the step duration, so the SEC
-term carries both steady-state and transition energy. The flat
-constants are kept in the config as a fallback (default 0.0).
+drift. The next revision folded ``sw_energy_wh`` into SEC via the
+step's effective power. This version attributes ``sw_energy_wh`` to
+the switching-cost term (``L_SW``) instead: SEC carries only the
+steady-state operating energy, and the twin's transition energy
+shows up as an action cost weighted by ``lambda_sw``. Rationale:
+(a) cleaner credit assignment — SEC measures mode efficiency, L_SW
+measures cost-of-action; (b) no load-coupling artefact (a switch at
+low load was disproportionately penalised when folded into SEC);
+(c) directional asymmetry comes for free from the twin, so the flat
+``c_dpdk``/``c_usr`` constants are no longer needed in the reward.
+Total energy (steady + amortised spike) is still reported in
+``info`` for downstream metrics.
 """
 
 from __future__ import annotations
@@ -52,19 +60,19 @@ class SingleSiteUPFEnv(gym.Env):
         index history_window+5               : cooldown progress in [0, 1]
 
     Reward (paper-aligned, Section 4.5; switching cost revised to
-    physics-grounded form):
-        P_steady_t   = composite.power_watts        # twin steady-state W
-        P_switch_t   = sw_energy_wh / step_h        # transition energy averaged over step (W)
-        P_eff_t      = P_steady_t + P_switch_t
-        SEC_t        = P_eff_t / max(load_mbps, eps)
+    physics-grounded form attributed to L_SW):
+        SEC_t        = composite.power_watts / max(load_mbps, eps)
+                       # steady-state specific energy (W/Mbps)
         delay_excess = max(0, delay_us - delay_budget_us)
         loss_excess  = max(0, predicted_loss - max_loss_pkts_per_interval)
         delay_score  = max(0, 1 - delay_excess / delay_budget_us)
         loss_score   = max(0, 1 - loss_excess  / max_loss_pkts_per_interval)
         Q_t          = min(delay_score, loss_score)
         L_QoS        = lambda_qos * max(0, tau - Q_t)
-        L_SW         = c_dpdk if realised switched->DPDK else
-                       c_usr  if realised switched->USR else 0  (default 0)
+        L_SW         = lambda_sw * sw_energy_wh   if realised type changed
+                       0                          otherwise
+                       # twin-measured transition energy; direction
+                       # asymmetry baked into sw_energy_wh itself
         L_CD         = soft cooldown surcharge (our extension)
         reward       = -(alpha * SEC_t + L_QoS + L_SW + L_CD)
     """
@@ -181,8 +189,7 @@ class SingleSiteUPFEnv(gym.Env):
         self._alpha = float(rw.get("alpha", 100.0))
         self._lambda_qos = float(rw.get("lambda_qos", 30.0))
         self._tau = float(rw.get("tau", 0.90))
-        self._c_dpdk = float(rw.get("c_dpdk", 0.03))
-        self._c_usr = float(rw.get("c_usr", 0.012))
+        self._lambda_sw = float(rw.get("lambda_sw", 4.0))
         self._cooldown_period = int(rw.get("cooldown_period", 0))
         self._cooldown_cost = float(rw.get("cooldown_cost", 0.0))
         if self._cooldown_period < 0:
@@ -292,16 +299,16 @@ class SingleSiteUPFEnv(gym.Env):
         if not pending:
             self._current_action = new_current
 
-        # --- Specific energy consumption (paper Eq. 5, revised) ---
-        # Steady-state power from the twin's composite UPF result + the
-        # switching spike from this step amortised over the step duration.
-        # The two are summed BEFORE SEC so a single physical quantity drives
-        # the energy term (no parallel flat constants).
+        # --- Specific energy consumption (paper Eq. 5) ---
+        # SEC now carries only steady-state operating energy. The
+        # twin's transition energy (sw_energy_wh) is attributed to
+        # L_SW below, not to SEC. Total energy (steady + amortised
+        # spike) is still computed for reporting in `info`.
         load_mbps = max(load_gbps * 1000.0, _EPS)
         power_w_steady = float(composite.power_watts)
         power_w_switch = float(sw_energy_wh) / self._step_h if self._step_h > 0 else 0.0
-        power_w = power_w_steady + power_w_switch
-        sec = power_w / load_mbps  # W/Mbps
+        power_w_total = power_w_steady + power_w_switch  # reporting only
+        sec = power_w_steady / load_mbps  # W/Mbps, steady-state
         energy_term = self._alpha * sec
 
         # --- Continuous QoS score Q in [0, 1] ---
@@ -314,10 +321,14 @@ class SingleSiteUPFEnv(gym.Env):
         q_score = min(delay_score, loss_score)
         qos_term = self._lambda_qos * max(0.0, self._tau - q_score)
 
-        # --- Asymmetric switching cost (paper Eq. 7) ---
+        # --- Switching cost: physics-grounded, attributed to action ---
+        # L_SW = lambda_sw * sw_energy_wh on a realised type change.
+        # The twin's sw_energy_wh already differs by direction
+        # (DPDK->USR vs USR->DPDK), so a single lambda_sw weight
+        # captures asymmetry without needing separate c_dpdk/c_usr.
         type_changed = realised != prev_realised
         if type_changed:
-            switch_term = self._c_dpdk if realised == "DPDK" else self._c_usr
+            switch_term = self._lambda_sw * float(sw_energy_wh)
         else:
             switch_term = 0.0
 
@@ -339,10 +350,10 @@ class SingleSiteUPFEnv(gym.Env):
             "requested_upf": requested,
             "actual_load_gbps": load_gbps,
             "predicted_load_gbps": predicted,
-            "power_watts": power_w,            # effective (steady + amortised switch spike)
+            "power_watts": power_w_total,      # reporting: steady + amortised switch spike
             "power_watts_steady": power_w_steady,
             "power_watts_switch": power_w_switch,
-            "sec_w_per_mbps": sec,
+            "sec_w_per_mbps": sec,             # steady-state, drives reward energy_term
             "delay_us": delay_us,
             "predicted_loss": loss_pkts,
             "q_score": q_score,

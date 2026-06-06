@@ -522,6 +522,29 @@ class MAPPO:
             pbar.set_postfix(postfix)
             pbar.update(1)
 
+            # Periodic clean progress line (always emitted, works with
+            # --no-progress and in piped logs). Fires ~10 times per run
+            # plus on the first and last update.
+            tick = max(1, n_updates // 10)
+            if verbose and (update == 1 or update == n_updates or update % tick == 0):
+                pct = 100.0 * update / n_updates
+                elapsed = time.time() - t_start
+                eta_s = elapsed * (n_updates - update) / max(1, update)
+                best_str = (
+                    f"  best_eval={self.best_eval_return:>11.1f}"
+                    if self.best_eval_return > -np.inf else ""
+                )
+                tqdm.write(
+                    f"[{pct:5.1f}%] upd {update:>4d}/{n_updates}  "
+                    f"step {self.global_step:>7d}/{self.cfg.total_timesteps}  "
+                    f"ret={rollout_return:>+9.1f}  "
+                    f"H={train_stats['entropy']:.2f}  "
+                    f"KL={train_stats['approx_kl']:.3f}  "
+                    f"elapsed={int(elapsed//60):d}:{int(elapsed%60):02d}  "
+                    f"ETA={int(eta_s//60):d}:{int(eta_s%60):02d}"
+                    f"{best_str}"
+                )
+
             if verbose and did_eval:
                 tqdm.write(
                     f"    [eval @ step {self.global_step:>7d}] "

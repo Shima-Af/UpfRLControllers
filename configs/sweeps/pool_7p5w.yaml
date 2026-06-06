@@ -1,0 +1,9 @@
+# Sweep point: barely sub-floor.
+# Cap = 7.5 W is just below the DPDK fleet floor (8.2 W). The policy
+# must use USR at SOME low-load steps to satisfy. Should bind lightly.
+# lambda_pool bumped 20x from v1: an overrun of ~1 W now costs 1
+# reward unit (was 0.05 — too weak to steer the policy).
+pool:
+  power_cap_w: 7.5
+  lambda_pool: 1.0
+  enforce: "soft"

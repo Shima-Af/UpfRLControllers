@@ -1,0 +1,8 @@
+# Sweep point: moderately sub-floor.
+# Cap = 6.0 W needs ~2.2 W of USR savings — meaningful migration.
+# Watch unsafe_rate: if the policy is forced into USR at moderate
+# load it may breach QoS, which is itself a useful result.
+pool:
+  power_cap_w: 6.0
+  lambda_pool: 1.0
+  enforce: "soft"

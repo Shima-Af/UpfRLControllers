@@ -1,0 +1,4 @@
+# Sweep point: no integrated budget (control).
+budget:
+  budget_wh: null
+  lambda_budget: 0.0

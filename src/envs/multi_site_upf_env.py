@@ -1,4 +1,4 @@
-"""Multi-site Gymnasium environment — K independent UPF clusters in parallel.
+"""Multi-site Gymnasium environment — K UPF clusters in parallel.
 
 Phase 3 setup (paper-aligned, centralised single-agent PPO):
 
@@ -6,20 +6,21 @@ Phase 3 setup (paper-aligned, centralised single-agent PPO):
                by ``SingleSiteUPFEnv``. Shape = (K * obs_dim_per_cluster,).
   Action:      ``MultiDiscrete([2] * K)`` — one binary decision per
                cluster (0 = DPDK, 1 = USR). Joint factored policy.
-  Reward:      load-weighted sum of per-cluster rewards.
-               At each step ``t``, weights are
-                   w_k(t) = load_k(t) / max(sum_j load_j(t), eps)
-               so an idle cluster contributes ~0 to the gradient and a
-               peaking cluster dominates. Matches the paper's per-step
-               SEC framing.
+  Reward:      load-weighted sum of per-cluster rewards,
+               minus an optional fleet-power-pool soft penalty
+               (see ``configs/scenario_rl.yaml`` -> ``pool``):
+                   P_total(t) = sum_k power_watts_steady_k(t)
+                   overrun(t) = max(0, P_total(t) - power_cap_w)
+                   L_pool(t)  = lambda_pool * overrun(t)
+                   reward(t)  = sum_k w_k(t) * r_k(t) - L_pool(t)
+               When ``power_cap_w`` is null the pool is disabled and
+               behaviour matches prior runs exactly.
 
 Per-cluster bookkeeping (cooldown, switching costs, history window,
 prev_Q, prev_SEC) is delegated entirely to the underlying
 ``SingleSiteUPFEnv`` instances — the multi-site wrapper only handles
-observation concatenation, the joint action, and reward aggregation.
-This keeps the per-cluster reward math defined in exactly one place
-(``SingleSiteUPFEnv.step``) and avoids drift between Phase 2 and
-Phase 3.
+observation concatenation, the joint action, reward aggregation, and
+the shared power-pool coupling.
 """
 
 from __future__ import annotations
@@ -121,6 +122,20 @@ class MultiSiteUPFEnv(gym.Env):
             dtype=np.float32,
         )
 
+        # Shared fleet-power pool (instant soft penalty). Disabled when null.
+        pool_cfg = self.scenario_cfg.get("pool", {})
+        cap = pool_cfg.get("power_cap_w", None)
+        self._pool_cap_w: float | None = float(cap) if cap is not None else None
+        self._lambda_pool = float(pool_cfg.get("lambda_pool", 0.0))
+
+        # Integrated energy budget (telecom-realistic kWh-style). Disabled
+        # when null. Tracks cumulative steady-state energy per episode.
+        budget_cfg = self.scenario_cfg.get("budget", {})
+        b = budget_cfg.get("budget_wh", None)
+        self._budget_wh: float | None = float(b) if b is not None else None
+        self._lambda_budget = float(budget_cfg.get("lambda_budget", 0.0))
+        self._cumulative_energy_wh: float = 0.0
+
         # Episode state — tracked by sub-envs; we only keep t for the
         # truncation flag.
         self._t = 0
@@ -142,6 +157,7 @@ class MultiSiteUPFEnv(gym.Env):
             obs, _info = env.reset(seed=sub_seed)
             obs_chunks.append(obs)
         self._t = 0
+        self._cumulative_energy_wh = 0.0
         info = {
             "cluster_indices": list(self.cluster_indices),
             "K": self.K,
@@ -186,6 +202,28 @@ class MultiSiteUPFEnv(gym.Env):
             weights = per_cluster_loads / total_load
         weighted_reward = float(np.dot(weights, per_cluster_rewards))
 
+        # Shared fleet-power pool — soft penalty on steady-state overrun.
+        p_total_w = float(
+            sum(ic["power_watts_steady"] for ic in per_cluster_info)
+        )
+        pool_overrun_w = 0.0
+        pool_penalty = 0.0
+        if self._pool_cap_w is not None:
+            pool_overrun_w = max(0.0, p_total_w - self._pool_cap_w)
+            pool_penalty = self._lambda_pool * pool_overrun_w
+            weighted_reward -= pool_penalty
+
+        # Integrated energy budget — penalty grows with running excess.
+        step_energy_wh = p_total_w * self.step_h
+        self._cumulative_energy_wh += step_energy_wh
+        budget_excess_wh = 0.0
+        budget_penalty = 0.0
+        if self._budget_wh is not None:
+            target_energy_wh = self._budget_wh * (self._t + 1) / max(1, self._N)
+            budget_excess_wh = max(0.0, self._cumulative_energy_wh - target_energy_wh)
+            budget_penalty = self._lambda_budget * budget_excess_wh
+            weighted_reward -= budget_penalty
+
         self._t += 1
         info: dict[str, Any] = {
             "timestep": int(self._t),
@@ -195,6 +233,15 @@ class MultiSiteUPFEnv(gym.Env):
             "per_cluster": per_cluster_info,
             "total_load_gbps": float(total_load),
             "sum_reward_unweighted": float(per_cluster_rewards.sum()),
+            "pool_power_w": p_total_w,
+            "pool_cap_w": self._pool_cap_w,
+            "pool_overrun_w": pool_overrun_w,
+            "pool_penalty": pool_penalty,
+            "step_energy_wh": step_energy_wh,
+            "cumulative_energy_wh": self._cumulative_energy_wh,
+            "budget_wh": self._budget_wh,
+            "budget_excess_wh": budget_excess_wh,
+            "budget_penalty": budget_penalty,
         }
         obs = np.concatenate(obs_chunks).astype(np.float32)
         return obs, weighted_reward, terminated_any, truncated_any, info

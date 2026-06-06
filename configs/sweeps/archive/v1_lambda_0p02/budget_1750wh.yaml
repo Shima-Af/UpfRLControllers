@@ -1,0 +1,6 @@
+# Sweep point: 1750 Wh per episode (~near oracle).
+# Very tight — close to the theoretical minimum (~1765 Wh from probe).
+# Likely forces QoS tradeoffs; watch the unsafe_rate.
+budget:
+  budget_wh: 1750.0
+  lambda_budget: 0.02
