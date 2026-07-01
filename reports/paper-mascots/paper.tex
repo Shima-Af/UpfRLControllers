@@ -1,79 +1,71 @@
-%%
-%% MASCOTS 2026 submission.
-%% IEEE conference format. IEEEtran.cls is bundled in this folder.
-%%
-%% Build:
-%%   pdflatex paper && pdflatex paper   (run twice for cross-references)
-%%   figures/fig_bootstrap.pdf and figures/fig_per_cluster.pdf are
-%%   produced by:  python make_figures.py
-%%
-\documentclass[conference]{IEEEtran}
+ \documentclass[10pt,conference,letterpaper]{IEEEtran}
+\newcommand{\SECt}{\mathrm{SEC}}
+\IEEEoverridecommandlockouts
 
-% --- Packages ---------------------------------------------------------------
-\usepackage{amsmath,amssymb}
-\usepackage{graphicx}
-\usepackage{booktabs}
-\usepackage{array}
 \usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
 \usepackage{xcolor}
+% -------------------------------
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
 \usepackage[hyphens]{url}
 \usepackage[hidelinks]{hyperref}
 \usepackage{tikz}
 \usetikzlibrary{positioning,arrows.meta,fit,backgrounds,calc}
-
-\providecommand{\SECt}{\mathrm{SEC}}
-
 % --- TikZ block styles ------------------------------------------------------
 \tikzset{
-  blk/.style={draw,rounded corners=1.5pt,align=center,inner sep=2.6pt,
-              font=\scriptsize,minimum height=7mm,fill=gray!6},
-  grp/.style={draw,rounded corners=2.5pt,inner sep=4.5pt,line width=0.5pt},
-  fl/.style={-{Latex[length=1.4mm]},line width=0.5pt},
+  blk/.style={draw,rounded corners=1.5pt,align=center,inner sep=3pt,
+              font=\scriptsize,minimum height=7.5mm,fill=gray!6},
+  grp/.style={draw,rounded corners=2.5pt,inner sep=5pt,line width=0.5pt},
+  fl/.style={-{Latex[length=1.5mm]},line width=0.55pt},
 }
+% --------------------------------------------------
 
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
-% ---------------------------------------------------------------------------
-\title{A Measurement-Grounded Digital Twin for Evaluating Cooperative
-MARL in Energy-Aware 5G UPF Orchestration}
+\title{A Measurement-Grounded Digital Twin for Evaluating 
+Cooperative MARL in Energy-Aware 5G UPF Orchestration}
 
-\author{%
-\IEEEauthorblockN{Shima Afshar Borji\IEEEauthorrefmark{1},
-Roberto Bruschi\IEEEauthorrefmark{1}\IEEEauthorrefmark{2},
-Chiara Lombardo\IEEEauthorrefmark{1}\IEEEauthorrefmark{2},
-Raffaele Bolla\IEEEauthorrefmark{1}\IEEEauthorrefmark{2},
-Cristina Emilia Costa\IEEEauthorrefmark{2}}
-\IEEEauthorblockA{\IEEEauthorrefmark{1}DITEN, University of Genoa, Genoa, Italy \qquad
-\IEEEauthorrefmark{2}CNIT -- S2N National Lab, Genoa, Italy\\
-\texttt{\footnotesize shima.afshar.borji@edu.unige.it}\\
-\texttt{\footnotesize \{roberto.bruschi,\,chiara.lombardo,\,raffaele.bolla\}@unige.it,\;ccosta@cnit.it}}
+\author{
+  \IEEEauthorblockN{Shima Afshar Borji}
+  \IEEEauthorblockA{\textit{DITEN -- University of Genoa}\\
+  Genoa, Italy\\
+  shima.afshar.borji@edu.unige.it}
+  \and
+  \IEEEauthorblockN{Roberto Bruschi}
+  \IEEEauthorblockA{\textit{DITEN -- University of Genoa}\\
+  \textit{CNIT -- S2N National Lab}\\
+  Genoa, Italy\\
+  roberto.bruschi@unige.it}
+  \and
+  \IEEEauthorblockN{Chiara Lombardo}
+  \IEEEauthorblockA{\textit{DITEN -- University of Genoa}\\
+  \textit{CNIT -- S2N National Lab}\\
+  Genoa, Italy\\
+  chiara.lombardo@unige.it}
+  \and
+  \IEEEauthorblockN{Raffaele Bolla}
+  \IEEEauthorblockA{\textit{DITEN -- University of Genoa}\\
+  \textit{CNIT -- S2N National Lab}\\
+  Genoa, Italy\\
+  raffaele.bolla@unige.it}
+  \and
+  \IEEEauthorblockN{Cristina Emilia Costa}
+  \IEEEauthorblockA{\textit{CNIT -- S2N National Lab}\\
+  Genoa, Italy\\
+  ccosta@cnit.it}
 }
 
 \maketitle
 
-% ---------------------------------------------------------------------------
 \begin{abstract}
-The 5G User Plane Function (UPF) can run as a DPDK kernel-bypass stack,
-which offers high throughput at a high idle-power floor, or as a
-user-space (USR) stack, which draws less power but has a narrower safe
-operating envelope. Selecting the right realization per site, across a
-fleet of heterogeneous Mobile Edge Computing (MEC) clusters, is a
-cooperative control problem whose multi-site coordination structure has
-not been studied. We build a measurement-grounded digital twin
-calibrated on a physical testbed through RAPL power measurements and
-per-mode surrogate models, and use it to evaluate cooperative
-multi-agent reinforcement learning (MARL) for joint UPF realization
-switching across $K\,{=}\,10$ clusters. MAPPO, with a shared-parameter
-actor and a centralised critic, outperforms an independent per-site PPO
-(IPPO) ensemble, a centralised single-MLP PPO, and the swept-best
-classical hysteresis baseline by 10 to 61\% under a physics-grounded
-reward that folds measured switching energy into specific energy
-consumption. The win over IPPO is small in magnitude but statistically
-robust (paired bootstrap one-sided $p\,{=}\,0.009$, 95\% CI
-$[+28,+262]$ reward units), and it concentrates on the data-poor
-low-load clusters where independent learning lacks cross-site signal.
-The result indicates that coordination architecture matters more than
-algorithm choice for energy-aware UPF orchestration at the edge.
+The distribution of 5G User Plane Functions (UPFs) across Mobile Edge Computing (MEC) sites improves service responsiveness but increases the energy footprint of the mobile data plane. Since edge traffic varies substantially across sites and over time, static provisioning often keeps high-performance UPF realizations active even when lower-power alternatives would be sufficient. This paper studies energy-aware UPF orchestration as a cooperative runtime-control problem in which multiple heterogeneous MEC clusters must select between a high-throughput DPDK-based UPF and a lower-power user-space UPF while preserving Quality of Service (QoS) and accounting for switching overheads. We evaluate this problem using a measurement-grounded digital twin calibrated from a physical UPF testbed, incorporating empirical power measurements, QoS surrogate models, and measured activation delays. Within this environment, we compare three reinforcement-learning control architectures: MAPPO with a shared actor and centralized critic, independent per-site PPO agents, and a centralized PPO controller. Results over a held-out test period show that MAPPO consistently outperforms the strongest hysteresis baseline and both PPO alternatives, with statistically significant gains over independent learning. The improvement is most visible in low-load, data-poor clusters, where shared policies transfer useful operating behavior across sites. These findings show that coordination structure is a key factor in energy-efficient UPF orchestration.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -81,707 +73,594 @@ algorithm choice for energy-aware UPF orchestration at the edge.
 reinforcement learning, MAPPO, digital twin, mobile edge computing, CTDE.
 \end{IEEEkeywords}
 
-% ===========================================================================
 \section{Introduction}
-% ===========================================================================
-\IEEEPARstart{T}{he} proliferation of 5G base stations and core network
-functions is driving a sharp increase in telecommunications energy
-consumption. The User Plane Function (UPF), which is responsible for
-packet routing, forwarding, and QoS enforcement in the 5G Core, is the
-highest-throughput data-plane element in a typical mobile operator
-deployment and one of its largest energy consumers at the network
-edge~\cite{ref:carbon}. Operators face growing pressure to reduce their
-carbon footprint while maintaining stringent QoS commitments across a
-geographically distributed fleet of MEC clusters.
+Mobile networks are being pushed toward a more distributed
+architecture. To meet latency requirements and support data-intensive edge
+services, operators increasingly deploy core-network functions closer to radio
+access sites and end users. The User Plane Function (UPF) is central in this
+architecture because it carries packet forwarding, traffic steering, and QoS
+enforcement in the 5G Core. As UPFs are replicated across Mobile Edge Computing
+(MEC) sites, their aggregate energy consumption becomes an important operational
+cost and a relevant sustainability concern.
 
-Two UPF realization classes define the practical energy-performance
-design space. A DPDK-accelerated kernel-bypass stack delivers high
-throughput and low tail latency, at the cost of dedicated CPU cores held
-at an elevated idle-power floor regardless of the offered load. A
-user-space (USR) software stack draws substantially less power at low
-utilization, but it has a narrower safe operating envelope before delay
-and packet loss degrade below QoS targets~\cite{ref:rischke}. Static
-all-DPDK provisioning, which is the current industry default, wastes
-energy whenever traffic falls below the per-site break-even point, while
-static all-USR violates QoS during peaks. The question is when to run
-which realization, on a per-site basis, given noisy short-horizon
-traffic forecasts and non-negligible switching costs.
+The difficulty is that edge traffic is neither uniform nor constant. Some MEC
+clusters serve dense and persistent demand, while others spend long periods at
+low load and experience only short peaks. Provisioning every site with a
+high-throughput data-plane realization is therefore safe but inefficient. It
+keeps resources active for peak conditions that occur only occasionally. At the
+same time, using an energy-efficient realization everywhere is unsafe, because it
+may violate latency or packet-loss constraints when load increases. Energy-aware
+UPF orchestration must therefore make repeated runtime decisions that balance
+three competing requirements: reduce power at low load, preserve QoS at high
+load, and avoid excessive switching between realizations.
 
-Hysteresis-based switching provides the strongest classical answer.
-Upper and lower thresholds derived from the energy-performance crossover
-point gate transitions and prevent rapid oscillation near the decision
-boundary. At a single site this approach achieves meaningful energy
-savings~\cite{ref:slices}, yet it faces a fundamental limit at practical
-forecaster accuracy levels. The hysteresis band must scale with the
-forecaster mean absolute error (MAE) to filter noise reliably, but when
-the MAE is large relative to the decision threshold, the lower threshold
-collapses to zero and the controller never leaves DPDK regardless of
-actual load. Single-site reinforcement learning (RL) resolves this by
-learning a policy that handles forecast uncertainty
-directly~\cite{ref:comcom}, but when each of $K$ heterogeneous MEC
-clusters trains independently, data-poor low-load sites lack sufficient
-sample signal to discover that USR is safe at their operating point.
-Independent per-site learning leaves each cluster's policy bounded by its
-own experience, with no mechanism to transfer the ``USR-at-low-load''
-rule learned on data-rich clusters to the low-traffic sites that need it
-most.
+This paper focuses on a concrete realization-selection problem. Each MEC site
+can operate either a DPDK-based kernel-bypass UPF or a user-space UPF. The DPDK
+realization provides robust high-load performance but maintains a comparatively
+high idle-power floor because CPU cores remain actively polled. The user-space
+realization consumes substantially less energy at low load, but its safe
+operating region is narrower. The resulting control problem is simple to state
+but difficult to solve in practice. At every 15-minute interval, each site must
+select the realization that minimizes energy while keeping QoS violations rare,
+using imperfect short-horizon traffic forecasts and paying the measured cost of
+changing realization.
 
-The natural remedy is cooperative multi-agent training. A
-shared-parameter actor trained simultaneously across all clusters can
-propagate policies across sites, while decentralised execution preserves
-per-site autonomy at inference time. Whether this coordination benefit
-materialises in practice, and whether it is statistically significant
-relative to independent per-site learning, has not been quantified for
-UPF orchestration. Answering this question requires a simulation
-environment whose fidelity to real hardware is established by
-measurement, so that results are grounded in actual energy-performance
-trade-offs rather than synthetic assumptions.
+A single-site controller can address this problem with thresholds or reinforcement learning. These approaches are useful, but they do not fully
+capture the operational setting of a fleet of heterogeneous MEC clusters. In a
+fleet, some sites generate abundant training experience around the relevant
+switching boundary, whereas low-load sites may rarely observe unsafe states and
+may not provide enough local evidence for an independent learner to identify
+when the user-space realization is safe. In contrast, a controller trained on the
+combined experience of all sites may learn reusable operating rules, such as
+when low predicted load justifies the user-space realization, and apply them to
+sites with limited local data. This motivates a cooperative multi-agent view of
+UPF orchestration.
 
-This paper makes three contributions.
+The main question addressed in this work is whether cooperation across MEC
+sites improves energy-aware UPF realization control, and whether the benefit
+comes from the coordination architecture itself. To answer this question, we
+compare three architectures under identical measurements, traffic traces,
+reward definitions, and evaluation protocol. The first is MAPPO, which uses a
+shared actor for decentralized per-site decisions and a centralized critic
+through centralized training with decentralized execution (CTDE). The second is
+an independent per-site PPO ensemble, where each MEC cluster learns its own
+policy without sharing experience. The third is a centralized PPO policy that
+observes the global state and outputs the joint action for all sites. This
+comparison separates the effect of policy sharing and centralized value learning
+from the broader use of reinforcement learning.
+
+Credible evaluation requires a system model that reflects the actual
+energy--performance behavior of UPF realizations. For this reason, the study is
+performed on a measurement-grounded digital twin calibrated from a physical
+5G-core testbed. The digital twin is calibrated with measured power, QoS, and switching-delay data from both UPF realizations. As a result, switching is not modeled as a fixed artificial penalty. Instead, its cost depends on the realization being activated and on the offered load, reflecting the behavior observed in the measured system. This allows the evaluation environment to capture the interaction between traffic demand, UPF realization, QoS, and energy consumption more realistically.
+
+The paper makes the following contributions.
 \begin{itemize}
-\item \emph{A measurement-grounded digital twin for multi-site UPF
-evaluation.} We calibrate a digital twin on a physical testbed (Keysight
-LoadCore traffic generation, RAPL-via-Scaphandre power measurement,
-SD-Core DPDK UPF and OAI USR UPF) and extend the single-site framework
-of~\cite{ref:comcom} to $K\,{=}\,10$ heterogeneous MEC clusters with
-distinct traffic profiles and per-mode MLP surrogate models for power
-and QoS.
-\item \emph{A physics-grounded reward that unifies switching and
-steady-state energy.} We remove the redundant flat switching-cost
-constant of prior formulations~\cite{ref:comcom} and fold the measured
-activation spike energy directly into the specific energy consumption
-(SEC) term, so switching costs emerge from testbed-measured activation
-durations rather than hand-set constants.
-\item \emph{Evidence that coordination architecture matters more than
-algorithm.} A controlled three-architecture comparison at eight training
-seeds, between MAPPO with a shared-parameter actor and centralised
-critic~\cite{ref:mappo}, an IPPO ensemble~\cite{ref:sb3}, and a
-centralised single-MLP PPO, shows that the MAPPO architectural win over
-IPPO is significant at $p\,{=}\,0.009$ (paired bootstrap, 95\% CI
-$[+28,+262]$ reward units), with the gain concentrating on low-load
-clusters where independent learning lacks sufficient signal.
+\item \emph{A cooperative formulation of energy-aware UPF realization control.}
+We formulate runtime selection between DPDK and user-space UPF realizations
+across $K=10$ heterogeneous MEC clusters as a cooperative multi-agent
+reinforcement-learning problem with binary per-site actions and a shared fleet
+objective.
+
+\item \emph{A measurement-grounded evaluation environment.}
+We formulate the UPF control problem within a calibrated digital twin derived from physical testbed measurements. The environment combines RAPL-based power measurements collected with Scaphandre, QoS surrogate models for each UPF realization, and empirical activation durations with their associated energy costs. This allows policies to be compared under hardware-grounded energy, QoS, and switching-cost conditions.
+
+\item \emph{A controlled comparison of coordination architectures.}
+We compare MAPPO, an IPPO ensemble, and centralized PPO under the same traffic traces, reward formulation, and switching-cost model. The comparison shows that the coordination architecture has a measurable impact on energy-aware UPF orchestration, with MAPPO achieving the best overall performance among the evaluated learning-based controllers.
 \end{itemize}
 
-The remainder of the paper is organised as follows.
-Section~\ref{sec:related} reviews related work.
-Section~\ref{sec:model} describes the system model and digital twin.
-Section~\ref{sec:problem} formalises the multi-site control problem and
-reward. Section~\ref{sec:method} details the MARL architectures and the
-evaluation protocol. Section~\ref{sec:results} presents and analyses
-results, and Section~\ref{sec:conclusion} concludes.
+The rest of the paper is organized as follows. Section~\ref{sec:related}
+reviews related work on UPF energy management, reinforcement learning for
+network control, cooperative MARL, and digital twins. Section~\ref{sec:model}
+introduces the deployment model, traffic data, and calibrated digital twin.
+Section~\ref{sec:problem} defines the multi-site control problem and reward.
+Section~\ref{sec:method} describes the evaluated learning architectures and the
+evaluation protocol. Section~\ref{sec:results} presents the experimental
+results. Section~\ref{sec:conclusion} concludes the paper.
 
-% ===========================================================================
 \section{Related Work}
 \label{sec:related}
-% ===========================================================================
-\noindent\textbf{Rule-based UPF realization selection.}
-Among classical strategies for dynamic network function management,
-hysteresis-based switching is the strongest and most practically
-deployable. A hysteresis policy defines an upper threshold $t_{up}$ and a
-lower threshold $t_{down}\,{=}\,t_{up}\,{-}\,b$ around the
-energy-performance crossover point. A switch to the low-power realization
-is triggered only when predicted traffic falls below $t_{down}$, and a
-switch back occurs only above $t_{up}$. The band $b$ acts as a noise
-filter that prevents rapid oscillation around the decision boundary.
-Simpler threshold policies, which switch on a single crossing without
-hysteresis, are strictly inferior, since they are susceptible to every
-forecaster error and incur excessive switching cost. This makes
-hysteresis the correct classical baseline rather than the bare threshold.
-Our prior work~\cite{ref:slices} studies this approach at a single site
-using polynomial surrogate models and an LSTM forecaster, achieving
-10.46\% energy savings over static DPDK provisioning. However,
-hysteresis faces a fundamental trade-off at real forecaster accuracy
-levels. The band $b$ must be set proportionally to the forecaster MAE to
-filter noise reliably, yet this same scaling causes $t_{down}$ to
-collapse towards zero when the MAE is large relative to the decision
-threshold, at which point the controller never leaves DPDK regardless of
-the actual load. We derive both thresholds directly from our calibrated
-digital twin and sweep the band over five values to identify the
-strongest classical operating point, so that the comparison is fair and
-not based on hand-tuned parameters (Section~\ref{sec:results}). UPF
-placement and chaining across the network have been studied from an
-optimisation perspective~\cite{ref:leyva}, but the per-site
-realization-selection problem with heterogeneous energy-performance
-profiles and practical forecaster noise has received less attention.
+\subsection{Energy-aware UPF realization and placement.}
+Energy reduction in 5G-core deployments has been studied through UPF placement,
+chaining, scaling, and implementation choices. Placement-oriented formulations
+optimize where UPFs should be located and how traffic should be routed through
+them~\cite{ref:leyva}. Complementary measurement studies show that different
+UPF realizations have markedly different energy--performance profiles: DPDK or
+VPP-based data planes achieve high packet-processing performance but tend to
+keep CPU resources active through polling, while user-space implementations
+exhibit stronger load-proportional behavior~\cite{ref:christakis,ref:bolla}.
+These observations motivate runtime realization selection, where the system
+switches between a high-performance and a low-power implementation according to
+offered load.
 
-\noindent\textbf{Reinforcement learning for single-site UPF
-orchestration.} RL has been applied to UPF realization selection at a
-single site. Bellin et al.~\cite{ref:bellin} use deep RL to choose among
-UPF deployment options based on power consumption at the 5G edge. Our
-prior work~\cite{ref:comcom} formulates the DPDK/USR selection problem as
-a single-site Markov decision process trained on a measurement-grounded
-digital twin, achieving 16.9\% energy savings over static DPDK
-provisioning with a physics-grounded reward. These single-agent
-formulations leave the multi-site coordination problem open, because each
-site learns independently and data-poor low-load clusters receive no
-benefit from the richer experience of high-load peers. The present paper
-extends the twin-based framework to $K\,{=}\,10$ heterogeneous clusters
-and directly quantifies how much coordination across sites is worth.
+\subsection{Threshold and hysteresis control.}
+A common classical approach is to switch realizations using thresholds around
+an energy--performance crossover. Hysteresis improves over a single threshold by
+introducing separate upper and lower switching points, thereby reducing
+oscillation caused by traffic noise or forecast errors. A single-site study
+reported 10.46\% energy savings over static DPDK using polynomial surrogates and
+an LSTM-based traffic predictor~\cite{ref:slices}. However, the hysteresis band
+must be large enough to absorb forecast uncertainty. When the forecast error is
+large relative to the switching threshold, the lower threshold may collapse to
+zero, causing the controller to remain in the conservative DPDK mode. In this
+paper, hysteresis is therefore treated as a strong deterministic baseline: its
+thresholds are derived from the calibrated twin and its band is swept to identify
+the best classical operating point.
 
-\noindent\textbf{Multi-agent RL for network resource management.}
-Cooperative MARL has been applied to network slicing, resource
-allocation, and traffic steering in MEC environments~\cite{ref:zhu}.
-Value-decomposition methods such as QMIX~\cite{ref:qmix} and
-VDN~\cite{ref:vdn} impose a monotonic factorisation of the joint value
-function, which simplifies credit assignment but introduces an inductive
-bias poorly suited to the heterogeneous reward scales of our $K\,{=}\,10$
-deployment. Moreover, both are off-policy and require replay buffers,
-which add tuning complexity that conflicts with the episodic,
-short-horizon structure of the 15-minute UPF control problem. On-policy
-actor-critic methods, specifically the MAPPO architecture~\cite{ref:mappo}
-with a shared-parameter actor and a centralised critic, provide
-Centralised Training with Decentralised Execution (CTDE) without these
-constraints and have shown competitive performance in cooperative
-discrete-action tasks. We adopt MAPPO as our proposed architecture and
-include an IPPO ensemble~\cite{ref:sb3} and a centralised single-MLP PPO
-as the two natural ablation points.
+\subsection{Reinforcement learning for UPF and edge-network control.}
+Reinforcement learning has been used to adapt UPF deployment and edge-resource
+management decisions under time-varying demand. Bellin et al.~\cite{ref:bellin}
+use deep RL to select UPF deployment options at the edge based on measured power
+behavior. A related single-site formulation~\cite{ref:comcom} models DPDK/USR
+selection as an MDP evaluated through a measurement-grounded twin and reports
+energy savings over static DPDK. These works demonstrate that learning-based
+control can outperform fixed policies, but they focus on one site or treat UPF
+options as independent choices. The present work extends this direction to a
+fleet of heterogeneous MEC clusters and asks whether shared learning across
+sites improves energy-aware realization selection.
 
-\noindent\textbf{Digital twins for network control evaluation.}
-Measurement-grounded digital twins have emerged as a principled approach
-to training and evaluating network controllers without incurring the cost
-and risk of live closed-loop experimentation~\cite{ref:ndt,ref:comcom}.
-The fidelity of the twin is critical, since a surrogate that does not
-capture the energy-performance trade-offs of the underlying hardware will
-produce controllers that misfire at deployment. We address this by
-calibrating the twin on per-mode profiling data from a physical testbed
-and grounding activation durations and power curves in RAPL
-measurements~\cite{ref:rapl}, extending the single-site calibration
-of~\cite{ref:comcom} to a ten-cluster heterogeneous fleet.
+\subsection{Cooperative MARL architectures.}
+Cooperative multi-agent reinforcement learning has been applied to network
+slicing, radio-resource allocation, traffic steering, and energy-aware radio
+access control~\cite{ref:zhu,ref:cai}. Value-decomposition methods such as VDN
+and QMIX decompose a global value into agent-specific terms~\cite{ref:vdn,ref:qmix},
+but their assumptions and off-policy training style are not always convenient
+for short-horizon operational control with heterogeneous reward scales. MAPPO
+has emerged as a robust on-policy actor--critic method for cooperative tasks,
+combining decentralized actors with a centralized critic~\cite{ref:mappo}. At
+the same time, independent PPO can be highly competitive in some cooperative
+settings~\cite{ref:ippo}. This makes architecture-level comparison important.
+Coordination may help, but centralized learning can also introduce optimization
+difficulties. Our study compares MAPPO, independent per-site PPO, and centralized
+PPO under a common UPF-control environment.
+\subsection{Measurement-grounded digital twins.}
+Digital twins provide a controlled way to evaluate network-management policies
+without repeatedly perturbing a live infrastructure~\cite{ref:ndt}. Their value,
+however, depends on calibration fidelity. For energy-aware control, the twin
+must reproduce not only operating power but also QoS degradation and the
+costs of configuration changes. A companion study develops a broader
+digital-twin vision for energy-aware UPF orchestration in 6G edge systems
+~\cite{ref:costandt}. This paper uses a concrete calibrated instance of that
+idea as an evaluation instrument for cooperative MARL.
 
-% --- Figure 1: pipeline -----------------------------------------------------
-\begin{figure}[!t]
-\centering
-\resizebox{\columnwidth}{!}{%
-\begin{tikzpicture}[node distance=3mm]
-% stage a
-\node[blk] (test)  {Physical Testbed\\\scriptsize SD-Core DPDK / OAI USR\\\scriptsize Keysight LoadCore};
-\node[blk,below=of test] (prof) {Profiling Campaign\\\scriptsize 22 load levels};
-\node[blk,below=of prof] (surr) {Surrogate Models\\\scriptsize $p_m(\rho),\,q_m(\rho)$ (MLP)};
-\begin{scope}[on background layer]
-\node[grp,fill=blue!4,fit=(test)(prof)(surr),label={[font=\scriptsize\bfseries]above:(a) Measurement}] (ga) {};
-\end{scope}
-% stage b
-\node[blk,right=10mm of test] (traf) {Traffic Data\\\scriptsize $K{=}10$ clusters\\\scriptsize 15-min, tr/val/test};
-\node[blk,below=of traf] (fore) {Forecaster\\\scriptsize MAE $=110.7$ Mbps};
-\node[blk,below=of fore] (twin) {Digital Twin\\\scriptsize $\mathcal{T}(c,\rho){\to}(P,d,\ell)$\\\scriptsize DPDK 24\,s / USR 3.3\,s};
-\begin{scope}[on background layer]
-\node[grp,fill=green!5,fit=(traf)(fore)(twin),label={[font=\scriptsize\bfseries]above:(b) Digital Twin}] (gb) {};
-\end{scope}
-% stage c
-\node[blk,right=10mm of traf] (env) {Multi-Site RL Env\\\scriptsize PettingZoo, $K{=}10$\\\scriptsize 14-dim obs/agent};
-\node[blk,below=of env] (mappo) {MAPPO\\\scriptsize shared actor + central critic};
-\node[blk,below=of mappo] (base) {IPPO\,$\times K$ \;/\; Central PPO};
-\begin{scope}[on background layer]
-\node[grp,fill=orange!6,fit=(env)(mappo)(base),label={[font=\scriptsize\bfseries]above:(c) Controllers}] (gc) {};
-\end{scope}
-% flows
-\draw[fl] (surr.east) -- (twin.west);
-\draw[fl] (twin.east) -- (env.west);
-\draw[fl] (env) -- (mappo);
-\draw[fl] (mappo) -- (base);
-\draw[fl] (test)--(prof); \draw[fl] (prof)--(surr);
-\draw[fl] (traf)--(fore); \draw[fl] (fore)--(twin);
-\end{tikzpicture}}
-\caption{End-to-end pipeline. (a) Physical-testbed measurements feed the
-profiling campaign that produces per-mode MLP surrogate models;
-(b) per-cluster traffic and a short-horizon forecaster are combined with
-the surrogates inside the measurement-grounded digital twin; (c) the twin
-drives a multi-site PettingZoo RL environment shared by the three
-evaluated controllers.}
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/MASCOTS_PIPELINE.pdf}
+    \caption{Measurement-grounded evaluation workflow. The physical UPF testbed is
+first profiled to fit per-realization power and QoS surrogates. These
+surrogates, together with traffic traces and short-horizon forecasts, define the
+digital twin. The same twin is then used as the environment for all evaluated
+controllers.}
 \label{fig:pipeline}
 \end{figure}
 
-% ===========================================================================
+
 \section{System Model and Digital Twin}
 \label{sec:model}
-% ===========================================================================
-\subsection{Deployment and control loop}
-A mobile operator runs $K\,{=}\,10$ MEC clusters that serve distinct
-geographic regions, each hosting one UPF instance. Fig.~\ref{fig:deploy}
-shows where the controller sits. It operates at the management and
-orchestration plane, above the 3GPP control plane, and issues virtual
-network function (VNF) lifecycle operations that start or stop the DPDK
-and USR containers at each site. The 5G Core control plane (SMF, AMF,
-UDM, PCF) stays centralised, and the SMF keeps issuing N4/PFCP session
-rules to whichever realization is active at each site. At each control
-step $t$ on a 15-minute cadence, cluster $i$ chooses a realization
-$a_{i,t}\,{\in}\,\{0,1\}$, where $0$ denotes DPDK and $1$ denotes USR.
-Switching is allowed at every step, subject to a cost. The per-agent
-action space is binary and the joint action space is $\{0,1\}^{K}$, which
-grows as $2^{K}$. The control loop is implemented as a PettingZoo
-parallel environment~\cite{ref:pz} wrapped around the twin.
 
-\subsection{Digital twin}
-We use a calibrated digital twin $\mathcal{T}$ that returns, for each
-cluster $i$ and step $t$, given an offered load $\lambda_{i,t}$ and a
-realization $a_{i,t}$, the steady-state power
-$P^{\mathrm{steady}}_{i,t}$ in watts, the per-packet delay $d_{i,t}$ in
-microseconds, the predicted packet loss $\ell_{i,t}$, and a binary safety
-flag. The twin is built in three steps that match
-Fig.~\ref{fig:pipeline}. First, a physical testbed (SD-Core DPDK UPF,
-OAI USR UPF, Keysight LoadCore traffic generation) is profiled over 22
-load levels while RAPL-via-Scaphandre records package power. Second,
-per-mode multilayer-perceptron (MLP) surrogates $p_m(\rho)$ and
-$q_m(\rho)$ regress power and QoS as functions of normalised load $\rho$
-for each realization $m$. Third, the RAPL traces also fix the measured
-activation durations of the two realizations, which are
-$t^{\mathrm{act}}_{\mathrm{DPDK}}\,{=}\,24$\,s and
-$t^{\mathrm{act}}_{\mathrm{USR}}\,{=}\,3.3$\,s. These durations make the
-switching cost asymmetric and physically grounded rather than hand-set.
-We treat the surrogates as ground truth in this paper and defer
-sim-to-real validation to future work.
+\subsection{Deployment model and control loop} 
+We consider a mobile operator with $K=10$ MEC clusters serving different geographic regions. Each cluster hosts one UPF service that can be instantiated using either a DPDK-based realization or a user-space realization. The control entity operates in the management-and-orchestration layer and issues lifecycle operations to start or stop the corresponding containers at each site. The central 5G Core control plane remains unchanged. The SMF, AMF, UDM, and PCF continue to operate centrally, while the SMF sends N4/PFCP rules to the active UPF realization at each MEC cluster.{\color{red} [Check the flow with Chiara.]}
 
-\subsection{Traffic and forecaster}
-Per-cluster offered loads come from a short-horizon
-forecaster~\cite{ref:comcom} and are partitioned chronologically into a
-training slice of 5073 steps (about 53 days), a validation slice of 1009
-steps (about 10.5 days), and a test slice of 1009 steps (about 10.5
-days). The one-step forecast $\hat{\lambda}_{i,t+1}$ is exposed to the
-controllers as part of the observation. The forecaster MAE on the test
-slice, averaged across the ten clusters, is 110.7~Mbps, which is
-non-negligible relative to the per-site break-even point and is the
-reason naive hysteresis struggles (Section~\ref{sec:problem}).
+At control step $t$, with a 15-minute period, each cluster $i$ selects an action $a_{i,t}\in\{0,1\}$, where $0$ denotes the DPDK realization and $1$ denotes the user-space realization. The joint action across the fleet belongs to $\{0,1\}^{K}$ and therefore grows exponentially with the number of sites. This structure makes a centralized joint policy difficult to train as $K$ increases, while also creating an opportunity for policy sharing across sites. The control environment is implemented as a PettingZoo parallel environment~\cite{ref:pz} that wraps the calibrated digital twin.
 
-The ten clusters form a deliberately heterogeneous fleet, which is what
-makes coordination interesting. On the test slice the per-cluster mean
-load ranges from 0.108~Gbps (cluster c0) to 1.66~Gbps (cluster c9), a
-15.4$\times$ spread, with 95th-percentile loads from 0.22 to 3.43~Gbps
-and instantaneous peaks up to 5.8~Gbps. The clusters also differ in
-shape, with peak-to-trough ratios between 4.8 and 17.3 and a daily peak
-that falls between 10:00 and 11:00 for most sites. This spread means a
-single static policy cannot be efficient everywhere, since the lowest-load
-clusters spend most of the day below the USR break-even point while the
-highest-load clusters are DPDK-bound around the clock.
+\subsection{Digital twin calibration}
+For each cluster $i$, time step $t$, offered load $\lambda_{i,t}$, and selected
+realization $a_{i,t}$, the digital twin returns operating power
+$P^{\mathrm{op}}_{i,t}$, packet delay $d_{i,t}$, packet loss $\ell_{i,t}$,
+and a binary safety indicator. The twin is calibrated from a physical testbed
+that includes an SD-Core DPDK UPF, an OpenAirInterface user-space UPF, Keysight
+LoadCore traffic generation, and RAPL power measurements collected through
+Scaphandre. The testbed is profiled over various traffic-load levels, creating the
+measurement basis for the per-realization models.
 
-% --- Figure 2: deployment ---------------------------------------------------
+For each realization $m$, regression surrogates $p_m(\rho)$ and $q_m(\rho)$ map
+the normalized load $\rho$ to power and QoS. Each surrogate is chosen by
+cross-validation: Ridge regression where the response is close to linear, and
+tree ensembles where saturation makes it nonlinear. Because the twin is the
+evaluation environment for every controller, we check that these surrogates
+reproduce the measured behavior on held-out data. The user-space power surrogate
+reaches $R^2=0.99$, and its delay and loss surrogates reach $R^2$ between $0.97$
+and $1.00$. DPDK power is almost constant across load (standard deviation about
+$5$~mW from $0$ to $5$~Gbps), and the surrogate reproduces it to within $4$~mW,
+so its low $R^2$ reflects this near-zero variance rather than a poor fit.
+The same measurement traces also determine the activation durations of the two
+realizations: $t^{\mathrm{act}}_{\mathrm{DPDK}}=24$~s and
+$t^{\mathrm{act}}_{\mathrm{USR}}=3.3$~s. These measured values are important
+because switching to DPDK is substantially more expensive than switching to the
+user-space realization. The digital twin therefore captures both operating
+operation and transition overhead. Live closed-loop validation is left for
+future work; the present study focuses on controlled, repeatable evaluation
+inside the calibrated twin.
+
+\subsection{Traffic Traces and Prediction}
+
+The traffic process is derived from the NetMob 2023 Lyon dataset, which provides city-scale mobile downlink demand over $100 \times 100$~m grid tiles at 15-minute resolution. We use these traces to represent the spatial and temporal variability of urban mobile traffic. Grid-level demand is first mapped to radio-site service areas using a Voronoi-based association constructed from base-station locations. The resulting site-level demand series are then grouped into $K=10$ heterogeneous MEC clusters, which define the traffic inputs of the digital twin.
+
+To support proactive UPF orchestration, we train a cluster-level spatiotemporal graph neural network, denoted as ClusterSTGNN. The graph nodes correspond to the selected MEC clusters, and edges encode spatial neighborhood relations inherited from the underlying radio-site topology. The model uses a recurrent temporal encoder to capture recent traffic evolution and graph-attention layers to propagate information across neighboring clusters. Given 24 hours of history, the model predicts the traffic load over the next hour. The resulting forecasts are used as demand estimates within the digital twin.
+
+
+% --- Figure 2: deployment (simplified) -------------------------------------
+% \begin{figure}[!t]
+% \centering
+% \resizebox{0.96\columnwidth}{!}{%
+% \begin{tikzpicture}[node distance=2.4mm]
+% \node[blk,fill=orange!8,minimum width=64mm] (mano)
+%   {\textbf{Management \& Orchestration Plane}\\[1pt]
+%    \scriptsize MARL controller -- per-site realization decisions (15-min steps)};
+% \node[blk,below=7mm of mano.south west,anchor=north west,minimum width=15mm] (s1)
+%   {Site 1\\\scriptsize DPDK/USR};
+% \node[blk,right=of s1,minimum width=15mm] (s2) {Site 2\\\scriptsize DPDK/USR};
+% \node[right=of s2,font=\scriptsize] (dots) {$\cdots$};
+% \node[blk,right=of dots,minimum width=15mm] (sk) {Site $K$\\\scriptsize DPDK/USR};
+% \begin{scope}[on background layer]
+% \node[grp,fill=green!5,fit=(s1)(sk),
+%       label={[font=\scriptsize\bfseries]above left:MEC edge ($K{=}10$ sites)}] (mec) {};
+% \end{scope}
+% \node[blk,fill=blue!5,below=9mm of s1.south west,anchor=north west,minimum width=32mm] (core)
+%   {\textbf{5G Core} (central DC)\\\scriptsize SMF \;\, AMF \;\, UDM \;\, PCF};
+% \node[blk,fill=gray!8,right=4mm of core,minimum width=28mm] (ran)
+%   {\textbf{Radio Access Network}\\\scriptsize gNB$_1$ \, $\cdots$ \, gNB$_n$};
+% \draw[fl,dashed] (mano.south) -- ($(mec.north)$)
+%   node[midway,right,font=\scriptsize] {VNF lifecycle ($\times K$)};
+% \draw[fl] (core.north) -- (s1.south) node[midway,left,font=\scriptsize] {N4};
+% \draw[fl] (ran.north) to[out=90,in=-90] (s2.south)
+%   node[midway,right,font=\scriptsize] {N3};
+% \end{tikzpicture}}
+% \caption{Deployment model. The controller operates at the
+% management-and-orchestration layer and selects the UPF realization at each MEC
+% site. The 5G Core control plane remains centralized, and the SMF communicates
+% with the active realization through N4/PFCP.}{\color{red} [Placeholder]}
+% \label{fig:deploy}
+% \end{figure}
 \begin{figure}[!t]
-\centering
-\resizebox{\columnwidth}{!}{%
-\begin{tikzpicture}[node distance=2.2mm]
-% MANO plane
-\node[blk,fill=orange!8,minimum width=68mm] (mano)
-  {\textbf{Management \& Orchestration Plane}\\[1pt]
-   \scriptsize MAPPO controller -- per-site realization decisions (15-min steps)};
-% MEC sites
-\node[blk,below=7mm of mano.south west,anchor=north west,minimum width=14mm] (s1)
-  {Site 1\\\scriptsize UPF\\\scriptsize DPDK/USR};
-\node[blk,right=of s1,minimum width=14mm] (s2) {Site 2\\\scriptsize UPF\\\scriptsize DPDK/USR};
-\node[blk,right=of s2,minimum width=14mm] (s3) {Site 3\\\scriptsize UPF\\\scriptsize DPDK/USR};
-\node[right=of s3,font=\scriptsize] (dots) {$\cdots$};
-\node[blk,right=of dots,minimum width=14mm] (sk) {Site $K$\\\scriptsize UPF\\\scriptsize DPDK/USR};
-\begin{scope}[on background layer]
-\node[grp,fill=green!5,fit=(s1)(sk),label={[font=\scriptsize\bfseries]above left:MEC Edge ($K{=}10$ sites)}] (mec) {};
-\end{scope}
-% core + ran
-\node[blk,fill=blue!5,below=9mm of s1.south west,anchor=north west,minimum width=34mm] (core)
-  {\textbf{5G Core} (central DC)\\\scriptsize SMF \;\, AMF \;\, UDM \;\, PCF};
-\node[blk,fill=gray!8,right=4mm of core,minimum width=30mm] (ran)
-  {\textbf{Radio Access Network}\\\scriptsize gNB$_1$ \, gNB$_2$ \, $\cdots$ \, gNB$_n$};
-% flows
-\draw[fl,dashed] (mano.south) -- ($(mec.north)+(0,0.0)$)
-  node[midway,right,font=\scriptsize] {VNF lifecycle ($\times K$)};
-\draw[fl] (core.north) -- (s1.south) node[midway,left,font=\scriptsize] {N4};
-\draw[fl] (ran.north) to[out=90,in=-90] (s3.south);
-\node[font=\scriptsize] at ($(ran.north)+(0.0,0.18)$) {N3};
-\end{tikzpicture}}
-\caption{5G deployment model. The MAPPO controller operates at the
-management and orchestration plane and issues container start/stop
-operations to switch each MEC site between DPDK and USR realizations. The
-5G Core control plane stays centralised, and the SMF continues to issue
-N4/PFCP session rules to the active UPF at each site.}
-\label{fig:deploy}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/closed_loop.pdf}
+    \caption{Deployment model. The controller operates at the management-and-orchestration layer and selects the UPF realization at each MEC site. The 5G Core control plane remains centralized, and the SMF communicates with the active realization through N4/PFCP.}{\color{red} [Placeholder]}
+    \label{fig:deploy}
 \end{figure}
 
-% ===========================================================================
+
 \section{Multi-Site Control Problem}
 \label{sec:problem}
-% ===========================================================================
-\subsection{Per-site observation and objective}
-Each agent observes a 14-dimensional state at step $t$, formed by the
-current load $\lambda_{i,t}$, an 8-step history window
-$\lambda_{i,t-1},\dots,\lambda_{i,t-8}$, the one-step forecast
-$\hat{\lambda}_{i,t+1}$, the previous action $a_{i,t-1}$, the previous
-QoS score $Q_{i,t-1}$, the previous specific energy
-$\SECt_{i,t-1}$, and a normalised cooldown-progress signal. The
-cooperative objective is the discounted sum of per-cluster rewards over
-an episode of length $T\,{=}\,1009$,
+
+\subsection{Observation and Objective}
+
+Each agent observes only the local state of its own MEC site, enabling decentralized execution. At decision step $t$, the observation of agent $i$ contains 14 values: the current offered load $\lambda_{i,t}$, an 8-step load history
+$\lambda_{i,t-1},\ldots,\lambda_{i,t-8}$, the one-step-ahead traffic forecast
+$\hat{\lambda}_{i,t+1}$, the previously active UPF realization, the previous QoS score, the previous specific energy (W/Mbps), and a cooldown-progress signal that represents the fraction of the cooldown period that has elapsed since the last switch.
+
+The fleet objective is the discounted sum of per-site rewards over an episode of length $T=1009$:
 \begin{equation}
-J(\pi) = \mathbb{E}_{\pi}\!\left[\sum_{t=0}^{T-1}\gamma^{t}\sum_{i=1}^{K}r_{i,t}\right],
+J(\pi) =
+\mathbb{E}_{\pi}\!\left[
+\sum_{t=0}^{T-1}\gamma^{t}
+\sum_{i=1}^{K} r_{i,t}
+\right],
 \qquad \gamma = 0.995 .
 \end{equation}
-Coupling across agents enters only through the joint cumulative reward.
-Per-cluster dynamics are independent given the realization choice, and we
-defer shared-resource extensions such as a common CPU pool to future
-work.
+The sites are dynamically independent given their selected realizations, but they are coupled through the cooperative training objective.
 
-\subsection{Physics-grounded reward}
-Following the single-site formulation of~\cite{ref:comcom} but removing
-its parallel flat switching constant, the per-step reward is
+\subsection{Reward Function}
+
+The reward penalizes four quantities: operating  energy inefficiency, QoS degradation, switching energy, and rapid oscillation between realizations:
 \begin{equation}
 \label{eq:reward}
-r_{i,t} = -\bigl(\alpha\,\SECt_{i,t}
-            + \lambda_{\mathrm{QoS}}\max(0,\tau-Q_{i,t})
-            + L^{\mathrm{CD}}_{i,t}\bigr).
+r_{i,t} =
+-\bigl(
+\alpha\,\SECt_{i,t}
++
+\lambda_{\mathrm{QoS}}\max(0,\tau-Q_{i,t})
++
+L^{\mathrm{SW}}_{i,t}
++
+L^{\mathrm{CD}}_{i,t}
+\bigr).
 \end{equation}
-The specific energy term now carries both steady-state and transition
-power. With the twin's per-transition spike energy
-$E^{\mathrm{sw}}_{i,t}\,{=}\,P_{\mathrm{new}}(\lambda_{i,t})\,
-t^{\mathrm{act}}_{\mathrm{new}}$ and a step duration
-$\Delta t\,{=}\,900$\,s, we define
-\begin{align}
-P^{\mathrm{eff}}_{i,t} &= P^{\mathrm{steady}}_{i,t} + E^{\mathrm{sw}}_{i,t}/\Delta t,\\
-\SECt_{i,t} &= P^{\mathrm{eff}}_{i,t}\,/\,\max(\lambda_{i,t},\varepsilon)\quad[\text{W/Mbps}].
-\end{align}
-The QoS score $Q_{i,t}\,{=}\,\min(\mathrm{score}_{d}(d_{i,t}),
-\mathrm{score}_{\ell}(\ell_{i,t}))\,{\in}\,[0,1]$ grades delay and loss
-against their budgets, and $L^{\mathrm{CD}}_{i,t}$ is a soft
-anti-oscillation penalty that fires when a switch happens inside a
-cooldown window. The constants are
-$(\alpha,\lambda_{\mathrm{QoS}},\tau)\,{=}\,(100,30,0.9)$, with cooldown
-period 4 steps and cost $c_{\mathrm{CD}}\,{=}\,0.5$, matching the
-paper-aligned values of~\cite{ref:comcom}. The asymmetry between DPDK and
-USR switching costs now emerges automatically from
-$t^{\mathrm{act}}_{\mathrm{DPDK}}\,{\gg}\,t^{\mathrm{act}}_{\mathrm{USR}}$
-and from load scaling, since a DPDK activation under heavy traffic costs
-more than one under light traffic, as it physically should. A previous
-revision used flat per-event constants running in parallel to the twin's
-$E^{\mathrm{sw}}$, and we removed that redundancy.
 
-\subsection{Classical baseline derivation}
-The threshold and hysteresis baselines use operating points derived from
-the twin rather than hand-tuned. Sweeping the twin gives an energy
-break-even at 91.0~Mbps, where USR power first exceeds DPDK power, and a
-QoS limit at 149.0~Mbps, the last load where USR stays safe. Taking the
-minimum and subtracting a 10~Mbps safety margin yields a decision
-threshold of 81.0~Mbps. A paper-faithful hysteresis band set to twice the
-forecaster MAE is 221.3~Mbps, which is more than $2.7\times$ the decision
-threshold. As a result the lower threshold collapses to zero and the
-auto-tuned hysteresis controller never leaves DPDK after the first step.
-This is the honest behaviour of naive hysteresis at this forecaster
-accuracy, not a bug. To give the classical family its strongest possible
-form, we additionally sweep a narrower band over
-$\{5,10,20,50,100\}$~Mbps and report the best operating point
-(Section~\ref{sec:results}).
+The first term is based on operating specific energy consumption:
+\begin{equation}
+\SECt_{i,t}
+=
+\frac{P^{\mathrm{op}}_{i,t}}
+{\max(\lambda_{i,t},\varepsilon)}
+\quad [\mathrm{W/Mbps}],
+\end{equation}
+where $P^{\mathrm{op}}_{i,t}$ is the operating power of the active UPF realization at time $t$, excluding activation transients. This term rewards operating modes that carry traffic with lower power per Mbps.
 
-% ===========================================================================
+The second term penalizes QoS degradation. The QoS score combines delay and packet-loss behavior:
+\begin{equation}
+Q_{i,t}
+=
+\min\bigl(
+\mathrm{score}_{d}(d_{i,t}),
+\mathrm{score}_{\ell}(\ell_{i,t})
+\bigr).
+\end{equation}
+The delay and loss scores decrease linearly from 1, when the metric is within its budget, to 0, when the budget is exceeded by 100\%. The budgets are set from the measured testbed limits: 200~$\mu$s for delay and 5 packets per interval for loss. The threshold $\tau=0.9$ defines a safety margin.
+
+The third term accounts for switching energy:
+\begin{equation}
+L^{\mathrm{SW}}_{i,t}
+=
+\lambda_{\mathrm{sw}} E^{\mathrm{sw}}_{i,t}.
+\end{equation}
+This penalty is applied only when the active realization changes. The activation energy $E^{\mathrm{sw}}_{i,t}$ is obtained from the digital twin using the measured activation behavior of the target realization. Since activating DPDK takes 24~s while activating the user-space realization takes 3.3~s, switching into DPDK is more expensive.
+
+The final term, $L^{\mathrm{CD}}_{i,t}$, discourages rapid oscillation. It adds a soft surcharge when a site switches again before the four-step cooldown period has elapsed. The reward weights are
+$\alpha=100$, $\lambda_{\mathrm{QoS}}=30$, $\tau=0.9$,
+$\lambda_{\mathrm{sw}}=4.0$, with cooldown period 4 and cooldown cost 0.5.
+
 \section{Cooperative MARL Controllers}
 \label{sec:method}
-% ===========================================================================
-\noindent\textbf{MAPPO (proposed).} MAPPO~\cite{ref:mappo} uses a
-parameter-shared actor, an MLP $14\,{\to}\,64\,{\to}\,64\,{\to}\,2$ with
-5{,}250 parameters in which one network handles every agent's per-step
-decision, together with a centralised critic on the global state, an MLP
-$140\,{\to}\,128\,{\to}\,128\,{\to}\,K$ with 35{,}850 parameters. The
-global state is the concatenation of all per-agent observations
-($K\,{\times}\,14\,{=}\,140$). Training uses PPO
-clipping~\cite{ref:ppo} on per-agent ratios with
-GAE~\cite{ref:gae} ($\lambda\,{=}\,0.9$), per-agent advantage
-normalisation over $(T,K)$ to absorb the cross-cluster reward-scale
-differences, and reward scaling of $0.01$ to balance actor and critic
-losses. We run 200k environment steps with $n_{\mathrm{steps}}\,{=}\,1024$,
-$n_{\mathrm{epochs}}\,{=}\,10$, minibatch 256, learning rate
-$3\,{\times}\,10^{-4}$, and entropy coefficient $0.05$.
-Best-of-validation checkpoint selection is load-bearing, because without
-it a late-stage policy collapse on a near-zero-load step produces an
-unusable final-step model.
 
-\noindent\textbf{IPPO ensemble (ablation).} The IPPO ensemble trains
-$K\,{=}\,10$ independent Stable-Baselines3~\cite{ref:sb3} PPO actors, one
-per cluster, on each cluster's 14-dimensional observation with identical
-hyperparameters. At evaluation the per-cluster policies are stacked. By
-construction the ensemble consumes $K$ times the training budget, which
-is its nominal compute advantage over the shared-actor design.
+\subsection{MAPPO with shared actor and centralized critic}
 
-\noindent\textbf{Centralised PPO (ablation).} The centralised baseline is
-a single SB3 PPO on the joint 140-dimensional observation with a
-$\mathrm{MultiDiscrete}([2]^{K})$ joint action, otherwise matched in
-reward, budget, and checkpoint selection.
+The proposed controller uses MAPPO~\cite{ref:mappo}. Each agent acts through a
+shared actor network that maps the 14-dimensional local site observation to a
+binary action distribution over the two UPF realizations. The actor has two
+hidden layers with 64 units each and 5,250 parameters. Because the same actor is
+used by all MEC clusters, the execution policy remains decentralized while the
+decision rule is learned from experience collected across the fleet.
 
-\noindent\textbf{Evaluation protocol.} Each trained controller is
-evaluated once on the test slice with a deterministic policy and a fixed
-environment seed for reset, over the full 1009-step episode on every
-cluster. MAPPO and IPPO are run at eight seeds
-$\{1,7,13,23,42,64,77,99\}$, and centralised PPO at four seeds, since its
-failure mode is unambiguous at any sample size. Classical baselines are
-deterministic. We report reward as the unweighted sum over clusters and
-steps, total fleet energy in watt-hours, the QoS-violation rate (the
-fraction of cluster-steps whose delay or loss budget is exceeded), the
-USR usage share, and the switch count.
+Training uses a centralized critic. The critic receives the concatenation of the
+ten local site observations, resulting in a 140-dimensional fleet-level input,
+and outputs $K$ value estimates. It has two hidden layers with 128 units each
+and 35,850 parameters. The critic is used only during training to estimate the
+value function and improve credit assignment across sites.
 
-% ===========================================================================
-\section{Results}
-\label{sec:results}
-% ===========================================================================
-\subsection{Headline comparison}
-Table~\ref{tab:headline} reports test-slice means across all controllers.
-MAPPO attains the lowest reward magnitude, the lowest energy, and the
-lowest QoS-violation rate among the trained policies. On reward it
-improves on the swept-best classical baseline (hysteresis at band
-50~Mbps) by 10.0\%, on always-DPDK by 21.8\%, and on the centralised PPO
-by 61.0\%, which is the 10 to 61\% range quoted in the abstract. The
-margin over the IPPO ensemble is much smaller in magnitude (154 reward
-units, about 2.7\%) but is statistically robust, as the next subsection
-shows. MAPPO is also the lowest-energy trained controller at 1967~Wh,
-ahead of IPPO at 1973~Wh and well ahead of always-DPDK at 2071~Wh. The
-energy gap to IPPO is small, so the reward advantage comes less from raw
-watt-hours and more from better-placed USR usage that avoids QoS
-penalties (Section~\ref{sec:results}-C).
+Training follows PPO clipping~\cite{ref:ppo} with generalized advantage
+estimation~\cite{ref:gae}, $\lambda=0.9$, per-agent advantage normalization over
+both time and agents, and reward scaling of 0.01. The learning rate is
+$3\times10^{-4}$, the entropy coefficient is 0.05, the rollout length is 1024,
+the minibatch size is 256, and each update uses 10 epochs. Each run is trained
+for 200k environment steps. The validation checkpoint with the best performance
+is selected for testing, which avoids late-stage policy degradation observed in
+some seeds.
+
 
 \begin{table}[!t]
 \centering
-\caption{Test-slice comparison ($K\,{=}\,10$, 1009-step episode). MAPPO
-and IPPO at 8 seeds, centralised PPO at 4. Reward is the unweighted sum
-over clusters and steps; QoSv is the QoS-violation rate.}
+\caption{Training configuration. Values are shared across MAPPO, IPPO,
+and centralized PPO unless noted.}
+\label{tab:hyperparams}
+\renewcommand{\arraystretch}{1.1}\setlength{\tabcolsep}{4pt}\footnotesize
+\begin{tabular}{@{}ll@{}}
+\toprule
+Hyperparameter & Value \\
+\midrule
+Discount $\gamma$            & 0.995 \\
+GAE $\lambda$                & 0.9 \\
+PPO clip range               & 0.2 \\
+Learning rate                & $3\times10^{-4}$ \\
+Entropy coefficient          & 0.05 \\
+Rollout length               & 1024 \\
+Minibatch size               & 256 \\
+Epochs per update            & 10 \\
+Reward scaling               & 0.01 \\
+Advantage normalization      & per-agent (over time \& agents) \\
+Environment steps            & 200{,}000 \\
+Checkpoint selection         & best validation reward \\
+\midrule
+Actor MLP (all)              & $14$--$64$--$64$--$2$ (5{,}250 par.) \\
+MAPPO critic MLP             & $140$--$128$--$128$--$10$ (35{,}850 par.) \\
+Seeds                        & 8 (MAPPO, IPPO); 4 (central PPO) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Independent PPO ensemble}
+
+The IPPO reference trains ten independent PPO policies~\cite{ref:ippo}, one for
+each MEC cluster. Each policy receives the same 14-dimensional local observation
+used by the MAPPO actor, but learns only from its own cluster. The ensemble is
+implemented with Stable-Baselines3~\cite{ref:sb3} and uses the same PPO
+hyperparameters as MAPPO where applicable. During evaluation, the ten policies
+are executed in parallel. This baseline tests whether the benefit of MAPPO comes
+from shared learning and centralized value estimation rather than from PPO
+itself.
+
+\subsection{Centralized PPO}
+
+The centralized reference uses a single PPO policy that observes the full
+140-dimensional fleet state and outputs a joint action using a
+$\mathrm{MultiDiscrete}([2]^K)$ action space. It receives the same reward and
+training budget as the other learning-based controllers. This baseline tests
+whether a fully centralized policy can solve the joint problem directly, without
+parameter sharing or decentralized execution.
+
+\subsection{Classical and static baselines}
+The learned controllers are compared against non-learning references
+evaluated on the same twin, traffic, and reward.
+
+\emph{Always-DPDK} keeps every site in the high-performance realization at all times, it is the safe but inefficient static reference that current provisioning corresponds to.
+
+\emph{Optimized hysteresis.} A per-site, decentralized two-threshold
+controller that acts on the one-step forecast $\hat\lambda_{i,t+1}$,
+exactly like the RL actors. Its operating points are read from the twin
+rather than hand-tuned. A load sweep places the energy break-even at
+91~Mbps and the USR QoS limit at 149~Mbps, so the upper threshold is their minimum less a 10~Mbps safety margin,
+$t_{\mathrm{up}}=81$~Mbps. A site in USR switches to DPDK once
+$\hat\lambda_{i,t+1}\!\ge\!t_{\mathrm{up}}$, and a site in DPDK switches
+to USR only once
+$\hat\lambda_{i,t+1}\!\le\!t_{\mathrm{down}}=t_{\mathrm{up}}-b$; the band
+$b$ between the two thresholds suppresses oscillation, and after any
+switch the realization is locked for a four-step cooldown. We call the
+controller \emph{optimized} for two reasons. First, its thresholds
+follow from measured twin physics rather than the manual analysis used
+in our earlier work~\cite{ref:slices}. Second, we sweep
+$b$ and report the best-performing operating
+point ($b=50$~Mbps). Together these give the classical family its
+strongest form, so the learned controllers are measured against a
+well-tuned competitor.
+
+
+\subsection{Evaluation protocol}
+All trained controllers are evaluated on the held-out test slice using
+deterministic actions and a fixed reset seed. MAPPO and IPPO are trained over
+eight seeds and centralized PPO is trained over four
+seeds because its failure mode is consistent and large in magnitude. The
+reported metrics are total reward over all clusters and time steps, total fleet
+energy in watt-hours, QoS-violation rate, user-space usage share, and switch
+count.
+\section{Results}
+\label{sec:results}
+\subsection{Overall comparison}
+Table~\ref{tab:headline} summarizes the test-slice results. MAPPO obtains the
+best reward among all evaluated controllers. Relative to the strongest
+hysteresis configuration, it improves reward by 9.7\%. Relative to always-DPDK,
+it improves reward by 21.5\%, and relative to centralized PPO by 33.8\%. These
+values form the 10--34\% improvement range reported in the abstract. MAPPO also
+has the lowest energy among the trained policies, with 1966~Wh compared with
+1973~Wh for IPPO and 2071~Wh for always-DPDK. The energy difference between
+MAPPO and IPPO is small, but MAPPO achieves better reward because its user-space
+usage is placed more safely, leading to fewer QoS penalties. MAPPO is also the
+most active controller (Table~\ref{tab:headline}), yet its switches are well
+placed: at a comparable user-space share it attains the lowest energy and
+QoS-violation rate among the learned controllers, so the additional switching is
+repaid in reward. Figure~\ref{fig:pareto} recasts this comparison as an
+energy--QoS trade-off: MAPPO occupies the efficient corner, dominating the IPPO
+ensemble, hysteresis, and centralized PPO on both axes, while static always-DPDK
+is the only non-dominated alternative---avoiding violations entirely but at a
+${\sim}5\%$ energy premium.
+
+\begin{table}[!t]
+\centering
+\caption{Test-slice comparison ($K=10$, 1009-step episode). MAPPO and IPPO are
+reported over 8 seeds, centralized PPO over 4 seeds. Reward is the unweighted
+sum over clusters and time steps; QoSv is the QoS-violation rate; Sw/d is
+realization switches per cluster per day.}
 \label{tab:headline}
 \renewcommand{\arraystretch}{1.12}
 \setlength{\tabcolsep}{3.2pt}
 \footnotesize
-\begin{tabular}{@{}lr@{\;}crrr@{}}
+\begin{tabular}{@{}lr@{\;}crrrr@{}}
 \toprule
-Controller & Reward & $n$ & Wh & QoSv\% & USR\% \\
+Controller & Reward & $n$ & Wh & QoSv\% & USR\% & Sw/d \\
 \midrule
-\textbf{MAPPO (ours)}      & $\mathbf{-5633\!\pm\!100}$ & 8 & $\mathbf{1967}$ & $\mathbf{0.52}$ & 7.8 \\
-IPPO ensemble              & $-5787\!\pm\!89$           & 8 & 1973            & 0.57           & 8.1 \\
-Hysteresis ($b{=}50$)      & $-6262$                    & -- & 1995           & 0.68           & 7.5 \\
-Hysteresis ($b{=}20$)      & $-6543$                    & -- & 1971           & 0.94           & 11.5 \\
-Always-DPDK                & $-7201$                    & -- & 2071           & 0.38           & 0.0 \\
-Threshold (81\,Mbps)       & $-7623$                    & -- & 1970           & 1.42           & 14.0 \\
-Centralised PPO            & $-14{,}458\!\pm\!4509$     & 4 & 2130            & 3.73           & 9.3 \\
+\textbf{MAPPO (ours)}      & $\mathbf{-5655\!\pm\!98}$  & 8 & $\mathbf{1966}$ & $\mathbf{0.54}$ & 8.1 & 2.92 \\
+IPPO ensemble              & $-5812\!\pm\!110$          & 8 & 1973            & 0.57           & 8.2 & 1.99 \\
+Centralized PPO            & $-8542\!\pm\!1744$         & 4 & 2066            & 1.18           & 4.3 & 0.44 \\
+Hysteresis ($b{=}50$)      & $-6261$                    & -- & 1995           & 0.68           & 7.5 & 1.06 \\
+% Hysteresis ($b{=}20$)      & $-6543$                    & -- & 1971           & 0.94           & 11.5 & 2.05 \\
+Always-DPDK                & $-7201$                    & -- & 2071           & 0.38           & 0.0 & 0.00 \\
+% Threshold (81\,Mbps)       & $-7623$                    & -- & 1970           & 1.42           & 14.0 \\
 \bottomrule
 \end{tabular}
 \end{table}
-
-\subsection{Statistical significance}
-A paired bootstrap over the eight seed-matched MAPPO minus IPPO deltas
-(10{,}000 resamples) places the architectural gap at $+154$ reward units,
-with a 95\% CI of $[+28,+262]$ and a one-sided $p\,{=}\,0.009$. The
-interval excludes zero by a clear margin, so the MAPPO win over IPPO is
-significant at the 0.01 level under the physics-grounded reward.
-Fig.~\ref{fig:bootstrap}(a) shows that seven of the eight seeds favour
-MAPPO. The single counter-example is seed 13, where MAPPO converged to a
-slightly more aggressive USR policy (0.67\% QoS violation, 364 switches,
-against the MAPPO averages of 0.52\% and 297) and IPPO happened to train
-its single best ensemble of the set. Fig.~\ref{fig:bootstrap}(b) shows
-the bootstrap distribution. Both architectures have comparable
-seed-to-seed reward range (MAPPO 315, IPPO 243), so MAPPO is slightly
-less stable across seeds but reliably better on the mean.
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=\columnwidth]{figures/fig_bootstrap.pdf}
-\caption{(a) Per-seed test reward for MAPPO (circles) and the IPPO
-ensemble (squares) over eight seeds, with paired lines connecting
-seed-matched runs. Seed 13 is the only seed where IPPO wins. (b)
-Paired-bootstrap distribution (10{,}000 resamples) of the mean
-$\Delta\,{=}\,\mathrm{MAPPO}-\mathrm{IPPO}$ delta, with the 95\% CI
-$[+28,+262]$ excluding zero ($p\,{=}\,0.009$).}
+\includegraphics[width=0.9\columnwidth]{figures/fig_pareto.pdf}
+\caption{Energy--QoS trade-off on the test slice (lower-left is better). MAPPO
+dominates the IPPO ensemble, hysteresis, and centralized PPO on both axes; only
+static always-DPDK is non-dominated, trading ${\sim}5\%$ more energy for
+marginally fewer violations.}
+\label{fig:pareto}
+\end{figure}
+
+\subsection{Significance of the MAPPO--IPPO difference}
+Although the MAPPO advantage over IPPO is smaller than its advantage over
+hysteresis or centralized PPO, it is statistically robust. A paired bootstrap
+over the eight seed-matched MAPPO-minus-IPPO reward differences, using 10,000
+resamples, gives a mean gain of 157 reward units, a 95\% confidence interval of
+$[+39,+271]$, and a one-sided $p$-value of 0.004. Seven of the eight paired
+seeds favor MAPPO. The only IPPO win occurs at seed 23, where MAPPO selects the
+user-space realization more aggressively and incurs a slightly higher QoS
+violation rate. The bootstrap distribution and per-seed comparison are shown in
+Fig.~\ref{fig:bootstrap}.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.75\linewidth]{figures/fig_bootstrap.pdf}
+\caption{Seed-paired comparison between MAPPO and IPPO. MAPPO outperforms IPPO
+on seven of eight seeds. The paired-bootstrap distribution of the mean reward
+difference excludes zero, with 95\% CI $[+39,+271]$ and $p=0.004$.}
 \label{fig:bootstrap}
 \end{figure}
 
-\subsection{Cross-cluster transfer}
-Fig.~\ref{fig:percluster} breaks the test reward down by cluster, with
-clusters sorted by mean offered load. MAPPO wins on 7 of 10 clusters,
-ties on the high-load DPDK-bound cluster c3, and loses by a small margin
-on two mid-load clusters (c2 by 8.8\% and c8 by 0.4\%). The clearest wins
-are on the low- and mid-load clusters, c5 ($+8.6\%$), c0 ($+6.6\%$), c7
-($+4.3\%$), and c4 ($+3.4\%$), which are exactly the sites where USR is
-the right call but a per-cluster IPPO has limited sample signal to find
-it. On c0, the lowest-load cluster, MAPPO's shared actor drives the most
-USR usage and the largest gap to always-DPDK. The shared actor, trained
-simultaneously on the data-rich low-load clusters, transfers the
-``USR-at-low-predicted-load'' rule to sites where an independent learner
-would stay close to DPDK. The small regression on c2 is the cost of
-policy sharing on a heterogeneous fleet, where MAPPO occasionally tries
-USR on a cluster that an independent learner has correctly fixed to DPDK,
-and it is more than offset by the low-load wins. On the highest-load
-cluster c9, with peaks near 5.8~Gbps, a few IPPO seeds tried USR and were
-punished, leaving the IPPO mean slightly below always-DPDK, whereas MAPPO
-correctly stays on DPDK across all eight seeds.
+\subsection{Per-cluster behavior and transfer across sites}
+The per-cluster analysis in Fig.~\ref{fig:percluster} explains where the MAPPO
+gain originates. MAPPO outperforms IPPO on seven of the ten clusters, matches it
+on a high-load DPDK-bound cluster, and loses slightly on two mid-load clusters.
+The strongest gains occur on low- and mid-load clusters, including c5, c0, c7,
+and c4. These are precisely the sites where the user-space realization can be
+beneficial but where an independent local learner may not observe enough
+informative transitions to confidently use it.
 
-\begin{figure*}[!t]
+This pattern is consistent with cross-site transfer through the shared actor.
+During training, MAPPO observes low-load operating conditions across several
+clusters and learns a common decision rule for safe user-space usage. That rule
+can then be applied at sites whose own local trace contains less evidence. In
+contrast, IPPO must learn each site independently and is therefore more likely
+to stay close to the conservative DPDK behavior on data-poor clusters. On the
+highest-load clusters, where DPDK is almost always required, MAPPO correctly
+avoids excessive user-space usage.
+
+\begin{figure}[!t]
 \centering
-\includegraphics[width=\textwidth]{figures/fig_per_cluster.pdf}
-\caption{Per-cluster mean test reward (8 seeds) for always-DPDK, the IPPO
-ensemble, and MAPPO, with clusters sorted by mean offered load (Mbps).
-MAPPO's advantage concentrates on the low- and mid-load clusters, where
-independent learning lacks the signal to leave DPDK. The high-load
-clusters c3 and c9 are DPDK-bound for every controller.}
+\includegraphics[width=\columnwidth]{figures/fig_per_cluster.pdf}
+\caption{Per-cluster mean test reward for always-DPDK, IPPO, and MAPPO, sorted
+by mean offered load. MAPPO's advantage is concentrated on low- and mid-load
+clusters, where shared learning helps identify safe user-space operation.}
 \label{fig:percluster}
-\end{figure*}
+\end{figure}
 
-\subsection{Classical-baseline sensitivity}
-Table~\ref{tab:hyst} sweeps the hysteresis band over five widths, with
-$t_{up}$ fixed at the derived 81~Mbps decision point and a one-step
-cooldown. Two facts stand out. First, the hand-picked 20~Mbps band used
-in earlier iterations is not the best classical operating point. Widening
-to 50~Mbps cuts switching from 215 to 111 events and improves reward by
-281 units, while a band of 100~Mbps drives $t_{down}$ to zero and
-collapses the controller to always-DPDK. Second, no setting of the band
-closes the gap to MAPPO. Even at the sweep optimum, hysteresis is 629
-reward units behind MAPPO, far outside the MAPPO minus IPPO 95\% CI and
-any per-seed range. The classical controller's fundamental limit at this
-forecaster accuracy is that any band wide enough to suppress
-noise-induced switching either degenerates to always-DPDK or admits a
-non-trivial QoS-violation rate.
+\subsection{Failure mode of centralized PPO}
+Centralized PPO performs substantially worse than all other controllers. Its
+average reward is $-8542$, with high seed-to-seed variability. The main failure mode is unsafe
+assignment of the user-space realization to one or two clusters for long
+periods. In some seeds, individual clusters experience very high QoS-violation
+rates because the centralized policy does not learn the per-site structure of
+the problem within the available budget.
 
-\begin{table}[!t]
-\centering
-\caption{Hysteresis band sweep ($t_{up}\,{=}\,81$~Mbps, cooldown 1 step).
-Band 50~Mbps is the strongest classical operating point, still 629 reward
-units behind MAPPO.}
-\label{tab:hyst}
-\renewcommand{\arraystretch}{1.12}
-\setlength{\tabcolsep}{4.5pt}
-\footnotesize
-\begin{tabular}{@{}rrrrrl@{}}
-\toprule
-Band & $t_{down}$ & Reward & Switches & QoSv\% & Regime \\
-\midrule
-5   & 76 & $-7047$ & 317 & 1.16 & over-switching \\
-10  & 71 & $-6923$ & 285 & 1.11 & over-switching \\
-20  & 61 & $-6543$ & 215 & 0.94 & prior hand-pick \\
-\textbf{50}  & \textbf{31} & $\mathbf{-6262}$ & \textbf{111} & \textbf{0.68} & \textbf{best classical} \\
-100 & 0  & $-7201$ & 0   & 0.38 & collapses to DPDK \\
-\bottomrule
-\end{tabular}
-\end{table}
+This result is important because it shows that more centralized observation does
+not automatically produce better control. The joint state has 140 dimensions and
+the joint binary action space grows as $2^K$. A shared decentralized actor, by
+contrast, solves the same local 14-to-2 mapping at each site while using a
+centralized critic only during training. The comparison therefore supports the
+main architectural conclusion: cooperative structure must be introduced in a way
+that preserves the local decision structure of the UPF-control problem.
 
-A complementary cooldown sweep on MAPPO (seed 42) around the default
-period 4 and cost 0.5 confirms the headline does not hinge on these
-hyperparameters. Lowering the cost to 0.1 lets the controller switch 58\%
-more often and costs 526 reward units, while raising it to 1.0
-overpenalises switching and costs 264 units. Varying the period between 2
-and 6 steps moves reward by at most 144 units. The default sits in the
-centre of a soft plateau whose width is on the order of the MAPPO minus
-IPPO gap and well inside the gap to the strongest classical baseline.
 
-\subsection{Why centralised PPO fails}
-The centralised single-MLP PPO sees the same problem, reward, and
-training budget, yet it trails MAPPO by 61\% with a seed-to-seed range of
-about 9{,}930 reward units (per-seed rewards $-11{,}202$, $-12{,}718$,
-$-12{,}779$, $-21{,}132$). Its energy at 2130~Wh is worse than
-always-DPDK, because it spends transition energy without the offsetting
-low-load USR benefit. Inspecting per-cluster behaviour reveals the
-failure mode. The joint factored softmax collapses one or two clusters to
-mostly-USR even when their load is unsafe for it, for example one seed
-drives cluster c6 to 98\% USR with a 46\% QoS-violation rate, and another
-drives c7 to 56\% USR with a 23\% violation rate. A single unsafe cluster
-of this kind dominates the joint reward and never recovers, because the
-$140$-dimensional to $10$-dimensional factored softmax cannot factor the
-per-cluster substructure within the training budget. The diagnosis is
-architectural rather than optimisational. Ten parameter-sharing
-$14$-to-$2$ policies are a much easier optimisation than one joint policy
-over a $2^{K}$ action space.
-
-% ===========================================================================
 \section{Conclusion}
 \label{sec:conclusion}
-% ===========================================================================
-We cast per-site DPDK/USR realization switching across $K\,{=}\,10$
-heterogeneous MEC clusters as a cooperative MARL problem on a
-measurement-grounded digital twin, under a physics-grounded reward that
-folds the twin's measured switching energy into specific energy
-consumption. On a 10.5-day held-out test slice, MAPPO with a
-shared-parameter actor and a centralised critic beats an IPPO ensemble,
-a centralised single-MLP PPO, and the swept-best classical hysteresis
-controller by 10 to 61\% on reward. The win over IPPO is small in
-magnitude but statistically significant (paired bootstrap
-$p\,{=}\,0.009$, 95\% CI $[+28,+262]$), and it concentrates on the
-data-poor low-load clusters, which is consistent with cross-cluster
-policy transfer through the shared actor. The practical message is that
-for energy-aware UPF coordination at the edge, the choice of coordination
-architecture matters more than the choice of algorithm. Future work will
-hold out clusters at training time to test zero-shot transfer directly,
-add shared-resource coupling such as a common CPU pool, and validate the
-twin against a live DPDK/USR testbed.
+This paper studied energy-aware UPF realization selection across a heterogeneous
+fleet of MEC clusters. The problem arises because DPDK-based UPFs provide strong
+high-load performance but carry a high idle-power cost, while user-space UPFs
+are more energy-efficient at low load but have a narrower safe operating range.
+Runtime selection between these realizations can reduce energy consumption, but
+it must be robust to traffic variation, forecast error, QoS constraints, and
+measured switching overheads.
 
-% ---------------------------------------------------------------------------
-\begin{thebibliography}{99}
-\footnotesize
+We formulated the fleet-level problem as cooperative multi-agent reinforcement
+learning and evaluated it using a measurement-grounded digital twin calibrated
+from a physical UPF testbed. The twin incorporates per-realization power and QoS
+surrogates and measured activation times, allowing switching energy to be
+included directly in specific energy consumption. Under this evaluation setup,
+MAPPO with a shared actor and centralized critic outperformed the strongest
+swept hysteresis baseline, an IPPO ensemble, and centralized PPO by 10--34\% in
+reward. The MAPPO advantage over IPPO was statistically significant and was
+concentrated on low-load clusters, suggesting that shared policies transfer
+useful behavior from data-rich to data-poor sites.
 
-\bibitem{ref:carbon}
-Y.~Ding, H.~Duan, M.~Xie, J.~Rao, J.~J.~Wang, and W.~Zhang, ``Carbon
-emissions and mitigation potentials of 5G base stations in China,''
-\emph{Resources, Conservation and Recycling}, vol.~182, p.~106330, 2022.
+The results show that coordination architecture is central to energy-aware UPF
+orchestration. A fully centralized PPO policy fails to exploit the structure of
+the problem, whereas a shared decentralized actor combined with centralized
+training provides both transfer and scalability. Future work will evaluate
+zero-shot transfer to unseen MEC clusters, incorporate shared-resource coupling
+among sites, and validate the learned policies in a live closed-loop UPF
+deployment.
 
-\bibitem{ref:rischke}
-J.~Rischke, C.~Vielhaus, P.~Sossalla, J.~Wang, and F.~H.~P.~Fitzek,
-``Comparison of UPF acceleration technologies and their tail-latency for
-URLLC,'' in \emph{Proc.\ IEEE NFV-SDN}, 2022, pp.~146--151.
 
-\bibitem{ref:slices}
-S.~Afshar Borji, R.~Bruschi, C.~E.~Costa, and C.~Lombardo, ``Dynamic
-energy-efficient User Plane Function selection in 5G networks,'' in
-\emph{Proc.\ IFIP SLICES Workshop}, 2025.
+\section*{Acknowledgment}
 
-\bibitem{ref:comcom}
-S.~Afshar Borji, R.~Bruschi, C.~Lombardo, R.~Bolla, and C.~E.~Costa,
-``AI-driven energy-efficient orchestration of User Plane Functions in 5G
-Core networks,'' \emph{Computer Communications}, 2026, under review,
-manuscript COMCOM-S-26-00430.
+The preferred spelling of the word ``acknowledgment'' in America is without 
+an ``e'' after the ``g''. Avoid the stilted expression ``one of us (R. B. 
+G.) thanks $\ldots$''. Instead, try ``R. B. G. thanks$\ldots$''. Put sponsor 
+acknowledgments in the unnumbered footnote on the first page.
 
-\bibitem{ref:mappo}
-C.~Yu, A.~Velu, E.~Vinitsky, J.~Gao, Y.~Wang, A.~Bayen, and Y.~Wu, ``The
-surprising effectiveness of PPO in cooperative multi-agent games,'' in
-\emph{Adv.\ Neural Inf.\ Process.\ Syst.\ (NeurIPS)}, vol.~35, 2022.
 
-\bibitem{ref:sb3}
-A.~Raffin, A.~Hill, A.~Gleave, A.~Kanervisto, M.~Ernestus, and
-N.~Dormann, ``Stable-Baselines3: Reliable reinforcement learning
-implementations,'' \emph{J.\ Mach.\ Learn.\ Res.}, vol.~22, no.~268,
-pp.~1--8, 2021.
-
-\bibitem{ref:leyva}
-I.~Leyva-Pupo and C.~Cervell\'o-Pastor, ``Efficient solutions to the
-placement and chaining problem of User Plane Functions in 5G,''
-\emph{J.\ Netw.\ Comput.\ Appl.}, vol.~197, p.~103253, 2022.
-
-\bibitem{ref:bellin}
-A.~Bellin, N.~Di Cicco, D.~Munaretto, and F.~Granelli, ``Power
-consumption-aware 5G edge UPF selection using deep reinforcement
-learning,'' in \emph{Proc.\ IEEE NFV-SDN}, 2024, pp.~1--6.
-
-\bibitem{ref:zhu}
-Y.~Zhu et al., ``Multi-agent deep reinforcement learning for
-UAV-assisted 5G network slicing: A comparative study of MAPPO, MADDPG,
-and MADQN,'' \emph{arXiv preprint arXiv:2512.03835}, 2024.
-
-\bibitem{ref:qmix}
-T.~Rashid, M.~Samvelyan, C.~Schroeder de Witt, G.~Farquhar, J.~Foerster,
-and S.~Whiteson, ``QMIX: Monotonic value function factorisation for deep
-multi-agent reinforcement learning,'' in \emph{Proc.\ Int.\ Conf.\ Mach.\
-Learn.\ (ICML)}, 2018.
-
-\bibitem{ref:vdn}
-P.~Sunehag et al., ``Value-decomposition networks for cooperative
-multi-agent learning based on team reward,'' in \emph{Proc.\ Int.\ Conf.\
-Auton.\ Agents Multi-Agent Syst.\ (AAMAS)}, 2018.
-
-\bibitem{ref:ppo}
-J.~Schulman, F.~Wolski, P.~Dhariwal, A.~Radford, and O.~Klimov,
-``Proximal policy optimization algorithms,'' \emph{arXiv preprint
-arXiv:1707.06347}, 2017.
-
-\bibitem{ref:gae}
-J.~Schulman, P.~Moritz, S.~Levine, M.~Jordan, and P.~Abbeel,
-``High-dimensional continuous control using generalized advantage
-estimation,'' in \emph{Proc.\ Int.\ Conf.\ Learn.\ Represent.\ (ICLR)},
-2016.
-
-\bibitem{ref:ndt}
-P.~Almasan, M.~Ferriol-Galm\'es, J.~Paillisse et al., ``Network digital
-twin: Context, enabling technologies, and opportunities,'' \emph{IEEE
-Communications Magazine}, vol.~60, no.~11, pp.~22--27, 2022.
-
-\bibitem{ref:rapl}
-K.~N.~Khan, M.~Hirki, T.~Niemi, J.~K.~Nurminen, and Z.~Ou, ``RAPL in
-action: Experiences in using RAPL for power measurements,'' \emph{ACM
-Trans.\ Model.\ Perform.\ Eval.\ Comput.\ Syst.}, vol.~3, no.~2, 2018.
-
-\bibitem{ref:pz}
-J.~K.~Terry et al., ``PettingZoo: Gym for multi-agent reinforcement
-learning,'' \emph{arXiv preprint arXiv:2009.14471}, 2021.
-
-\end{thebibliography}
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
 
 \end{document}

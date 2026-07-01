@@ -109,10 +109,11 @@ def fig_bootstrap(data: dict) -> None:
     ax.grid(axis="y", alpha=0.25, lw=0.5)
     ax.legend(loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=2,
               frameon=False, borderaxespad=0.0, columnspacing=1.4)
-    ix13 = seeds.index("13")
-    ax.annotate("only IPPO win", xy=(ix13 + 0.11, ippo[ix13]),
-                xytext=(ix13 - 1.9, ippo[ix13] - 165), fontsize=8.5,
-                arrowprops=dict(arrowstyle="->", color="grey", lw=0.5))
+    iwin = int(np.argmax(np.asarray(ippo) - np.asarray(mappo)))  # the one seed IPPO wins
+    if ippo[iwin] > mappo[iwin]:
+        ax.annotate("only IPPO win", xy=(iwin + 0.11, ippo[iwin]),
+                    xytext=(iwin - 1.9, ippo[iwin] - 165), fontsize=8.5,
+                    arrowprops=dict(arrowstyle="->", color="grey", lw=0.5))
 
     # (b) bootstrap distribution
     ax = axes[1]

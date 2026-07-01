@@ -100,6 +100,7 @@ def train_ppo_multi_site(
         vf_coef=vf_coef,
         verbose=verbose,
         seed=seed,
+        device="cpu",  # tiny MLP: CPU is faster and avoids GPU contention
         tensorboard_log=str(tensorboard_log) if tensorboard_log else None,
     )
 

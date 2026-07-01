@@ -1,0 +1,201 @@
+% ===========================================================================
+% refs.bib  --  MASCOTS 2026 submission
+% Bibliography style: IEEEtran
+%
+% NOTE ON UNPUBLISHED COMPANION WORK
+%   ref:comcom   -- single-site journal paper, currently under review.
+%                   IEEE style cites submitted-but-unpublished work as
+%                   "unpublished"; we use note = {submitted for publication}.
+%   ref:costandt -- companion 6G-multimedia NDT workshop paper, accepted but
+%                   not yet published -> cited as "in press". The venue name
+%                   is a PLACEHOLDER: replace {Proc.~...WORKSHOP NAME...} with
+%                   the real workshop once known.
+% ===========================================================================
+
+% ---- Motivation: 5G energy --------------------------------------------------
+@article{ref:carbon,
+  author  = {Ding, Yan and Duan, Hongbo and Xie, Maohui and Rao, Ruochen and Wang, Jingjing and Zhang, Weiwen},
+  title   = {Carbon emissions and mitigation potentials of {5G} base stations in {China}},
+  journal = {Resources, Conservation and Recycling},
+  volume  = {182},
+  pages   = {106330},
+  year    = {2022},
+  doi     = {10.1016/j.resconrec.2022.106330}
+}
+
+% ---- UPF realizations: measurement and trade-offs ---------------------------
+@inproceedings{ref:rischke,
+  author    = {Rischke, Justus and Vielhaus, Christian and Sossalla, Peter and Wang, Jiajin and Fitzek, Frank H.~P.},
+  title     = {Comparison of {UPF} acceleration technologies and their tail-latency for {URLLC}},
+  booktitle = {Proc.\ IEEE Conf.\ Network Function Virtualization and Software Defined Networks (NFV-SDN)},
+  pages     = {19--25},
+  year      = {2022},
+  doi       = {10.1109/NFV-SDN56302.2022.9974798}
+}
+
+@inproceedings{ref:christakis,
+  author    = {Christakis, Stylianos and Tsourdinis, Theodoros and Makris, Nikos and Korakis, Thanasis and Fdida, Serge},
+  title     = {Evaluation of user plane function implementations in real-world {5G} networks},
+  booktitle = {Proc.\ IEEE INFOCOM Workshops (CNERT)},
+  pages     = {1--6},
+  year      = {2024},
+  doi       = {10.1109/INFOCOMWKSHPS61880.2024.10620666}
+}
+
+@inproceedings{ref:bolla,
+  author    = {Bolla, Raffaele and Ghiorzo, Pietro and Bruschi, Roberto and Ivaldi, Lorenzo and Davoli, Franco and Lombardo, Chiara and Siccardi, Beatrice},
+  title     = {Comparison of the performance and energy efficiency evaluation of {5G} user-plane functions},
+  booktitle = {Proc.\ IEEE GreenCom},
+  pages     = {361--367},
+  year      = {2024}
+}
+
+% ---- UPF placement / chaining ----------------------------------------------
+@article{ref:leyva,
+  author  = {Leyva-Pupo, Irian and Cervell\'o-Pastor, Cristina},
+  title   = {Efficient solutions to the placement and chaining problem of user plane functions in {5G}},
+  journal = {J.\ Netw.\ Comput.\ Appl.},
+  volume  = {197},
+  pages   = {103253},
+  year    = {2022},
+  doi     = {10.1016/j.jnca.2021.103253}
+}
+
+% ---- RL for single-site UPF -------------------------------------------------
+@inproceedings{ref:bellin,
+  author    = {Bellin, Andrea and Di Cicco, Nicola and Munaretto, Daniele and Granelli, Fabrizio},
+  title     = {Power consumption-aware {5G} edge {UPF} selection using deep reinforcement learning},
+  booktitle = {Proc.\ IEEE Conf.\ Network Function Virtualization and Software Defined Networks (NFV-SDN)},
+  pages     = {1--6},
+  year      = {2024},
+  doi       = {10.1109/NFV-SDN61811.2024.10807472}
+}
+
+% ---- Author prior work ------------------------------------------------------
+@inproceedings{ref:slices,
+  author    = {Afshar Borji, Shima and Bruschi, Roberto and Costa, Cristina Emilia and Lombardo, Chiara},
+  title     = {Dynamic energy-efficient user plane function selection in {5G} networks},
+  booktitle = {Proc.\ IFIP SLICES Workshop},
+  year      = {2025},
+  note      = {doi:10.5281/zenodo.18484420}
+}
+
+@article{ref:comcom,
+  author  = {Afshar Borji, Shima and Bruschi, Roberto and Lombardo, Chiara and Bolla, Raffaele and Costa, Cristina Emilia},
+  title   = {{AI}-driven energy-efficient orchestration of user plane functions in {5G} core networks},
+  journal = {Computer Communications},
+  year    = {2026},
+  note    = {submitted for publication, manuscript COMCOM-S-26-00430}
+}
+
+@inproceedings{ref:costandt,
+  author    = {Costa, Cristina Emilia and Afshar Borji, Shima and Sobanapuram Muruganandame, Narendran and Pramanik, Somreeta and Granelli, Fabrizio},
+  title     = {Digital twins for sustainable multimedia delivery in {6G} edge systems},
+  booktitle = {Proc.\ XXXXX WORKSHOP NAME -- REPLACE ME XXXXX},
+  year      = {2026},
+  note      = {in press}
+}
+
+% ---- Cooperative MARL methods ----------------------------------------------
+@inproceedings{ref:mappo,
+  author    = {Yu, Chao and Velu, Akash and Vinitsky, Eugene and Gao, Jiaxuan and Wang, Yu and Bayen, Alexandre and Wu, Yi},
+  title     = {The surprising effectiveness of {PPO} in cooperative multi-agent games},
+  booktitle = {Adv.\ Neural Inf.\ Process.\ Syst.\ (NeurIPS)},
+  volume    = {35},
+  year      = {2022}
+}
+
+@article{ref:ippo,
+  author  = {Schroeder de Witt, Christian and Gupta, Tarun and Makoviichuk, Denys and Makoviychuk, Viktor and Torr, Philip H.~S. and Sun, Mingfei and Whiteson, Shimon},
+  title   = {Is independent learning all you need in the {StarCraft} multi-agent challenge?},
+  journal = {arXiv preprint arXiv:2011.09533},
+  year    = {2020}
+}
+
+@inproceedings{ref:avanzi,
+  author    = {Avanzi, Marco and Giordani, Marco and Zorzi, Michele},
+  title     = {Multi-agent reinforcement learning scheduling to support low latency in teleoperated driving},
+  booktitle = {Proc.\ IEEE Vehicular Networking Conf.\ (VNC)},
+  year      = {2025},
+  note      = {arXiv:2505.03558}
+}
+
+@article{ref:cai,
+  author  = {Cai, Yongxin and Wang, Yu and Zhong, Zhe and Demir, \"Ozlem Tu\u{g}fe and Cavdar, Cicek},
+  title   = {Multi-agent reinforcement learning for energy saving in multi-cell massive {MIMO} systems},
+  journal = {arXiv preprint arXiv:2402.03204},
+  year    = {2024}
+}
+
+@inproceedings{ref:qmix,
+  author    = {Rashid, Tabish and Samvelyan, Mikayel and Schroeder de Witt, Christian and Farquhar, Gregory and Foerster, Jakob and Whiteson, Shimon},
+  title     = {{QMIX}: Monotonic value function factorisation for deep multi-agent reinforcement learning},
+  booktitle = {Proc.\ Int.\ Conf.\ Mach.\ Learn.\ (ICML)},
+  year      = {2018}
+}
+
+@inproceedings{ref:vdn,
+  author    = {Sunehag, Peter and Lever, Guy and Gruslys, Audrunas and Czarnecki, Wojciech Marian and Zambaldi, Vinicius and Jaderberg, Max and Lanctot, Marc and Sonnerat, Nicolas and Leibo, Joel Z. and Tuyls, Karl and Graepel, Thore},
+  title     = {Value-decomposition networks for cooperative multi-agent learning based on team reward},
+  booktitle = {Proc.\ Int.\ Conf.\ Auton.\ Agents Multi-Agent Syst.\ (AAMAS)},
+  year      = {2018}
+}
+
+@article{ref:ppo,
+  author  = {Schulman, John and Wolski, Filip and Dhariwal, Prafulla and Radford, Alec and Klimov, Oleg},
+  title   = {Proximal policy optimization algorithms},
+  journal = {arXiv preprint arXiv:1707.06347},
+  year    = {2017}
+}
+
+@inproceedings{ref:gae,
+  author    = {Schulman, John and Moritz, Philipp and Levine, Sergey and Jordan, Michael and Abbeel, Pieter},
+  title     = {High-dimensional continuous control using generalized advantage estimation},
+  booktitle = {Proc.\ Int.\ Conf.\ Learn.\ Represent.\ (ICLR)},
+  year      = {2016}
+}
+
+@article{ref:sb3,
+  author  = {Raffin, Antonin and Hill, Ashley and Gleave, Adam and Kanervisto, Anssi and Ernestus, Maximilian and Dormann, Noah},
+  title   = {Stable-{Baselines3}: Reliable reinforcement learning implementations},
+  journal = {J.\ Mach.\ Learn.\ Res.},
+  volume  = {22},
+  number  = {268},
+  pages   = {1--8},
+  year    = {2021}
+}
+
+@article{ref:zhu,
+  author  = {Zhu, Ying and others},
+  title   = {Multi-agent deep reinforcement learning for {UAV}-assisted {5G} network slicing: A comparative study of {MAPPO}, {MADDPG}, and {MADQN}},
+  journal = {arXiv preprint arXiv:2512.03835},
+  year    = {2024}
+}
+
+% ---- Digital twins / measurement methodology --------------------------------
+@article{ref:ndt,
+  author  = {Almasan, Paul and Ferriol-Galm\'es, Miquel and Paillisse, Jordi and others},
+  title   = {Network digital twin: Context, enabling technologies, and opportunities},
+  journal = {IEEE Communications Magazine},
+  volume  = {60},
+  number  = {11},
+  pages   = {22--27},
+  year    = {2022}
+}
+
+@article{ref:rapl,
+  author  = {Khan, Kashif Nizam and Hirki, Mikael and Niemi, Tapio and Nurminen, Jukka K. and Ou, Zhonghong},
+  title   = {{RAPL} in action: Experiences in using {RAPL} for power measurements},
+  journal = {ACM Trans.\ Model.\ Perform.\ Eval.\ Comput.\ Syst.},
+  volume  = {3},
+  number  = {2},
+  year    = {2018},
+  doi     = {10.1145/3177754}
+}
+
+@article{ref:pz,
+  author  = {Terry, J.~K. and others},
+  title   = {{PettingZoo}: Gym for multi-agent reinforcement learning},
+  journal = {arXiv preprint arXiv:2009.14471},
+  year    = {2021}
+}
