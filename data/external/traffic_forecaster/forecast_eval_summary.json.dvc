@@ -1,0 +1,13 @@
+# Forecast accuracy metrics (MAE/RMSE/WAPE) for the K=10 cluster-first STGNN,
+# from UpfTrafficForecaster @ feature/cluster-first-stgnn.
+#
+# Upstream emits this with `cache: false`, so it exists in no upstream DVC
+# remote and could not be recovered by `dvc pull` from the forecaster. It is the
+# source of the forecast MAE (110.7 Mbps at K=10) that drives the auto-derived
+# hysteresis band in src/baselines/threshold_derivation.py, and hence the
+# Phase-7 finding that hysteresis(auto-band) collapses to always-DPDK.
+outs:
+- md5: bd934bdf4412cb07694acb2f9f6a6db3
+  size: 1641
+  hash: md5
+  path: forecast_eval_summary.json

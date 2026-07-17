@@ -1,0 +1,15 @@
+# Ground-truth cluster load (service=Netflix, K=10, horizon dim=4) from
+# UpfTrafficForecaster @ feature/cluster-first-stgnn.
+#
+# Verified 2026-07-17: byte-identical to upstream
+# results/cluster_first/Netflix/K10/targets_test.npy. Ground truth is deterministic given
+# the NetMob traces + SKATER clustering, so unlike the sibling predictions_*.npy
+# this file IS reproducible upstream.
+#
+# Units: summed per-BS dl_norm (dimensionless NetMob). Multiply by the scenario
+# alpha to obtain Gbps.
+outs:
+- md5: 178791ee6b5a92c207c98fa4e03680e4
+  size: 161568
+  hash: md5
+  path: targets_test.npy

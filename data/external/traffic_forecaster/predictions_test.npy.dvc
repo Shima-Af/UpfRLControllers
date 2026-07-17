@@ -1,0 +1,20 @@
+# Forecast output of the cluster-first STGNN (service=Netflix, K=10, horizon
+# dim=4) from UpfTrafficForecaster @ feature/cluster-first-stgnn.
+#
+# PROVENANCE WARNING - these bytes are NOT reproducible from the forecaster's
+# current working tree. checkpoints/cluster_first/Netflix/K10/best_model.pt was
+# retrained on 2026-06-11, after this array was copied here (2026-05-09). Verified
+# 2026-07-17: upstream results/cluster_first/Netflix/K10/predictions_test.npy now differs from
+# this file, while the sibling targets_*.npy still match. This array is
+# therefore the only surviving output of the forecaster checkpoint behind every
+# Phase 2-9 result and the MASCOTS paper. Regenerating upstream will NOT
+# reproduce it. Do not delete; do not "refresh" from upstream.
+#
+# Units: summed per-BS dl_norm (dimensionless NetMob). Multiply by the scenario
+# alpha to obtain Gbps - see configs/scenario_rl.yaml (alpha is an unresolved
+# modelling assumption, not a recoverable constant).
+outs:
+- md5: 0b90c82bf5ab4dca1da959efa2ca5527
+  size: 161568
+  hash: md5
+  path: predictions_test.npy

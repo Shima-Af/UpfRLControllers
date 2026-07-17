@@ -1,0 +1,11 @@
+# Hand-authored activation-cost measurements (RAPL package-0, 100 iterations
+# per variant) sourced from a colleague's machine — see the file's own header
+# for measurement provenance. NOT produced by the UpfProfilingCampaign
+# pipeline, so it has no upstream .dvc import to point at; it is tracked here
+# directly. Belongs in UpfProfilingCampaign long-term.
+outs:
+- md5: e1456485051ead966a8fc87be7fb30a1
+  size: 2103
+  hash: md5
+  path: switching_costs.yaml
+  remote: profiling

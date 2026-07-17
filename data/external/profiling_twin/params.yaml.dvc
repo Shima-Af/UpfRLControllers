@@ -1,0 +1,9 @@
+# Hand-authored config snapshot of the profiling run. Not emitted as a DVC
+# output by UpfProfilingCampaign, so it is tracked here directly rather than
+# imported.
+outs:
+- md5: 8eb4f4f6f4419eeb7d9a1ba74f998bcc
+  size: 816
+  hash: md5
+  path: params.yaml
+  remote: profiling
