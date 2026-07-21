@@ -1,0 +1,163 @@
+# Thesis master plan — end-to-end consolidation
+
+**Thesis:** *Advanced AI tools for Augmented Observability in the 5/6G environment*
+**Author:** Shima Afshar Borji · **Plan written:** 2026-07-21
+
+Resumable checkpoint file. Every step has a STATUS. Any session may resume by
+reading this file and continuing at the first `TODO`. Update STATUS in the same
+commit as the work. Do not batch — one step, one commit, one status update.
+
+STATUS values: `TODO` · `WIP` · `DONE` · `BLOCKED(reason)` · `DECIDE(author)`
+
+---
+
+## 0. The framing gap, and how to close it
+
+The thesis title promises *Augmented Observability*. The four modules currently
+read as an energy-optimisation pipeline. The gap is not missing work — it is a
+missing argument. The argument:
+
+> **Each module extends the observability envelope along a different axis, and
+> the controller results are the evidence that the extension is trustworthy.**
+
+| Module | Observability axis extended | What becomes observable |
+|---|---|---|
+| UpfProfilingCampaign | **the unmeasurable** (virtual sensing) | Per-NF attributed power and QoS compliance — quantities production 5GC cannot instrument. RAPL is per-package, not per-network-function. The surrogates manufacture a signal the network cannot natively expose. |
+| UpfTrafficForecaster | **the future** (temporal) | Cluster load at t+1 rather than only at t. Observability normally ends at the present; the STGNN pushes the horizon forward. |
+| UPF_NDT | **the counterfactual** (modal) | "What would happen under the other realisation" — states never entered. The deepest extension: observing the road not taken. |
+| UpfRLControllers | **the elsewhere** (spatial) | MAPPO's shared actor lets data-poor MEC sites inherit operating knowledge from data-rich ones. Cluster 5/8 transfer is the empirical proof. |
+
+**The closing move.** Energy saving is not the contribution — it is the
+*instrument*. If the inferred power/QoS/forecast signals were wrong, a
+controller trained on them could not beat classical baselines on a held-out
+period. It does (MAPPO −5610 ± 43 vs hysteresis −6544, 8 seeds). Therefore the
+augmented observability is faithful. Control performance is the *validation
+metric for the observability stack*, not the end in itself.
+
+**Standards hook.** Frame each module as an AI-augmented realisation of a
+standardised analytics function: profiling ↔ MDAF/IDAF (infrastructure
+telemetry), forecasting ↔ NWDAF analytics, twin ↔ network digital twin
+(Almasan et al.), controllers ↔ closed-loop orchestration. The EnergyAwareUPF
+manuscript already invokes NWDAF/MDAF — reuse that thread.
+
+**Where EnergyAwareUPF fits.** Deprecated single-site ancestor. It belongs in
+the controller chapter as the *pre-augmentation baseline*: a controller acting
+on raw telemetry plus one offline LSTM forecast, with a hand-fitted in-repo
+power model. It motivates the split into the four-module stack. Do not present
+it as current work; present it as the reason the architecture changed.
+
+---
+
+## Phase A — Durability (do first; cheap; unblocks everything)
+
+| # | Step | Status |
+|---|---|---|
+| A1 | Push `UpfProfilingCampaign` (`main --follow-tags`, tags `thesis-v1`,`thesis-v1.1`) | DECIDE(author) |
+| A2 | Push `UpfTrafficForecaster` (`feature/cluster-first-stgnn --follow-tags`, tag `thesis-v1`) | DECIDE(author) |
+| A3 | Controller: replace 2 local `.dvc` stubs with `dvc import` from `UpfProfilingCampaign@thesis-v1.1` | BLOCKED(A1) |
+| A4 | Controller: bump `upf-digital-twin` pin `v0.1.0` → `v0.3.0` in `pyproject.toml` | TODO |
+
+`UPF_NDT` and `UpfRLControllers` are already committed and pushed. A1/A2 are
+outward-facing; until they land the chain still lives on one machine.
+
+---
+
+## Phase B — Close the open scientific inconsistency
+
+The switching-cost model. `switching_costs.yaml` scales activation energy by
+the target's *steady-state attributed power* (0.82 W), where the source
+measured *net RAPL package power during activation* (34.8 W). Result: the twin
+charges 0.00546 Wh per DPDK start; the source measured 0.232 Wh; the
+`scenario_rl.yaml` reward comment claims ~0.25 Wh. **Code is ~42× cheaper than
+its own documentation.** Switching is effectively free (0.022 reward units vs
+~0.7 for SEC), which plausibly explains MAPPO's 276 flips vs the ensemble's 183.
+
+| # | Step | Status |
+|---|---|---|
+| B1 | Evaluate the 12 existing `lambda_sw` checkpoints on test with flips/energy/unsafe recorded | **DONE** 2026-07-21 → `research/phase8/results/sweep_lambda_sw_long.csv` |
+| B1b | Train MAPPO at `lambda_sw≈170` (3 seeds, ~1.5 h) — the equivalent of the absolute switching model — and compare flips/reward to λ=4. This is the experiment that actually settles B2 | TODO |
+| B2 | From B1b, decide: absolute measured spike (0.232/0.007 Wh) vs current scaled model | BLOCKED(B1b) |
+| B3 | If B2 = absolute → re-run Phase 6/7 + MASCOTS. If B2 = scaled → rewrite the `scenario_rl.yaml` magnitudes comment and soften the "physics-grounded" claim | BLOCKED(B2) |
+| B4 | Split standby out of `switching_energy_wh` ([digital_twin.py:201](../../UPF_NDT/src/upf_digital_twin/twin/digital_twin.py#L201)); numerically zero today (prewarm off) but misreports if re-enabled | TODO |
+| B5 | Document the reward v1→v2 revision (`reports/phase-7/*.oldreward.bak` prove a change; no prose records it). Required or cross-phase tables are apples-to-oranges | TODO |
+
+**B1 result (2026-07-21).** λ_sw 2→16 (8×) moves switching only −4.1%
+(294→282); reward spread across the whole range is 125 units, *below* the
+154–177 MAPPO-vs-IPPO margin. Two conclusions: (a) within the plausible range
+the switching weight does not threaten the headline result; (b) the sweep
+cannot settle B2, because even λ_sw=16 costs 0.087 reward units against ~0.7
+for one step's SEC — the penalty is never binding. The absolute model needs
+λ_sw ≈ 170, ~10× beyond the sweep. Break-even reasoning: USR saves ~0.3
+units/step, so a 0.93 switch cost pays only if the state is held ≥3–4 steps;
+observed behaviour is a switch every ~3.6 steps, i.e. exactly at the boundary
+— so the absolute model probably *does* change behaviour. Hence B1b.
+
+**Do not start Phase D chapter writing before B2 is decided** — it sets the
+switching numbers every chapter quotes.
+
+---
+
+## Phase C — Contracts and module information sheets
+
+| # | Step | Status |
+|---|---|---|
+| C1 | `CONTRACTS.md` (repo root of controller, mirrored upstream): for each repo boundary, the exact shape, dtype, units, semantics, and canonical value. Would have caught `alpha`, `selected_k`, `service` before they existed | TODO |
+| C2 | Executable contract test (`tests/test_contracts.py`) asserting the C1 claims against the real artifacts | TODO |
+| C3 | Per-module information sheet — one page per module: purpose, inputs (path, shape, units), outputs, hyperparameters, entry-point CLI, runtime, artifacts consumed/produced | TODO |
+
+C3 is a stated deliverable. Draft table per module:
+`name · role · observability axis · inputs · outputs · hyperparameters ·
+entry point · wall time · upstream pin · downstream consumer`.
+
+---
+
+## Phase D — Thesis chapters
+
+Existing: `chapter_upf_profiling.tex` (37 kB, 26 figs) ·
+`chapter_forecaster.tex` (28 kB, 8 figs) · `chapter_digital_twin.tex` (39 kB,
+5 figs, regenerated 2026-07-21 under the unified scenario).
+**Missing: the controller chapter** — 36 figures already exist for it.
+
+| # | Step | Status |
+|---|---|---|
+| D1 | Write `chapter_controllers.tex`. Arc: threshold baseline → single-site PPO → LSTM-PPO detour → why single-site ceilings → MARL/MAPPO → synthesis | BLOCKED(B2) |
+| D2 | Bridge figure: single-site PPO vs MAPPO on one axis (Phase 2 and Phase 7 currently live in separate tables) | TODO |
+| D3 | Weave the §0 observability framing into all four chapters — one framing paragraph each, plus a synthesis section | TODO |
+| D4 | Cross-chapter numeric consistency pass: every shared quantity (λ_dec 81, λ_be 91, QoS 149, MAE 110.7, α=1.0) must agree across chapters. Twin↔controller verified 2026-07-21; profiling and forecaster unchecked | TODO |
+| D5 | Narrate the three currently-unwritten transitions: single-site→MARL limitation, the LSTM-PPO result, threshold v1 (hand-tuned) vs v2 (physics-derived) | BLOCKED(D1) |
+
+---
+
+## Phase E — End-to-end reproducibility
+
+| # | Step | Status |
+|---|---|---|
+| E1 | `UpfThesisPipeline` manifest repo: four pinned revisions + `make reproduce` running the DVC pipelines in dependency order. A manifest, **not** a merge — the twin must stay controller-agnostic or its evidence becomes circular | TODO |
+| E2 | Clean-clone verification: fresh clone + `dvc pull` + smoke test per repo | BLOCKED(A1,A2) |
+| E3 | Tag `thesis-v1` across all four repos once B2 has settled and numbers are final | BLOCKED(B3) |
+
+---
+
+## Preservation rules
+
+- Never `git checkout`/`reset`/`clean` in these repos without `git stash -u` first.
+- `data/external/**` and `exports/` hold bytes that are **not regenerable**
+  (forecaster K10 retrained 2026-06-11; DailyMotion run overwrote the Netflix
+  summary). Content-hash before and after any operation that moves them.
+- New work goes on branches; never force-push a published branch.
+- Three orphaned-artifact incidents so far (`switching_costs.yaml`,
+  `params.yaml` snapshot, `operating_ranges`). Every one was an artifact with
+  no declared owner. C1/C2 exist to end that class of bug.
+
+## Known-open, non-blocking
+
+- Forecaster `README` describes the deprecated per-gNodeB LSTM; live model is
+  the cluster-first STGNN (`PIPELINE.md` flags it).
+- DailyMotion run overwrote `results/cluster_first/total/forecast_eval_summary.json`;
+  the Netflix copy survives only in `exports/`. May affect the forecaster
+  chapter's own reported numbers — unverified.
+- `alpha=0.12` was calibrated so peak fleet demand ≡ USR safe capacity
+  (0.1208 exactly). Superseded by the α=1.0 decision, but record the rule as
+  the alternative anchor and report a twin-side α sensitivity sweep — it
+  converts the weakest point ("you picked a number") into a characterised
+  regime boundary.

@@ -12,4 +12,4 @@ tqdm
 pyarrow
 dvc[s3]
 boto3
-git+https://github.com/Shima-Af/UpfDigitalTwin.git@v0.1.0
+git+https://github.com/Shima-Af/UpfDigitalTwin.git@v0.3.0
