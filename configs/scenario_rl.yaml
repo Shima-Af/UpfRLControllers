@@ -13,11 +13,19 @@
 seed: 42
 
 traffic:
-  service: "video"
-  selected_k: 8
+  service: "Netflix"        # must match forecast_eval_summary.json "service"
+  selected_k: 10            # must match the K of the forecaster arrays (N,H,K)
   time_step_minutes: 15
-  # Normalization factor: Gbps per 1.0 of normalized forecaster output.
-  # Placeholder — override once the forecaster's scaler is known.
+  # Gbps per 1.0 of the forecaster's summed dl_norm output.
+  #
+  # DECLARED MODELLING ASSUMPTION (not a recovered scaler). NetMob traffic is
+  # dimensionless by construction (privacy-preserving) and the forecaster sums
+  # per-BS dl_norm across each cluster, so there is no physical scaler to look
+  # up. alpha=1.0 interprets one summed-dl_norm unit as 1 Gbps of offered UPF
+  # load. This places the K=10 clusters at mean 0.06–1.66 Gbps and peaks up to
+  # 5.8 Gbps — a realistic per-site MEC-UPF operating range in which the USR
+  # realisation is QoS-safe ~29% of steps, i.e. DPDK is the frequent-but-not-
+  # always correct default. This is the regime all reported results assume.
   alpha: 1.0
 
 upf:

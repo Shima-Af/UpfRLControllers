@@ -1,7 +1,13 @@
-# Pointer to data/cluster_first/Netflix/K10/cluster_bs_map.json in
-# https://github.com/Shima-Af/UpfTrafficForecaster.git
-# (commit 020373a, branch feature/cluster-first-stgnn).
-# Run `dvc pull` to fetch it from the `forecaster` S3 remote.
+# cluster_bs_map.json — service=Netflix, K=10, from UpfTrafficForecaster
+# @ feature/cluster-first-stgnn (data/cluster_first/Netflix/K10/).
+#
+# The md5 below is the CANONICAL pin — the blob lives in the `forecaster`
+# S3 remote and `dvc pull` fetches it by hash. The earlier comment citing
+# 'commit 020373a' was stale: train/val prediction arrays were added
+# upstream in LATER commits (04ed1c1, ff90c8a), so no single source commit
+# describes the current external set. TODO: once UpfTrafficForecaster
+# declares these as DVC pipeline outputs, replace this hand-written pointer
+# with a real `dvc import` (repo+path+rev dep).
 outs:
 - md5: c4f8d936f478478c5f9a90c35f48a4d3
   hash: md5

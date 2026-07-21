@@ -130,8 +130,7 @@ class SingleSiteUPFEnv(gym.Env):
         if not pred_path.exists():
             raise FileNotFoundError(
                 f"Traffic predictions for split={split!r} not found: {pred_path}. "
-                "Run `python scripts/bootstrap_external_data.py` or copy the "
-                "matching predictions_<split>.npy from the forecaster repo."
+                "Run `dvc pull` to fetch the forecaster arrays from S3."
             )
         if not targ_path.exists():
             raise FileNotFoundError(

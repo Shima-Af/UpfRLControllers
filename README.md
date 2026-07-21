@@ -68,20 +68,11 @@ vendored from the digital-twin repo.
    - `traffic_forecaster/cluster_bs_map.json`
    - `profiling_twin/models/` (entire surrogate-model tree + `manifest.json`)
 
-   **(b) Non-DVC files** — the train/val/test prediction and target
-   arrays (`predictions_{train,val,test}.npy`, `targets_{train,val,test}.npy`,
-   `forecast_eval_summary.json`) plus hand-authored files
-   (`switching_costs.yaml`, `params.yaml`). These are copied from the
-   upstream forecaster repo output or a peer directory. The default source
-   is `/home/ubuntu/UPF_NDT/data/external`; override with `--source`.
-
-   ```bash
-   python scripts/bootstrap_external_data.py
-   ```
-
-   See [scripts/bootstrap_external_data.py](scripts/bootstrap_external_data.py)
-   for the exact file list and the rationale. The script is idempotent —
-   existing files are left alone unless `--force` is passed.
+   As of the 2026-07 artifact-tracking pass, **every** required file
+   (including the train/val prediction and target arrays,
+   `forecast_eval_summary.json`, `switching_costs.yaml`, and `params.yaml`)
+   is DVC-tracked, so `dvc pull` above fetches the complete set. The old
+   `scripts/bootstrap_external_data.py` hand-copy step is gone.
 
 5. **Run the setup check**
 
@@ -110,7 +101,7 @@ UpfRLControllers/
     evaluation/             (reserved — empty for now)
     utils/                  Config loading, project paths
   scripts/                  CANONICAL CLIs (still actively used)
-    bootstrap_external_data.py, check_setup.py, smoke_test_single_site_env.py
+    check_setup.py, smoke_test_single_site_env.py
     train_ppo_single_site.py, train_ppo_multi_site.py,
     train_ppo_ensemble.py, train_mappo.py
   research/                 ONE-OFFS — see research/README.md

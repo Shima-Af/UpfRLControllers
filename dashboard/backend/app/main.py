@@ -79,7 +79,7 @@ def _cluster_stats() -> list[ClusterInfo]:
             status_code=503,
             detail=(
                 f"Traffic targets not found at {targets_path}. "
-                "Run `dvc pull` and `python scripts/bootstrap_external_data.py` first."
+                "Run `dvc pull` first."
             ),
         )
     arr = np.load(targets_path)  # (N, H, K)

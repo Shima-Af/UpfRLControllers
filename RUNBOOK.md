@@ -8,8 +8,7 @@ All commands run from the repo root with `.venv` activated.
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt          # installs library + UpfDigitalTwin from git
-dvc pull                                  # forecaster + profiling artifacts from S3 (needs AWS creds)
-python scripts/bootstrap_external_data.py # non-DVC artifacts (predictions/targets, switching_costs.yaml)
+dvc pull                                  # ALL external artifacts from S3 (needs AWS creds)
 python scripts/check_setup.py             # sanity-check artifacts + imports
 ```
 
