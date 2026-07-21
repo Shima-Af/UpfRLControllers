@@ -1,11 +1,13 @@
-# Hand-authored activation-cost measurements (RAPL package-0, 100 iterations
-# per variant) sourced from a colleague's machine — see the file's own header
-# for measurement provenance. NOT produced by the UpfProfilingCampaign
-# pipeline, so it has no upstream .dvc import to point at; it is tracked here
-# directly. Belongs in UpfProfilingCampaign long-term.
+md5: a589adb2b7995705c008232c8c858b60
+frozen: true
+deps:
+- path: configs/twin_export/switching_costs.yaml
+  repo:
+    url: https://github.com/Shima-Af/UpfProfilingCampaign.git
+    rev: thesis-v1.1
+    rev_lock: 07e983267eb0cc6a97c3ec103e631175bb8f23fb
 outs:
 - md5: e1456485051ead966a8fc87be7fb30a1
   size: 2103
   hash: md5
   path: switching_costs.yaml
-  remote: profiling

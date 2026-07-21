@@ -52,10 +52,10 @@ it as current work; present it as the reason the architecture changed.
 
 | # | Step | Status |
 |---|---|---|
-| A1 | Push `UpfProfilingCampaign` (`main --follow-tags`, tags `thesis-v1`,`thesis-v1.1`) | DECIDE(author) |
-| A2 | Push `UpfTrafficForecaster` (`feature/cluster-first-stgnn --follow-tags`, tag `thesis-v1`) | DECIDE(author) |
-| A3 | Controller: replace 2 local `.dvc` stubs with `dvc import` from `UpfProfilingCampaign@thesis-v1.1` | BLOCKED(A1) |
-| A4 | Controller: bump `upf-digital-twin` pin `v0.1.0` → `v0.3.0` in `pyproject.toml` | TODO |
+| A1 | Push `UpfProfilingCampaign` (`main --follow-tags`) | **DONE** `a73870f..07e9832` + tags `thesis-v1`,`thesis-v1.1` |
+| A2 | Push `UpfTrafficForecaster` (`feature/cluster-first-stgnn --follow-tags`) | **DONE** `ff90c8a..99dbe1a` + tag `thesis-v1`; `dvc push` 130 files |
+| A3 | Controller: replace 2 local `.dvc` stubs with `dvc import` from `UpfProfilingCampaign@thesis-v1.1` | TODO (now unblocked) |
+| A4 | Controller: bump `upf-digital-twin` pin → `v0.3.0` | **DONE** `cf6478b` — in *both* `pyproject.toml` and `requirements.txt`, which had drifted |
 
 `UPF_NDT` and `UpfRLControllers` are already committed and pushed. A1/A2 are
 outward-facing; until they land the chain still lives on one machine.
@@ -101,9 +101,10 @@ switching numbers every chapter quotes.
 
 | # | Step | Status |
 |---|---|---|
-| C1 | `CONTRACTS.md` (repo root of controller, mirrored upstream): for each repo boundary, the exact shape, dtype, units, semantics, and canonical value. Would have caught `alpha`, `selected_k`, `service` before they existed | TODO |
-| C2 | Executable contract test (`tests/test_contracts.py`) asserting the C1 claims against the real artifacts | TODO |
-| C3 | Per-module information sheet — one page per module: purpose, inputs (path, shape, units), outputs, hyperparameters, entry-point CLI, runtime, artifacts consumed/produced | TODO |
+| C1 | `CONTRACTS.md` — every boundary's shape, dtype, units, semantics, canonical value | **DONE** `f0b0f54` |
+| C2 | `tests/test_contracts.py` — 19 tests, executable form of C1 | **DONE** `f0b0f54` (28/28 suite green) |
+| C3 | `reports/MODULE_SHEET.md` — per-module role, I/O, hyperparameters, entry point, runtime, pin | **DONE** `f0b0f54` |
+| C4 | Mirror `CONTRACTS.md` (or a pointer to it) into the three upstream repos so the contract is visible from either side | TODO |
 
 C3 is a stated deliverable. Draft table per module:
 `name · role · observability axis · inputs · outputs · hyperparameters ·
