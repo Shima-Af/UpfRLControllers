@@ -11,7 +11,12 @@ section.
 | 6 — MAPPO / CTDE | done | [phase-6/](phase-6/README.md) |
 | 7 — Final multi-seed comparison | done | [phase-7/](phase-7/README.md) |
 
-Paper artifacts: [paper-draft/](paper-draft/README.md), [paper-letters/](paper-letters/README.md).
+Paper artifacts: [paper-draft/](paper-draft/README.md), [paper-letters/](paper-letters/README.md),
+[paper-mascots/](paper-mascots/README.md).
+
+Cross-repo work: [cross_repo_fixups.md](cross_repo_fixups.md) — ready-to-run agent
+prompts for UpfTrafficForecaster, UpfProfilingCampaign, and UPF_NDT, plus the
+follow-ups they unblock in this repo.
 
 Each phase has a `research/phaseN/generate_figures.py` that regenerates
 the figures from the current code + trained models. Re-run after any
