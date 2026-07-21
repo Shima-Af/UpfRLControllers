@@ -1,0 +1,23 @@
+# Sweep point B1b — the "absolute switching model" equivalent.
+#
+# switching_costs.yaml scales activation energy by the TARGET machine's
+# steady-state attributed UPF power (0.82 W), so the twin charges
+# 0.00546 Wh to start DPDK. The SOURCE machine measured the activation
+# burst directly at 0.232 Wh (34.81 W net RAPL x 24 s). The two differ ~42x
+# because steady-state attributed power is not the same quantity as the
+# CPU-saturating transient during container start.
+#
+# Rather than edit the twin's energy model (which would change every
+# reported number), this overlay reproduces the absolute model's *reward
+# weight* equivalently:
+#
+#     lambda_sw x spike_wh_scaled  ==  4.0 x spike_wh_absolute
+#     lambda_sw x 0.00546          ==  4.0 x 0.232
+#     lambda_sw                    ==  170.0
+#
+# If MAPPO's flip count and its margin over IPPO survive here, the choice of
+# switching-cost model does not threaten the headline result and the scaled
+# model can stand with corrected documentation. If they do not, the absolute
+# model must be adopted and Phase 6/7 re-run.
+reward_weights:
+  lambda_sw: 170.0
