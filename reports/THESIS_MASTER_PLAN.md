@@ -134,9 +134,9 @@ Existing: `chapter_upf_profiling.tex` (37 kB, 26 figs) ·
 
 | # | Step | Status |
 |---|---|---|
-| E1 | `UpfThesisPipeline` manifest repo: four pinned revisions + `make reproduce` running the DVC pipelines in dependency order. A manifest, **not** a merge — the twin must stay controller-agnostic or its evidence becomes circular | TODO |
-| E2 | Clean-clone verification: fresh clone + `dvc pull` + smoke test per repo | BLOCKED(A1,A2) |
-| E3 | Tag `thesis-v1` across all four repos once B2 has settled and numbers are final | BLOCKED(B3) |
+| E1 | `UpfThesisPipeline` manifest repo | **DONE** 2026-07-23 — `/home/ubuntu/UpfThesisPipeline` (local; needs GitHub remote + push). `manifest.yaml` (pins + produce/consume edges), `Makefile` (clone/pull/verify/reproduce/chapters/boundary), `README.md` (reproducibility boundary). Manifest, not merge |
+| E2 | Verification harness | **DONE (scoped)** — `make pins` resolves all four (prof eb30588, fcst 15af9ec, twin 95de456, ctrl f558e28); all tags confirmed on remotes; `make verify` green (twin 40, ctrl 28, check_setup OK); `make chapters` all four compile. Full cold-clone is the documented `make clone && make pull && make verify` (needs AWS creds + clean machine) |
+| E3 | Tag `thesis-v1` across all four repos once numbers are final | TODO — controller pins ready; gated on author-side finalisation (spike-eq paste, phase-figure regen, MASCOTS refresh) |
 
 ---
 
