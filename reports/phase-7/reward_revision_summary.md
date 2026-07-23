@@ -37,3 +37,16 @@ Reward magnitudes are NOT directly comparable across v1 and v2 (switching cost m
 | 6 | 0.5 | -5591.2 | 1967.0 | 292 | 0.51 |
 
 Interpretation: cooldown is **not load-bearing** if all rows in this table lie within seed noise of the baseline (± ~50 reward units for MAPPO under v2).
+
+## v2 refinement (2026-07-23) — corrected switching energy
+
+The v2 numbers above use the twin's original `sw_energy_wh`, which scaled
+activation energy by load-dependent steady-state power. That input was later
+corrected to a **load-independent per-variant constant** (activation is a
+zero-traffic event) — UPF_NDT `v0.4.0`, profiling `thesis-v1.2`. This is a
+refinement of v2's `L_SW` *input*, **not** a new reward version: the reward
+formula `−(α·SEC + L_QoS + L_SW + L_CD)` with `L_SW = λ_sw · sw_energy_wh` is
+unchanged. Re-scored numbers (MAPPO −5647, ranking and MAPPO>IPPO significance
+preserved) are in [switching_fix_reeval.md](switching_fix_reeval.md); the
+authoritative post-fix summary is `multiseed_summary_v04twin.json`. All final
+thesis tables should quote the v0.4 numbers.
