@@ -1,0 +1,77 @@
+% ============================================================
+% Thesis-level synthesis section — the Augmented Observability argument.
+% Standalone: drop into the thesis Introduction or Conclusion. Uses only
+% base LaTeX + booktabs; rename \upf/\dpdk/\usr if the host preamble differs.
+% Compiles on its own via the small wrapper at the bottom (comment it out
+% when pasting into the thesis).
+% ============================================================
+
+\section{Synthesis: four axes of augmented observability}
+\label{sec:thesis_synthesis}
+
+The title of this thesis promises \emph{advanced AI tools for augmented
+observability in the 5/6G environment}. The four technical chapters can be read
+individually as an energy-optimisation pipeline---profile the hardware, forecast
+the load, simulate the alternatives, control the switch---but that reading misses
+the argument that binds them. The binding claim is that each chapter extends what
+the network can \emph{observe} along a different axis, and that the final control
+results are the evidence the extensions are trustworthy.
+
+\begin{table}[h]
+\centering
+\caption{Each module extends the observability envelope along a distinct axis.}
+\label{tab:obs_axes}
+\begin{tabular}{lll}
+\toprule
+Module & Axis extended & What becomes observable \\
+\midrule
+Profiling campaign & the unmeasurable (sensing) & per-\upf{} attributed power and QoS compliance \\
+Traffic forecaster & the future (temporal) & cluster load one control step ahead \\
+Digital twin & the counterfactual (modal) & outcomes under the realisation not running \\
+Controllers & the elsewhere (spatial) & one site's operating experience, at another site \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Read this way the modules are not four projects but one instrument built in four
+stages. Production 5G cores cannot measure the power of a single network
+function: energy counters are per-package, so per-\upf{} attributed power and QoS
+compliance must be \emph{inferred}. The profiling campaign manufactures that
+signal (the \emph{unmeasurable} axis). Observation normally ends at the present;
+the forecaster projects per-cluster load one step forward (the \emph{temporal}
+axis). Choosing between two \upf{} realisations requires knowing the outcome of
+the option not taken; the digital twin supplies it (the \emph{counterfactual}
+axis). And a fleet of heterogeneous edge sites cannot each learn the rare
+switching boundary alone; the cooperative controller lets a data-poor site
+inherit operating knowledge observed at a data-rich one (the \emph{spatial}
+axis).
+
+\paragraph{Why control is the validation, not the goal.} Every one of these four
+signals is inferred, not directly measured. The natural objection is that a
+system built on inferred signals might simply be optimising its own fictions. The
+control results answer that objection directly. A controller trained purely on
+inferred attributed power, inferred future load, and inferred counterfactual QoS
+was evaluated on a held-out time period against baselines tuned on the physical
+ground truth. If the inferred signals were unfaithful, such a controller could
+not win; it would be optimising noise and would lose on the real held-out
+outcomes. Instead the cooperative controller beats every baseline, including the
+best hand-tuned classical rule, by a margin larger than seed noise and at the
+lowest QoS-violation rate of any learner. That result is only obtainable if the
+augmented observability is accurate. Energy saving is therefore the
+\emph{instrument} through which the observability stack is validated---not the
+contribution in itself.
+
+\paragraph{Standards framing.} Each module also has a natural counterpart among
+the standardised analytics functions of the 5G architecture, which situates the
+contribution as AI-augmented realisations of functions operators already deploy:
+the profiling surrogate plays the role of infrastructure-level telemetry
+(MDAF/IDAF); the forecaster, of network-data analytics (NWDAF); the twin, of a
+network digital twin; and the controllers, of a closed-loop orchestration
+function. The augmentation, in every case, is that an AI tool makes observable a
+quantity the standardised function would otherwise have to do without.
+
+% ---- standalone wrapper (delete when pasting into the thesis) --------------
+% \documentclass[12pt,a4paper]{report}\usepackage{booktabs}
+% \newcommand{\upf}{\textsc{upf}}\newcommand{\dpdk}{\textsc{sd-core dpdk}}
+% \newcommand{\usr}{\textsc{usr-upf}}\begin{document}
+% ... section above ... \end{document}
