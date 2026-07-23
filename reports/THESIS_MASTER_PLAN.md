@@ -121,8 +121,9 @@ Existing: `chapter_upf_profiling.tex` (37 kB, 26 figs) ·
 
 | # | Step | Status |
 |---|---|---|
-| D1 | Write `chapter_controllers.tex`. Arc: threshold baseline → single-site PPO → LSTM-PPO detour → why single-site ceilings → MARL/MAPPO → synthesis | TODO — **UNBLOCKED** (B2 decided 2026-07-23); largest missing deliverable, 36 figures already exist |
-| D2 | Bridge figure: single-site PPO vs MAPPO on one axis (Phase 2 and Phase 7 currently live in separate tables) | TODO |
+| D1 | Write `chapter_controllers.tex`. Arc: threshold baseline → single-site PPO → LSTM-PPO detour → why single-site ceilings → MARL/MAPPO → synthesis | **DONE** 2026-07-23 `e2f6b0b` — `reports/chapter-controllers/`, compiles 9pp, v0.4 numbers, observability framing woven through. Author TODO in-file: regenerate phase PNGs + paired bootstrap under v0.4 (within noise) |
+| D2 | Bridge figure: single-site PPO vs MAPPO on one axis (Phase 2 and Phase 7 currently live in separate tables) | **DONE** `fig_bridge_ippo_vs_mappo.{pdf,png}` from v0.4 summary; transfer wins c0/c4/c5/c7 |
+| B5 | Document reward v1→v2 revision | **DONE** — `reward_revision_summary.md` already covered v1(flat)→v2(L_SW); appended note that the v0.4 switching fix is a refinement of v2's input, not a new reward |
 | D3 | Weave the §0 observability framing into all four chapters — one framing paragraph each, plus a synthesis section | TODO |
 | D4 | Cross-chapter numeric consistency pass: every shared quantity (λ_dec 81, λ_be 91, QoS 149, MAE 110.7, α=1.0) must agree across chapters. Twin↔controller verified 2026-07-21; profiling and forecaster unchecked | TODO |
 | D5 | Narrate the three currently-unwritten transitions: single-site→MARL limitation, the LSTM-PPO result, threshold v1 (hand-tuned) vs v2 (physics-derived) | BLOCKED(D1) |
