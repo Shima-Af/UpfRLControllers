@@ -515,7 +515,8 @@ def main() -> int:
             f"{agg['unsafe_mean'] * 100:>9.2f}%"
         )
     print("=" * 92)
-    print(f"\nWrote {args.out_json.relative_to(REPO_ROOT)}")
+    out_path = args.out_json if args.out_json.is_absolute() else (REPO_ROOT / args.out_json)
+    print(f"\nWrote {out_path}")
     return 0
 
 
