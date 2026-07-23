@@ -1,0 +1,7 @@
+# LaTeX intermediates; .tex/.pdf and figures/ are tracked
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
