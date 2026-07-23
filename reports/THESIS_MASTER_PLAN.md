@@ -75,9 +75,9 @@ its own documentation.** Switching is effectively free (0.022 reward units vs
 | # | Step | Status |
 |---|---|---|
 | B1 | Evaluate the 12 existing `lambda_sw` checkpoints on test with flips/energy/unsafe recorded | **DONE** 2026-07-21 → `research/phase8/results/sweep_lambda_sw_long.csv` |
-| B1b | Train MAPPO at `lambda_sw≈170` (3 seeds, ~1.5 h) — the equivalent of the absolute switching model — and compare flips/reward to λ=4. This is the experiment that actually settles B2 | TODO |
-| B2 | From B1b, decide: absolute measured spike (0.232/0.007 Wh) vs current scaled model | BLOCKED(B1b) |
-| B3 | If B2 = absolute → re-run Phase 6/7 + MASCOTS. If B2 = scaled → rewrite the `scenario_rl.yaml` magnitudes comment and soften the "physics-grounded" claim | BLOCKED(B2) |
+| B1b | Train MAPPO at `lambda_sw≈170` (3 seeds) — equivalent of absolute switching model — compare to λ=4 | **DONE** 2026-07-23 (single-threaded, ~4 min/seed after thread-thrash fix). flips 276→238, energy/unsafe/reward within noise → switching model does NOT change conclusions |
+| B2 | Decide switching-cost model | **DECIDED** 2026-07-23 — neither "absolute" nor "scaled": the correct model is a **load-independent per-variant constant** (activation is a zero-traffic event). Rebased-burst calibration: DPDK 0.00948 Wh, USR 5.2e-6 Wh. See [[project_switching_cost_model]] |
+| B3 | Implement + propagate + re-score | **DONE** — profiling `thesis-v1.2`, NDT `v0.4.0`, RL pin bump; Phase-7 re-scored under fixed twin (MAPPO −5647, ordering holds), `reports/phase-7/switching_fix_reeval.md`. NO retrain (B1b). MASCOTS/README number refresh still owed (doc-only) |
 | B4 | Split standby out of `switching_energy_wh` ([digital_twin.py:201](../../UPF_NDT/src/upf_digital_twin/twin/digital_twin.py#L201)); numerically zero today (prewarm off) but misreports if re-enabled | TODO |
 | B5 | Document the reward v1→v2 revision (`reports/phase-7/*.oldreward.bak` prove a change; no prose records it). Required or cross-phase tables are apples-to-oranges | TODO |
 
@@ -121,7 +121,7 @@ Existing: `chapter_upf_profiling.tex` (37 kB, 26 figs) ·
 
 | # | Step | Status |
 |---|---|---|
-| D1 | Write `chapter_controllers.tex`. Arc: threshold baseline → single-site PPO → LSTM-PPO detour → why single-site ceilings → MARL/MAPPO → synthesis | BLOCKED(B2) |
+| D1 | Write `chapter_controllers.tex`. Arc: threshold baseline → single-site PPO → LSTM-PPO detour → why single-site ceilings → MARL/MAPPO → synthesis | TODO — **UNBLOCKED** (B2 decided 2026-07-23); largest missing deliverable, 36 figures already exist |
 | D2 | Bridge figure: single-site PPO vs MAPPO on one axis (Phase 2 and Phase 7 currently live in separate tables) | TODO |
 | D3 | Weave the §0 observability framing into all four chapters — one framing paragraph each, plus a synthesis section | TODO |
 | D4 | Cross-chapter numeric consistency pass: every shared quantity (λ_dec 81, λ_be 91, QoS 149, MAE 110.7, α=1.0) must agree across chapters. Twin↔controller verified 2026-07-21; profiling and forecaster unchecked | TODO |
