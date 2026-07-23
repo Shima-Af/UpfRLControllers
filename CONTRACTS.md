@@ -121,7 +121,7 @@ config). Same name, unrelated content; namespaced upstream under
 
 ## 3. UPF_NDT → UpfRLControllers
 
-**Transport:** pip, `upf-digital-twin @ git+…/UpfDigitalTwin.git@v0.3.0`
+**Transport:** pip, `upf-digital-twin @ git+…/UpfDigitalTwin.git@v0.4.0`
 (pinned identically in `pyproject.toml` *and* `requirements.txt` — keep in sync).
 
 **API the controller depends on:**

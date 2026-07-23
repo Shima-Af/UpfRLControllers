@@ -1,13 +1,13 @@
-md5: a589adb2b7995705c008232c8c858b60
+md5: b655439cec43ad6951befd63621ed21f
 frozen: true
 deps:
 - path: configs/twin_export/switching_costs.yaml
   repo:
     url: https://github.com/Shima-Af/UpfProfilingCampaign.git
-    rev: thesis-v1.1
-    rev_lock: 07e983267eb0cc6a97c3ec103e631175bb8f23fb
+    rev: thesis-v1.2
+    rev_lock: eb30588a7d130b8dbf4399a71b94d62d653c4c98
 outs:
-- md5: e1456485051ead966a8fc87be7fb30a1
-  size: 2103
+- md5: 194ca4e7d1229d526afb36bd413fa739
+  size: 3638
   hash: md5
   path: switching_costs.yaml
