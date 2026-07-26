@@ -9,9 +9,10 @@
 % evaluation. Per-controller means are from
 %   reports/phase-7/multiseed_summary_v04twin.json
 % and the comparison note reports/phase-7/switching_fix_reeval.md.
-% TODO(author): the paired bootstrap (p-value) and the phase-2/3/6/7 PNG
-% figures were produced under the pre-v0.4 twin; regenerate for the final
-% (deltas are within seed noise). The bridge figure IS v0.4-correct.
+% All figures regenerated under the v0.4 twin in the paper font (Latin Modern,
+% usetex) by research/phase7/generate_chapter_figures.py (4 data figures) and
+% generate_chapter_heatmaps.py (2 rollout heatmaps). Paired bootstrap recomputed
+% under v0.4: reports/phase-7/paired_bootstrap_mappo_vs_ippo_v04.json.
 % ============================================================
 
 \documentclass[12pt, a4paper]{report}
@@ -204,16 +205,16 @@ both a static policy and the derived threshold:
 \toprule
 Policy & Total reward & Energy (Wh) & Unsafe \% \\
 \midrule
-Single-site \ppo{} & $\mathbf{-892.1}$ & $\mathbf{174.3}$ & $0.50$ \\
+Single-site \ppo{} & $\mathbf{-881.1}$ & $\mathbf{176.6}$ & $0.37$ \\
 Always \dpdk{} & $-1321.4$ & $206.8$ & $0.00$ \\
-Threshold ($<0.05$\,Gbps) & $-1688.4$ & $194.7$ & $2.87$ \\
+Threshold (derived $81$\,Mbps) & $-1348.1$ & $175.9$ & $2.48$ \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-The \ppo{} controller improves total reward by $32.5\%$ and energy by $15.7\%$
+The \ppo{} controller improves total reward by $33.3\%$ and energy by $14.6\%$
 over always-\dpdk{}, and beats the derived threshold on every axis at once---it
-is both safer (0.50\% vs 2.87\% unsafe) and cheaper. The reason is observability:
+is both safer (0.37\% vs 2.48\% unsafe) and cheaper. The reason is observability:
 the threshold acts on the noisy one-step forecast alone, so it flips on forecast
 jitter, whereas the learner also sees the eight-step history, which acts as an
 implicit smoother, and the twin's QoS and energy signals, which let it weigh the
@@ -225,8 +226,7 @@ inferred signals are good enough to act on.
   \includegraphics[width=0.82\linewidth]{\figpath{fig_p2_singlesite_reward.png}}
   \caption{Single-site \ppo{} against static and threshold baselines on the
   held-out test period for a low-load cluster. The learner dominates on both
-  energy and total penalty. (Figure produced under the pre-\code{v0.4} twin;
-  qualitative behaviour is unchanged---regenerate for the final.)}
+  energy and total penalty (cluster~0, \code{v0.4} twin).}
   \label{fig:ctrl_singlesite}
 \end{figure}
 
@@ -268,10 +268,11 @@ Two multi-site designs bracket the problem. A single \emph{centralised} \ppo{},
 observing the concatenated $140$-dimensional fleet state and emitting a joint
 $10$-dimensional action, has the information in principle but must learn one
 monolithic policy over a joint space; at a fixed training budget it is fragile.
-In this work the centralised controller collapsed---on the busiest cluster it
-degenerated to always-\usr{}, driving that cluster's unsafe rate above $20\%$,
-and its across-seed reward variance was an order of magnitude larger than any
-other controller (Figure~\ref{fig:ctrl_collapse}). The opposite design, an
+In this work the centralised controller collapsed---on one low-load cluster
+(\code{c6} in the illustrated seed) it degenerated to near-always-\usr{}, driving
+that cluster's QoS-violation rate well above every other controller's, and its
+across-seed reward variance was an order of magnitude larger than any other
+controller (Figure~\ref{fig:ctrl_collapse}). The opposite design, an
 \emph{independent} \ppo{} per site (an \ippo{} ensemble), is stable and
 embarrassingly parallel to train, but by construction cannot share what one site
 learns with another---so the data-poor clusters remain data-poor.
@@ -280,9 +281,10 @@ learns with another---so the data-poor clusters remain data-poor.
   \centering
   \includegraphics[width=0.9\linewidth]{\figpath{fig_p3_centralised_collapse.png}}
   \caption{Per-cluster, per-step action of the centralised \ppo{} on the test
-  period (green = \dpdk{}, red = \usr{}). The solid red band is the busiest
-  cluster collapsed to always-\usr{}: the monolithic joint policy could not
-  factor the per-site substructure at this training budget.}
+  period (green = \dpdk{}, red = \usr{}). The solid red band (cluster \code{c6}
+  in this seed) is a low-load cluster collapsed to near-always-\usr{}: the
+  monolithic joint policy could not factor the per-site substructure at this
+  training budget.}
   \label{fig:ctrl_collapse}
 \end{figure}
 
@@ -308,9 +310,8 @@ decentralised: at run time each site acts on its own observation alone.
   \centering
   \includegraphics[width=0.86\linewidth]{\figpath{fig_p7_reward_errorbars.png}}
   \caption{Test-period reward, mean over eight training seeds, with standard
-  deviation. \mappo{} is the best controller and the most stable trained one.
-  (Pre-\code{v0.4} figure; the \code{v0.4} means in Table~\ref{tab:ctrl_headline}
-  differ by less than one standard deviation.)}
+  deviation, under the \code{v0.4} twin. \mappo{} is the best controller and the
+  most stable trained one; values match Table~\ref{tab:ctrl_headline}.}
   \label{fig:ctrl_errorbars}
 \end{figure}
 
@@ -340,11 +341,9 @@ Centralised \ppo{} & $-14459 \pm 4509$ & $2130$ & $3.73$ & $4$ \\
 controller, at the lowest QoS-violation rate of any trained controller and at
 energy indistinguishable from the ensemble. The margin over the \ippo{} ensemble
 ($\approx 141$ reward units) exceeds the combined seed standard deviation, and a
-paired bootstrap confirms the ordering is significant
-(\mappo{}${}>{}$\ippo{}, $p<0.01$).\footnote{The paired bootstrap was last
-computed under the pre-\code{v0.4} twin (mean $\Delta=157$, $95\%$ CI
-$[39,271]$, $p=0.004$); the $\approx 141$-unit \code{v0.4} gap sits well inside
-that interval, so significance is preserved. Regenerate for the final.}
+paired bootstrap over the eight seeds confirms the ordering is significant:
+mean $\Delta = 141$, $95\%$ CI $[23, 237]$ (excludes zero), $p = 0.011$
+(\mappo{}${}>{}$\ippo{}), computed under the \code{v0.4} twin.
 
 \paragraph{Where the win comes from.} The advantage is not uniform---it
 concentrates exactly where the single-site ceiling predicted it would.
