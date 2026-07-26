@@ -121,7 +121,7 @@ Existing: `chapter_upf_profiling.tex` (37 kB, 26 figs) ·
 
 | # | Step | Status |
 |---|---|---|
-| D1 | Write `chapter_controllers.tex`. Arc: threshold baseline → single-site PPO → LSTM-PPO detour → why single-site ceilings → MARL/MAPPO → synthesis | **DONE** 2026-07-23 `e2f6b0b` — `reports/chapter-controllers/`, compiles 9pp, v0.4 numbers, observability framing woven through. Author TODO in-file: regenerate phase PNGs + paired bootstrap under v0.4 (within noise) |
+| D1 | Write `chapter_controllers.tex` | **DONE** `e2f6b0b`; figures regenerated under v0.4 in the paper font (Latin Modern/usetex) `9d30b8b` — all 6 figs + paired bootstrap now v0.4-consistent |
 | D2 | Bridge figure: single-site PPO vs MAPPO on one axis (Phase 2 and Phase 7 currently live in separate tables) | **DONE** `fig_bridge_ippo_vs_mappo.{pdf,png}` from v0.4 summary; transfer wins c0/c4/c5/c7 |
 | B5 | Document reward v1→v2 revision | **DONE** — `reward_revision_summary.md` already covered v1(flat)→v2(L_SW); appended note that the v0.4 switching fix is a refinement of v2's input, not a new reward |
 | D3 | Weave the §0 observability framing into all four chapters — one framing paragraph each, plus a synthesis section | **DONE** 2026-07-23 — "Place in the thesis" paragraph added to profiling (`aa32521`), forecaster (`2ff1aa8`), twin (`d98ce28`); controller chapter framed at source. Synthesis: `reports/thesis_synthesis_observability.tex` (drop into thesis intro/conclusion). Found+fixed: forecaster `reports/` was fully gitignored (chapter untracked) |
