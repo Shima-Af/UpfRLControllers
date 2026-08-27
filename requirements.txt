@@ -1,15 +1,32 @@
-numpy
-pandas
-pyyaml
-scikit-learn
-matplotlib
-gymnasium
-pettingzoo
-stable-baselines3
-torch
-tensorboard
-tqdm
-pyarrow
-dvc[s3]
-boto3
-git+https://github.com/Shima-Af/UpfDigitalTwin.git@v0.4.0
+# Pinned to the exact versions used to produce every result in the thesis.
+# Nothing here floats: a range or a branch name would let a later install
+# resolve to different code than the one the numbers came from, which defeats
+# the purpose of publishing the file at all.
+#
+# Regenerate with:  pip freeze  (then re-pin the git dependency by SHA)
+# Python 3.12
+
+numpy==2.4.4
+pandas==3.0.3
+scipy==1.17.1
+PyYAML==6.0.3
+scikit-learn==1.8.0
+matplotlib==3.10.9
+pyarrow==24.0.0
+tqdm==4.67.3
+
+gymnasium==1.2.3
+pettingzoo==1.26.1
+stable_baselines3==2.9.0
+sb3_contrib==2.9.0            # RecurrentPPO, used by the recurrent ablation
+torch==2.11.0
+tensorboard==2.20.0
+
+dvc[s3]==3.67.1
+boto3==1.43.6
+
+# The digital twin. Pinned to the COMMIT, not the tag: a tag is a movable
+# reference and can be repointed after publication, so it is not a durable
+# identifier for the code that produced these results. 95de456 is what
+# v0.4.0 resolved to at the time of the runs.
+upf-digital-twin @ git+https://github.com/Shima-Af/UpfDigitalTwin.git@95de4569689e1278db4cda7475aa14229da83ba9
