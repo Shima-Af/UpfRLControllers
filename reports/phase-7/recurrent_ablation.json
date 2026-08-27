@@ -1,0 +1,86 @@
+{
+  "cluster": 0,
+  "total_timesteps": 200000,
+  "runs": [
+    {
+      "seed": 1,
+      "kind": "feedforward",
+      "train_seconds": 111.9,
+      "total_reward": -808.207526057407,
+      "total_energy_wh": 173.34212917701757,
+      "unsafe_rate": 0.0009910802775024777
+    },
+    {
+      "seed": 1,
+      "kind": "recurrent",
+      "train_seconds": 666.8,
+      "total_reward": -1321.3628235601145,
+      "total_energy_wh": 206.76482886375837,
+      "unsafe_rate": 0.0
+    },
+    {
+      "seed": 7,
+      "kind": "feedforward",
+      "train_seconds": 105.1,
+      "total_reward": -809.3384920444557,
+      "total_energy_wh": 173.9204890230392,
+      "unsafe_rate": 0.0009910802775024777
+    },
+    {
+      "seed": 7,
+      "kind": "recurrent",
+      "train_seconds": 656.9,
+      "total_reward": -1321.3628235601145,
+      "total_energy_wh": 206.76482886375837,
+      "unsafe_rate": 0.0
+    },
+    {
+      "seed": 13,
+      "kind": "feedforward",
+      "train_seconds": 106.3,
+      "total_reward": -870.8729974389059,
+      "total_energy_wh": 173.54356006852015,
+      "unsafe_rate": 0.003964321110009911
+    },
+    {
+      "seed": 13,
+      "kind": "recurrent",
+      "train_seconds": 661.7,
+      "total_reward": -1321.3628235601145,
+      "total_energy_wh": 206.76482886375837,
+      "unsafe_rate": 0.0
+    },
+    {
+      "seed": 42,
+      "kind": "feedforward",
+      "train_seconds": 105.4,
+      "total_reward": -829.4380725525126,
+      "total_energy_wh": 173.818025517481,
+      "unsafe_rate": 0.0019821605550049554
+    },
+    {
+      "seed": 42,
+      "kind": "recurrent",
+      "train_seconds": 502.2,
+      "total_reward": -1321.3628235601145,
+      "total_energy_wh": 206.76482886375837,
+      "unsafe_rate": 0.0
+    },
+    {
+      "seed": 99,
+      "kind": "feedforward",
+      "train_seconds": 101.5,
+      "total_reward": -818.7552475776654,
+      "total_energy_wh": 178.44378002637706,
+      "unsafe_rate": 0.0
+    },
+    {
+      "seed": 99,
+      "kind": "recurrent",
+      "train_seconds": 500.5,
+      "total_reward": -903.5527892262326,
+      "total_energy_wh": 175.4507524716189,
+      "unsafe_rate": 0.004955401387512388
+    }
+  ]
+}
