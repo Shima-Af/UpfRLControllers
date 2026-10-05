@@ -1,0 +1,6 @@
+CPU(s):                                  32
+Model name:                              AMD EPYC 9274F 24-Core Processor
+               total        used        free      shared  buff/cache   available
+Mem:             251          34         170           0          49         217
+Linux shima-gpu 6.8.0-134-generic #134-Ubuntu SMP PREEMPT_DYNAMIC Fri Jun 26 18:43:11 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+Python 3.12.3

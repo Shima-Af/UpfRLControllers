@@ -1,0 +1,159 @@
+{
+ "forecast_timing": {
+  "corr_F_t_L_t": 0.9600208457436065,
+  "corr_F_t_L_t_plus_1": 0.950287161462825,
+  "corr_F_t_L_t_minus_1": 0.9831030892092766,
+  "mae_F_t_L_t": 97.60667890508967,
+  "mae_persistence": 110.29426017750724,
+  "targets_test_equals_rollout_load": true
+ },
+ "penalized_exits": {
+  "per_seed_mean": {
+   "MAPPO": 14.125,
+   "Shared-PPO": 19.125
+  },
+  "median_by_controller": {
+   "MAPPO": {
+    "load_prev_mbps": 40.642,
+    "load_mbps": 241.69,
+    "forecast_mbps": 44.288,
+    "forecast_prev_mbps": 47.269,
+    "q_score": 0.165,
+    "predicted_loss": 9.173,
+    "qos_penalty": 22.037
+   },
+   "Shared-PPO": {
+    "load_prev_mbps": 46.838,
+    "load_mbps": 241.143,
+    "forecast_mbps": 52.32,
+    "forecast_prev_mbps": 56.208,
+    "q_score": 0.165,
+    "predicted_loss": 9.173,
+    "qos_penalty": 22.037
+   }
+  },
+  "mean_qos_penalty": 22.98095050469391,
+  "share_other_cluster_crossed_one_step_earlier": {
+   "MAPPO": 0.49557522123893805,
+   "Shared-PPO": 0.5163398692810458
+  },
+  "base_rate_all_upward_149_crossings": {
+   "n": 572,
+   "share_other_crossed_one_step_earlier": 0.4597902097902098,
+   "share_other_crossed_same_step": 0.43356643356643354
+  },
+  "unique_events": 35,
+  "unique_events_by_cluster": {
+   "6": 8,
+   "4": 6,
+   "7": 6,
+   "5": 4,
+   "1": 3,
+   "2": 3,
+   "8": 2,
+   "0": 2,
+   "9": 1
+  }
+ },
+ "exposure": {
+  "means": {
+   "MAPPO": {
+    "usr_steps": 789.75,
+    "usr_share_50_81": 0.18350638977635783,
+    "exposed_onsets": 14.0,
+    "penalized_exits": 14.125,
+    "best_step": 71168.0,
+    "usr_steps_in_risky_state": 0.125
+   },
+   "Shared-PPO": {
+    "usr_steps": 858.375,
+    "usr_share_50_81": 0.27296325878594246,
+    "exposed_onsets": 19.125,
+    "penalized_exits": 19.125,
+    "best_step": 51200.0,
+    "usr_steps_in_risky_state": 0.0
+   }
+  },
+  "usr_steps_in_risky_state_by_run": {
+   "MAPPO seed 42": 1
+  },
+  "exits_equal_exposed_onsets_runs": 15,
+  "paired_shared_minus_mappo": {
+   "usr_share_50_81": {
+    "mean": 0.08945686900958466,
+    "seeds_shared_higher": 6,
+    "seeds_shared_lower": 2
+   },
+   "exposed_onsets": {
+    "mean": 5.125,
+    "seeds_shared_higher": 6,
+    "seeds_shared_lower": 2
+   },
+   "penalized_exits": {
+    "mean": 5.0,
+    "seeds_shared_higher": 6,
+    "seeds_shared_lower": 2
+   },
+   "best_step": {
+    "mean": -19968.0,
+    "seeds_shared_higher": 0,
+    "seeds_shared_lower": 8
+   }
+  },
+  "spearman_16_runs": {
+   "usr_share_50_81_vs_exposed_onsets": {
+    "rho": 0.9696736262020337,
+    "p": 5.838419317572404e-10
+   },
+   "best_step_vs_usr_share_50_81": {
+    "rho": -0.19379037484806488,
+    "p": 0.47205224445076205
+   },
+   "best_step_vs_penalized_exits": {
+    "rho": -0.1497766193846213,
+    "p": 0.5798202287070608
+   }
+  },
+  "spearman_8_seeds": {
+   "d_usr_share_50_81_vs_d_cost": {
+    "rho": 0.5000000000000001,
+    "p": 0.2070312499999999
+   },
+   "d_exposed_onsets_vs_d_cost": {
+    "rho": 0.554257096618662,
+    "p": 0.15398834575899528
+   }
+  },
+  "d_cost_per_seed": {
+   "1": 292.35,
+   "7": 4.15,
+   "13": -22.65,
+   "23": 75.22,
+   "42": 45.99,
+   "64": 93.36,
+   "77": 77.49,
+   "99": 97.26
+  }
+ },
+ "proxy_vs_twin_flag_test": {
+  "agreement": 0.9887016848364718,
+  "risky_but_below_149": 0,
+  "above_149_but_not_risky": 114
+ },
+ "disagreements": {
+  "MAPPO USR / Shared-PPO DPDK": {
+   "n_total": 327,
+   "per_seed": 40.875,
+   "share_same_observation": 0.6788990825688074,
+   "share_prev_upf_differs": 0.1926605504587156,
+   "median_load_mbps": 51.32120102643967
+  },
+  "Shared-PPO USR / MAPPO DPDK": {
+   "n_total": 876,
+   "per_seed": 109.5,
+   "share_same_observation": 0.5764840182648402,
+   "share_prev_upf_differs": 0.3082191780821918,
+   "median_load_mbps": 59.81908738613129
+  }
+ }
+}

@@ -1,0 +1,313 @@
+world,tier,level_mbps,subset,n_samples,n_runs,measured_unsafe_share,predicted_unsafe_share,false_safe,false_unsafe,false_safe_share_of_measured_unsafe,false_unsafe_share_of_measured_safe
+pinned,reference,60,all,200,5,0.005,0.0,1,0,1.0,0.0
+pinned,reference,60,in this world's training data,200,5,0.005,0.0,1,0,1.0,0.0
+pinned,reference,80,all,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+pinned,reference,80,in this world's training data,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+pinned,reference,100,all,200,5,0.0,0.0,0,0,,0.0
+pinned,reference,100,in this world's training data,200,5,0.0,0.0,0,0,,0.0
+pinned,reference,200,all,199,5,0.1658291457286432,0.11557788944723618,25,15,0.7575757575757576,0.09036144578313253
+pinned,reference,200,in this world's training data,199,5,0.1658291457286432,0.11557788944723618,25,15,0.7575757575757576,0.09036144578313253
+pinned,reference,400,all,200,5,0.335,1.0,0,133,0.0,1.0
+pinned,reference,400,in this world's training data,200,5,0.335,1.0,0,133,0.0,1.0
+pinned,reference,600,all,200,5,1.0,1.0,0,0,0.0,
+pinned,reference,600,in this world's training data,200,5,1.0,1.0,0,0,0.0,
+LOSO-dep-f0,primary,60,all,200,5,0.005,0.0,1,0,1.0,0.0
+LOSO-dep-f0,primary,60,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-dep-f0,primary,60,in this world's training data,160,4,0.00625,0.0,1,0,1.0,0.0
+LOSO-dep-f0,primary,80,all,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOSO-dep-f0,primary,80,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-dep-f0,primary,80,in this world's training data,157,4,0.025477707006369428,0.0,4,0,1.0,0.0
+LOSO-dep-f0,primary,100,all,200,5,0.0,0.0,0,0,,0.0
+LOSO-dep-f0,primary,100,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-dep-f0,primary,100,in this world's training data,160,4,0.0,0.0,0,0,,0.0
+LOSO-dep-f0,primary,200,all,199,5,0.1658291457286432,0.18090452261306533,25,28,0.7575757575757576,0.1686746987951807
+LOSO-dep-f0,primary,200,held-out of this world's fit,40,1,0.15,0.15,4,4,0.6666666666666666,0.11764705882352941
+LOSO-dep-f0,primary,200,in this world's training data,159,4,0.16981132075471697,0.18867924528301888,21,24,0.7777777777777778,0.18181818181818182
+LOSO-dep-f0,primary,400,all,200,5,0.335,1.0,0,133,0.0,1.0
+LOSO-dep-f0,primary,400,held-out of this world's fit,40,1,0.425,1.0,0,23,0.0,1.0
+LOSO-dep-f0,primary,400,in this world's training data,160,4,0.3125,1.0,0,110,0.0,1.0
+LOSO-dep-f0,primary,600,all,200,5,1.0,1.0,0,0,0.0,
+LOSO-dep-f0,primary,600,held-out of this world's fit,40,1,1.0,1.0,0,0,0.0,
+LOSO-dep-f0,primary,600,in this world's training data,160,4,1.0,1.0,0,0,0.0,
+LOSO-dep-f1,primary,60,all,200,5,0.005,0.0,1,0,1.0,0.0
+LOSO-dep-f1,primary,60,held-out of this world's fit,40,1,0.025,0.0,1,0,1.0,0.0
+LOSO-dep-f1,primary,60,in this world's training data,160,4,0.0,0.0,0,0,,0.0
+LOSO-dep-f1,primary,80,all,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOSO-dep-f1,primary,80,held-out of this world's fit,39,1,0.02564102564102564,0.0,1,0,1.0,0.0
+LOSO-dep-f1,primary,80,in this world's training data,158,4,0.0189873417721519,0.0,3,0,1.0,0.0
+LOSO-dep-f1,primary,100,all,200,5,0.0,0.0,0,0,,0.0
+LOSO-dep-f1,primary,100,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-dep-f1,primary,100,in this world's training data,160,4,0.0,0.0,0,0,,0.0
+LOSO-dep-f1,primary,200,all,199,5,0.1658291457286432,0.11557788944723618,25,15,0.7575757575757576,0.09036144578313253
+LOSO-dep-f1,primary,200,held-out of this world's fit,39,1,0.10256410256410256,0.10256410256410256,4,4,1.0,0.11428571428571428
+LOSO-dep-f1,primary,200,in this world's training data,160,4,0.18125,0.11875,21,11,0.7241379310344828,0.08396946564885496
+LOSO-dep-f1,primary,400,all,200,5,0.335,1.0,0,133,0.0,1.0
+LOSO-dep-f1,primary,400,held-out of this world's fit,40,1,0.075,1.0,0,37,0.0,1.0
+LOSO-dep-f1,primary,400,in this world's training data,160,4,0.4,1.0,0,96,0.0,1.0
+LOSO-dep-f1,primary,600,all,200,5,1.0,1.0,0,0,0.0,
+LOSO-dep-f1,primary,600,held-out of this world's fit,40,1,1.0,1.0,0,0,0.0,
+LOSO-dep-f1,primary,600,in this world's training data,160,4,1.0,1.0,0,0,0.0,
+LOSO-dep-f2,primary,60,all,200,5,0.005,0.0,1,0,1.0,0.0
+LOSO-dep-f2,primary,60,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-dep-f2,primary,60,in this world's training data,160,4,0.00625,0.0,1,0,1.0,0.0
+LOSO-dep-f2,primary,80,all,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOSO-dep-f2,primary,80,held-out of this world's fit,39,1,0.05128205128205128,0.0,2,0,1.0,0.0
+LOSO-dep-f2,primary,80,in this world's training data,158,4,0.012658227848101266,0.0,2,0,1.0,0.0
+LOSO-dep-f2,primary,100,all,200,5,0.0,0.0,0,0,,0.0
+LOSO-dep-f2,primary,100,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-dep-f2,primary,100,in this world's training data,160,4,0.0,0.0,0,0,,0.0
+LOSO-dep-f2,primary,200,all,199,5,0.1658291457286432,0.1407035175879397,25,20,0.7575757575757576,0.12048192771084337
+LOSO-dep-f2,primary,200,held-out of this world's fit,40,1,0.125,0.2,3,6,0.6,0.17142857142857143
+LOSO-dep-f2,primary,200,in this world's training data,159,4,0.1761006289308176,0.12578616352201258,22,14,0.7857142857142857,0.10687022900763359
+LOSO-dep-f2,primary,400,all,200,5,0.335,1.0,0,133,0.0,1.0
+LOSO-dep-f2,primary,400,held-out of this world's fit,40,1,1.0,1.0,0,0,0.0,
+LOSO-dep-f2,primary,400,in this world's training data,160,4,0.16875,1.0,0,133,0.0,1.0
+LOSO-dep-f2,primary,600,all,200,5,1.0,1.0,0,0,0.0,
+LOSO-dep-f2,primary,600,held-out of this world's fit,40,1,1.0,1.0,0,0,0.0,
+LOSO-dep-f2,primary,600,in this world's training data,160,4,1.0,1.0,0,0,0.0,
+LOSO-dep-f3,primary,60,all,200,5,0.005,0.0,1,0,1.0,0.0
+LOSO-dep-f3,primary,60,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-dep-f3,primary,60,in this world's training data,160,4,0.00625,0.0,1,0,1.0,0.0
+LOSO-dep-f3,primary,80,all,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOSO-dep-f3,primary,80,held-out of this world's fit,39,1,0.02564102564102564,0.0,1,0,1.0,0.0
+LOSO-dep-f3,primary,80,in this world's training data,158,4,0.0189873417721519,0.0,3,0,1.0,0.0
+LOSO-dep-f3,primary,100,all,200,5,0.0,0.0,0,0,,0.0
+LOSO-dep-f3,primary,100,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-dep-f3,primary,100,in this world's training data,160,4,0.0,0.0,0,0,,0.0
+LOSO-dep-f3,primary,200,all,199,5,0.1658291457286432,0.2663316582914573,22,42,0.6666666666666666,0.25301204819277107
+LOSO-dep-f3,primary,200,held-out of this world's fit,40,1,0.25,0.4,6,12,0.6,0.4
+LOSO-dep-f3,primary,200,in this world's training data,159,4,0.14465408805031446,0.23270440251572327,16,30,0.6956521739130435,0.22058823529411764
+LOSO-dep-f3,primary,400,all,200,5,0.335,1.0,0,133,0.0,1.0
+LOSO-dep-f3,primary,400,held-out of this world's fit,40,1,0.1,1.0,0,36,0.0,1.0
+LOSO-dep-f3,primary,400,in this world's training data,160,4,0.39375,1.0,0,97,0.0,1.0
+LOSO-dep-f3,primary,600,all,200,5,1.0,1.0,0,0,0.0,
+LOSO-dep-f3,primary,600,held-out of this world's fit,40,1,1.0,1.0,0,0,0.0,
+LOSO-dep-f3,primary,600,in this world's training data,160,4,1.0,1.0,0,0,0.0,
+LOSO-dep-f4,primary,60,all,200,5,0.005,0.0,1,0,1.0,0.0
+LOSO-dep-f4,primary,60,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-dep-f4,primary,60,in this world's training data,160,4,0.00625,0.0,1,0,1.0,0.0
+LOSO-dep-f4,primary,80,all,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOSO-dep-f4,primary,80,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-dep-f4,primary,80,in this world's training data,157,4,0.025477707006369428,0.0,4,0,1.0,0.0
+LOSO-dep-f4,primary,100,all,200,5,0.0,0.0,0,0,,0.0
+LOSO-dep-f4,primary,100,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-dep-f4,primary,100,in this world's training data,160,4,0.0,0.0,0,0,,0.0
+LOSO-dep-f4,primary,200,all,199,5,0.1658291457286432,0.2663316582914573,22,42,0.6666666666666666,0.25301204819277107
+LOSO-dep-f4,primary,200,held-out of this world's fit,40,1,0.2,0.275,6,9,0.75,0.28125
+LOSO-dep-f4,primary,200,in this world's training data,159,4,0.15723270440251572,0.2641509433962264,16,33,0.64,0.2462686567164179
+LOSO-dep-f4,primary,400,all,200,5,0.335,1.0,0,133,0.0,1.0
+LOSO-dep-f4,primary,400,held-out of this world's fit,40,1,0.075,1.0,0,37,0.0,1.0
+LOSO-dep-f4,primary,400,in this world's training data,160,4,0.4,1.0,0,96,0.0,1.0
+LOSO-dep-f4,primary,600,all,200,5,1.0,1.0,0,0,0.0,
+LOSO-dep-f4,primary,600,held-out of this world's fit,40,1,1.0,1.0,0,0,0.0,
+LOSO-dep-f4,primary,600,in this world's training data,160,4,1.0,1.0,0,0,0.0,
+LOLO-dep-f0,primary,60,all,200,5,0.005,0.0,1,0,1.0,0.0
+LOLO-dep-f0,primary,60,held-out of this world's fit,200,5,0.005,0.0,1,0,1.0,0.0
+LOLO-dep-f0,primary,80,all,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOLO-dep-f0,primary,80,in this world's training data,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOLO-dep-f0,primary,100,all,200,5,0.0,0.0,0,0,,0.0
+LOLO-dep-f0,primary,100,in this world's training data,200,5,0.0,0.0,0,0,,0.0
+LOLO-dep-f0,primary,200,all,199,5,0.1658291457286432,0.11557788944723618,25,15,0.7575757575757576,0.09036144578313253
+LOLO-dep-f0,primary,200,in this world's training data,199,5,0.1658291457286432,0.11557788944723618,25,15,0.7575757575757576,0.09036144578313253
+LOLO-dep-f0,primary,400,all,200,5,0.335,1.0,0,133,0.0,1.0
+LOLO-dep-f0,primary,400,in this world's training data,200,5,0.335,1.0,0,133,0.0,1.0
+LOLO-dep-f0,primary,600,all,200,5,1.0,1.0,0,0,0.0,
+LOLO-dep-f0,primary,600,held-out of this world's fit,200,5,1.0,1.0,0,0,0.0,
+LOLO-dep-f1,primary,60,all,200,5,0.005,0.0,1,0,1.0,0.0
+LOLO-dep-f1,primary,60,in this world's training data,200,5,0.005,0.0,1,0,1.0,0.0
+LOLO-dep-f1,primary,80,all,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOLO-dep-f1,primary,80,held-out of this world's fit,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOLO-dep-f1,primary,100,all,200,5,0.0,0.0,0,0,,0.0
+LOLO-dep-f1,primary,100,in this world's training data,200,5,0.0,0.0,0,0,,0.0
+LOLO-dep-f1,primary,200,all,199,5,0.1658291457286432,0.2663316582914573,22,42,0.6666666666666666,0.25301204819277107
+LOLO-dep-f1,primary,200,in this world's training data,199,5,0.1658291457286432,0.2663316582914573,22,42,0.6666666666666666,0.25301204819277107
+LOLO-dep-f1,primary,400,all,200,5,0.335,1.0,0,133,0.0,1.0
+LOLO-dep-f1,primary,400,in this world's training data,200,5,0.335,1.0,0,133,0.0,1.0
+LOLO-dep-f1,primary,600,all,200,5,1.0,1.0,0,0,0.0,
+LOLO-dep-f1,primary,600,in this world's training data,200,5,1.0,1.0,0,0,0.0,
+LOLO-dep-f2,primary,60,all,200,5,0.005,0.0,1,0,1.0,0.0
+LOLO-dep-f2,primary,60,in this world's training data,200,5,0.005,0.0,1,0,1.0,0.0
+LOLO-dep-f2,primary,80,all,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOLO-dep-f2,primary,80,in this world's training data,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOLO-dep-f2,primary,100,all,200,5,0.0,1.0,0,200,,1.0
+LOLO-dep-f2,primary,100,held-out of this world's fit,200,5,0.0,1.0,0,200,,1.0
+LOLO-dep-f2,primary,200,all,199,5,0.1658291457286432,0.12060301507537688,25,16,0.7575757575757576,0.0963855421686747
+LOLO-dep-f2,primary,200,in this world's training data,199,5,0.1658291457286432,0.12060301507537688,25,16,0.7575757575757576,0.0963855421686747
+LOLO-dep-f2,primary,400,all,200,5,0.335,1.0,0,133,0.0,1.0
+LOLO-dep-f2,primary,400,in this world's training data,200,5,0.335,1.0,0,133,0.0,1.0
+LOLO-dep-f2,primary,600,all,200,5,1.0,1.0,0,0,0.0,
+LOLO-dep-f2,primary,600,in this world's training data,200,5,1.0,1.0,0,0,0.0,
+LOLO-dep-f3,primary,60,all,200,5,0.005,0.0,1,0,1.0,0.0
+LOLO-dep-f3,primary,60,in this world's training data,200,5,0.005,0.0,1,0,1.0,0.0
+LOLO-dep-f3,primary,80,all,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOLO-dep-f3,primary,80,in this world's training data,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOLO-dep-f3,primary,100,all,200,5,0.0,0.0,0,0,,0.0
+LOLO-dep-f3,primary,100,in this world's training data,200,5,0.0,0.0,0,0,,0.0
+LOLO-dep-f3,primary,200,all,199,5,0.1658291457286432,1.0,0,166,0.0,1.0
+LOLO-dep-f3,primary,200,held-out of this world's fit,199,5,0.1658291457286432,1.0,0,166,0.0,1.0
+LOLO-dep-f3,primary,400,all,200,5,0.335,1.0,0,133,0.0,1.0
+LOLO-dep-f3,primary,400,in this world's training data,200,5,0.335,1.0,0,133,0.0,1.0
+LOLO-dep-f3,primary,600,all,200,5,1.0,1.0,0,0,0.0,
+LOLO-dep-f3,primary,600,in this world's training data,200,5,1.0,1.0,0,0,0.0,
+LOLO-dep-f4,primary,60,all,200,5,0.005,0.0,1,0,1.0,0.0
+LOLO-dep-f4,primary,60,in this world's training data,200,5,0.005,0.0,1,0,1.0,0.0
+LOLO-dep-f4,primary,80,all,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOLO-dep-f4,primary,80,in this world's training data,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOLO-dep-f4,primary,100,all,200,5,0.0,0.0,0,0,,0.0
+LOLO-dep-f4,primary,100,in this world's training data,200,5,0.0,0.0,0,0,,0.0
+LOLO-dep-f4,primary,200,all,199,5,0.1658291457286432,0.41708542713567837,21,71,0.6363636363636364,0.42771084337349397
+LOLO-dep-f4,primary,200,in this world's training data,199,5,0.1658291457286432,0.41708542713567837,21,71,0.6363636363636364,0.42771084337349397
+LOLO-dep-f4,primary,400,all,200,5,0.335,1.0,0,133,0.0,1.0
+LOLO-dep-f4,primary,400,held-out of this world's fit,200,5,0.335,1.0,0,133,0.0,1.0
+LOLO-dep-f4,primary,600,all,200,5,1.0,1.0,0,0,0.0,
+LOLO-dep-f4,primary,600,in this world's training data,200,5,1.0,1.0,0,0,0.0,
+LOSO-nes-f0,secondary,60,all,200,5,0.005,0.0,1,0,1.0,0.0
+LOSO-nes-f0,secondary,60,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-nes-f0,secondary,60,in this world's training data,160,4,0.00625,0.0,1,0,1.0,0.0
+LOSO-nes-f0,secondary,80,all,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOSO-nes-f0,secondary,80,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-nes-f0,secondary,80,in this world's training data,157,4,0.025477707006369428,0.0,4,0,1.0,0.0
+LOSO-nes-f0,secondary,100,all,200,5,0.0,0.0,0,0,,0.0
+LOSO-nes-f0,secondary,100,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-nes-f0,secondary,100,in this world's training data,160,4,0.0,0.0,0,0,,0.0
+LOSO-nes-f0,secondary,200,all,199,5,0.1658291457286432,0.18090452261306533,25,28,0.7575757575757576,0.1686746987951807
+LOSO-nes-f0,secondary,200,held-out of this world's fit,40,1,0.15,0.15,4,4,0.6666666666666666,0.11764705882352941
+LOSO-nes-f0,secondary,200,in this world's training data,159,4,0.16981132075471697,0.18867924528301888,21,24,0.7777777777777778,0.18181818181818182
+LOSO-nes-f0,secondary,400,all,200,5,0.335,1.0,0,133,0.0,1.0
+LOSO-nes-f0,secondary,400,held-out of this world's fit,40,1,0.425,1.0,0,23,0.0,1.0
+LOSO-nes-f0,secondary,400,in this world's training data,160,4,0.3125,1.0,0,110,0.0,1.0
+LOSO-nes-f0,secondary,600,all,200,5,1.0,1.0,0,0,0.0,
+LOSO-nes-f0,secondary,600,held-out of this world's fit,40,1,1.0,1.0,0,0,0.0,
+LOSO-nes-f0,secondary,600,in this world's training data,160,4,1.0,1.0,0,0,0.0,
+LOSO-nes-f1,secondary,60,all,200,5,0.005,0.0,1,0,1.0,0.0
+LOSO-nes-f1,secondary,60,held-out of this world's fit,40,1,0.025,0.0,1,0,1.0,0.0
+LOSO-nes-f1,secondary,60,in this world's training data,160,4,0.0,0.0,0,0,,0.0
+LOSO-nes-f1,secondary,80,all,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOSO-nes-f1,secondary,80,held-out of this world's fit,39,1,0.02564102564102564,0.0,1,0,1.0,0.0
+LOSO-nes-f1,secondary,80,in this world's training data,158,4,0.0189873417721519,0.0,3,0,1.0,0.0
+LOSO-nes-f1,secondary,100,all,200,5,0.0,0.0,0,0,,0.0
+LOSO-nes-f1,secondary,100,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-nes-f1,secondary,100,in this world's training data,160,4,0.0,0.0,0,0,,0.0
+LOSO-nes-f1,secondary,200,all,199,5,0.1658291457286432,0.11557788944723618,25,15,0.7575757575757576,0.09036144578313253
+LOSO-nes-f1,secondary,200,held-out of this world's fit,39,1,0.10256410256410256,0.10256410256410256,4,4,1.0,0.11428571428571428
+LOSO-nes-f1,secondary,200,in this world's training data,160,4,0.18125,0.11875,21,11,0.7241379310344828,0.08396946564885496
+LOSO-nes-f1,secondary,400,all,200,5,0.335,1.0,0,133,0.0,1.0
+LOSO-nes-f1,secondary,400,held-out of this world's fit,40,1,0.075,1.0,0,37,0.0,1.0
+LOSO-nes-f1,secondary,400,in this world's training data,160,4,0.4,1.0,0,96,0.0,1.0
+LOSO-nes-f1,secondary,600,all,200,5,1.0,1.0,0,0,0.0,
+LOSO-nes-f1,secondary,600,held-out of this world's fit,40,1,1.0,1.0,0,0,0.0,
+LOSO-nes-f1,secondary,600,in this world's training data,160,4,1.0,1.0,0,0,0.0,
+LOSO-nes-f2,secondary,60,all,200,5,0.005,0.0,1,0,1.0,0.0
+LOSO-nes-f2,secondary,60,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-nes-f2,secondary,60,in this world's training data,160,4,0.00625,0.0,1,0,1.0,0.0
+LOSO-nes-f2,secondary,80,all,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOSO-nes-f2,secondary,80,held-out of this world's fit,39,1,0.05128205128205128,0.0,2,0,1.0,0.0
+LOSO-nes-f2,secondary,80,in this world's training data,158,4,0.012658227848101266,0.0,2,0,1.0,0.0
+LOSO-nes-f2,secondary,100,all,200,5,0.0,0.0,0,0,,0.0
+LOSO-nes-f2,secondary,100,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-nes-f2,secondary,100,in this world's training data,160,4,0.0,0.0,0,0,,0.0
+LOSO-nes-f2,secondary,200,all,199,5,0.1658291457286432,0.19095477386934673,25,30,0.7575757575757576,0.18072289156626506
+LOSO-nes-f2,secondary,200,held-out of this world's fit,40,1,0.125,0.3,3,10,0.6,0.2857142857142857
+LOSO-nes-f2,secondary,200,in this world's training data,159,4,0.1761006289308176,0.16352201257861634,22,20,0.7857142857142857,0.15267175572519084
+LOSO-nes-f2,secondary,400,all,200,5,0.335,1.0,0,133,0.0,1.0
+LOSO-nes-f2,secondary,400,held-out of this world's fit,40,1,1.0,1.0,0,0,0.0,
+LOSO-nes-f2,secondary,400,in this world's training data,160,4,0.16875,1.0,0,133,0.0,1.0
+LOSO-nes-f2,secondary,600,all,200,5,1.0,1.0,0,0,0.0,
+LOSO-nes-f2,secondary,600,held-out of this world's fit,40,1,1.0,1.0,0,0,0.0,
+LOSO-nes-f2,secondary,600,in this world's training data,160,4,1.0,1.0,0,0,0.0,
+LOSO-nes-f3,secondary,60,all,200,5,0.005,0.0,1,0,1.0,0.0
+LOSO-nes-f3,secondary,60,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-nes-f3,secondary,60,in this world's training data,160,4,0.00625,0.0,1,0,1.0,0.0
+LOSO-nes-f3,secondary,80,all,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOSO-nes-f3,secondary,80,held-out of this world's fit,39,1,0.02564102564102564,0.0,1,0,1.0,0.0
+LOSO-nes-f3,secondary,80,in this world's training data,158,4,0.0189873417721519,0.0,3,0,1.0,0.0
+LOSO-nes-f3,secondary,100,all,200,5,0.0,0.0,0,0,,0.0
+LOSO-nes-f3,secondary,100,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-nes-f3,secondary,100,in this world's training data,160,4,0.0,0.0,0,0,,0.0
+LOSO-nes-f3,secondary,200,all,199,5,0.1658291457286432,0.2663316582914573,22,42,0.6666666666666666,0.25301204819277107
+LOSO-nes-f3,secondary,200,held-out of this world's fit,40,1,0.25,0.4,6,12,0.6,0.4
+LOSO-nes-f3,secondary,200,in this world's training data,159,4,0.14465408805031446,0.23270440251572327,16,30,0.6956521739130435,0.22058823529411764
+LOSO-nes-f3,secondary,400,all,200,5,0.335,1.0,0,133,0.0,1.0
+LOSO-nes-f3,secondary,400,held-out of this world's fit,40,1,0.1,1.0,0,36,0.0,1.0
+LOSO-nes-f3,secondary,400,in this world's training data,160,4,0.39375,1.0,0,97,0.0,1.0
+LOSO-nes-f3,secondary,600,all,200,5,1.0,1.0,0,0,0.0,
+LOSO-nes-f3,secondary,600,held-out of this world's fit,40,1,1.0,1.0,0,0,0.0,
+LOSO-nes-f3,secondary,600,in this world's training data,160,4,1.0,1.0,0,0,0.0,
+LOSO-nes-f4,secondary,60,all,200,5,0.005,0.0,1,0,1.0,0.0
+LOSO-nes-f4,secondary,60,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-nes-f4,secondary,60,in this world's training data,160,4,0.00625,0.0,1,0,1.0,0.0
+LOSO-nes-f4,secondary,80,all,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOSO-nes-f4,secondary,80,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-nes-f4,secondary,80,in this world's training data,157,4,0.025477707006369428,0.0,4,0,1.0,0.0
+LOSO-nes-f4,secondary,100,all,200,5,0.0,0.0,0,0,,0.0
+LOSO-nes-f4,secondary,100,held-out of this world's fit,40,1,0.0,0.0,0,0,,0.0
+LOSO-nes-f4,secondary,100,in this world's training data,160,4,0.0,0.0,0,0,,0.0
+LOSO-nes-f4,secondary,200,all,199,5,0.1658291457286432,0.2663316582914573,22,42,0.6666666666666666,0.25301204819277107
+LOSO-nes-f4,secondary,200,held-out of this world's fit,40,1,0.2,0.275,6,9,0.75,0.28125
+LOSO-nes-f4,secondary,200,in this world's training data,159,4,0.15723270440251572,0.2641509433962264,16,33,0.64,0.2462686567164179
+LOSO-nes-f4,secondary,400,all,200,5,0.335,0.975,0,128,0.0,0.9624060150375939
+LOSO-nes-f4,secondary,400,held-out of this world's fit,40,1,0.075,0.95,0,35,0.0,0.9459459459459459
+LOSO-nes-f4,secondary,400,in this world's training data,160,4,0.4,0.98125,0,93,0.0,0.96875
+LOSO-nes-f4,secondary,600,all,200,5,1.0,1.0,0,0,0.0,
+LOSO-nes-f4,secondary,600,held-out of this world's fit,40,1,1.0,1.0,0,0,0.0,
+LOSO-nes-f4,secondary,600,in this world's training data,160,4,1.0,1.0,0,0,0.0,
+LOLO-nes-f0,secondary,60,all,200,5,0.005,0.0,1,0,1.0,0.0
+LOLO-nes-f0,secondary,60,held-out of this world's fit,200,5,0.005,0.0,1,0,1.0,0.0
+LOLO-nes-f0,secondary,80,all,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOLO-nes-f0,secondary,80,in this world's training data,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOLO-nes-f0,secondary,100,all,200,5,0.0,0.0,0,0,,0.0
+LOLO-nes-f0,secondary,100,in this world's training data,200,5,0.0,0.0,0,0,,0.0
+LOLO-nes-f0,secondary,200,all,199,5,0.1658291457286432,0.11557788944723618,25,15,0.7575757575757576,0.09036144578313253
+LOLO-nes-f0,secondary,200,in this world's training data,199,5,0.1658291457286432,0.11557788944723618,25,15,0.7575757575757576,0.09036144578313253
+LOLO-nes-f0,secondary,400,all,200,5,0.335,1.0,0,133,0.0,1.0
+LOLO-nes-f0,secondary,400,in this world's training data,200,5,0.335,1.0,0,133,0.0,1.0
+LOLO-nes-f0,secondary,600,all,200,5,1.0,1.0,0,0,0.0,
+LOLO-nes-f0,secondary,600,held-out of this world's fit,200,5,1.0,1.0,0,0,0.0,
+LOLO-nes-f1,secondary,60,all,200,5,0.005,0.0,1,0,1.0,0.0
+LOLO-nes-f1,secondary,60,in this world's training data,200,5,0.005,0.0,1,0,1.0,0.0
+LOLO-nes-f1,secondary,80,all,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOLO-nes-f1,secondary,80,held-out of this world's fit,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOLO-nes-f1,secondary,100,all,200,5,0.0,0.0,0,0,,0.0
+LOLO-nes-f1,secondary,100,in this world's training data,200,5,0.0,0.0,0,0,,0.0
+LOLO-nes-f1,secondary,200,all,199,5,0.1658291457286432,0.27638190954773867,22,44,0.6666666666666666,0.26506024096385544
+LOLO-nes-f1,secondary,200,in this world's training data,199,5,0.1658291457286432,0.27638190954773867,22,44,0.6666666666666666,0.26506024096385544
+LOLO-nes-f1,secondary,400,all,200,5,0.335,1.0,0,133,0.0,1.0
+LOLO-nes-f1,secondary,400,in this world's training data,200,5,0.335,1.0,0,133,0.0,1.0
+LOLO-nes-f1,secondary,600,all,200,5,1.0,1.0,0,0,0.0,
+LOLO-nes-f1,secondary,600,in this world's training data,200,5,1.0,1.0,0,0,0.0,
+LOLO-nes-f2,secondary,60,all,200,5,0.005,1.0,0,199,0.0,1.0
+LOLO-nes-f2,secondary,60,in this world's training data,200,5,0.005,1.0,0,199,0.0,1.0
+LOLO-nes-f2,secondary,80,all,197,5,0.02030456852791878,1.0,0,193,0.0,1.0
+LOLO-nes-f2,secondary,80,in this world's training data,197,5,0.02030456852791878,1.0,0,193,0.0,1.0
+LOLO-nes-f2,secondary,100,all,200,5,0.0,1.0,0,200,,1.0
+LOLO-nes-f2,secondary,100,held-out of this world's fit,200,5,0.0,1.0,0,200,,1.0
+LOLO-nes-f2,secondary,200,all,199,5,0.1658291457286432,1.0,0,166,0.0,1.0
+LOLO-nes-f2,secondary,200,in this world's training data,199,5,0.1658291457286432,1.0,0,166,0.0,1.0
+LOLO-nes-f2,secondary,400,all,200,5,0.335,1.0,0,133,0.0,1.0
+LOLO-nes-f2,secondary,400,in this world's training data,200,5,0.335,1.0,0,133,0.0,1.0
+LOLO-nes-f2,secondary,600,all,200,5,1.0,1.0,0,0,0.0,
+LOLO-nes-f2,secondary,600,in this world's training data,200,5,1.0,1.0,0,0,0.0,
+LOLO-nes-f3,secondary,60,all,200,5,0.005,1.0,0,199,0.0,1.0
+LOLO-nes-f3,secondary,60,in this world's training data,200,5,0.005,1.0,0,199,0.0,1.0
+LOLO-nes-f3,secondary,80,all,197,5,0.02030456852791878,1.0,0,193,0.0,1.0
+LOLO-nes-f3,secondary,80,in this world's training data,197,5,0.02030456852791878,1.0,0,193,0.0,1.0
+LOLO-nes-f3,secondary,100,all,200,5,0.0,1.0,0,200,,1.0
+LOLO-nes-f3,secondary,100,in this world's training data,200,5,0.0,1.0,0,200,,1.0
+LOLO-nes-f3,secondary,200,all,199,5,0.1658291457286432,1.0,0,166,0.0,1.0
+LOLO-nes-f3,secondary,200,held-out of this world's fit,199,5,0.1658291457286432,1.0,0,166,0.0,1.0
+LOLO-nes-f3,secondary,400,all,200,5,0.335,1.0,0,133,0.0,1.0
+LOLO-nes-f3,secondary,400,in this world's training data,200,5,0.335,1.0,0,133,0.0,1.0
+LOLO-nes-f3,secondary,600,all,200,5,1.0,1.0,0,0,0.0,
+LOLO-nes-f3,secondary,600,in this world's training data,200,5,1.0,1.0,0,0,0.0,
+LOLO-nes-f4,secondary,60,all,200,5,0.005,0.0,1,0,1.0,0.0
+LOLO-nes-f4,secondary,60,in this world's training data,200,5,0.005,0.0,1,0,1.0,0.0
+LOLO-nes-f4,secondary,80,all,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOLO-nes-f4,secondary,80,in this world's training data,197,5,0.02030456852791878,0.0,4,0,1.0,0.0
+LOLO-nes-f4,secondary,100,all,200,5,0.0,0.0,0,0,,0.0
+LOLO-nes-f4,secondary,100,in this world's training data,200,5,0.0,0.0,0,0,,0.0
+LOLO-nes-f4,secondary,200,all,199,5,0.1658291457286432,1.0,0,166,0.0,1.0
+LOLO-nes-f4,secondary,200,in this world's training data,199,5,0.1658291457286432,1.0,0,166,0.0,1.0
+LOLO-nes-f4,secondary,400,all,200,5,0.335,1.0,0,133,0.0,1.0
+LOLO-nes-f4,secondary,400,held-out of this world's fit,200,5,0.335,1.0,0,133,0.0,1.0
+LOLO-nes-f4,secondary,600,all,200,5,1.0,1.0,0,0,0.0,
+LOLO-nes-f4,secondary,600,in this world's training data,200,5,1.0,1.0,0,0,0.0,

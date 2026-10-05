@@ -1,0 +1,250 @@
+{
+  "band_gbps": [
+    0.049666666666666665,
+    0.44699999999999995
+  ],
+  "budgets": {
+    "delay_us": 200.0,
+    "loss_pkts_per_3s": 5.0
+  },
+  "rl_test": {
+    "alpha": 1.0,
+    "steps": 10090,
+    "max_gbps": 5.796208381652832,
+    "steps_above_5gbps": 3,
+    "share_in_0.1_0.6gbps_gaps": 0.604757185332012
+  },
+  "threshold_stability": [
+    {
+      "source": "pinned (manuscript twin)",
+      "protocol": "-",
+      "config": "deployed",
+      "outer_fold": -1,
+      "energy_breakeven_mbps": 91.0,
+      "qos_limit_mbps": 149.0,
+      "decision_mbps": 81.0,
+      "usr_safe_flips_on_grid": 3,
+      "usr_unsafe_share_100_400mbps": 0.82
+    },
+    {
+      "source": "refit on training runs of outer fold",
+      "protocol": "LOSO",
+      "config": "nested",
+      "outer_fold": 0,
+      "energy_breakeven_mbps": 93.0,
+      "qos_limit_mbps": 149.0,
+      "decision_mbps": 83.0,
+      "usr_safe_flips_on_grid": 3,
+      "usr_unsafe_share_100_400mbps": 0.8333333333333334
+    },
+    {
+      "source": "refit on training runs of outer fold",
+      "protocol": "LOSO",
+      "config": "nested",
+      "outer_fold": 1,
+      "energy_breakeven_mbps": 93.0,
+      "qos_limit_mbps": 149.0,
+      "decision_mbps": 83.0,
+      "usr_safe_flips_on_grid": 3,
+      "usr_unsafe_share_100_400mbps": 0.82
+    },
+    {
+      "source": "refit on training runs of outer fold",
+      "protocol": "LOSO",
+      "config": "nested",
+      "outer_fold": 2,
+      "energy_breakeven_mbps": 93.0,
+      "qos_limit_mbps": 153.0,
+      "decision_mbps": 83.0,
+      "usr_safe_flips_on_grid": 3,
+      "usr_unsafe_share_100_400mbps": 0.82
+    },
+    {
+      "source": "refit on training runs of outer fold",
+      "protocol": "LOSO",
+      "config": "nested",
+      "outer_fold": 3,
+      "energy_breakeven_mbps": 90.0,
+      "qos_limit_mbps": 150.0,
+      "decision_mbps": 80.0,
+      "usr_safe_flips_on_grid": 3,
+      "usr_unsafe_share_100_400mbps": 0.4766666666666667
+    },
+    {
+      "source": "refit on training runs of outer fold",
+      "protocol": "LOSO",
+      "config": "nested",
+      "outer_fold": 4,
+      "energy_breakeven_mbps": 93.0,
+      "qos_limit_mbps": 149.0,
+      "decision_mbps": 83.0,
+      "usr_safe_flips_on_grid": 3,
+      "usr_unsafe_share_100_400mbps": 0.48
+    },
+    {
+      "source": "refit on training runs of outer fold",
+      "protocol": "LOSO",
+      "config": "deployed",
+      "outer_fold": 0,
+      "energy_breakeven_mbps": 93.0,
+      "qos_limit_mbps": 149.0,
+      "decision_mbps": 83.0,
+      "usr_safe_flips_on_grid": 3,
+      "usr_unsafe_share_100_400mbps": 0.8333333333333334
+    },
+    {
+      "source": "refit on training runs of outer fold",
+      "protocol": "LOSO",
+      "config": "deployed",
+      "outer_fold": 1,
+      "energy_breakeven_mbps": 93.0,
+      "qos_limit_mbps": 149.0,
+      "decision_mbps": 83.0,
+      "usr_safe_flips_on_grid": 3,
+      "usr_unsafe_share_100_400mbps": 0.82
+    },
+    {
+      "source": "refit on training runs of outer fold",
+      "protocol": "LOSO",
+      "config": "deployed",
+      "outer_fold": 2,
+      "energy_breakeven_mbps": 93.0,
+      "qos_limit_mbps": 153.0,
+      "decision_mbps": 83.0,
+      "usr_safe_flips_on_grid": 3,
+      "usr_unsafe_share_100_400mbps": 0.82
+    },
+    {
+      "source": "refit on training runs of outer fold",
+      "protocol": "LOSO",
+      "config": "deployed",
+      "outer_fold": 3,
+      "energy_breakeven_mbps": 91.0,
+      "qos_limit_mbps": 150.0,
+      "decision_mbps": 81.0,
+      "usr_safe_flips_on_grid": 3,
+      "usr_unsafe_share_100_400mbps": 0.4966666666666666
+    },
+    {
+      "source": "refit on training runs of outer fold",
+      "protocol": "LOSO",
+      "config": "deployed",
+      "outer_fold": 4,
+      "energy_breakeven_mbps": 91.0,
+      "qos_limit_mbps": 149.0,
+      "decision_mbps": 81.0,
+      "usr_safe_flips_on_grid": 3,
+      "usr_unsafe_share_100_400mbps": 0.7666666666666667
+    },
+    {
+      "source": "refit on training runs of outer fold",
+      "protocol": "LOLO",
+      "config": "nested",
+      "outer_fold": 0,
+      "energy_breakeven_mbps": 62.0,
+      "qos_limit_mbps": 149.0,
+      "decision_mbps": 52.0,
+      "usr_safe_flips_on_grid": 3,
+      "usr_unsafe_share_100_400mbps": 0.82
+    },
+    {
+      "source": "refit on training runs of outer fold",
+      "protocol": "LOLO",
+      "config": "nested",
+      "outer_fold": 1,
+      "energy_breakeven_mbps": 61.0,
+      "qos_limit_mbps": 149.0,
+      "decision_mbps": 51.0,
+      "usr_safe_flips_on_grid": 3,
+      "usr_unsafe_share_100_400mbps": 0.8333333333333334
+    },
+    {
+      "source": "refit on training runs of outer fold",
+      "protocol": "LOLO",
+      "config": "nested",
+      "outer_fold": 2,
+      "energy_breakeven_mbps": 70.0,
+      "qos_limit_mbps": 0.0,
+      "decision_mbps": 0.0,
+      "usr_safe_flips_on_grid": 0,
+      "usr_unsafe_share_100_400mbps": 1.0
+    },
+    {
+      "source": "refit on training runs of outer fold",
+      "protocol": "LOLO",
+      "config": "nested",
+      "outer_fold": 3,
+      "energy_breakeven_mbps": 72.00000000000001,
+      "qos_limit_mbps": 0.0,
+      "decision_mbps": 0.0,
+      "usr_safe_flips_on_grid": 1,
+      "usr_unsafe_share_100_400mbps": 1.0
+    },
+    {
+      "source": "refit on training runs of outer fold",
+      "protocol": "LOLO",
+      "config": "nested",
+      "outer_fold": 4,
+      "energy_breakeven_mbps": 81.0,
+      "qos_limit_mbps": 149.0,
+      "decision_mbps": 71.00000000000001,
+      "usr_safe_flips_on_grid": 1,
+      "usr_unsafe_share_100_400mbps": 0.8366666666666667
+    },
+    {
+      "source": "refit on training runs of outer fold",
+      "protocol": "LOLO",
+      "config": "deployed",
+      "outer_fold": 0,
+      "energy_breakeven_mbps": 90.0,
+      "qos_limit_mbps": 149.0,
+      "decision_mbps": 80.0,
+      "usr_safe_flips_on_grid": 3,
+      "usr_unsafe_share_100_400mbps": 0.82
+    },
+    {
+      "source": "refit on training runs of outer fold",
+      "protocol": "LOLO",
+      "config": "deployed",
+      "outer_fold": 1,
+      "energy_breakeven_mbps": 80.0,
+      "qos_limit_mbps": 149.0,
+      "decision_mbps": 70.0,
+      "usr_safe_flips_on_grid": 3,
+      "usr_unsafe_share_100_400mbps": 0.82
+    },
+    {
+      "source": "refit on training runs of outer fold",
+      "protocol": "LOLO",
+      "config": "deployed",
+      "outer_fold": 2,
+      "energy_breakeven_mbps": 81.0,
+      "qos_limit_mbps": 81.0,
+      "decision_mbps": 71.00000000000001,
+      "usr_safe_flips_on_grid": 3,
+      "usr_unsafe_share_100_400mbps": 0.9966666666666668
+    },
+    {
+      "source": "refit on training runs of outer fold",
+      "protocol": "LOLO",
+      "config": "deployed",
+      "outer_fold": 3,
+      "energy_breakeven_mbps": 93.0,
+      "qos_limit_mbps": 170.0,
+      "decision_mbps": 83.0,
+      "usr_safe_flips_on_grid": 1,
+      "usr_unsafe_share_100_400mbps": 0.7666666666666667
+    },
+    {
+      "source": "refit on training runs of outer fold",
+      "protocol": "LOLO",
+      "config": "deployed",
+      "outer_fold": 4,
+      "energy_breakeven_mbps": 93.0,
+      "qos_limit_mbps": 149.0,
+      "decision_mbps": 83.0,
+      "usr_safe_flips_on_grid": 3,
+      "usr_unsafe_share_100_400mbps": 0.8333333333333334
+    }
+  ]
+}

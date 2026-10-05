@@ -1,0 +1,578 @@
+[
+ {
+  "set": "Centralized PPO",
+  "seed": 1,
+  "checkpoint": "experiments/wcnc2027_ablation/central_seed1/ppo_multi_site.zip",
+  "file": "rollouts/Centralized_PPO__seed1.npz",
+  "total_reward": -20316.766717761846,
+  "seconds": 7.7
+ },
+ {
+  "set": "Centralized PPO",
+  "seed": 7,
+  "checkpoint": "experiments/wcnc2027_ablation/central_seed7/ppo_multi_site.zip",
+  "file": "rollouts/Centralized_PPO__seed7.npz",
+  "total_reward": -11568.362887050083,
+  "seconds": 7.6
+ },
+ {
+  "set": "Centralized PPO",
+  "seed": 13,
+  "checkpoint": "experiments/wcnc2027_ablation/central_seed13/ppo_multi_site.zip",
+  "file": "rollouts/Centralized_PPO__seed13.npz",
+  "total_reward": -11179.335499376451,
+  "seconds": 8.0
+ },
+ {
+  "set": "Centralized PPO",
+  "seed": 23,
+  "checkpoint": "experiments/wcnc2027_ablation/central_seed23/ppo_multi_site.zip",
+  "file": "rollouts/Centralized_PPO__seed23.npz",
+  "total_reward": -18575.363956326946,
+  "seconds": 7.7
+ },
+ {
+  "set": "Centralized PPO",
+  "seed": 42,
+  "checkpoint": "experiments/wcnc2027_ablation/central_seed42/ppo_multi_site.zip",
+  "file": "rollouts/Centralized_PPO__seed42.npz",
+  "total_reward": -7369.532818375774,
+  "seconds": 8.0
+ },
+ {
+  "set": "Centralized PPO",
+  "seed": 64,
+  "checkpoint": "experiments/wcnc2027_ablation/central_seed64/ppo_multi_site.zip",
+  "file": "rollouts/Centralized_PPO__seed64.npz",
+  "total_reward": -8207.590539094766,
+  "seconds": 8.0
+ },
+ {
+  "set": "Centralized PPO",
+  "seed": 77,
+  "checkpoint": "experiments/wcnc2027_ablation/central_seed77/ppo_multi_site.zip",
+  "file": "rollouts/Centralized_PPO__seed77.npz",
+  "total_reward": -27822.84150789405,
+  "seconds": 6.9
+ },
+ {
+  "set": "Centralized PPO",
+  "seed": 99,
+  "checkpoint": "experiments/wcnc2027_ablation/central_seed99/ppo_multi_site.zip",
+  "file": "rollouts/Centralized_PPO__seed99.npz",
+  "total_reward": -15161.238590906585,
+  "seconds": 6.9
+ },
+ {
+  "set": "Hysteresis (b=50 Mbps)",
+  "seed": 0,
+  "checkpoint": "-",
+  "file": "rollouts/Hysteresis_(b=50_Mbps)__seed0.npz",
+  "total_reward": -6262.135125110266,
+  "seconds": 6.8
+ },
+ {
+  "set": "IPPO",
+  "seed": 1,
+  "checkpoint": "experiments/wcnc2027_ablation/ippo_seed1",
+  "file": "rollouts/IPPO__seed1.npz",
+  "total_reward": -5777.110554812833,
+  "seconds": 51.7
+ },
+ {
+  "set": "IPPO",
+  "seed": 7,
+  "checkpoint": "experiments/wcnc2027_ablation/ippo_seed7",
+  "file": "rollouts/IPPO__seed7.npz",
+  "total_reward": -5848.010539532998,
+  "seconds": 51.7
+ },
+ {
+  "set": "IPPO",
+  "seed": 13,
+  "checkpoint": "experiments/wcnc2027_ablation/ippo_seed13",
+  "file": "rollouts/IPPO__seed13.npz",
+  "total_reward": -5730.714488021969,
+  "seconds": 51.8
+ },
+ {
+  "set": "IPPO",
+  "seed": 23,
+  "checkpoint": "experiments/wcnc2027_ablation/ippo_seed23",
+  "file": "rollouts/IPPO__seed23.npz",
+  "total_reward": -5871.134786122522,
+  "seconds": 51.4
+ },
+ {
+  "set": "IPPO",
+  "seed": 42,
+  "checkpoint": "experiments/wcnc2027_ablation/ippo_seed42",
+  "file": "rollouts/IPPO__seed42.npz",
+  "total_reward": -5742.21985939281,
+  "seconds": 51.7
+ },
+ {
+  "set": "IPPO",
+  "seed": 64,
+  "checkpoint": "experiments/wcnc2027_ablation/ippo_seed64",
+  "file": "rollouts/IPPO__seed64.npz",
+  "total_reward": -5763.317766514849,
+  "seconds": 51.8
+ },
+ {
+  "set": "IPPO",
+  "seed": 77,
+  "checkpoint": "experiments/wcnc2027_ablation/ippo_seed77",
+  "file": "rollouts/IPPO__seed77.npz",
+  "total_reward": -5811.061561499445,
+  "seconds": 51.7
+ },
+ {
+  "set": "IPPO",
+  "seed": 99,
+  "checkpoint": "experiments/wcnc2027_ablation/ippo_seed99",
+  "file": "rollouts/IPPO__seed99.npz",
+  "total_reward": -25341.128895259033,
+  "seconds": 51.3
+ },
+ {
+  "set": "MAPPO",
+  "seed": 1,
+  "checkpoint": "experiments/wcnc2027_ablation/mappo_seed1/mappo_best.pt",
+  "file": "rollouts/MAPPO__seed1.npz",
+  "total_reward": -5579.372568665656,
+  "seconds": 7.8
+ },
+ {
+  "set": "MAPPO",
+  "seed": 7,
+  "checkpoint": "experiments/wcnc2027_ablation/mappo_seed7/mappo_best.pt",
+  "file": "rollouts/MAPPO__seed7.npz",
+  "total_reward": -5622.810827490619,
+  "seconds": 7.6
+ },
+ {
+  "set": "MAPPO",
+  "seed": 13,
+  "checkpoint": "experiments/wcnc2027_ablation/mappo_seed13/mappo_best.pt",
+  "file": "rollouts/MAPPO__seed13.npz",
+  "total_reward": -5639.967789290811,
+  "seconds": 7.4
+ },
+ {
+  "set": "MAPPO",
+  "seed": 23,
+  "checkpoint": "experiments/wcnc2027_ablation/mappo_seed23/mappo_best.pt",
+  "file": "rollouts/MAPPO__seed23.npz",
+  "total_reward": -5625.8406854391915,
+  "seconds": 7.7
+ },
+ {
+  "set": "MAPPO",
+  "seed": 42,
+  "checkpoint": "experiments/wcnc2027_ablation/mappo_seed42/mappo_best.pt",
+  "file": "rollouts/MAPPO__seed42.npz",
+  "total_reward": -5654.440879365017,
+  "seconds": 7.8
+ },
+ {
+  "set": "MAPPO",
+  "seed": 64,
+  "checkpoint": "experiments/wcnc2027_ablation/mappo_seed64/mappo_best.pt",
+  "file": "rollouts/MAPPO__seed64.npz",
+  "total_reward": -5627.012230936112,
+  "seconds": 7.9
+ },
+ {
+  "set": "MAPPO",
+  "seed": 77,
+  "checkpoint": "experiments/wcnc2027_ablation/mappo_seed77/mappo_best.pt",
+  "file": "rollouts/MAPPO__seed77.npz",
+  "total_reward": -5629.12267933633,
+  "seconds": 6.7
+ },
+ {
+  "set": "MAPPO",
+  "seed": 99,
+  "checkpoint": "experiments/wcnc2027_ablation/mappo_seed99/mappo_best.pt",
+  "file": "rollouts/MAPPO__seed99.npz",
+  "total_reward": -5610.925547346105,
+  "seconds": 7.0
+ },
+ {
+  "set": "Shared-PPO",
+  "seed": 1,
+  "checkpoint": "experiments/wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt",
+  "file": "rollouts/Shared-PPO__seed1.npz",
+  "total_reward": -5871.719789768298,
+  "seconds": 6.6
+ },
+ {
+  "set": "Shared-PPO",
+  "seed": 7,
+  "checkpoint": "experiments/wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt",
+  "file": "rollouts/Shared-PPO__seed7.npz",
+  "total_reward": -5626.958921531195,
+  "seconds": 6.8
+ },
+ {
+  "set": "Shared-PPO",
+  "seed": 13,
+  "checkpoint": "experiments/wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt",
+  "file": "rollouts/Shared-PPO__seed13.npz",
+  "total_reward": -5617.315181659223,
+  "seconds": 6.8
+ },
+ {
+  "set": "Shared-PPO",
+  "seed": 23,
+  "checkpoint": "experiments/wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt",
+  "file": "rollouts/Shared-PPO__seed23.npz",
+  "total_reward": -5701.063005453555,
+  "seconds": 6.6
+ },
+ {
+  "set": "Shared-PPO",
+  "seed": 42,
+  "checkpoint": "experiments/wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt",
+  "file": "rollouts/Shared-PPO__seed42.npz",
+  "total_reward": -5700.428477740054,
+  "seconds": 6.4
+ },
+ {
+  "set": "Shared-PPO",
+  "seed": 64,
+  "checkpoint": "experiments/wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt",
+  "file": "rollouts/Shared-PPO__seed64.npz",
+  "total_reward": -5720.367666519166,
+  "seconds": 6.6
+ },
+ {
+  "set": "Shared-PPO",
+  "seed": 77,
+  "checkpoint": "experiments/wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt",
+  "file": "rollouts/Shared-PPO__seed77.npz",
+  "total_reward": -5706.611094057333,
+  "seconds": 6.5
+ },
+ {
+  "set": "Shared-PPO",
+  "seed": 99,
+  "checkpoint": "experiments/wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt",
+  "file": "rollouts/Shared-PPO__seed99.npz",
+  "total_reward": -5708.18181706094,
+  "seconds": 6.6
+ },
+ {
+  "set": "always-DPDK",
+  "seed": 0,
+  "checkpoint": "-",
+  "file": "rollouts/always-DPDK__seed0.npz",
+  "total_reward": -7201.084827726419,
+  "seconds": 7.0
+ },
+ {
+  "set": "legacy Centralized PPO (central_nr, June+Aug)",
+  "seed": 1,
+  "checkpoint": "experiments/central_nr_seed1/ppo_multi_site.zip",
+  "file": "rollouts/legacy_Centralized_PPO_(central_nr,_June+Aug)__seed1.npz",
+  "total_reward": -27441.53839203379,
+  "seconds": 6.2
+ },
+ {
+  "set": "legacy Centralized PPO (central_nr, June+Aug)",
+  "seed": 7,
+  "checkpoint": "experiments/central_nr_seed7/ppo_multi_site.zip",
+  "file": "rollouts/legacy_Centralized_PPO_(central_nr,_June+Aug)__seed7.npz",
+  "total_reward": -7522.750669234216,
+  "seconds": 6.2
+ },
+ {
+  "set": "legacy Centralized PPO (central_nr, June+Aug)",
+  "seed": 13,
+  "checkpoint": "experiments/central_nr_seed13/ppo_multi_site.zip",
+  "file": "rollouts/legacy_Centralized_PPO_(central_nr,_June+Aug)__seed13.npz",
+  "total_reward": -7967.978345043853,
+  "seconds": 6.1
+ },
+ {
+  "set": "legacy Centralized PPO (central_nr, June+Aug)",
+  "seed": 23,
+  "checkpoint": "experiments/central_nr_seed23/ppo_multi_site.zip",
+  "file": "rollouts/legacy_Centralized_PPO_(central_nr,_June+Aug)__seed23.npz",
+  "total_reward": -27425.163740184813,
+  "seconds": 6.3
+ },
+ {
+  "set": "legacy Centralized PPO (central_nr, June+Aug)",
+  "seed": 42,
+  "checkpoint": "experiments/central_nr_seed42/ppo_multi_site.zip",
+  "file": "rollouts/legacy_Centralized_PPO_(central_nr,_June+Aug)__seed42.npz",
+  "total_reward": -11520.275892777545,
+  "seconds": 6.5
+ },
+ {
+  "set": "legacy Centralized PPO (central_nr, June+Aug)",
+  "seed": 64,
+  "checkpoint": "experiments/central_nr_seed64/ppo_multi_site.zip",
+  "file": "rollouts/legacy_Centralized_PPO_(central_nr,_June+Aug)__seed64.npz",
+  "total_reward": -24040.168146050557,
+  "seconds": 6.5
+ },
+ {
+  "set": "legacy Centralized PPO (central_nr, June+Aug)",
+  "seed": 77,
+  "checkpoint": "experiments/central_nr_seed77/ppo_multi_site.zip",
+  "file": "rollouts/legacy_Centralized_PPO_(central_nr,_June+Aug)__seed77.npz",
+  "total_reward": -23281.84343756237,
+  "seconds": 6.5
+ },
+ {
+  "set": "legacy Centralized PPO (v0.4 re-scored set)",
+  "seed": 7,
+  "checkpoint": "experiments/ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip",
+  "file": "rollouts/legacy_Centralized_PPO_(v0.4_re-scored_set)__seed7.npz",
+  "total_reward": -12781.039650613237,
+  "seconds": 6.6
+ },
+ {
+  "set": "legacy Centralized PPO (v0.4 re-scored set)",
+  "seed": 13,
+  "checkpoint": "experiments/ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip",
+  "file": "rollouts/legacy_Centralized_PPO_(v0.4_re-scored_set)__seed13.npz",
+  "total_reward": -12718.787759182029,
+  "seconds": 6.5
+ },
+ {
+  "set": "legacy Centralized PPO (v0.4 re-scored set)",
+  "seed": 42,
+  "checkpoint": "experiments/ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip",
+  "file": "rollouts/legacy_Centralized_PPO_(v0.4_re-scored_set)__seed42.npz",
+  "total_reward": -11203.796849020413,
+  "seconds": 6.5
+ },
+ {
+  "set": "legacy Centralized PPO (v0.4 re-scored set)",
+  "seed": 99,
+  "checkpoint": "experiments/ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip",
+  "file": "rollouts/legacy_Centralized_PPO_(v0.4_re-scored_set)__seed99.npz",
+  "total_reward": -21133.539210535368,
+  "seconds": 6.5
+ },
+ {
+  "set": "legacy IPPO (ippo_nr, paper Table I)",
+  "seed": 1,
+  "checkpoint": "experiments/ippo_nr_seed1",
+  "file": "rollouts/legacy_IPPO_(ippo_nr,_paper_Table_I)__seed1.npz",
+  "total_reward": -6064.789864641358,
+  "seconds": 11.3
+ },
+ {
+  "set": "legacy IPPO (ippo_nr, paper Table I)",
+  "seed": 7,
+  "checkpoint": "experiments/ippo_nr_seed7",
+  "file": "rollouts/legacy_IPPO_(ippo_nr,_paper_Table_I)__seed7.npz",
+  "total_reward": -5806.65261323037,
+  "seconds": 36.5
+ },
+ {
+  "set": "legacy IPPO (ippo_nr, paper Table I)",
+  "seed": 13,
+  "checkpoint": "experiments/ippo_nr_seed13",
+  "file": "rollouts/legacy_IPPO_(ippo_nr,_paper_Table_I)__seed13.npz",
+  "total_reward": -5762.551429228126,
+  "seconds": 38.3
+ },
+ {
+  "set": "legacy IPPO (ippo_nr, paper Table I)",
+  "seed": 23,
+  "checkpoint": "experiments/ippo_nr_seed23",
+  "file": "rollouts/legacy_IPPO_(ippo_nr,_paper_Table_I)__seed23.npz",
+  "total_reward": -5717.731895921974,
+  "seconds": 38.7
+ },
+ {
+  "set": "legacy IPPO (ippo_nr, paper Table I)",
+  "seed": 42,
+  "checkpoint": "experiments/ippo_nr_seed42",
+  "file": "rollouts/legacy_IPPO_(ippo_nr,_paper_Table_I)__seed42.npz",
+  "total_reward": -5698.174694736378,
+  "seconds": 38.3
+ },
+ {
+  "set": "legacy IPPO (ippo_nr, paper Table I)",
+  "seed": 64,
+  "checkpoint": "experiments/ippo_nr_seed64",
+  "file": "rollouts/legacy_IPPO_(ippo_nr,_paper_Table_I)__seed64.npz",
+  "total_reward": -5761.415009088346,
+  "seconds": 38.4
+ },
+ {
+  "set": "legacy IPPO (ippo_nr, paper Table I)",
+  "seed": 77,
+  "checkpoint": "experiments/ippo_nr_seed77",
+  "file": "rollouts/legacy_IPPO_(ippo_nr,_paper_Table_I)__seed77.npz",
+  "total_reward": -5811.3178357652505,
+  "seconds": 34.4
+ },
+ {
+  "set": "legacy IPPO (ippo_nr, paper Table I)",
+  "seed": 99,
+  "checkpoint": "experiments/ippo_nr_seed99",
+  "file": "rollouts/legacy_IPPO_(ippo_nr,_paper_Table_I)__seed99.npz",
+  "total_reward": -5886.442708332133,
+  "seconds": 24.7
+ },
+ {
+  "set": "legacy IPPO (v0.4 re-scored set)",
+  "seed": 1,
+  "checkpoint": "experiments/ppo_single_site_ensemble_seed1_20260517T110907",
+  "file": "rollouts/legacy_IPPO_(v0.4_re-scored_set)__seed1.npz",
+  "total_reward": -5708.994804591908,
+  "seconds": 36.1
+ },
+ {
+  "set": "legacy IPPO (v0.4 re-scored set)",
+  "seed": 7,
+  "checkpoint": "experiments/ppo_single_site_ensemble_seed7_20260517T091403",
+  "file": "rollouts/legacy_IPPO_(v0.4_re-scored_set)__seed7.npz",
+  "total_reward": -5780.6208127844275,
+  "seconds": 36.7
+ },
+ {
+  "set": "legacy IPPO (v0.4 re-scored set)",
+  "seed": 13,
+  "checkpoint": "experiments/ppo_single_site_ensemble_seed13_20260517T091403",
+  "file": "rollouts/legacy_IPPO_(v0.4_re-scored_set)__seed13.npz",
+  "total_reward": -5641.102509897597,
+  "seconds": 36.6
+ },
+ {
+  "set": "legacy IPPO (v0.4 re-scored set)",
+  "seed": 23,
+  "checkpoint": "experiments/ppo_single_site_ensemble_seed23_20260517T110907",
+  "file": "rollouts/legacy_IPPO_(v0.4_re-scored_set)__seed23.npz",
+  "total_reward": -5819.7752193480355,
+  "seconds": 36.5
+ },
+ {
+  "set": "legacy IPPO (v0.4 re-scored set)",
+  "seed": 42,
+  "checkpoint": "experiments/ppo_single_site_ensemble_seed42_20260517T091403",
+  "file": "rollouts/legacy_IPPO_(v0.4_re-scored_set)__seed42.npz",
+  "total_reward": -5880.004575935089,
+  "seconds": 36.2
+ },
+ {
+  "set": "legacy IPPO (v0.4 re-scored set)",
+  "seed": 64,
+  "checkpoint": "experiments/ppo_single_site_ensemble_seed64_20260517T110907",
+  "file": "rollouts/legacy_IPPO_(v0.4_re-scored_set)__seed64.npz",
+  "total_reward": -5883.890665592871,
+  "seconds": 17.5
+ },
+ {
+  "set": "legacy IPPO (v0.4 re-scored set)",
+  "seed": 77,
+  "checkpoint": "experiments/ppo_single_site_ensemble_seed77_20260517T110907",
+  "file": "rollouts/legacy_IPPO_(v0.4_re-scored_set)__seed77.npz",
+  "total_reward": -5864.595921473702,
+  "seconds": 16.0
+ },
+ {
+  "set": "legacy IPPO (v0.4 re-scored set)",
+  "seed": 99,
+  "checkpoint": "experiments/ppo_single_site_ensemble_seed99_20260517T091403",
+  "file": "rollouts/legacy_IPPO_(v0.4_re-scored_set)__seed99.npz",
+  "total_reward": -5730.124502636791,
+  "seconds": 15.8
+ },
+ {
+  "set": "legacy MAPPO (mappo_nr, June)",
+  "seed": 23,
+  "checkpoint": "experiments/mappo_nr_seed23/mappo_best.pt",
+  "file": "rollouts/legacy_MAPPO_(mappo_nr,_June)__seed23.npz",
+  "total_reward": -5877.07885502683,
+  "seconds": 6.5
+ },
+ {
+  "set": "legacy MAPPO (mappo_nr, June)",
+  "seed": 64,
+  "checkpoint": "experiments/mappo_nr_seed64/mappo_best.pt",
+  "file": "rollouts/legacy_MAPPO_(mappo_nr,_June)__seed64.npz",
+  "total_reward": -5597.986538745549,
+  "seconds": 6.6
+ },
+ {
+  "set": "legacy MAPPO (mappo_nr, June)",
+  "seed": 99,
+  "checkpoint": "experiments/mappo_nr_seed99/mappo_best.pt",
+  "file": "rollouts/legacy_MAPPO_(mappo_nr,_June)__seed99.npz",
+  "total_reward": -5638.285116898305,
+  "seconds": 6.4
+ },
+ {
+  "set": "legacy MAPPO (v0.4 re-scored set)",
+  "seed": 1,
+  "checkpoint": "experiments/mappo_seed1_20260517T110908/mappo_best.pt",
+  "file": "rollouts/legacy_MAPPO_(v0.4_re-scored_set)__seed1.npz",
+  "total_reward": -5608.271964274167,
+  "seconds": 7.7
+ },
+ {
+  "set": "legacy MAPPO (v0.4 re-scored set)",
+  "seed": 7,
+  "checkpoint": "experiments/mappo_seed7_20260517T003433/mappo_best.pt",
+  "file": "rollouts/legacy_MAPPO_(v0.4_re-scored_set)__seed7.npz",
+  "total_reward": -5692.5121071958365,
+  "seconds": 7.4
+ },
+ {
+  "set": "legacy MAPPO (v0.4 re-scored set)",
+  "seed": 13,
+  "checkpoint": "experiments/mappo_seed13_20260517T003433/mappo_best.pt",
+  "file": "rollouts/legacy_MAPPO_(v0.4_re-scored_set)__seed13.npz",
+  "total_reward": -5848.028385298791,
+  "seconds": 7.6
+ },
+ {
+  "set": "legacy MAPPO (v0.4 re-scored set)",
+  "seed": 23,
+  "checkpoint": "experiments/mappo_seed23_20260517T110908/mappo_best.pt",
+  "file": "rollouts/legacy_MAPPO_(v0.4_re-scored_set)__seed23.npz",
+  "total_reward": -5636.955772126769,
+  "seconds": 7.8
+ },
+ {
+  "set": "legacy MAPPO (v0.4 re-scored set)",
+  "seed": 42,
+  "checkpoint": "experiments/mappo_seed42_20260526T143637/mappo_best.pt",
+  "file": "rollouts/legacy_MAPPO_(v0.4_re-scored_set)__seed42.npz",
+  "total_reward": -5633.068104826562,
+  "seconds": 7.9
+ },
+ {
+  "set": "legacy MAPPO (v0.4 re-scored set)",
+  "seed": 64,
+  "checkpoint": "experiments/mappo_seed64_20260517T110908/mappo_best.pt",
+  "file": "rollouts/legacy_MAPPO_(v0.4_re-scored_set)__seed64.npz",
+  "total_reward": -5535.706798091949,
+  "seconds": 7.8
+ },
+ {
+  "set": "legacy MAPPO (v0.4 re-scored set)",
+  "seed": 77,
+  "checkpoint": "experiments/mappo_seed77_20260517T110908/mappo_best.pt",
+  "file": "rollouts/legacy_MAPPO_(v0.4_re-scored_set)__seed77.npz",
+  "total_reward": -5622.0923175797525,
+  "seconds": 6.4
+ },
+ {
+  "set": "legacy MAPPO (v0.4 re-scored set)",
+  "seed": 99,
+  "checkpoint": "experiments/mappo_seed99_20260517T003433/mappo_best.pt",
+  "file": "rollouts/legacy_MAPPO_(v0.4_re-scored_set)__seed99.npz",
+  "total_reward": -5601.241523329915,
+  "seconds": 6.4
+ }
+]

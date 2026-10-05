@@ -1,0 +1,147 @@
+world,check,passed,detail
+pinned,C1 feature order/units,True,"L1 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s'], L2 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s', 'l1_pred__throughput_gbps', 'l1_pred__cpu_pct', 'l1_pred__gtpu_packets_dn__packets_lost_delta', 'l1_pred__downlink_one_way_delay_distribution__weighted_mean_delay_us']; 0.1 Gbps -> [[100000.0, 100000.0]] kbit/s (UL:=DL)"
+pinned,C2 variant mapping,True,"{'DPDK': 'dpdk', 'USR': 'usr_full'}; manifest keys 30"
+pinned,C4 env code path == direct pinned-model predictions,True,max |diff| = 2.27e-13
+pinned,C5 grid predictions == threshold_grid_predictions.csv.gz,True,max rel diff = 7.75e-16
+pinned,"C6 finite, power >= 0 after clip",True,"{""DPDK"": {""finite"": true, ""min_power_after_clip"": 0.8177087597004455, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.003766851704996035}, ""USR"": {""finite"": true, ""min_power_after_clip"": 0.017527796268614188, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.7025178429817605}}"
+pinned,C7 derived thresholds == threshold_stability.csv,True,"break-even 91, QoS 149, decision 81 Mbps (ref 91/149/81)"
+LOSO-dep-f0,C1 feature order/units,True,"L1 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s'], L2 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s', 'l1_pred__throughput_gbps', 'l1_pred__cpu_pct', 'l1_pred__gtpu_packets_dn__packets_lost_delta', 'l1_pred__downlink_one_way_delay_distribution__weighted_mean_delay_us']; 0.1 Gbps -> [[100000.0, 100000.0]] kbit/s (UL:=DL)"
+LOSO-dep-f0,C2 variant mapping,True,"{'DPDK': 'dpdk', 'USR': 'usr_full'}; manifest keys 10"
+LOSO-dep-f0,C3 reproduces saved held-out predictions,True,"max |diff|/max(1,|ref|) = 2.22e-16"
+LOSO-dep-f0,C4 env code path == direct predictions,True,max |diff| = 8.88e-16
+LOSO-dep-f0,C5 grid predictions == threshold_grid_predictions.csv.gz,True,max rel diff = 2.10e-16
+LOSO-dep-f0,"C6 finite, power >= 0 after clip",True,"{""DPDK"": {""finite"": true, ""min_power_after_clip"": 0.818441355991198, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.0046590007930214115}, ""USR"": {""finite"": true, ""min_power_after_clip"": 0.017230348391282416, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.7101506740681999}}"
+LOSO-dep-f0,C7 derived thresholds == threshold_stability.csv,True,"break-even 93, QoS 149, decision 83 Mbps (ref 93/149/83)"
+LOSO-dep-f1,C1 feature order/units,True,"L1 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s'], L2 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s', 'l1_pred__throughput_gbps', 'l1_pred__cpu_pct', 'l1_pred__gtpu_packets_dn__packets_lost_delta', 'l1_pred__downlink_one_way_delay_distribution__weighted_mean_delay_us']; 0.1 Gbps -> [[100000.0, 100000.0]] kbit/s (UL:=DL)"
+LOSO-dep-f1,C2 variant mapping,True,"{'DPDK': 'dpdk', 'USR': 'usr_full'}; manifest keys 10"
+LOSO-dep-f1,C3 reproduces saved held-out predictions,True,"max |diff|/max(1,|ref|) = 2.41e-16"
+LOSO-dep-f1,C4 env code path == direct predictions,True,max |diff| = 1.33e-15
+LOSO-dep-f1,C5 grid predictions == threshold_grid_predictions.csv.gz,True,max rel diff = 2.13e-16
+LOSO-dep-f1,"C6 finite, power >= 0 after clip",True,"{""DPDK"": {""finite"": true, ""min_power_after_clip"": 0.817843007642212, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.003766851704996035}, ""USR"": {""finite"": true, ""min_power_after_clip"": 0.017081468970587523, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.7025178429817605}}"
+LOSO-dep-f1,C7 derived thresholds == threshold_stability.csv,True,"break-even 93, QoS 149, decision 83 Mbps (ref 93/149/83)"
+LOSO-dep-f2,C1 feature order/units,True,"L1 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s'], L2 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s', 'l1_pred__throughput_gbps', 'l1_pred__cpu_pct', 'l1_pred__gtpu_packets_dn__packets_lost_delta', 'l1_pred__downlink_one_way_delay_distribution__weighted_mean_delay_us']; 0.1 Gbps -> [[100000.0, 100000.0]] kbit/s (UL:=DL)"
+LOSO-dep-f2,C2 variant mapping,True,"{'DPDK': 'dpdk', 'USR': 'usr_full'}; manifest keys 10"
+LOSO-dep-f2,C3 reproduces saved held-out predictions,True,"max |diff|/max(1,|ref|) = 2.46e-16"
+LOSO-dep-f2,C4 env code path == direct predictions,True,max |diff| = 8.88e-16
+LOSO-dep-f2,C5 grid predictions == threshold_grid_predictions.csv.gz,True,max rel diff = 2.21e-16
+LOSO-dep-f2,"C6 finite, power >= 0 after clip",True,"{""DPDK"": {""finite"": true, ""min_power_after_clip"": 0.818430711367122, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.0046590007930214115}, ""USR"": {""finite"": true, ""min_power_after_clip"": 0.017412035619103337, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.7023195876288659}}"
+LOSO-dep-f2,C7 derived thresholds == threshold_stability.csv,True,"break-even 93, QoS 153, decision 83 Mbps (ref 93/153/83)"
+LOSO-dep-f3,C1 feature order/units,True,"L1 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s'], L2 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s', 'l1_pred__throughput_gbps', 'l1_pred__cpu_pct', 'l1_pred__gtpu_packets_dn__packets_lost_delta', 'l1_pred__downlink_one_way_delay_distribution__weighted_mean_delay_us']; 0.1 Gbps -> [[100000.0, 100000.0]] kbit/s (UL:=DL)"
+LOSO-dep-f3,C2 variant mapping,True,"{'DPDK': 'dpdk', 'USR': 'usr_full'}; manifest keys 10"
+LOSO-dep-f3,C3 reproduces saved held-out predictions,True,"max |diff|/max(1,|ref|) = 2.45e-16"
+LOSO-dep-f3,C4 env code path == direct predictions,True,max |diff| = 8.88e-16
+LOSO-dep-f3,C5 grid predictions == threshold_grid_predictions.csv.gz,True,max rel diff = 2.09e-16
+LOSO-dep-f3,"C6 finite, power >= 0 after clip",True,"{""DPDK"": {""finite"": true, ""min_power_after_clip"": 0.8192675499802182, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.0046590007930214115}, ""USR"": {""finite"": true, ""min_power_after_clip"": 0.017448613012540786, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.5556106264869152}}"
+LOSO-dep-f3,C7 derived thresholds == threshold_stability.csv,True,"break-even 91, QoS 150, decision 81 Mbps (ref 91/150/81)"
+LOSO-dep-f4,C1 feature order/units,True,"L1 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s'], L2 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s', 'l1_pred__throughput_gbps', 'l1_pred__cpu_pct', 'l1_pred__gtpu_packets_dn__packets_lost_delta', 'l1_pred__downlink_one_way_delay_distribution__weighted_mean_delay_us']; 0.1 Gbps -> [[100000.0, 100000.0]] kbit/s (UL:=DL)"
+LOSO-dep-f4,C2 variant mapping,True,"{'DPDK': 'dpdk', 'USR': 'usr_full'}; manifest keys 10"
+LOSO-dep-f4,C3 reproduces saved held-out predictions,True,"max |diff|/max(1,|ref|) = 2.75e-16"
+LOSO-dep-f4,C4 env code path == direct predictions,True,max |diff| = 1.33e-15
+LOSO-dep-f4,C5 grid predictions == threshold_grid_predictions.csv.gz,True,max rel diff = 2.34e-16
+LOSO-dep-f4,"C6 finite, power >= 0 after clip",True,"{""DPDK"": {""finite"": true, ""min_power_after_clip"": 0.8172554630833773, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.003766851704996035}, ""USR"": {""finite"": true, ""min_power_after_clip"": 0.017506019603625363, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.6748612212529739}}"
+LOSO-dep-f4,C7 derived thresholds == threshold_stability.csv,True,"break-even 91, QoS 149, decision 81 Mbps (ref 91/149/81)"
+LOLO-dep-f0,C1 feature order/units,True,"L1 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s'], L2 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s', 'l1_pred__throughput_gbps', 'l1_pred__cpu_pct', 'l1_pred__gtpu_packets_dn__packets_lost_delta', 'l1_pred__downlink_one_way_delay_distribution__weighted_mean_delay_us']; 0.1 Gbps -> [[100000.0, 100000.0]] kbit/s (UL:=DL)"
+LOLO-dep-f0,C2 variant mapping,True,"{'DPDK': 'dpdk', 'USR': 'usr_full'}; manifest keys 10"
+LOLO-dep-f0,C3 reproduces saved held-out predictions,True,"max |diff|/max(1,|ref|) = 2.22e-16"
+LOLO-dep-f0,C4 env code path == direct predictions,True,max |diff| = 8.88e-16
+LOLO-dep-f0,C5 grid predictions == threshold_grid_predictions.csv.gz,True,max rel diff = 2.09e-16
+LOLO-dep-f0,"C6 finite, power >= 0 after clip",True,"{""DPDK"": {""finite"": true, ""min_power_after_clip"": 0.8178812916090287, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.00802934179222839}, ""USR"": {""finite"": true, ""min_power_after_clip"": 0.02462026774815199, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.7025178429817605}}"
+LOLO-dep-f0,C7 derived thresholds == threshold_stability.csv,True,"break-even 90, QoS 149, decision 80 Mbps (ref 90/149/80)"
+LOLO-dep-f1,C1 feature order/units,True,"L1 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s'], L2 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s', 'l1_pred__throughput_gbps', 'l1_pred__cpu_pct', 'l1_pred__gtpu_packets_dn__packets_lost_delta', 'l1_pred__downlink_one_way_delay_distribution__weighted_mean_delay_us']; 0.1 Gbps -> [[100000.0, 100000.0]] kbit/s (UL:=DL)"
+LOLO-dep-f1,C2 variant mapping,True,"{'DPDK': 'dpdk', 'USR': 'usr_full'}; manifest keys 10"
+LOLO-dep-f1,C3 reproduces saved held-out predictions,True,"max |diff|/max(1,|ref|) = 2.09e-16"
+LOLO-dep-f1,C4 env code path == direct predictions,True,max |diff| = 0.00e+00
+LOLO-dep-f1,C5 grid predictions == threshold_grid_predictions.csv.gz,True,max rel diff = 2.33e-16
+LOLO-dep-f1,"C6 finite, power >= 0 after clip",True,"{""DPDK"": {""finite"": true, ""min_power_after_clip"": 0.8178451561665573, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.0046590007930214115}, ""USR"": {""finite"": true, ""min_power_after_clip"": 0.020228981193843833, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.7025178429817605}}"
+LOLO-dep-f1,C7 derived thresholds == threshold_stability.csv,True,"break-even 80, QoS 149, decision 70 Mbps (ref 80/149/70)"
+LOLO-dep-f2,C1 feature order/units,True,"L1 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s'], L2 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s', 'l1_pred__throughput_gbps', 'l1_pred__cpu_pct', 'l1_pred__gtpu_packets_dn__packets_lost_delta', 'l1_pred__downlink_one_way_delay_distribution__weighted_mean_delay_us']; 0.1 Gbps -> [[100000.0, 100000.0]] kbit/s (UL:=DL)"
+LOLO-dep-f2,C2 variant mapping,True,"{'DPDK': 'dpdk', 'USR': 'usr_full'}; manifest keys 10"
+LOLO-dep-f2,C3 reproduces saved held-out predictions,True,"max |diff|/max(1,|ref|) = 2.22e-16"
+LOLO-dep-f2,C4 env code path == direct predictions,True,max |diff| = 2.22e-16
+LOLO-dep-f2,C5 grid predictions == threshold_grid_predictions.csv.gz,True,max rel diff = 2.22e-16
+LOLO-dep-f2,"C6 finite, power >= 0 after clip",True,"{""DPDK"": {""finite"": true, ""min_power_after_clip"": 0.8178885105454132, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.0046590007930214115}, ""USR"": {""finite"": true, ""min_power_after_clip"": 0.02366685595231441, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.8617168913560667}}"
+LOLO-dep-f2,C7 derived thresholds == threshold_stability.csv,True,"break-even 81, QoS 81, decision 71 Mbps (ref 81/81/71)"
+LOLO-dep-f3,C1 feature order/units,True,"L1 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s'], L2 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s', 'l1_pred__throughput_gbps', 'l1_pred__cpu_pct', 'l1_pred__gtpu_packets_dn__packets_lost_delta', 'l1_pred__downlink_one_way_delay_distribution__weighted_mean_delay_us']; 0.1 Gbps -> [[100000.0, 100000.0]] kbit/s (UL:=DL)"
+LOLO-dep-f3,C2 variant mapping,True,"{'DPDK': 'dpdk', 'USR': 'usr_full'}; manifest keys 10"
+LOLO-dep-f3,C3 reproduces saved held-out predictions,True,"max |diff|/max(1,|ref|) = 2.22e-16"
+LOLO-dep-f3,C4 env code path == direct predictions,True,max |diff| = 8.88e-16
+LOLO-dep-f3,C5 grid predictions == threshold_grid_predictions.csv.gz,True,max rel diff = 2.09e-16
+LOLO-dep-f3,"C6 finite, power >= 0 after clip",True,"{""DPDK"": {""finite"": true, ""min_power_after_clip"": 0.8178726466317917, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.0046590007930214115}, ""USR"": {""finite"": true, ""min_power_after_clip"": 0.007690091619695883, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.6673275178429817}}"
+LOLO-dep-f3,C7 derived thresholds == threshold_stability.csv,True,"break-even 93, QoS 170, decision 83 Mbps (ref 93/170/83)"
+LOLO-dep-f4,C1 feature order/units,True,"L1 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s'], L2 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s', 'l1_pred__throughput_gbps', 'l1_pred__cpu_pct', 'l1_pred__gtpu_packets_dn__packets_lost_delta', 'l1_pred__downlink_one_way_delay_distribution__weighted_mean_delay_us']; 0.1 Gbps -> [[100000.0, 100000.0]] kbit/s (UL:=DL)"
+LOLO-dep-f4,C2 variant mapping,True,"{'DPDK': 'dpdk', 'USR': 'usr_full'}; manifest keys 10"
+LOLO-dep-f4,C3 reproduces saved held-out predictions,True,"max |diff|/max(1,|ref|) = 2.09e-16"
+LOLO-dep-f4,C4 env code path == direct predictions,True,max |diff| = 0.00e+00
+LOLO-dep-f4,C5 grid predictions == threshold_grid_predictions.csv.gz,True,max rel diff = 2.15e-16
+LOLO-dep-f4,"C6 finite, power >= 0 after clip",True,"{""DPDK"": {""finite"": true, ""min_power_after_clip"": 0.8180152440373699, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.00802934179222839}, ""USR"": {""finite"": true, ""min_power_after_clip"": 0.015468149422536387, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.7101506740681999}}"
+LOLO-dep-f4,C7 derived thresholds == threshold_stability.csv,True,"break-even 93, QoS 149, decision 83 Mbps (ref 93/149/83)"
+LOSO-nes-f0,C1 feature order/units,True,"L1 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s'], L2 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s', 'l1_pred__throughput_gbps', 'l1_pred__cpu_pct', 'l1_pred__gtpu_packets_dn__packets_lost_delta', 'l1_pred__downlink_one_way_delay_distribution__weighted_mean_delay_us']; 0.1 Gbps -> [[100000.0, 100000.0]] kbit/s (UL:=DL)"
+LOSO-nes-f0,C2 variant mapping,True,"{'DPDK': 'dpdk', 'USR': 'usr_full'}; manifest keys 10"
+LOSO-nes-f0,C3 reproduces saved held-out predictions,True,"max |diff|/max(1,|ref|) = 2.22e-16"
+LOSO-nes-f0,C4 env code path == direct predictions,True,max |diff| = 8.88e-16
+LOSO-nes-f0,C5 grid predictions == threshold_grid_predictions.csv.gz,True,max rel diff = 2.12e-16
+LOSO-nes-f0,"C6 finite, power >= 0 after clip",True,"{""DPDK"": {""finite"": true, ""min_power_after_clip"": 0.8195795634058427, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.003766851704996035}, ""USR"": {""finite"": true, ""min_power_after_clip"": 0.017776017374012004, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.7101506740681999}}"
+LOSO-nes-f0,C7 derived thresholds == threshold_stability.csv,True,"break-even 93, QoS 149, decision 83 Mbps (ref 93/149/83)"
+LOSO-nes-f1,C1 feature order/units,True,"L1 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s'], L2 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s', 'l1_pred__throughput_gbps', 'l1_pred__cpu_pct', 'l1_pred__gtpu_packets_dn__packets_lost_delta', 'l1_pred__downlink_one_way_delay_distribution__weighted_mean_delay_us']; 0.1 Gbps -> [[100000.0, 100000.0]] kbit/s (UL:=DL)"
+LOSO-nes-f1,C2 variant mapping,True,"{'DPDK': 'dpdk', 'USR': 'usr_full'}; manifest keys 10"
+LOSO-nes-f1,C3 reproduces saved held-out predictions,True,"max |diff|/max(1,|ref|) = 2.40e-16"
+LOSO-nes-f1,C4 env code path == direct predictions,True,max |diff| = 5.68e-14
+LOSO-nes-f1,C5 grid predictions == threshold_grid_predictions.csv.gz,True,max rel diff = 2.13e-16
+LOSO-nes-f1,"C6 finite, power >= 0 after clip",True,"{""DPDK"": {""finite"": true, ""min_power_after_clip"": 0.8186692314604933, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.06552339413164156}, ""USR"": {""finite"": true, ""min_power_after_clip"": 0.017395785186924712, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.7025178429817605}}"
+LOSO-nes-f1,C7 derived thresholds == threshold_stability.csv,True,"break-even 93, QoS 149, decision 83 Mbps (ref 93/149/83)"
+LOSO-nes-f2,C1 feature order/units,True,"L1 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s'], L2 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s', 'l1_pred__throughput_gbps', 'l1_pred__cpu_pct', 'l1_pred__gtpu_packets_dn__packets_lost_delta', 'l1_pred__downlink_one_way_delay_distribution__weighted_mean_delay_us']; 0.1 Gbps -> [[100000.0, 100000.0]] kbit/s (UL:=DL)"
+LOSO-nes-f2,C2 variant mapping,True,"{'DPDK': 'dpdk', 'USR': 'usr_full'}; manifest keys 10"
+LOSO-nes-f2,C3 reproduces saved held-out predictions,True,"max |diff|/max(1,|ref|) = 2.38e-16"
+LOSO-nes-f2,C4 env code path == direct predictions,True,max |diff| = 0.00e+00
+LOSO-nes-f2,C5 grid predictions == threshold_grid_predictions.csv.gz,True,max rel diff = 2.09e-16
+LOSO-nes-f2,"C6 finite, power >= 0 after clip",True,"{""DPDK"": {""finite"": true, ""min_power_after_clip"": 0.8197830303932389, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.0046590007930214115}, ""USR"": {""finite"": true, ""min_power_after_clip"": 0.01729501800614487, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.7025178429817605}}"
+LOSO-nes-f2,C7 derived thresholds == threshold_stability.csv,True,"break-even 93, QoS 153, decision 83 Mbps (ref 93/153/83)"
+LOSO-nes-f3,C1 feature order/units,True,"L1 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s'], L2 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s', 'l1_pred__throughput_gbps', 'l1_pred__cpu_pct', 'l1_pred__gtpu_packets_dn__packets_lost_delta', 'l1_pred__downlink_one_way_delay_distribution__weighted_mean_delay_us']; 0.1 Gbps -> [[100000.0, 100000.0]] kbit/s (UL:=DL)"
+LOSO-nes-f3,C2 variant mapping,True,"{'DPDK': 'dpdk', 'USR': 'usr_full'}; manifest keys 10"
+LOSO-nes-f3,C3 reproduces saved held-out predictions,True,"max |diff|/max(1,|ref|) = 2.83e-16"
+LOSO-nes-f3,C4 env code path == direct predictions,True,max |diff| = 8.88e-16
+LOSO-nes-f3,C5 grid predictions == threshold_grid_predictions.csv.gz,True,max rel diff = 2.18e-16
+LOSO-nes-f3,"C6 finite, power >= 0 after clip",True,"{""DPDK"": {""finite"": true, ""min_power_after_clip"": 0.8198283136805959, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.0046590007930214115}, ""USR"": {""finite"": true, ""min_power_after_clip"": 0.017194879370167435, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.5473830293417923}}"
+LOSO-nes-f3,C7 derived thresholds == threshold_stability.csv,True,"break-even 90, QoS 150, decision 80 Mbps (ref 90/150/80)"
+LOSO-nes-f4,C1 feature order/units,True,"L1 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s'], L2 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s', 'l1_pred__throughput_gbps', 'l1_pred__cpu_pct', 'l1_pred__gtpu_packets_dn__packets_lost_delta', 'l1_pred__downlink_one_way_delay_distribution__weighted_mean_delay_us']; 0.1 Gbps -> [[100000.0, 100000.0]] kbit/s (UL:=DL)"
+LOSO-nes-f4,C2 variant mapping,True,"{'DPDK': 'dpdk', 'USR': 'usr_full'}; manifest keys 10"
+LOSO-nes-f4,C3 reproduces saved held-out predictions,True,"max |diff|/max(1,|ref|) = 2.41e-16"
+LOSO-nes-f4,C4 env code path == direct predictions,True,max |diff| = 1.33e-15
+LOSO-nes-f4,C5 grid predictions == threshold_grid_predictions.csv.gz,True,max rel diff = 2.09e-16
+LOSO-nes-f4,"C6 finite, power >= 0 after clip",True,"{""DPDK"": {""finite"": true, ""min_power_after_clip"": 0.8192717672535065, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.001486915146708961}, ""USR"": {""finite"": true, ""min_power_after_clip"": 0.01786800945664943, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.5473830293417923}}"
+LOSO-nes-f4,C7 derived thresholds == threshold_stability.csv,True,"break-even 93, QoS 149, decision 83 Mbps (ref 93/149/83)"
+LOLO-nes-f0,C1 feature order/units,True,"L1 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s'], L2 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s', 'l1_pred__throughput_gbps', 'l1_pred__cpu_pct', 'l1_pred__gtpu_packets_dn__packets_lost_delta', 'l1_pred__downlink_one_way_delay_distribution__weighted_mean_delay_us']; 0.1 Gbps -> [[100000.0, 100000.0]] kbit/s (UL:=DL)"
+LOLO-nes-f0,C2 variant mapping,True,"{'DPDK': 'dpdk', 'USR': 'usr_full'}; manifest keys 10"
+LOLO-nes-f0,C3 reproduces saved held-out predictions,True,"max |diff|/max(1,|ref|) = 2.22e-16"
+LOLO-nes-f0,C4 env code path == direct predictions,True,max |diff| = 8.88e-16
+LOLO-nes-f0,C5 grid predictions == threshold_grid_predictions.csv.gz,True,max rel diff = 2.23e-16
+LOLO-nes-f0,"C6 finite, power >= 0 after clip",True,"{""DPDK"": {""finite"": true, ""min_power_after_clip"": 0.8177704550971348, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.0002973830293417922}, ""USR"": {""finite"": true, ""min_power_after_clip"": 0.10412884769931963, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.7025178429817605}}"
+LOLO-nes-f0,C7 derived thresholds == threshold_stability.csv,True,"break-even 62, QoS 149, decision 52 Mbps (ref 62/149/52)"
+LOLO-nes-f1,C1 feature order/units,True,"L1 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s'], L2 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s', 'l1_pred__throughput_gbps', 'l1_pred__cpu_pct', 'l1_pred__gtpu_packets_dn__packets_lost_delta', 'l1_pred__downlink_one_way_delay_distribution__weighted_mean_delay_us']; 0.1 Gbps -> [[100000.0, 100000.0]] kbit/s (UL:=DL)"
+LOLO-nes-f1,C2 variant mapping,True,"{'DPDK': 'dpdk', 'USR': 'usr_full'}; manifest keys 10"
+LOLO-nes-f1,C3 reproduces saved held-out predictions,True,"max |diff|/max(1,|ref|) = 2.09e-16"
+LOLO-nes-f1,C4 env code path == direct predictions,True,max |diff| = 0.00e+00
+LOLO-nes-f1,C5 grid predictions == threshold_grid_predictions.csv.gz,True,max rel diff = 2.09e-16
+LOLO-nes-f1,"C6 finite, power >= 0 after clip",True,"{""DPDK"": {""finite"": true, ""min_power_after_clip"": 0.8185921330713231, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.0046590007930214115}, ""USR"": {""finite"": true, ""min_power_after_clip"": 0.09240216353976072, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.7101506740681999}}"
+LOLO-nes-f1,C7 derived thresholds == threshold_stability.csv,True,"break-even 61, QoS 149, decision 51 Mbps (ref 61/149/51)"
+LOLO-nes-f2,C1 feature order/units,True,"L1 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s'], L2 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s', 'l1_pred__throughput_gbps', 'l1_pred__cpu_pct', 'l1_pred__gtpu_packets_dn__packets_lost_delta', 'l1_pred__downlink_one_way_delay_distribution__weighted_mean_delay_us']; 0.1 Gbps -> [[100000.0, 100000.0]] kbit/s (UL:=DL)"
+LOLO-nes-f2,C2 variant mapping,True,"{'DPDK': 'dpdk', 'USR': 'usr_full'}; manifest keys 10"
+LOLO-nes-f2,C3 reproduces saved held-out predictions,True,"max |diff|/max(1,|ref|) = 2.22e-16"
+LOLO-nes-f2,C4 env code path == direct predictions,True,max |diff| = 2.22e-16
+LOLO-nes-f2,C5 grid predictions == threshold_grid_predictions.csv.gz,True,max rel diff = 2.09e-16
+LOLO-nes-f2,"C6 finite, power >= 0 after clip",True,"{""DPDK"": {""finite"": true, ""min_power_after_clip"": 0.8184732522749614, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.001486915146708961}, ""USR"": {""finite"": true, ""min_power_after_clip"": 0.07074632278408499, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 1.0}}"
+LOLO-nes-f2,C7 derived thresholds == threshold_stability.csv,True,"break-even 70, QoS 0, decision 0 Mbps (ref 70/0/0)"
+LOLO-nes-f3,C1 feature order/units,True,"L1 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s'], L2 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s', 'l1_pred__throughput_gbps', 'l1_pred__cpu_pct', 'l1_pred__gtpu_packets_dn__packets_lost_delta', 'l1_pred__downlink_one_way_delay_distribution__weighted_mean_delay_us']; 0.1 Gbps -> [[100000.0, 100000.0]] kbit/s (UL:=DL)"
+LOLO-nes-f3,C2 variant mapping,True,"{'DPDK': 'dpdk', 'USR': 'usr_full'}; manifest keys 10"
+LOLO-nes-f3,C3 reproduces saved held-out predictions,True,"max |diff|/max(1,|ref|) = 2.22e-16"
+LOLO-nes-f3,C4 env code path == direct predictions,True,max |diff| = 8.88e-16
+LOLO-nes-f3,C5 grid predictions == threshold_grid_predictions.csv.gz,True,max rel diff = 2.09e-16
+LOLO-nes-f3,"C6 finite, power >= 0 after clip",True,"{""DPDK"": {""finite"": true, ""min_power_after_clip"": 0.8185354952287645, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.001486915146708961}, ""USR"": {""finite"": true, ""min_power_after_clip"": 0.0, ""share_raw_negative_power"": 0.0008921490880253767, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.9310071371927042}}"
+LOLO-nes-f3,C7 derived thresholds == threshold_stability.csv,True,"break-even 72, QoS 0, decision 0 Mbps (ref 72/0/0)"
+LOLO-nes-f4,C1 feature order/units,True,"L1 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s'], L2 ['gtpu_kbitss_dn__kbits_tx_s', 'gtpu_kbitss_ngran__gtpu_kbits_tx_s', 'l1_pred__throughput_gbps', 'l1_pred__cpu_pct', 'l1_pred__gtpu_packets_dn__packets_lost_delta', 'l1_pred__downlink_one_way_delay_distribution__weighted_mean_delay_us']; 0.1 Gbps -> [[100000.0, 100000.0]] kbit/s (UL:=DL)"
+LOLO-nes-f4,C2 variant mapping,True,"{'DPDK': 'dpdk', 'USR': 'usr_full'}; manifest keys 10"
+LOLO-nes-f4,C3 reproduces saved held-out predictions,True,"max |diff|/max(1,|ref|) = 2.40e-16"
+LOLO-nes-f4,C4 env code path == direct predictions,True,max |diff| = 0.00e+00
+LOLO-nes-f4,C5 grid predictions == threshold_grid_predictions.csv.gz,True,max rel diff = 2.29e-16
+LOLO-nes-f4,"C6 finite, power >= 0 after clip",True,"{""DPDK"": {""finite"": true, ""min_power_after_clip"": 0.818091258173314, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.001486915146708961}, ""USR"": {""finite"": true, ""min_power_after_clip"": 0.061712216785026586, ""share_raw_negative_power"": 0.0, ""usr_or_dpdk_unsafe_share_on_test_loads"": 0.7101506740681999}}"
+LOLO-nes-f4,C7 derived thresholds == threshold_stability.csv,True,"break-even 81, QoS 149, decision 71 Mbps (ref 81/149/71)"

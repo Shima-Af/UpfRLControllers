@@ -1,0 +1,6 @@
+outs:
+- md5: 5764f97637dd8fa1d81da13455f6256c.dir
+  size: 283059742
+  nfiles: 260
+  hash: md5
+  path: bundles

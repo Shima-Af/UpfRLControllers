@@ -1,0 +1,35 @@
+grid: 32 cells, 0 already done, 32 to run, 16-way parallel
+[1/32] [done] mappo_lineA_a1_K10_s4  train=233s  total=265s  reward=-5613  unsafe=0.50%  | elapsed 4m eta 138m
+[2/32] [done] mappo_lineA_a0.75_K10_s1  train=291s  total=328s  reward=-5734  unsafe=0.29%  | elapsed 6m eta 83m
+[3/32] [done] mappo_lineA_a0.75_K10_s5  train=296s  total=335s  reward=-5680  unsafe=0.25%  | elapsed 6m eta 54m
+[4/32] [done] mappo_lineA_a0.75_K10_s4  train=320s  total=362s  reward=-5763  unsafe=0.30%  | elapsed 6m eta 42m
+[5/32] [done] mappo_lineA_a1_K10_s1  train=326s  total=369s  reward=-5674  unsafe=0.53%  | elapsed 6m eta 33m
+[6/32] [done] mappo_lineA_a1_K10_s2  train=338s  total=384s  reward=-5619  unsafe=0.51%  | elapsed 6m eta 28m
+[7/32] [done] mappo_lineA_a1_K10_s6  train=342s  total=390s  reward=-5624  unsafe=0.52%  | elapsed 7m eta 23m
+[8/32] [done] mappo_lineA_a0.75_K10_s8  train=343s  total=391s  reward=-5693  unsafe=0.23%  | elapsed 7m eta 20m
+[9/32] [done] mappo_lineA_a0.75_K10_s7  train=347s  total=395s  reward=-5744  unsafe=0.24%  | elapsed 7m eta 17m
+[10/32] [done] mappo_lineA_a0.75_K10_s2  train=349s  total=397s  reward=-5697  unsafe=0.25%  | elapsed 7m eta 15m
+[11/32] [done] mappo_lineA_a1_K10_s7  train=349s  total=398s  reward=-5586  unsafe=0.53%  | elapsed 7m eta 13m
+[12/32] [done] mappo_lineA_a1_K10_s8  train=351s  total=399s  reward=-5580  unsafe=0.48%  | elapsed 7m eta 11m
+[13/32] [done] mappo_lineA_a1_K10_s5  train=352s  total=400s  reward=-5574  unsafe=0.48%  | elapsed 7m eta 10m
+[14/32] [done] mappo_lineA_a0.75_K10_s3  train=352s  total=401s  reward=-5692  unsafe=0.26%  | elapsed 7m eta 9m
+[15/32] [done] mappo_lineA_a0.75_K10_s6  train=353s  total=401s  reward=-5868  unsafe=0.38%  | elapsed 7m eta 8m
+[16/32] [done] mappo_lineA_a1_K10_s3  train=354s  total=401s  reward=-5611  unsafe=0.50%  | elapsed 7m eta 7m
+[17/32] [done] mappo_lineA_a0.5_K10_s1  train=324s  total=357s  reward=-6620  unsafe=0.21%  | elapsed 10m eta 9m
+[18/32] [done] mappo_lineA_a0.5_K10_s4  train=292s  total=330s  reward=-6639  unsafe=0.23%  | elapsed 12m eta 9m
+[19/32] [done] mappo_lineA_a0.5_K10_s3  train=327s  total=365s  reward=-6630  unsafe=0.22%  | elapsed 12m eta 8m
+[20/32] [done] mappo_lineA_a0.5_K10_s2  train=340s  total=377s  reward=-6629  unsafe=0.23%  | elapsed 12m eta 7m
+[21/32] [done] mappo_lineA_a0.5_K10_s8  train=291s  total=328s  reward=-6706  unsafe=0.26%  | elapsed 12m eta 6m
+[22/32] [done] mappo_lineA_a0.25_K10_s4  train=295s  total=333s  reward=-8077  unsafe=0.29%  | elapsed 12m eta 6m
+[23/32] [done] mappo_lineA_a0.25_K10_s2  train=311s  total=350s  reward=-8087  unsafe=0.26%  | elapsed 13m eta 5m
+[24/32] [done] mappo_lineA_a0.5_K10_s5  train=348s  total=387s  reward=-6722  unsafe=0.33%  | elapsed 13m eta 4m
+[25/32] [done] mappo_lineA_a0.25_K10_s8  train=322s  total=361s  reward=-8000  unsafe=0.21%  | elapsed 13m eta 4m
+[26/32] [done] mappo_lineA_a0.5_K10_s6  train=353s  total=392s  reward=-6704  unsafe=0.29%  | elapsed 13m eta 3m
+[27/32] [done] mappo_lineA_a0.25_K10_s1  train=345s  total=384s  reward=-8124  unsafe=0.32%  | elapsed 13m eta 2m
+[28/32] [done] mappo_lineA_a0.5_K10_s7  train=352s  total=391s  reward=-6640  unsafe=0.18%  | elapsed 13m eta 2m
+[29/32] [done] mappo_lineA_a0.25_K10_s6  train=344s  total=383s  reward=-8028  unsafe=0.24%  | elapsed 13m eta 1m
+[30/32] [done] mappo_lineA_a0.25_K10_s7  train=352s  total=391s  reward=-8071  unsafe=0.28%  | elapsed 13m eta 1m
+[31/32] [done] mappo_lineA_a0.25_K10_s5  train=353s  total=392s  reward=-8054  unsafe=0.28%  | elapsed 13m eta 0m
+[32/32] [done] mappo_lineA_a0.25_K10_s3  train=356s  total=395s  reward=-8106  unsafe=0.27%  | elapsed 13m eta 0m
+
+finished in 13.3 min; 0 failed

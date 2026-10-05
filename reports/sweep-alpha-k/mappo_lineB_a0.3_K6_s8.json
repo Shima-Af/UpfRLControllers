@@ -1,0 +1,132 @@
+{
+  "tag": "mappo_lineB_a0.3_K6_s8",
+  "line": "B",
+  "alpha": 0.3,
+  "K": 6,
+  "seed": 8,
+  "arch": "mappo",
+  "total_timesteps": 200000,
+  "train_seconds": 220.3,
+  "wall_seconds": 248.2,
+  "thresholds": {
+    "decision_gbps": 0.081,
+    "qos_limit_gbps": 0.149,
+    "energy_breakeven_gbps": 0.091,
+    "t_up_gbps": 0.081,
+    "t_down_gbps": 0.0
+  },
+  "results": {
+    "mappo": {
+      "steps": 1009,
+      "K": 6,
+      "total_reward": -3616.4106315666204,
+      "per_cluster_reward": [
+        -607.200881007246,
+        -893.369260188243,
+        -861.6568592137523,
+        -211.9733070991161,
+        -733.3680132068145,
+        -308.84231085144836
+      ],
+      "total_energy_wh": 1004.715368018069,
+      "agg_unsafe_rate": 0.0009910802775024777,
+      "agg_qos_violation_rate": 0.0009910802775024777,
+      "agg_usr_rate": 0.2974892632969937,
+      "agg_n_switches": 203
+    },
+    "always_dpdk": {
+      "steps": 1009,
+      "K": 6,
+      "total_reward": -9697.1688120299,
+      "per_cluster_reward": [
+        -925.2410675070304,
+        -4402.3163525876425,
+        -2893.4275101344083,
+        -211.97330709911603,
+        -949.8493903106154,
+        -314.361184391085
+      ],
+      "total_energy_wh": 1241.5005334780706,
+      "agg_unsafe_rate": 0.0,
+      "agg_qos_violation_rate": 0.0,
+      "agg_usr_rate": 0.0,
+      "agg_n_switches": 0
+    },
+    "always_usr": {
+      "steps": 1009,
+      "K": 6,
+      "total_reward": -74217.35166803263,
+      "per_cluster_reward": [
+        -12367.671659309319,
+        -902.5554524729869,
+        -3729.5282735593846,
+        -25130.929597209244,
+        -8767.380054064915,
+        -23319.28663141678
+      ],
+      "total_energy_wh": 2241.4123109303055,
+      "agg_unsafe_rate": 0.46597291047241496,
+      "agg_qos_violation_rate": 0.46597291047241496,
+      "agg_usr_rate": 1.0,
+      "agg_n_switches": 0
+    },
+    "hysteresis": {
+      "steps": 1009,
+      "K": 6,
+      "total_reward": -3800.947282600346,
+      "per_cluster_reward": [
+        -659.5093311553002,
+        -917.087729319646,
+        -864.335819380625,
+        -211.9733070991161,
+        -834.9833657713664,
+        -313.0577298742924
+      ],
+      "total_energy_wh": 1013.0787577431701,
+      "agg_unsafe_rate": 0.0019821605550049554,
+      "agg_qos_violation_rate": 0.0019821605550049554,
+      "agg_usr_rate": 0.30806078625702016,
+      "agg_n_switches": 107,
+      "t_up_mbps": 81.0,
+      "t_down_mbps": 61.0
+    },
+    "hysteresis_auto": {
+      "steps": 1009,
+      "K": 6,
+      "total_reward": -7880.757534540415,
+      "per_cluster_reward": [
+        -925.2410675070304,
+        -2585.90507509816,
+        -2893.427510134408,
+        -211.9733070991161,
+        -949.8493903106154,
+        -314.36118439108503
+      ],
+      "total_energy_wh": 1168.9001371987285,
+      "agg_unsafe_rate": 0.0,
+      "agg_qos_violation_rate": 0.0,
+      "agg_usr_rate": 0.0853980839114635,
+      "agg_n_switches": 1,
+      "t_up_mbps": 81.0,
+      "t_down_mbps": 0.0
+    },
+    "threshold": {
+      "steps": 1009,
+      "K": 6,
+      "total_reward": -4029.0800241737957,
+      "per_cluster_reward": [
+        -652.203700404886,
+        -910.9456144934902,
+        -1042.1889456027977,
+        -211.97330709911606,
+        -901.0647425230643,
+        -310.7037140504414
+      ],
+      "total_energy_wh": 1006.9145321331642,
+      "agg_unsafe_rate": 0.004129501156260324,
+      "agg_qos_violation_rate": 0.004129501156260324,
+      "agg_usr_rate": 0.34076643541460194,
+      "agg_n_switches": 231
+    }
+  }
+}

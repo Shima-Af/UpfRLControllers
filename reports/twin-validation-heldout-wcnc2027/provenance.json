@@ -1,0 +1,125 @@
+{
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-134-generic-x86_64-with-glibc2.39",
+  "sklearn": "1.8.0",
+  "numpy": "2.4.4",
+  "pandas": "3.0.3",
+  "input_hashes": {
+    "data/interim/merged.csv": {
+      "md5": "3d6d4c6ec7b7e3f9e18d2482563aa023",
+      "expected_thesis_v1": "3d6d4c6ec7b7e3f9e18d2482563aa023",
+      "match": true
+    },
+    "data/processed/features.csv": {
+      "md5": "04497319167520a102d66985238ad005",
+      "expected_thesis_v1": "04497319167520a102d66985238ad005",
+      "match": true
+    },
+    "src/features.py": {
+      "md5": "7bd9edc0143b47ec52a8b325ea42a3b8",
+      "expected_thesis_v1": "7bd9edc0143b47ec52a8b325ea42a3b8",
+      "match": true
+    },
+    "src/train.py": {
+      "md5": "95a7ec21ea37f02aa3f1ee837f56e9e4",
+      "expected_thesis_v1": "95a7ec21ea37f02aa3f1ee837f56e9e4",
+      "match": true
+    },
+    "src/merge.py": {
+      "md5": "ab49fd74f3a4d492182c45436369ef52",
+      "expected_thesis_v1": "ab49fd74f3a4d492182c45436369ef52",
+      "match": true
+    },
+    "src/ingest.py": {
+      "md5": "4d24c1f9d2c5c37dec10da396da70607",
+      "expected_thesis_v1": "4d24c1f9d2c5c37dec10da396da70607",
+      "match": true
+    },
+    "pinned models dir (controller data/external/profiling_twin/models)": {
+      "md5": "a92ad2caa7f058b85e582261594b17b4.dir",
+      "nfiles": 32,
+      "expected_thesis_v1": "a92ad2caa7f058b85e582261594b17b4.dir",
+      "match": true
+    },
+    "configs/scenario_rl.yaml": {
+      "md5": "3caa755301f2e14fb124cc07d67d988c"
+    }
+  },
+  "dataset": {
+    "rows": 8781,
+    "rows_by_upf": {
+      "USR": 4393,
+      "DPDK": 4388
+    },
+    "runs": 220,
+    "runs_by_upf": {
+      "USR": 110,
+      "DPDK": 110
+    },
+    "samples_per_run_min_median_max": [
+      39,
+      40.0,
+      41
+    ],
+    "load_levels_per_upf": 22,
+    "runs_per_level": 5,
+    "sweeps_per_upf": 5,
+    "reporting_interval_s": 3.0,
+    "max_rel_dev_run_load_from_level": 0.02441951219512191,
+    "offered_dl_load_range_gbps": {
+      "DPDK": [
+        9e-06,
+        5.001227
+      ],
+      "USR": [
+        9e-06,
+        5.001235
+      ]
+    },
+    "campaign_time_span": {
+      "DPDK": [
+        "2025-01-03 16:25:39",
+        "2025-01-04 01:50:15"
+      ],
+      "USR": [
+        "2025-01-13 13:09:06",
+        "2025-01-13 21:03:36"
+      ]
+    },
+    "ul_over_dl_offered_median": {
+      "DPDK": 1.0224,
+      "USR": 1.0224
+    },
+    "run_dir_rebuilt_from_merged_csv_and_verified_equal_to_features_csv": true,
+    "untracked_features_with_run_csv_run_dir_agrees": true
+  },
+  "original_split": {
+    "definition": "sklearn train_test_split(test_size=0.2, random_state=42) per variant, row level (src/train.py)",
+    "validation_split": "none (model family chosen by best TEST R2; hyper-parameters by ungrouped 5-fold KFold on train rows)",
+    "leakage": {
+      "DPDK": {
+        "n_train": 3510,
+        "n_test": 878,
+        "test_runs": 110,
+        "train_runs": 110,
+        "test_rows_whose_run_is_in_train_pct": 100.0,
+        "median_train_rows_from_same_run_per_test_row": 31.0,
+        "test_load_levels_present_in_train_pct": 100.0
+      },
+      "USR": {
+        "n_train": 3514,
+        "n_test": 879,
+        "test_runs": 110,
+        "train_runs": 110,
+        "test_rows_whose_run_is_in_train_pct": 100.0,
+        "median_train_rows_from_same_run_per_test_row": 31.0,
+        "test_load_levels_present_in_train_pct": 100.0
+      }
+    },
+    "max_abs_diff_vs_manifest": {
+      "r2": 3.3306690738754696e-15,
+      "mae": 9.094947017729282e-13,
+      "rmse": 3.637978807091713e-12
+    }
+  }
+}

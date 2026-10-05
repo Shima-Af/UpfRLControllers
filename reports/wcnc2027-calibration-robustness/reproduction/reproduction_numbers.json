@@ -1,0 +1,53 @@
+{
+ "part1": {
+  "n_checks": 843,
+  "n_failed": 0
+ },
+ "part1_by_check": [
+  {
+   "check": "1a Task-C rollout",
+   "size": 720,
+   "sum": 720
+  },
+  {
+   "check": "1b v04twin.json",
+   "size": 122,
+   "sum": 122
+  },
+  {
+   "check": "1c replay == closed loop (pinned)",
+   "size": 1,
+   "sum": 1
+  }
+ ],
+ "part2_rows": {
+  "Always-DPDK": true,
+  "Centralized PPO": false,
+  "Hysteresis (b=50)": true,
+  "IPPO": true,
+  "MAPPO": true
+ },
+ "traced": {
+  "MAPPO": {
+   "1": "MAPPO|mappo_pool_off_seed1_20260526T162327/mappo_best.pt",
+   "7": "MAPPO|mappo_pool_off_seed7_20260526T162327/mappo_best.pt",
+   "13": "MAPPO|mappo_pool_off_seed13_20260526T162327/mappo_best.pt",
+   "23": "MAPPO|mappo_nr_seed23/mappo_best.pt",
+   "42": "MAPPO|mappo_seed42_20260526T143637/mappo_best.pt",
+   "64": "MAPPO|mappo_nr_seed64/mappo_best.pt",
+   "77": "MAPPO|mappo_pool_off_seed77_20260526T162327/mappo_best.pt",
+   "99": "MAPPO|mappo_nr_seed99/mappo_best.pt"
+  },
+  "IPPO": {
+   "1": "IPPO|ippo_nr_seed1",
+   "7": "IPPO|ippo_nr_seed7",
+   "13": "IPPO|ippo_nr_seed13",
+   "23": "IPPO|ippo_nr_seed23",
+   "42": "IPPO|ippo_nr_seed42",
+   "64": "IPPO|ippo_nr_seed64",
+   "77": "IPPO|ippo_nr_seed77",
+   "99": "IPPO|ippo_nr_seed99"
+  }
+ },
+ "centralized_traced": false
+}

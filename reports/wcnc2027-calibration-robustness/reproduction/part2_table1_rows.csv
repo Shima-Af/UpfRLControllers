@@ -1,0 +1,32 @@
+row,metric,table1,reproduced,abs_diff,tol,passed,note
+MAPPO,reward,-5655.0,-5655.250744449886,0.2507444498860423,0.5,True,"8/8 seeds traced: [1, 7, 13, 23, 42, 64, 77, 99]"
+MAPPO,sd,98.0,97.63526837549055,0.36473162450944585,0.5,True,"8/8 seeds traced: [1, 7, 13, 23, 42, 64, 77, 99]"
+MAPPO,n,8.0,8.0,0.0,0.0,True,"8/8 seeds traced: [1, 7, 13, 23, 42, 64, 77, 99]"
+MAPPO,wh,1966.0,1965.8044297268816,0.19557027311839192,0.5,True,"8/8 seeds traced: [1, 7, 13, 23, 42, 64, 77, 99]"
+MAPPO,qosv,0.54,0.5401387512388462,0.0001387512388462131,0.005,True,"8/8 seeds traced: [1, 7, 13, 23, 42, 64, 77, 99]"
+MAPPO,usr,8.1,8.071110009910797,0.02888999008920301,0.05,True,"8/8 seeds traced: [1, 7, 13, 23, 42, 64, 77, 99]"
+MAPPO,swd,2.92,2.916154608523291,0.003845391476708926,0.005,True,"8/8 seeds traced: [1, 7, 13, 23, 42, 64, 77, 99]"
+IPPO,reward,-5812.0,-5812.081464980493,0.08146498049336515,0.5,True,"8/8 seeds traced: [1, 7, 13, 23, 42, 64, 77, 99]"
+IPPO,sd,110.0,109.81143082912523,0.18856917087477143,0.5,True,"8/8 seeds traced: [1, 7, 13, 23, 42, 64, 77, 99]"
+IPPO,n,8.0,8.0,0.0,0.0,True,"8/8 seeds traced: [1, 7, 13, 23, 42, 64, 77, 99]"
+IPPO,wh,1973.0,1973.230908962019,0.23090896201892974,0.5,True,"8/8 seeds traced: [1, 7, 13, 23, 42, 64, 77, 99]"
+IPPO,qosv,0.57,0.5735877106045525,0.003587710604552541,0.005,True,"8/8 seeds traced: [1, 7, 13, 23, 42, 64, 77, 99]"
+IPPO,usr,8.2,8.17393458870168,0.026065411298318963,0.05,True,"8/8 seeds traced: [1, 7, 13, 23, 42, 64, 77, 99]"
+IPPO,swd,1.99,1.9908820614469775,0.0008820614469775556,0.005,True,"8/8 seeds traced: [1, 7, 13, 23, 42, 64, 77, 99]"
+Hysteresis (b=50),reward,-6261.0,-6261.313888672984,0.3138886729839214,0.5,True,"t_up 81, t_down 31 Mbps, cooldown 1"
+Hysteresis (b=50),wh,1995.0,1994.5894074379637,0.41059256203629957,0.5,True,"t_up 81, t_down 31 Mbps, cooldown 1"
+Hysteresis (b=50),qosv,0.68,0.6838453914767001,0.003845391476700044,0.005,True,"t_up 81, t_down 31 Mbps, cooldown 1"
+Hysteresis (b=50),usr,7.5,7.472745292368679,0.027254707631320763,0.05,True,"t_up 81, t_down 31 Mbps, cooldown 1"
+Hysteresis (b=50),swd,1.06,1.0560951437066404,0.003904856293359682,0.005,True,"t_up 81, t_down 31 Mbps, cooldown 1"
+Always-DPDK,reward,-7201.0,-7201.084827726418,0.08482772641764313,0.5,True,
+Always-DPDK,wh,2071.0,2070.724111926966,0.2758880730339115,0.5,True,
+Always-DPDK,qosv,0.38,0.37661050545094,0.0033894945490600126,0.005,True,
+Always-DPDK,usr,0.0,0.0,0.0,0.05,True,
+Always-DPDK,swd,0.0,0.0,0.0,0.005,True,
+Centralized PPO,reward,-8542.0,-8576.080416134264,34.08041613426394,0.5,False,NOT traced: 433762 four-distinct-seed combinations of 73 checkpoints searched (0 match reward mean and SD only); closest shown (Centralized PPO|wcnc2027_ablation/central_seed42/ppo_multi_site.zip ; Centralized PPO|ppo_multi_site_seed99_20260516T092259/ppo_multi_site.zip ; Centralized PPO|central_nr_seed7/best_model.zip ; Centralized PPO|central_nr_seed77/ppo_multi_site_final.zip)
+Centralized PPO,sd,1744.0,1696.5404596977176,47.45954030228245,0.5,False,NOT traced: 433762 four-distinct-seed combinations of 73 checkpoints searched (0 match reward mean and SD only); closest shown (Centralized PPO|wcnc2027_ablation/central_seed42/ppo_multi_site.zip ; Centralized PPO|ppo_multi_site_seed99_20260516T092259/ppo_multi_site.zip ; Centralized PPO|central_nr_seed7/best_model.zip ; Centralized PPO|central_nr_seed77/ppo_multi_site_final.zip)
+Centralized PPO,n,4.0,4.0,0.0,0.0,True,NOT traced: 433762 four-distinct-seed combinations of 73 checkpoints searched (0 match reward mean and SD only); closest shown (Centralized PPO|wcnc2027_ablation/central_seed42/ppo_multi_site.zip ; Centralized PPO|ppo_multi_site_seed99_20260516T092259/ppo_multi_site.zip ; Centralized PPO|central_nr_seed7/best_model.zip ; Centralized PPO|central_nr_seed77/ppo_multi_site_final.zip)
+Centralized PPO,wh,2066.0,2070.498998939702,4.498998939701778,0.5,False,NOT traced: 433762 four-distinct-seed combinations of 73 checkpoints searched (0 match reward mean and SD only); closest shown (Centralized PPO|wcnc2027_ablation/central_seed42/ppo_multi_site.zip ; Centralized PPO|ppo_multi_site_seed99_20260516T092259/ppo_multi_site.zip ; Centralized PPO|central_nr_seed7/best_model.zip ; Centralized PPO|central_nr_seed77/ppo_multi_site_final.zip)
+Centralized PPO,qosv,1.18,1.13478691774033,0.04521308225966991,0.005,False,NOT traced: 433762 four-distinct-seed combinations of 73 checkpoints searched (0 match reward mean and SD only); closest shown (Centralized PPO|wcnc2027_ablation/central_seed42/ppo_multi_site.zip ; Centralized PPO|ppo_multi_site_seed99_20260516T092259/ppo_multi_site.zip ; Centralized PPO|central_nr_seed7/best_model.zip ; Centralized PPO|central_nr_seed77/ppo_multi_site_final.zip)
+Centralized PPO,usr,4.3,3.904856293359757,0.3951437066402428,0.05,False,NOT traced: 433762 four-distinct-seed combinations of 73 checkpoints searched (0 match reward mean and SD only); closest shown (Centralized PPO|wcnc2027_ablation/central_seed42/ppo_multi_site.zip ; Centralized PPO|ppo_multi_site_seed99_20260516T092259/ppo_multi_site.zip ; Centralized PPO|central_nr_seed7/best_model.zip ; Centralized PPO|central_nr_seed77/ppo_multi_site_final.zip)
+Centralized PPO,swd,0.44,0.4971258671952428,0.05712586719524282,0.005,False,NOT traced: 433762 four-distinct-seed combinations of 73 checkpoints searched (0 match reward mean and SD only); closest shown (Centralized PPO|wcnc2027_ablation/central_seed42/ppo_multi_site.zip ; Centralized PPO|ppo_multi_site_seed99_20260516T092259/ppo_multi_site.zip ; Centralized PPO|central_nr_seed7/best_model.zip ; Centralized PPO|central_nr_seed77/ppo_multi_site_final.zip)

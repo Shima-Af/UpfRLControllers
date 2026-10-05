@@ -1,0 +1,42 @@
+{
+ "generated": "2026-09-17T15:06:45",
+ "repo_head_now": "71a1b2fc8ab94b33979fc1f399f4c4dacd2e1f57",
+ "repo_branch_now": "chore/cleanup-research-vs-library",
+ "repo_head_at_training": "71a1b2fc8ab94b33979fc1f399f4c4dacd2e1f57",
+ "code_files_unchanged_since_launch": true,
+ "code_files_untracked": [
+  "src/trainers/shared_ppo.py",
+  "scripts/train_shared_ppo.py"
+ ],
+ "training_started": "2026-09-14T04:03:32+02:00",
+ "training_finished": "2026-09-14T04:10:22+02:00",
+ "twin": {
+  "url": "https://github.com/Shima-Af/UpfDigitalTwin.git",
+  "vcs_info": {
+   "commit_id": "95de4569689e1278db4cda7475aa14229da83ba9",
+   "requested_revision": "v0.4.0",
+   "vcs": "git"
+  }
+ },
+ "scenario_sha256": "f4637a758a80981016a4b12478311d2aac86f4f36bcfb6361612d4971272e4fa",
+ "traffic_test_sha256": {
+  "predictions_test.npy": "bd679942f8cd3f4b6f254c8243c821274e5c156327518978a9e9dc0a7444551f",
+  "targets_test.npy": "b49aafe548a6d8f6277c9207b0781665e0004b35635568ddf48f404499b51403"
+ },
+ "config_differences_other_than_seed": [],
+ "param_counts": {
+  "MAPPO": {
+   "actor": 5250,
+   "critic": 35850
+  },
+  "Shared-PPO": {
+   "actor": 5250,
+   "critic": 18561
+  }
+ },
+ "checkpoints_match_calibration_inventory": true,
+ "n_checkpoints_checked_against_inventory": 16,
+ "rollouts_identical_actions": true,
+ "selection_shared_earlier_than_mappo": 8,
+ "selection_mappo_higher_val": 8
+}

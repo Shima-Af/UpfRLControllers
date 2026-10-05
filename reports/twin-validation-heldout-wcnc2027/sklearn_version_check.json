@@ -1,0 +1,22 @@
+{
+  "files": [
+    "pinned_predictions_sklearn1.7.0.npz",
+    "pinned_predictions_sklearn1.7.2.npz",
+    "pinned_predictions_sklearn1.8.0.npz"
+  ],
+  "reference": "pinned_predictions_sklearn1.7.0.npz",
+  "max_abs_diff": {
+    "pinned_predictions_sklearn1.7.2.npz": {
+      "DPDK_samples": 3.637978807091713e-12,
+      "DPDK_grid": 5.4569682106375694e-12,
+      "USR_samples": 2.3283064365386963e-10,
+      "USR_grid": 1.1641532182693481e-10
+    },
+    "pinned_predictions_sklearn1.8.0.npz": {
+      "DPDK_samples": 3.637978807091713e-12,
+      "DPDK_grid": 5.4569682106375694e-12,
+      "USR_samples": 1.1641532182693481e-10,
+      "USR_grid": 1.1641532182693481e-10
+    }
+  }
+}

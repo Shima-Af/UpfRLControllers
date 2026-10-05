@@ -1,0 +1,390 @@
+{
+ "checks": {
+  "1": {
+   "sec_recon_max_rel_err": 0.0,
+   "max_abs_delta_reward_when_agree_same_state": 3.552713678800501e-14
+  },
+  "7": {
+   "sec_recon_max_rel_err": 0.0,
+   "max_abs_delta_reward_when_agree_same_state": 2.1316282072803006e-14
+  },
+  "13": {
+   "sec_recon_max_rel_err": 0.0,
+   "max_abs_delta_reward_when_agree_same_state": 3.197442310920451e-14
+  },
+  "23": {
+   "sec_recon_max_rel_err": 0.0,
+   "max_abs_delta_reward_when_agree_same_state": 1.7763568394002505e-14
+  },
+  "42": {
+   "sec_recon_max_rel_err": 0.0,
+   "max_abs_delta_reward_when_agree_same_state": 2.1316282072803006e-14
+  },
+  "64": {
+   "sec_recon_max_rel_err": 0.0,
+   "max_abs_delta_reward_when_agree_same_state": 4.263256414560601e-14
+  },
+  "77": {
+   "sec_recon_max_rel_err": 0.0,
+   "max_abs_delta_reward_when_agree_same_state": 4.263256414560601e-14
+  },
+  "99": {
+   "sec_recon_max_rel_err": 0.0,
+   "max_abs_delta_reward_when_agree_same_state": 2.4868995751603507e-14
+  }
+ },
+ "totals_per_seed": {
+  "1": {
+   "delta_reward": -292.347,
+   "delta_energy_term": -84.669,
+   "delta_qos_penalty": 379.936,
+   "delta_switch_penalty": 0.455,
+   "delta_cooldown_penalty": -3.375,
+   "delta_wh_total": -13.069,
+   "delta_wh_steady": -13.183,
+   "delta_viol": 17.0,
+   "delta_q_below_tau": 17.0
+  },
+  "7": {
+   "delta_reward": -4.148,
+   "delta_energy_term": 47.01,
+   "delta_qos_penalty": -44.112,
+   "delta_switch_penalty": 0.0,
+   "delta_cooldown_penalty": 1.25,
+   "delta_wh_total": 5.854,
+   "delta_wh_steady": 5.854,
+   "delta_viol": -2.0,
+   "delta_q_below_tau": -2.0
+  },
+  "13": {
+   "delta_reward": 22.653,
+   "delta_energy_term": 136.373,
+   "delta_qos_penalty": -142.225,
+   "delta_switch_penalty": -1.176,
+   "delta_cooldown_penalty": -15.625,
+   "delta_wh_total": 13.981,
+   "delta_wh_steady": 14.275,
+   "delta_viol": -6.0,
+   "delta_q_below_tau": -6.0
+  },
+  "23": {
+   "delta_reward": -75.222,
+   "delta_energy_term": -50.077,
+   "delta_qos_penalty": 132.3,
+   "delta_switch_penalty": 0.0,
+   "delta_cooldown_penalty": -7.0,
+   "delta_wh_total": -8.034,
+   "delta_wh_steady": -8.034,
+   "delta_viol": 6.0,
+   "delta_q_below_tau": 6.0
+  },
+  "42": {
+   "delta_reward": -45.988,
+   "delta_energy_term": -139.187,
+   "delta_qos_penalty": 171.449,
+   "delta_switch_penalty": 1.1,
+   "delta_cooldown_penalty": 12.625,
+   "delta_wh_total": -17.758,
+   "delta_wh_steady": -18.033,
+   "delta_viol": 8.0,
+   "delta_q_below_tau": 8.0
+  },
+  "64": {
+   "delta_reward": -93.355,
+   "delta_energy_term": -29.089,
+   "delta_qos_penalty": 110.262,
+   "delta_switch_penalty": 0.683,
+   "delta_cooldown_penalty": 11.5,
+   "delta_wh_total": -3.753,
+   "delta_wh_steady": -3.923,
+   "delta_viol": 5.0,
+   "delta_q_below_tau": 5.0
+  },
+  "77": {
+   "delta_reward": -77.488,
+   "delta_energy_term": -39.867,
+   "delta_qos_penalty": 137.337,
+   "delta_switch_penalty": -0.607,
+   "delta_cooldown_penalty": -19.375,
+   "delta_wh_total": -5.803,
+   "delta_wh_steady": -5.652,
+   "delta_viol": 6.0,
+   "delta_q_below_tau": 6.0
+  },
+  "99": {
+   "delta_reward": -97.256,
+   "delta_energy_term": -44.072,
+   "delta_qos_penalty": 110.225,
+   "delta_switch_penalty": 1.479,
+   "delta_cooldown_penalty": 29.625,
+   "delta_wh_total": -5.07,
+   "delta_wh_steady": -5.44,
+   "delta_viol": 5.0,
+   "delta_q_below_tau": 5.0
+  }
+ },
+ "totals_mean_over_seeds": {
+  "delta_reward": -82.894,
+  "delta_energy_term": -25.447,
+  "delta_qos_penalty": 106.896,
+  "delta_switch_penalty": 0.242,
+  "delta_cooldown_penalty": 1.203,
+  "delta_wh_total": -4.207,
+  "delta_wh_steady": -4.267,
+  "delta_viol": 4.875,
+  "delta_q_below_tau": 4.875
+ },
+ "by_category_mean_over_seeds": {
+  "MAPPO USR / Shared-PPO DPDK": {
+   "delta_reward": -31.717,
+   "delta_energy_term": 35.124,
+   "delta_qos_penalty": -3.375,
+   "delta_switch_penalty": 0.421,
+   "delta_cooldown_penalty": -0.453,
+   "delta_wh_total": 3.828,
+   "n_cells": 40.875
+  },
+  "Shared-PPO USR / MAPPO DPDK": {
+   "delta_reward": 65.033,
+   "delta_energy_term": -60.564,
+   "delta_qos_penalty": 0.0,
+   "delta_switch_penalty": -1.25,
+   "delta_cooldown_penalty": -3.219,
+   "delta_wh_total": -8.332,
+   "n_cells": 109.5
+  },
+  "agree, different prev/cooldown": {
+   "delta_reward": -116.21,
+   "delta_energy_term": -0.007,
+   "delta_qos_penalty": 110.271,
+   "delta_switch_penalty": 1.07,
+   "delta_cooldown_penalty": 4.875,
+   "delta_wh_total": 0.298,
+   "n_cells": 3260.0
+  },
+  "agree, same state": {
+   "delta_reward": -0.0,
+   "delta_energy_term": -0.0,
+   "delta_qos_penalty": 0.0,
+   "delta_switch_penalty": 0.0,
+   "delta_cooldown_penalty": 0.0,
+   "delta_wh_total": 0.0,
+   "n_cells": 6679.625
+  }
+ },
+ "by_category_and_risk_mean_over_seeds": [
+  {
+   "category": "MAPPO USR / Shared-PPO DPDK",
+   "usr_risk_class": "USR QoS-risky",
+   "delta_reward": 27.084,
+   "delta_energy_term": -0.084,
+   "delta_qos_penalty": -27.0,
+   "delta_switch_penalty": -0.0,
+   "delta_cooldown_penalty": 0.0,
+   "static_energy_term": -0.084,
+   "static_qos_penalty": -27.0,
+   "delta_wh_total": -0.657,
+   "delta_wh_steady": -0.657,
+   "n_cells": 1.0,
+   "n_same_observation": 1.0,
+   "n_switch_step_either": 1.0,
+   "n_prev_upf_differs": 0.0
+  },
+  {
+   "category": "MAPPO USR / Shared-PPO DPDK",
+   "usr_risk_class": "USR no saving",
+   "delta_reward": -0.441,
+   "delta_energy_term": -0.097,
+   "delta_qos_penalty": 0.0,
+   "delta_switch_penalty": 0.038,
+   "delta_cooldown_penalty": 0.5,
+   "static_energy_term": -0.099,
+   "static_qos_penalty": 0.0,
+   "delta_wh_total": -0.016,
+   "delta_wh_steady": -0.025,
+   "n_cells": 1.0,
+   "n_same_observation": 1.0,
+   "n_switch_step_either": 1.0,
+   "n_prev_upf_differs": 0.0
+  },
+  {
+   "category": "MAPPO USR / Shared-PPO DPDK",
+   "usr_risk_class": "USR safe saving",
+   "delta_reward": -35.047,
+   "delta_energy_term": 35.146,
+   "delta_qos_penalty": 0.0,
+   "delta_switch_penalty": 0.416,
+   "delta_cooldown_penalty": -0.516,
+   "static_energy_term": 35.36,
+   "static_qos_penalty": 0.0,
+   "delta_wh_total": 3.912,
+   "delta_wh_steady": 3.808,
+   "n_cells": 40.625,
+   "n_same_observation": 27.5,
+   "n_switch_step_either": 32.875,
+   "n_prev_upf_differs": 7.875
+  },
+  {
+   "category": "Shared-PPO USR / MAPPO DPDK",
+   "usr_risk_class": "USR no saving",
+   "delta_reward": 0.389,
+   "delta_energy_term": 0.242,
+   "delta_qos_penalty": 0.0,
+   "delta_switch_penalty": -0.106,
+   "delta_cooldown_penalty": -0.525,
+   "static_energy_term": 0.247,
+   "static_qos_penalty": 0.0,
+   "delta_wh_total": 0.034,
+   "delta_wh_steady": 0.061,
+   "n_cells": 4.2,
+   "n_same_observation": 2.8,
+   "n_switch_step_either": 3.0,
+   "n_prev_upf_differs": 1.2
+  },
+  {
+   "category": "Shared-PPO USR / MAPPO DPDK",
+   "usr_risk_class": "USR safe saving",
+   "delta_reward": 64.79,
+   "delta_energy_term": -60.715,
+   "delta_qos_penalty": 0.0,
+   "delta_switch_penalty": -1.184,
+   "delta_cooldown_penalty": -2.891,
+   "static_energy_term": -61.129,
+   "static_qos_penalty": 0.0,
+   "delta_wh_total": -8.354,
+   "delta_wh_steady": -8.058,
+   "n_cells": 106.875,
+   "n_same_observation": 61.375,
+   "n_switch_step_either": 74.125,
+   "n_prev_upf_differs": 33.0
+  },
+  {
+   "category": "agree, different prev/cooldown",
+   "usr_risk_class": "MAPPO enters USR, Shared-PPO already in USR",
+   "delta_reward": 7.505,
+   "delta_energy_term": -0.272,
+   "delta_qos_penalty": 0.0,
+   "delta_switch_penalty": -0.001,
+   "delta_cooldown_penalty": -7.232,
+   "static_energy_term": 0.0,
+   "static_qos_penalty": 0.0,
+   "delta_wh_total": -0.017,
+   "delta_wh_steady": -0.016,
+   "n_cells": 34.857,
+   "n_same_observation": 0.0,
+   "n_switch_step_either": 34.857,
+   "n_prev_upf_differs": 34.857
+  },
+  {
+   "category": "agree, different prev/cooldown",
+   "usr_risk_class": "MAPPO exits USR, Shared-PPO already in DPDK",
+   "delta_reward": 47.71,
+   "delta_energy_term": 0.025,
+   "delta_qos_penalty": -40.636,
+   "delta_switch_penalty": -0.742,
+   "delta_cooldown_penalty": -6.357,
+   "static_energy_term": 0.0,
+   "static_qos_penalty": 0.0,
+   "delta_wh_total": -0.195,
+   "delta_wh_steady": -0.009,
+   "n_cells": 19.571,
+   "n_same_observation": 0.0,
+   "n_switch_step_either": 19.571,
+   "n_prev_upf_differs": 19.571
+  },
+  {
+   "category": "agree, different prev/cooldown",
+   "usr_risk_class": "Shared-PPO enters USR, MAPPO already in USR",
+   "delta_reward": -3.663,
+   "delta_energy_term": 0.163,
+   "delta_qos_penalty": 0.0,
+   "delta_switch_penalty": 0.0,
+   "delta_cooldown_penalty": 3.5,
+   "static_energy_term": 0.0,
+   "static_qos_penalty": 0.0,
+   "delta_wh_total": 0.008,
+   "delta_wh_steady": 0.008,
+   "n_cells": 15.75,
+   "n_same_observation": 0.0,
+   "n_switch_step_either": 15.75,
+   "n_prev_upf_differs": 15.75
+  },
+  {
+   "category": "agree, different prev/cooldown",
+   "usr_risk_class": "Shared-PPO exits USR, MAPPO already in DPDK",
+   "delta_reward": -160.531,
+   "delta_energy_term": 0.046,
+   "delta_qos_penalty": 145.828,
+   "delta_switch_penalty": 1.72,
+   "delta_cooldown_penalty": 12.938,
+   "static_energy_term": 0.0,
+   "static_qos_penalty": 0.0,
+   "delta_wh_total": 0.475,
+   "delta_wh_steady": 0.045,
+   "n_cells": 45.375,
+   "n_same_observation": 0.0,
+   "n_switch_step_either": 45.375,
+   "n_prev_upf_differs": 45.375
+  },
+  {
+   "category": "agree, different prev/cooldown",
+   "usr_risk_class": "both switch",
+   "delta_reward": -0.328,
+   "delta_energy_term": -0.0,
+   "delta_qos_penalty": 0.0,
+   "delta_switch_penalty": 0.0,
+   "delta_cooldown_penalty": 0.328,
+   "static_energy_term": 0.0,
+   "static_qos_penalty": 0.0,
+   "delta_wh_total": -0.0,
+   "delta_wh_steady": -0.0,
+   "n_cells": 64.75,
+   "n_same_observation": 33.75,
+   "n_switch_step_either": 64.75,
+   "n_prev_upf_differs": 0.0
+  },
+  {
+   "category": "agree, different prev/cooldown",
+   "usr_risk_class": "no switch, cooldown counter differs",
+   "delta_reward": 0.0,
+   "delta_energy_term": -0.0,
+   "delta_qos_penalty": 0.0,
+   "delta_switch_penalty": 0.0,
+   "delta_cooldown_penalty": 0.0,
+   "static_energy_term": 0.0,
+   "static_qos_penalty": 0.0,
+   "delta_wh_total": -0.0,
+   "delta_wh_steady": -0.0,
+   "n_cells": 3086.5,
+   "n_same_observation": 2794.875,
+   "n_switch_step_either": 0.0,
+   "n_prev_upf_differs": 0.0
+  }
+ ],
+ "by_category_and_risk_n_seeds_positive_delta_qos": {
+  "MAPPO USR / Shared-PPO DPDK | USR QoS-risky": 0,
+  "MAPPO USR / Shared-PPO DPDK | USR no saving": 0,
+  "MAPPO USR / Shared-PPO DPDK | USR safe saving": 0,
+  "Shared-PPO USR / MAPPO DPDK | USR no saving": 0,
+  "Shared-PPO USR / MAPPO DPDK | USR safe saving": 0,
+  "agree, different prev/cooldown | MAPPO enters USR, Shared-PPO already in USR": 0,
+  "agree, different prev/cooldown | MAPPO exits USR, Shared-PPO already in DPDK": 0,
+  "agree, different prev/cooldown | Shared-PPO enters USR, MAPPO already in USR": 0,
+  "agree, different prev/cooldown | Shared-PPO exits USR, MAPPO already in DPDK": 7,
+  "agree, different prev/cooldown | both switch": 4,
+  "agree, different prev/cooldown | no switch, cooldown counter differs": 1
+ },
+ "disagreement_cells_total": 1203,
+ "disagreement_cells_per_seed": {
+  "1": 268,
+  "7": 119,
+  "13": 139,
+  "23": 140,
+  "42": 208,
+  "64": 87,
+  "77": 138,
+  "99": 104
+ },
+ "share_disagreements_same_observation": 0.6043225270157938,
+ "share_disagreements_prev_upf_differs": 0.27680798004987534
+}

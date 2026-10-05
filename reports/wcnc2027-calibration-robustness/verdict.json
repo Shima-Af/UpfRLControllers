@@ -1,0 +1,321 @@
+{
+ "S1|primary|A": {
+  "set": "S1",
+  "set_label": "manuscript checkpoints (MAPPO/IPPO traced to Table I; centralized = v0.4 substitute set)",
+  "tier": "primary",
+  "experiment": "A",
+  "role": "PRIMARY VERDICT",
+  "n_worlds": 10,
+  "n1_MAPPO_first": 9,
+  "r_I_delta_IPPO_nonpositive": 0,
+  "r_H_delta_hyst_nonpositive": 0,
+  "p1_MAPPO_dominated": 0,
+  "m_magnitude_raw_pareto_ok": 8,
+  "verdict": "B",
+  "worlds_MAPPO_not_first": [
+   "LOLO-dep-f2"
+  ],
+  "worlds_delta_IPPO_nonpositive": [],
+  "worlds_delta_hyst_nonpositive": [],
+  "worlds_MAPPO_dominated": [],
+  "worlds_failing_m": [
+   "LOSO-dep-f2",
+   "LOLO-dep-f2"
+  ]
+ },
+ "S1|primary|B": {
+  "set": "S1",
+  "set_label": "manuscript checkpoints (MAPPO/IPPO traced to Table I; centralized = v0.4 substitute set)",
+  "tier": "primary",
+  "experiment": "B",
+  "role": "secondary",
+  "n_worlds": 10,
+  "n1_MAPPO_first": 9,
+  "r_I_delta_IPPO_nonpositive": 0,
+  "r_H_delta_hyst_nonpositive": 0,
+  "p1_MAPPO_dominated": 0,
+  "m_magnitude_raw_pareto_ok": 8,
+  "verdict": "B",
+  "worlds_MAPPO_not_first": [
+   "LOLO-dep-f2"
+  ],
+  "worlds_delta_IPPO_nonpositive": [],
+  "worlds_delta_hyst_nonpositive": [],
+  "worlds_MAPPO_dominated": [],
+  "worlds_failing_m": [
+   "LOSO-dep-f2",
+   "LOLO-dep-f2"
+  ]
+ },
+ "S1|secondary|A": {
+  "set": "S1",
+  "set_label": "manuscript checkpoints (MAPPO/IPPO traced to Table I; centralized = v0.4 substitute set)",
+  "tier": "secondary",
+  "experiment": "A",
+  "role": "secondary",
+  "n_worlds": 10,
+  "n1_MAPPO_first": 8,
+  "r_I_delta_IPPO_nonpositive": 2,
+  "r_H_delta_hyst_nonpositive": 0,
+  "p1_MAPPO_dominated": 1,
+  "m_magnitude_raw_pareto_ok": 8,
+  "verdict": "C",
+  "worlds_MAPPO_not_first": [
+   "LOLO-nes-f2",
+   "LOLO-nes-f3"
+  ],
+  "worlds_delta_IPPO_nonpositive": [
+   "LOLO-nes-f2",
+   "LOLO-nes-f3"
+  ],
+  "worlds_delta_hyst_nonpositive": [],
+  "worlds_MAPPO_dominated": [
+   "LOLO-nes-f2"
+  ],
+  "worlds_failing_m": [
+   "LOLO-nes-f2",
+   "LOLO-nes-f3"
+  ]
+ },
+ "S1|secondary|B": {
+  "set": "S1",
+  "set_label": "manuscript checkpoints (MAPPO/IPPO traced to Table I; centralized = v0.4 substitute set)",
+  "tier": "secondary",
+  "experiment": "B",
+  "role": "secondary",
+  "n_worlds": 10,
+  "n1_MAPPO_first": 8,
+  "r_I_delta_IPPO_nonpositive": 2,
+  "r_H_delta_hyst_nonpositive": 2,
+  "p1_MAPPO_dominated": 0,
+  "m_magnitude_raw_pareto_ok": 7,
+  "verdict": "C",
+  "worlds_MAPPO_not_first": [
+   "LOLO-nes-f2",
+   "LOLO-nes-f3"
+  ],
+  "worlds_delta_IPPO_nonpositive": [
+   "LOLO-nes-f2",
+   "LOLO-nes-f3"
+  ],
+  "worlds_delta_hyst_nonpositive": [
+   "LOLO-nes-f2",
+   "LOLO-nes-f3"
+  ],
+  "worlds_MAPPO_dominated": [],
+  "worlds_failing_m": [
+   "LOSO-nes-f2",
+   "LOLO-nes-f2",
+   "LOLO-nes-f3"
+  ]
+ },
+ "S2|primary|A": {
+  "set": "S2",
+  "set_label": "same-code revision set (cohort R)",
+  "tier": "primary",
+  "experiment": "A",
+  "role": "secondary",
+  "n_worlds": 10,
+  "n1_MAPPO_first": 9,
+  "r_I_delta_IPPO_nonpositive": 0,
+  "r_H_delta_hyst_nonpositive": 0,
+  "p1_MAPPO_dominated": 0,
+  "m_magnitude_raw_pareto_ok": 9,
+  "verdict": "A",
+  "worlds_MAPPO_not_first": [
+   "LOLO-dep-f2"
+  ],
+  "worlds_delta_IPPO_nonpositive": [],
+  "worlds_delta_hyst_nonpositive": [],
+  "worlds_MAPPO_dominated": [],
+  "worlds_failing_m": [
+   "LOLO-dep-f2"
+  ]
+ },
+ "S2|primary|B": {
+  "set": "S2",
+  "set_label": "same-code revision set (cohort R)",
+  "tier": "primary",
+  "experiment": "B",
+  "role": "secondary",
+  "n_worlds": 10,
+  "n1_MAPPO_first": 9,
+  "r_I_delta_IPPO_nonpositive": 0,
+  "r_H_delta_hyst_nonpositive": 0,
+  "p1_MAPPO_dominated": 0,
+  "m_magnitude_raw_pareto_ok": 9,
+  "verdict": "A",
+  "worlds_MAPPO_not_first": [
+   "LOLO-dep-f2"
+  ],
+  "worlds_delta_IPPO_nonpositive": [],
+  "worlds_delta_hyst_nonpositive": [],
+  "worlds_MAPPO_dominated": [],
+  "worlds_failing_m": [
+   "LOLO-dep-f2"
+  ]
+ },
+ "S2|secondary|A": {
+  "set": "S2",
+  "set_label": "same-code revision set (cohort R)",
+  "tier": "secondary",
+  "experiment": "A",
+  "role": "secondary",
+  "n_worlds": 10,
+  "n1_MAPPO_first": 8,
+  "r_I_delta_IPPO_nonpositive": 0,
+  "r_H_delta_hyst_nonpositive": 0,
+  "p1_MAPPO_dominated": 0,
+  "m_magnitude_raw_pareto_ok": 8,
+  "verdict": "B",
+  "worlds_MAPPO_not_first": [
+   "LOLO-nes-f2",
+   "LOLO-nes-f3"
+  ],
+  "worlds_delta_IPPO_nonpositive": [],
+  "worlds_delta_hyst_nonpositive": [],
+  "worlds_MAPPO_dominated": [],
+  "worlds_failing_m": [
+   "LOLO-nes-f2",
+   "LOLO-nes-f3"
+  ]
+ },
+ "S2|secondary|B": {
+  "set": "S2",
+  "set_label": "same-code revision set (cohort R)",
+  "tier": "secondary",
+  "experiment": "B",
+  "role": "secondary",
+  "n_worlds": 10,
+  "n1_MAPPO_first": 8,
+  "r_I_delta_IPPO_nonpositive": 0,
+  "r_H_delta_hyst_nonpositive": 2,
+  "p1_MAPPO_dominated": 0,
+  "m_magnitude_raw_pareto_ok": 8,
+  "verdict": "C",
+  "worlds_MAPPO_not_first": [
+   "LOLO-nes-f2",
+   "LOLO-nes-f3"
+  ],
+  "worlds_delta_IPPO_nonpositive": [],
+  "worlds_delta_hyst_nonpositive": [
+   "LOLO-nes-f2",
+   "LOLO-nes-f3"
+  ],
+  "worlds_MAPPO_dominated": [],
+  "worlds_failing_m": [
+   "LOLO-nes-f2",
+   "LOLO-nes-f3"
+  ]
+ },
+ "S3|primary|A": {
+  "set": "S3",
+  "set_label": "v0.4 re-scored set (cohort P)",
+  "tier": "primary",
+  "experiment": "A",
+  "role": "secondary",
+  "n_worlds": 10,
+  "n1_MAPPO_first": 9,
+  "r_I_delta_IPPO_nonpositive": 0,
+  "r_H_delta_hyst_nonpositive": 0,
+  "p1_MAPPO_dominated": 0,
+  "m_magnitude_raw_pareto_ok": 8,
+  "verdict": "B",
+  "worlds_MAPPO_not_first": [
+   "LOLO-dep-f2"
+  ],
+  "worlds_delta_IPPO_nonpositive": [],
+  "worlds_delta_hyst_nonpositive": [],
+  "worlds_MAPPO_dominated": [],
+  "worlds_failing_m": [
+   "LOSO-dep-f2",
+   "LOLO-dep-f2"
+  ]
+ },
+ "S3|primary|B": {
+  "set": "S3",
+  "set_label": "v0.4 re-scored set (cohort P)",
+  "tier": "primary",
+  "experiment": "B",
+  "role": "secondary",
+  "n_worlds": 10,
+  "n1_MAPPO_first": 9,
+  "r_I_delta_IPPO_nonpositive": 0,
+  "r_H_delta_hyst_nonpositive": 0,
+  "p1_MAPPO_dominated": 0,
+  "m_magnitude_raw_pareto_ok": 8,
+  "verdict": "B",
+  "worlds_MAPPO_not_first": [
+   "LOLO-dep-f2"
+  ],
+  "worlds_delta_IPPO_nonpositive": [],
+  "worlds_delta_hyst_nonpositive": [],
+  "worlds_MAPPO_dominated": [],
+  "worlds_failing_m": [
+   "LOSO-dep-f2",
+   "LOLO-dep-f2"
+  ]
+ },
+ "S3|secondary|A": {
+  "set": "S3",
+  "set_label": "v0.4 re-scored set (cohort P)",
+  "tier": "secondary",
+  "experiment": "A",
+  "role": "secondary",
+  "n_worlds": 10,
+  "n1_MAPPO_first": 8,
+  "r_I_delta_IPPO_nonpositive": 2,
+  "r_H_delta_hyst_nonpositive": 0,
+  "p1_MAPPO_dominated": 2,
+  "m_magnitude_raw_pareto_ok": 8,
+  "verdict": "C",
+  "worlds_MAPPO_not_first": [
+   "LOLO-nes-f2",
+   "LOLO-nes-f3"
+  ],
+  "worlds_delta_IPPO_nonpositive": [
+   "LOLO-nes-f2",
+   "LOLO-nes-f3"
+  ],
+  "worlds_delta_hyst_nonpositive": [],
+  "worlds_MAPPO_dominated": [
+   "LOLO-nes-f2",
+   "LOLO-nes-f3"
+  ],
+  "worlds_failing_m": [
+   "LOLO-nes-f2",
+   "LOLO-nes-f3"
+  ]
+ },
+ "S3|secondary|B": {
+  "set": "S3",
+  "set_label": "v0.4 re-scored set (cohort P)",
+  "tier": "secondary",
+  "experiment": "B",
+  "role": "secondary",
+  "n_worlds": 10,
+  "n1_MAPPO_first": 8,
+  "r_I_delta_IPPO_nonpositive": 2,
+  "r_H_delta_hyst_nonpositive": 2,
+  "p1_MAPPO_dominated": 0,
+  "m_magnitude_raw_pareto_ok": 8,
+  "verdict": "C",
+  "worlds_MAPPO_not_first": [
+   "LOLO-nes-f2",
+   "LOLO-nes-f3"
+  ],
+  "worlds_delta_IPPO_nonpositive": [
+   "LOLO-nes-f2",
+   "LOLO-nes-f3"
+  ],
+  "worlds_delta_hyst_nonpositive": [
+   "LOLO-nes-f2",
+   "LOLO-nes-f3"
+  ],
+  "worlds_MAPPO_dominated": [],
+  "worlds_failing_m": [
+   "LOLO-nes-f2",
+   "LOLO-nes-f3"
+  ]
+ }
+}

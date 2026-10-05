@@ -1,0 +1,844 @@
+check,item,metric,ours,ref,abs_diff,tol,passed,note
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed1/ppo_multi_site.zip,reward,-20316.76671776184,-20316.766717761846,7.275957614183426e-12,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed1/ppo_multi_site.zip,energy_wh,2201.4992153479943,2201.4992153479943,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed1/ppo_multi_site.zip,energy_penalty,5756.518939731139,5756.51893973114,9.094947017729282e-13,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed1/ppo_multi_site.zip,qos_penalty,14517.9904878307,14517.990487830706,5.4569682106375694e-12,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed1/ppo_multi_site.zip,switch_penalty,2.8822902,2.8822902,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed1/ppo_multi_site.zip,cooldown_penalty,39.375,39.375,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed1/ppo_multi_site.zip,qos_violation_rate,0.0620416253716551,0.062041625371655106,6.938893903907228e-18,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed1/ppo_multi_site.zip,usr_share,0.1322101090188305,0.1322101090188305,0.0,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed1/ppo_multi_site.zip,switches,150.0,150.0,0.0,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed1/ppo_multi_site.zip,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed7/ppo_multi_site.zip,reward,-11568.362887050083,-11568.362887050083,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed7/ppo_multi_site.zip,energy_wh,2097.629793591723,2097.629793591723,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed7/ppo_multi_site.zip,energy_penalty,5786.716369814648,5786.716369814649,9.094947017729282e-13,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed7/ppo_multi_site.zip,qos_penalty,5772.740552235438,5772.740552235435,3.637978807091713e-12,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed7/ppo_multi_site.zip,switch_penalty,0.5309650000000001,0.5309650000000001,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed7/ppo_multi_site.zip,cooldown_penalty,8.375,8.375,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed7/ppo_multi_site.zip,qos_violation_rate,0.0254707631318136,0.02547076313181368,7.979727989493313e-17,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed7/ppo_multi_site.zip,usr_share,0.097621407333994,0.09762140733399405,4.163336342344337e-17,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed7/ppo_multi_site.zip,switches,29.0,29.0,0.0,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed7/ppo_multi_site.zip,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed13/ppo_multi_site.zip,reward,-11179.335499376451,-11179.335499376451,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed13/ppo_multi_site.zip,energy_wh,2089.127738897684,2089.127738897684,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed13/ppo_multi_site.zip,energy_penalty,5739.840144092513,5739.840144092512,9.094947017729282e-13,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed13/ppo_multi_site.zip,qos_penalty,5419.842124483941,5419.842124483938,2.7284841053187847e-12,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed13/ppo_multi_site.zip,switch_penalty,1.4032308000000002,1.4032308000000002,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed13/ppo_multi_site.zip,cooldown_penalty,18.25,18.25,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed13/ppo_multi_site.zip,qos_violation_rate,0.0238850346878097,0.02388503468780971,1.0408340855860843e-17,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed13/ppo_multi_site.zip,usr_share,0.0924677898909811,0.09246778989098117,6.938893903907228e-17,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed13/ppo_multi_site.zip,switches,74.0,74.0,0.0,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed13/ppo_multi_site.zip,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed23/ppo_multi_site.zip,reward,-18575.363956326943,-18575.363956326946,3.637978807091713e-12,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed23/ppo_multi_site.zip,energy_wh,2137.626141509546,2137.626141509546,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed23/ppo_multi_site.zip,energy_penalty,5187.330102306327,5187.330102306328,9.094947017729282e-13,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed23/ppo_multi_site.zip,qos_penalty,13139.619751220613,13139.61975122062,7.275957614183426e-12,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed23/ppo_multi_site.zip,switch_penalty,13.5391028,13.5391028,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed23/ppo_multi_site.zip,cooldown_penalty,234.875,234.875,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed23/ppo_multi_site.zip,qos_violation_rate,0.0563924677898909,0.05639246778989098,8.326672684688674e-17,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed23/ppo_multi_site.zip,usr_share,0.1505450941526263,0.15054509415262637,8.326672684688674e-17,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed23/ppo_multi_site.zip,switches,712.0,712.0,0.0,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed23/ppo_multi_site.zip,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed42/ppo_multi_site.zip,reward,-7369.532818375773,-7369.532818375774,9.094947017729282e-13,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed42/ppo_multi_site.zip,energy_wh,2062.6394408171363,2062.6394408171363,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed42/ppo_multi_site.zip,energy_penalty,5945.197257111818,5945.197257111818,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed42/ppo_multi_site.zip,qos_penalty,1415.8270692639553,1415.8270692639555,2.2737367544323206e-13,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed42/ppo_multi_site.zip,switch_penalty,0.758492,0.758492,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed42/ppo_multi_site.zip,cooldown_penalty,7.75,7.75,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed42/ppo_multi_site.zip,qos_violation_rate,0.0057482656095143,0.005748265609514371,7.112366251504909e-17,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed42/ppo_multi_site.zip,usr_share,0.0142715559960356,0.01427155599603568,7.979727989493313e-17,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed42/ppo_multi_site.zip,switches,39.0,39.0,0.0,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed42/ppo_multi_site.zip,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed64/ppo_multi_site.zip,reward,-8207.590539094766,-8207.590539094766,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed64/ppo_multi_site.zip,energy_wh,2046.76462519314,2046.76462519314,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed64/ppo_multi_site.zip,energy_penalty,5433.001863253436,5433.001863253436,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed64/ppo_multi_site.zip,qos_penalty,2758.7191442413305,2758.7191442413305,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed64/ppo_multi_site.zip,switch_penalty,1.7445316000000002,1.7445316000000002,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed64/ppo_multi_site.zip,cooldown_penalty,14.125,14.125,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed64/ppo_multi_site.zip,qos_violation_rate,0.0117938553022794,0.011793855302279485,8.500145032286355e-17,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed64/ppo_multi_site.zip,usr_share,0.0515361744301288,0.05153617443012884,4.163336342344337e-17,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed64/ppo_multi_site.zip,switches,89.0,89.0,0.0,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed64/ppo_multi_site.zip,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed77/ppo_multi_site.zip,reward,-27822.841507894045,-27822.84150789405,3.637978807091713e-12,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed77/ppo_multi_site.zip,energy_wh,2285.322715314765,2285.3227153147654,4.547473508864641e-13,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed77/ppo_multi_site.zip,energy_penalty,5307.467846446612,5307.467846446612,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed77/ppo_multi_site.zip,qos_penalty,22505.602390247437,22505.602390247434,3.637978807091713e-12,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed77/ppo_multi_site.zip,switch_penalty,1.8962712,1.8962712000000002,2.220446049250313e-16,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed77/ppo_multi_site.zip,cooldown_penalty,7.875,7.875,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed77/ppo_multi_site.zip,qos_violation_rate,0.0970267591674925,0.09702675916749257,6.938893903907228e-17,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed77/ppo_multi_site.zip,usr_share,0.231615460852329,0.23161546085232904,2.7755575615628914e-17,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed77/ppo_multi_site.zip,switches,98.0,98.0,0.0,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed77/ppo_multi_site.zip,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed99/ppo_multi_site.zip,reward,-15161.238590906589,-15161.238590906585,3.637978807091713e-12,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed99/ppo_multi_site.zip,energy_wh,2132.128482565674,2132.128482565674,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed99/ppo_multi_site.zip,energy_penalty,5683.606686783964,5683.606686783964,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed99/ppo_multi_site.zip,qos_penalty,9446.475670322625,9446.475670322623,1.8189894035458565e-12,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed99/ppo_multi_site.zip,switch_penalty,3.9062338,3.9062338000000003,4.440892098500626e-16,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed99/ppo_multi_site.zip,cooldown_penalty,27.25,27.25,0.0,0.01,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed99/ppo_multi_site.zip,qos_violation_rate,0.0402378592666006,0.0402378592666006,0.0,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed99/ppo_multi_site.zip,usr_share,0.1179385530227948,0.11793855302279485,5.551115123125783e-17,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed99/ppo_multi_site.zip,switches,205.0,205.0,0.0,1e-09,True,Centralized PPO
+1a Task-C rollout,Centralized PPO|wcnc2027_ablation/central_seed99/ppo_multi_site.zip,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,Centralized PPO
+1a Task-C rollout,"Hysteresis (fixed, t_up=81, b=50 Mbps)|-",reward,-6262.135125110266,-6262.135125110266,0.0,0.01,True,Hysteresis (b=50 Mbps)
+1a Task-C rollout,"Hysteresis (fixed, t_up=81, b=50 Mbps)|-",energy_wh,1994.794716547284,1994.7947165472842,2.2737367544323206e-13,0.01,True,Hysteresis (b=50 Mbps)
+1a Task-C rollout,"Hysteresis (fixed, t_up=81, b=50 Mbps)|-",energy_penalty,4583.7406978301215,4583.7406978301215,0.0,0.01,True,Hysteresis (b=50 Mbps)
+1a Task-C rollout,"Hysteresis (fixed, t_up=81, b=50 Mbps)|-",qos_penalty,1674.6456496801443,1674.6456496801452,9.094947017729282e-13,0.01,True,Hysteresis (b=50 Mbps)
+1a Task-C rollout,"Hysteresis (fixed, t_up=81, b=50 Mbps)|-",switch_penalty,2.1237776,2.1237776,0.0,0.01,True,Hysteresis (b=50 Mbps)
+1a Task-C rollout,"Hysteresis (fixed, t_up=81, b=50 Mbps)|-",cooldown_penalty,1.625,1.625,0.0,0.01,True,Hysteresis (b=50 Mbps)
+1a Task-C rollout,"Hysteresis (fixed, t_up=81, b=50 Mbps)|-",qos_violation_rate,0.006838453914767,0.006838453914767096,9.540979117872439e-17,1e-09,True,Hysteresis (b=50 Mbps)
+1a Task-C rollout,"Hysteresis (fixed, t_up=81, b=50 Mbps)|-",usr_share,0.0747274529236868,0.07472745292368682,2.7755575615628914e-17,1e-09,True,Hysteresis (b=50 Mbps)
+1a Task-C rollout,"Hysteresis (fixed, t_up=81, b=50 Mbps)|-",switches,111.0,111.0,0.0,1e-09,True,Hysteresis (b=50 Mbps)
+1a Task-C rollout,"Hysteresis (fixed, t_up=81, b=50 Mbps)|-",per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,Hysteresis (b=50 Mbps)
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed1,reward,-5777.110554812833,-5777.110554812833,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed1,energy_wh,1975.021889349075,1975.0218893490749,2.2737367544323206e-13,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed1,energy_penalty,4328.05984708435,4328.05984708435,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed1,qos_penalty,1422.4815493284823,1422.4815493284827,4.547473508864641e-13,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed1,switch_penalty,3.9441584,3.9441584,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed1,cooldown_penalty,22.625,22.625,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed1,qos_violation_rate,0.0056491575817641,0.005649157581764123,2.3418766925686896e-17,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed1,usr_share,0.0806739345887016,0.08067393458870169,8.326672684688674e-17,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed1,switches,207.0,207.0,0.0,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed1,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed7,reward,-5848.010539532997,-5848.010539532998,9.094947017729282e-13,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed7,energy_wh,1975.5970330634964,1975.5970330634962,2.2737367544323206e-13,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed7,energy_penalty,4390.899354881947,4390.899354881947,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed7,qos_penalty,1421.0420262510506,1421.0420262510515,9.094947017729282e-13,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed7,switch_penalty,3.9441584,3.9441584,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed7,cooldown_penalty,32.125,32.125,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed7,qos_violation_rate,0.0056491575817641,0.005649157581764123,2.3418766925686896e-17,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed7,usr_share,0.0780971258671952,0.07809712586719525,5.551115123125783e-17,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed7,switches,207.0,207.0,0.0,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed7,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed13,reward,-5730.714488021969,-5730.714488021969,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed13,energy_wh,1976.5704541272,1976.5704541271996,4.547473508864641e-13,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed13,energy_penalty,4377.257318005627,4377.257318005627,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed13,qos_penalty,1327.8922576163422,1327.8922576163422,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed13,switch_penalty,3.5649124,3.5649124,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed13,cooldown_penalty,22.0,22.0,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed13,qos_violation_rate,0.0052527254707631,0.005252725470763132,3.209238430557093e-17,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed13,usr_share,0.0758176412289395,0.07581764122893954,4.163336342344337e-17,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed13,switches,187.0,187.0,0.0,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed13,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed23,reward,-5871.134786122521,-5871.134786122522,9.094947017729282e-13,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed23,energy_wh,1966.92079064918,1966.9207906491795,4.547473508864641e-13,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed23,energy_penalty,4295.843439899368,4295.843439899368,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed23,qos_penalty,1541.2291680231538,1541.2291680231542,4.547473508864641e-13,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed23,switch_penalty,4.4371782,4.4371782,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed23,cooldown_penalty,29.625,29.625,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed23,qos_violation_rate,0.0061446977205153,0.006144697720515362,6.158268339717665e-17,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed23,usr_share,0.088800792864222,0.088800792864222,0.0,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed23,switches,233.0,233.0,0.0,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed23,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed42,reward,-5742.219859392808,-5742.21985939281,1.8189894035458565e-12,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed42,energy_wh,1968.7631906202453,1968.763190620245,2.2737367544323206e-13,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed42,energy_penalty,4285.902476616548,4285.902476616548,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed42,qos_penalty,1420.967279976261,1420.9672799762616,6.821210263296962e-13,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed42,switch_penalty,4.4751028,4.4751028,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed42,cooldown_penalty,30.875,30.875,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed42,qos_violation_rate,0.0056491575817641,0.005649157581764123,2.3418766925686896e-17,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed42,usr_share,0.0841427155599603,0.08414271555996036,6.938893903907228e-17,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed42,switches,234.0,234.0,0.0,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed42,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed64,reward,-5763.317766514847,-5763.317766514849,1.8189894035458565e-12,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed64,energy_wh,1982.577985656034,1982.577985656034,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed64,energy_penalty,4453.423197704837,4453.423197704838,9.094947017729282e-13,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed64,qos_penalty,1283.74258101001,1283.7425810100108,6.821210263296962e-13,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed64,switch_penalty,3.5269878,3.5269878,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed64,cooldown_penalty,22.625,22.625,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed64,qos_violation_rate,0.0050545094152626,0.005054509415262636,3.642919299551295e-17,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed64,usr_share,0.0685827552031714,0.06858275520317146,5.551115123125783e-17,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed64,switches,185.0,185.0,0.0,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed64,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed77,reward,-5811.061561499445,-5811.061561499445,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed77,energy_wh,1971.802885302635,1971.802885302635,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed77,energy_penalty,4306.060556033567,4306.060556033568,9.094947017729282e-13,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed77,qos_penalty,1476.5189224658775,1476.5189224658775,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed77,switch_penalty,3.982083,3.982083,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed77,cooldown_penalty,24.5,24.5,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed77,qos_violation_rate,0.0058473736372646,0.005847373637264618,1.8214596497756474e-17,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed77,usr_share,0.0839444995044598,0.08394449950445985,5.551115123125783e-17,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed77,switches,209.0,209.0,0.0,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed77,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed99,reward,-25341.128895259037,-25341.128895259033,3.637978807091713e-12,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed99,energy_wh,2393.5782014995434,2393.578201499544,4.547473508864641e-13,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed99,energy_penalty,4565.443340465239,4565.443340465239,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed99,qos_penalty,20747.34667819379,20747.34667819379,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed99,switch_penalty,4.5888766,4.5888766,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed99,cooldown_penalty,23.75,23.75,0.0,0.01,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed99,qos_violation_rate,0.0779980178394449,0.07799801783944499,8.326672684688674e-17,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed99,usr_share,0.1550049554013875,0.1550049554013875,0.0,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed99,switches,241.0,241.0,0.0,1e-09,True,IPPO
+1a Task-C rollout,IPPO|wcnc2027_ablation/ippo_seed99,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,IPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed1/mappo_best.pt,reward,-5579.372568665656,-5579.372568665656,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed1/mappo_best.pt,energy_wh,1968.607545924125,1968.6075459241247,2.2737367544323206e-13,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed1/mappo_best.pt,energy_penalty,4249.256031039933,4249.256031039933,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed1/mappo_best.pt,qos_penalty,1271.4433198257225,1271.4433198257225,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed1/mappo_best.pt,switch_penalty,5.423217800000001,5.423217800000001,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed1/mappo_best.pt,cooldown_penalty,53.25,53.25,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed1/mappo_best.pt,qos_violation_rate,0.0049554013875123,0.004955401387512388,8.847089727481716e-17,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed1/mappo_best.pt,usr_share,0.076412289395441,0.07641228939544104,4.163336342344337e-17,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed1/mappo_best.pt,switches,286.0,286.0,0.0,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed1/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed7/mappo_best.pt,reward,-5622.810827490619,-5622.810827490619,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed7/mappo_best.pt,energy_wh,1964.9971875271715,1964.9971875271708,6.821210263296962e-13,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed7/mappo_best.pt,energy_penalty,4223.415826692793,4223.415826692793,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed7/mappo_best.pt,qos_penalty,1337.6304615978256,1337.6304615978256,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed7/mappo_best.pt,switch_penalty,5.7645392,5.7645392,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed7/mappo_best.pt,cooldown_penalty,56.0,56.0,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed7/mappo_best.pt,qos_violation_rate,0.0052527254707631,0.005252725470763132,3.209238430557093e-17,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed7/mappo_best.pt,usr_share,0.0815659068384539,0.08156590683845391,1.3877787807814457e-17,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed7/mappo_best.pt,switches,304.0,304.0,0.0,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed7/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed13/mappo_best.pt,reward,-5639.967789290811,-5639.967789290811,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed13/mappo_best.pt,energy_wh,1970.217452798312,1970.217452798312,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed13/mappo_best.pt,energy_penalty,4262.299876658757,4262.299876658757,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed13/mappo_best.pt,qos_penalty,1315.5929964320546,1315.5929964320544,2.2737367544323206e-13,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed13/mappo_best.pt,switch_penalty,5.5749162000000005,5.5749162000000005,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed13/mappo_best.pt,cooldown_penalty,56.5,56.5,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed13/mappo_best.pt,qos_violation_rate,0.0051536174430128,0.005153617443012884,8.413408858487514e-17,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed13/mappo_best.pt,usr_share,0.074826560951437,0.07482656095143707,6.938893903907228e-17,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed13/mappo_best.pt,switches,294.0,294.0,0.0,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed13/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed23/mappo_best.pt,reward,-5625.840685439191,-5625.8406854391915,9.094947017729282e-13,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed23/mappo_best.pt,energy_wh,1967.82438413646,1967.8243841364597,2.2737367544323206e-13,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed23/mappo_best.pt,energy_penalty,4240.042975344531,4240.042975344531,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed23/mappo_best.pt,qos_penalty,1315.5556232946597,1315.55562329466,4.547473508864641e-13,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed23/mappo_best.pt,switch_penalty,5.9920868,5.9920868,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed23/mappo_best.pt,cooldown_penalty,64.25,64.25,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed23/mappo_best.pt,qos_violation_rate,0.0051536174430128,0.005153617443012884,8.413408858487514e-17,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed23/mappo_best.pt,usr_share,0.077205153617443,0.07720515361744301,1.3877787807814457e-17,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed23/mappo_best.pt,switches,316.0,316.0,0.0,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed23/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed42/mappo_best.pt,reward,-5654.440879365017,-5654.440879365017,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed42/mappo_best.pt,energy_wh,1975.5193285823923,1975.5193285823925,2.2737367544323206e-13,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed42/mappo_best.pt,energy_penalty,4303.3291392019,4303.3291392019,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed42/mappo_best.pt,qos_penalty,1298.4806929631172,1298.4806929631172,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed42/mappo_best.pt,switch_penalty,5.0060472,5.0060472,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed42/mappo_best.pt,cooldown_penalty,47.625,47.625,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed42/mappo_best.pt,qos_violation_rate,0.0050545094152626,0.005054509415262636,3.642919299551295e-17,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed42/mappo_best.pt,usr_share,0.0700693756194251,0.07006937561942517,6.938893903907228e-17,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed42/mappo_best.pt,switches,264.0,264.0,0.0,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed42/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed64/mappo_best.pt,reward,-5627.012230936112,-5627.012230936112,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed64/mappo_best.pt,energy_wh,1959.1279939740632,1959.1279939740632,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed64/mappo_best.pt,energy_penalty,4164.947283869349,4164.947283869349,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed64/mappo_best.pt,qos_penalty,1381.7427650667628,1381.7427650667637,9.094947017729282e-13,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed64/mappo_best.pt,switch_penalty,6.447182,6.447182,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed64/mappo_best.pt,cooldown_penalty,73.875,73.875,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed64/mappo_best.pt,qos_violation_rate,0.0054509415262636,0.005450941526263627,2.688821387764051e-17,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed64/mappo_best.pt,usr_share,0.0865213082259663,0.0865213082259663,0.0,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed64/mappo_best.pt,switches,340.0,340.0,0.0,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed64/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed77/mappo_best.pt,reward,-5629.1226793363285,-5629.12267933633,1.8189894035458565e-12,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed77/mappo_best.pt,energy_wh,1967.4028050707848,1967.4028050707855,6.821210263296962e-13,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed77/mappo_best.pt,energy_penalty,4237.370425504274,4237.370425504275,9.094947017729282e-13,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed77/mappo_best.pt,qos_penalty,1315.5929964320544,1315.5929964320553,9.094947017729282e-13,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed77/mappo_best.pt,switch_penalty,6.4092574,6.4092573999999995,8.881784197001252e-16,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed77/mappo_best.pt,cooldown_penalty,69.75,69.75,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed77/mappo_best.pt,qos_violation_rate,0.0051536174430128,0.005153617443012884,8.413408858487514e-17,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed77/mappo_best.pt,usr_share,0.0779980178394449,0.07799801783944499,8.326672684688674e-17,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed77/mappo_best.pt,switches,338.0,338.0,0.0,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed77/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed99/mappo_best.pt,reward,-5610.925547346105,-5610.925547346105,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed99/mappo_best.pt,energy_wh,1964.762996717353,1964.7629967173532,2.2737367544323206e-13,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed99/mappo_best.pt,energy_penalty,4218.14810691405,4218.14810691405,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed99/mappo_best.pt,qos_penalty,1342.592996432055,1342.5929964320549,2.2737367544323206e-13,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed99/mappo_best.pt,switch_penalty,5.309444000000001,5.309444000000001,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed99/mappo_best.pt,cooldown_penalty,44.875,44.875,0.0,0.01,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed99/mappo_best.pt,qos_violation_rate,0.0052527254707631,0.005252725470763132,3.209238430557093e-17,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed99/mappo_best.pt,usr_share,0.0815659068384539,0.08156590683845391,1.3877787807814457e-17,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed99/mappo_best.pt,switches,280.0,280.0,0.0,1e-09,True,MAPPO
+1a Task-C rollout,MAPPO|wcnc2027_ablation/mappo_seed99/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,MAPPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt,reward,-5871.719789768298,-5871.719789768298,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt,energy_wh,1955.538284866012,1955.5382848660117,2.2737367544323206e-13,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt,energy_penalty,4164.587356053684,4164.587356053684,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt,qos_penalty,1651.3791207146146,1651.3791207146146,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt,switch_penalty,5.878313,5.878313,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt,cooldown_penalty,49.875,49.875,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt,qos_violation_rate,0.0066402378592666,0.006640237859266601,8.673617379884035e-19,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt,usr_share,0.1001982160555005,0.1001982160555005,0.0,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt,switches,310.0,310.0,0.0,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt,reward,-5626.958921531195,-5626.958921531195,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt,energy_wh,1970.8510628893964,1970.851062889396,4.547473508864641e-13,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt,energy_penalty,4270.426224202307,4270.426224202307,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt,qos_penalty,1293.518158128889,1293.5181581288884,4.547473508864641e-13,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt,switch_penalty,5.764539200000001,5.764539200000001,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt,cooldown_penalty,57.25,57.25,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt,qos_violation_rate,0.0050545094152626,0.005054509415262636,3.642919299551295e-17,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt,usr_share,0.0741328047571853,0.07413280475718534,4.163336342344337e-17,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt,switches,304.0,304.0,0.0,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt,reward,-5617.315181659223,-5617.315181659223,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt,energy_wh,1984.198842210137,1984.1988422101367,2.2737367544323206e-13,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt,energy_penalty,4398.672538565042,4398.6725385650425,9.094947017729282e-13,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt,qos_penalty,1173.36838949418,1173.368389494181,9.094947017729282e-13,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt,switch_penalty,4.399253600000001,4.399253600000001,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt,cooldown_penalty,40.875,40.875,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt,qos_violation_rate,0.0045589692765113,0.0045589692765113975,9.71445146547012e-17,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt,usr_share,0.0612487611496531,0.06124876114965312,2.0816681711721685e-17,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt,switches,232.0,232.0,0.0,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt,reward,-5701.063005453554,-5701.063005453555,9.094947017729282e-13,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt,energy_wh,1959.790073682053,1959.790073682053,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt,energy_penalty,4189.965758089478,4189.965758089477,9.094947017729282e-13,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt,qos_penalty,1447.8551605640764,1447.8551605640769,4.547473508864641e-13,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt,switch_penalty,5.992086800000001,5.992086800000001,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt,cooldown_penalty,57.25,57.25,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt,qos_violation_rate,0.0057482656095143,0.005748265609514371,7.112366251504909e-17,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt,usr_share,0.0890981169474727,0.08909811694747274,4.163336342344337e-17,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt,switches,316.0,316.0,0.0,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt,reward,-5700.428477740054,-5700.428477740054,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt,energy_wh,1957.7611500106952,1957.761150010695,2.2737367544323206e-13,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt,energy_penalty,4164.142618272813,4164.142618272812,9.094947017729282e-13,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt,qos_penalty,1469.9299988672424,1469.9299988672428,4.547473508864641e-13,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt,switch_penalty,6.1058606,6.1058606,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt,cooldown_penalty,60.25,60.25,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt,qos_violation_rate,0.0058473736372646,0.005847373637264618,1.8214596497756474e-17,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt,usr_share,0.0900891972249752,0.09008919722497523,2.7755575615628914e-17,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt,switches,322.0,322.0,0.0,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt,reward,-5720.367666519165,-5720.367666519166,9.094947017729282e-13,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt,energy_wh,1955.3751871863583,1955.3751871863583,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt,energy_penalty,4135.858004548756,4135.858004548756,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt,qos_penalty,1492.0048371704083,1492.0048371704095,1.1368683772161603e-12,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt,switch_penalty,7.129824800000001,7.129824800000001,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt,cooldown_penalty,85.375,85.375,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt,qos_violation_rate,0.0059464816650148,0.005946481665014866,6.591949208711867e-17,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt,usr_share,0.0911793855302279,0.09117938553022795,4.163336342344337e-17,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt,switches,376.0,376.0,0.0,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt,reward,-5706.611094057334,-5706.611094057333,1.8189894035458565e-12,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt,energy_wh,1961.5995025980333,1961.5995025980335,2.2737367544323206e-13,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt,energy_penalty,4197.503815446843,4197.503815446844,9.094947017729282e-13,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt,qos_penalty,1452.9298148104904,1452.9298148104895,9.094947017729282e-13,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt,switch_penalty,5.8024638,5.8024638,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt,cooldown_penalty,50.375,50.375,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt,qos_violation_rate,0.0057482656095143,0.005748265609514371,7.112366251504909e-17,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt,usr_share,0.0871159563924677,0.08711595639246779,8.326672684688674e-17,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt,switches,306.0,306.0,0.0,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt,reward,-5708.18181706094,-5708.18181706094,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt,energy_wh,1959.693017546338,1959.693017546338,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt,energy_penalty,4174.075618262634,4174.075618262634,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt,qos_penalty,1452.817695398306,1452.8176953983061,2.2737367544323206e-13,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt,switch_penalty,6.7885034,6.7885034,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt,cooldown_penalty,74.5,74.5,0.0,0.01,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt,qos_violation_rate,0.0057482656095143,0.005748265609514371,7.112366251504909e-17,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt,usr_share,0.0875123885034687,0.08751238850346878,8.326672684688674e-17,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt,switches,358.0,358.0,0.0,1e-09,True,Shared-PPO
+1a Task-C rollout,Shared-PPO|wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,Shared-PPO
+1a Task-C rollout,Always-DPDK|-,reward,-7201.084827726418,-7201.084827726419,9.094947017729282e-13,0.01,True,always-DPDK
+1a Task-C rollout,Always-DPDK|-,energy_wh,2070.724111926966,2070.724111926966,0.0,0.01,True,always-DPDK
+1a Task-C rollout,Always-DPDK|-,energy_penalty,6209.053440667425,6209.053440667424,9.094947017729282e-13,0.01,True,always-DPDK
+1a Task-C rollout,Always-DPDK|-,qos_penalty,992.0313870589926,992.0313870589931,5.684341886080801e-13,0.01,True,always-DPDK
+1a Task-C rollout,Always-DPDK|-,switch_penalty,0.0,0.0,0.0,0.01,True,always-DPDK
+1a Task-C rollout,Always-DPDK|-,cooldown_penalty,0.0,0.0,0.0,0.01,True,always-DPDK
+1a Task-C rollout,Always-DPDK|-,qos_violation_rate,0.0037661050545094,0.0037661050545094153,1.5178830414797062e-17,1e-09,True,always-DPDK
+1a Task-C rollout,Always-DPDK|-,usr_share,0.0,0.0,0.0,1e-09,True,always-DPDK
+1a Task-C rollout,Always-DPDK|-,switches,0.0,0.0,0.0,1e-09,True,always-DPDK
+1a Task-C rollout,Always-DPDK|-,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,always-DPDK
+1a Task-C rollout,Centralized PPO|central_nr_seed1/ppo_multi_site.zip,reward,-27441.53839203379,-27441.53839203379,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed1/ppo_multi_site.zip,energy_wh,2261.614780174269,2261.614780174269,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed1/ppo_multi_site.zip,energy_penalty,5491.521578240136,5491.521578240136,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed1/ppo_multi_site.zip,qos_penalty,21896.74676499365,21896.746764993655,3.637978807091713e-12,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed1/ppo_multi_site.zip,switch_penalty,4.0200488000000005,4.0200488000000005,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed1/ppo_multi_site.zip,cooldown_penalty,49.25,49.25,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed1/ppo_multi_site.zip,qos_violation_rate,0.0942517343904856,0.09425173439048563,2.7755575615628914e-17,1e-09,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed1/ppo_multi_site.zip,usr_share,0.2438057482656095,0.24380574826560952,2.7755575615628914e-17,1e-09,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed1/ppo_multi_site.zip,switches,210.0,210.0,0.0,1e-09,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed1/ppo_multi_site.zip,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed7/ppo_multi_site.zip,reward,-7522.750669234216,-7522.750669234216,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed7/ppo_multi_site.zip,energy_wh,2073.742530012347,2073.7425300123464,4.547473508864641e-13,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed7/ppo_multi_site.zip,energy_penalty,6213.942821733223,6213.942821733223,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed7/ppo_multi_site.zip,qos_penalty,1305.7052999009925,1305.705299900992,4.547473508864641e-13,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed7/ppo_multi_site.zip,switch_penalty,0.2275476,0.2275476,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed7/ppo_multi_site.zip,cooldown_penalty,2.875,2.875,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed7/ppo_multi_site.zip,qos_violation_rate,0.0051536174430128,0.005153617443012884,8.413408858487514e-17,1e-09,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed7/ppo_multi_site.zip,usr_share,0.0010901883052527,0.0010901883052527254,2.5370330836160804e-17,1e-09,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed7/ppo_multi_site.zip,switches,12.0,12.0,0.0,1e-09,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed7/ppo_multi_site.zip,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed13/ppo_multi_site.zip,reward,-7967.978345043854,-7967.978345043853,9.094947017729282e-13,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed13/ppo_multi_site.zip,energy_wh,2057.396936532955,2057.396936532955,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed13/ppo_multi_site.zip,energy_penalty,5699.784398433535,5699.784398433535,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed13/ppo_multi_site.zip,qos_penalty,2260.366585610318,2260.3665856103185,4.547473508864641e-13,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed13/ppo_multi_site.zip,switch_penalty,1.3273609999999998,1.3273609999999998,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed13/ppo_multi_site.zip,cooldown_penalty,6.5,6.5,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed13/ppo_multi_site.zip,qos_violation_rate,0.0094152626362735,0.009415262636273538,3.8163916471489756e-17,1e-09,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed13/ppo_multi_site.zip,usr_share,0.03201189296333,0.03201189296333003,2.7755575615628914e-17,1e-09,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed13/ppo_multi_site.zip,switches,69.0,69.0,0.0,1e-09,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed13/ppo_multi_site.zip,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed23/ppo_multi_site.zip,reward,-27425.163740184813,-27425.163740184813,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed23/ppo_multi_site.zip,energy_wh,2251.870614639982,2251.870614639982,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed23/ppo_multi_site.zip,energy_penalty,5043.193504216014,5043.193504216015,9.094947017729282e-13,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed23/ppo_multi_site.zip,qos_penalty,22293.1817119688,22293.1817119688,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed23/ppo_multi_site.zip,switch_penalty,6.788524,6.788524,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed23/ppo_multi_site.zip,cooldown_penalty,82.0,82.0,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed23/ppo_multi_site.zip,qos_violation_rate,0.096432111000991,0.09643211100099108,8.326672684688674e-17,1e-09,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed23/ppo_multi_site.zip,usr_share,0.2676907829534192,0.26769078295341925,5.551115123125783e-17,1e-09,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed23/ppo_multi_site.zip,switches,354.0,354.0,0.0,1e-09,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed23/ppo_multi_site.zip,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed42/ppo_multi_site.zip,reward,-11520.275892777545,-11520.275892777545,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed42/ppo_multi_site.zip,energy_wh,2094.727335644277,2094.7273356442774,4.547473508864641e-13,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed42/ppo_multi_site.zip,energy_penalty,5747.535319942108,5747.535319942108,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed42/ppo_multi_site.zip,qos_penalty,5772.740552235437,5772.740552235437,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed42/ppo_multi_site.zip,switch_penalty,2.06e-05,2.06e-05,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed42/ppo_multi_site.zip,cooldown_penalty,0.0,0.0,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed42/ppo_multi_site.zip,qos_violation_rate,0.0254707631318136,0.02547076313181368,7.979727989493313e-17,1e-09,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed42/ppo_multi_site.zip,usr_share,0.1,0.1,0.0,1e-09,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed42/ppo_multi_site.zip,switches,0.0,0.0,0.0,1e-09,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed42/ppo_multi_site.zip,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed64/ppo_multi_site.zip,reward,-24040.16814605055,-24040.168146050557,7.275957614183426e-12,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed64/ppo_multi_site.zip,energy_wh,2235.983955093967,2235.983955093967,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed64/ppo_multi_site.zip,energy_penalty,5527.00021018462,5527.000210184621,9.094947017729282e-13,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed64/ppo_multi_site.zip,qos_penalty,18443.605737065933,18443.605737065933,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed64/ppo_multi_site.zip,switch_penalty,4.4371988,4.4371988,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed64/ppo_multi_site.zip,cooldown_penalty,65.125,65.125,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed64/ppo_multi_site.zip,qos_violation_rate,0.0791873141724479,0.07918731417244797,6.938893903907228e-17,1e-09,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed64/ppo_multi_site.zip,usr_share,0.1840436075322101,0.1840436075322101,0.0,1e-09,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed64/ppo_multi_site.zip,switches,233.0,233.0,0.0,1e-09,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed64/ppo_multi_site.zip,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed77/ppo_multi_site.zip,reward,-23281.84343756237,-23281.84343756237,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed77/ppo_multi_site.zip,energy_wh,2207.7415044013514,2207.7415044013514,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed77/ppo_multi_site.zip,energy_penalty,5148.341922320741,5148.34192232074,9.094947017729282e-13,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed77/ppo_multi_site.zip,qos_penalty,18113.94932024163,18113.949320241627,3.637978807091713e-12,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed77/ppo_multi_site.zip,switch_penalty,2.427195,2.427195,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed77/ppo_multi_site.zip,cooldown_penalty,17.125,17.125,0.0,0.01,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed77/ppo_multi_site.zip,qos_violation_rate,0.0789890981169474,0.07898909811694747,6.938893903907228e-17,1e-09,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed77/ppo_multi_site.zip,usr_share,0.210406342913776,0.21040634291377602,2.7755575615628914e-17,1e-09,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed77/ppo_multi_site.zip,switches,126.0,126.0,0.0,1e-09,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|central_nr_seed77/ppo_multi_site.zip,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,"legacy Centralized PPO (central_nr, June+Aug)"
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,reward,-12781.039650613237,-12781.039650613237,0.0,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,energy_wh,2104.2466733949177,2104.2466733949173,4.547473508864641e-13,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,energy_penalty,5870.384242555114,5870.384242555112,1.8189894035458565e-12,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,qos_penalty,6849.490682258123,6849.490682258123,0.0,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,switch_penalty,4.6647258,4.6647258,0.0,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,cooldown_penalty,56.5,56.5,0.0,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,qos_violation_rate,0.0294350842418235,0.02943508424182359,9.020562075079397e-17,1e-09,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,usr_share,0.0511397423191278,0.05113974231912785,4.85722573273506e-17,1e-09,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,switches,245.0,245.0,0.0,1e-09,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,reward,-12718.787759182029,-12718.787759182029,0.0,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,energy_wh,2121.2049200313204,2121.20492003132,4.547473508864641e-13,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,energy_penalty,6109.4540640229125,6109.4540640229125,0.0,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,qos_penalty,6605.472655559117,6605.472655559117,0.0,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,switch_penalty,0.9860396,0.9860396,0.0,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,cooldown_penalty,2.875,2.875,0.0,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,qos_violation_rate,0.0285431119920713,0.02854311199207136,5.898059818321144e-17,1e-09,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,usr_share,0.0574826560951437,0.057482656095143705,6.938893903907228e-18,1e-09,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,switches,51.0,51.0,0.0,1e-09,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,reward,-11203.796849020411,-11203.796849020413,1.8189894035458565e-12,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,energy_wh,2074.1289069121253,2074.1289069121253,0.0,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,energy_penalty,5427.264846125658,5427.264846125658,0.0,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,qos_penalty,5728.545653294756,5728.5456532947555,9.094947017729282e-13,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,switch_penalty,4.3613496000000005,4.3613496000000005,0.0,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,cooldown_penalty,43.625,43.625,0.0,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,qos_violation_rate,0.0249752229930624,0.02497522299306244,3.8163916471489756e-17,1e-09,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,usr_share,0.0837462834489593,0.08374628344895936,5.551115123125783e-17,1e-09,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,switches,227.0,227.0,0.0,1e-09,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,reward,-21133.539210535368,-21133.539210535368,0.0,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,energy_wh,2220.2941270699066,2220.2941270699066,0.0,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,energy_penalty,5180.922927870419,5180.922927870419,0.0,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,qos_penalty,15933.821067864952,15933.821067864952,0.0,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,switch_penalty,2.9202148,2.9202148,0.0,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,cooldown_penalty,15.875,15.875,0.0,0.01,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,qos_violation_rate,0.0661050545094152,0.06610505450941526,5.551115123125783e-17,1e-09,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,usr_share,0.1788899900891972,0.17888999008919723,2.7755575615628914e-17,1e-09,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,switches,152.0,152.0,0.0,1e-09,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,Centralized PPO|ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,legacy Centralized PPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ippo_nr_seed1,reward,-6064.789864641358,-6064.789864641358,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed1,energy_wh,1984.1456069660596,1984.1456069660594,2.2737367544323206e-13,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed1,energy_penalty,4368.283451796639,4368.2834517966385,9.094947017729282e-13,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed1,qos_penalty,1673.8923496447187,1673.8923496447187,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed1,switch_penalty,3.4890631999999995,3.4890631999999995,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed1,cooldown_penalty,19.125,19.125,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed1,qos_violation_rate,0.0065411298315163,0.006541129831516353,5.2909066017292616e-17,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed1,usr_share,0.077601585728444,0.077601585728444,0.0,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed1,switches,183.0,183.0,0.0,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed1,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed7,reward,-5806.65261323037,-5806.65261323037,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed7,energy_wh,1973.34836921124,1973.34836921124,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed7,energy_penalty,4333.018976179319,4333.018976179319,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed7,qos_penalty,1448.0420262510506,1448.0420262510504,2.2737367544323206e-13,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed7,switch_penalty,3.7166108,3.7166107999999998,4.440892098500626e-16,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed7,cooldown_penalty,21.875,21.875,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed7,qos_violation_rate,0.0057482656095143,0.005748265609514371,7.112366251504909e-17,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed7,usr_share,0.0809712586719524,0.08097125867195243,2.7755575615628914e-17,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed7,switches,195.0,195.0,0.0,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed7,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed13,reward,-5762.551429228126,-5762.551429228126,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed13,energy_wh,1975.4292168507272,1975.4292168507272,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed13,energy_penalty,4374.252386349179,4374.252386349179,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed13,qos_penalty,1354.8548844789475,1354.8548844789475,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed13,switch_penalty,3.9441584,3.9441584,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed13,cooldown_penalty,29.5,29.5,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed13,qos_violation_rate,0.0053518334985133,0.005351833498513379,7.892991815694472e-17,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed13,usr_share,0.0769078295341922,0.07690782953419227,6.938893903907228e-17,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed13,switches,207.0,207.0,0.0,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed13,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed23,reward,-5717.731895921972,-5717.731895921974,1.8189894035458565e-12,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed23,energy_wh,1975.0832726195688,1975.083272619569,2.2737367544323206e-13,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed23,energy_penalty,4374.291921408796,4374.291921408796,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed23,qos_penalty,1305.8174193131763,1305.8174193131767,4.547473508864641e-13,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed23,switch_penalty,4.2475552,4.2475552,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed23,cooldown_penalty,33.375,33.375,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed23,qos_violation_rate,0.0051536174430128,0.005153617443012884,8.413408858487514e-17,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed23,usr_share,0.0777006937561942,0.07770069375619425,4.163336342344337e-17,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed23,switches,223.0,223.0,0.0,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed23,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed42,reward,-5698.174694736377,-5698.174694736378,9.094947017729282e-13,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed42,energy_wh,1972.7048002846832,1972.7048002846832,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed42,energy_penalty,4331.639102263762,4331.639102263762,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed42,qos_penalty,1337.7052078726156,1337.705207872616,4.547473508864641e-13,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed42,switch_penalty,3.8303846,3.8303846000000004,4.440892098500626e-16,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed42,cooldown_penalty,25.0,25.0,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed42,qos_violation_rate,0.0052527254707631,0.005252725470763132,3.209238430557093e-17,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed42,usr_share,0.0806739345887016,0.08067393458870169,8.326672684688674e-17,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed42,switches,201.0,201.0,0.0,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed42,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed64,reward,-5761.415009088346,-5761.415009088346,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed64,energy_wh,1966.5703835018453,1966.5703835018453,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed64,energy_penalty,4285.751112530843,4285.751112530843,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed64,qos_penalty,1431.9345477575032,1431.9345477575034,2.2737367544323206e-13,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed64,switch_penalty,4.8543488,4.8543488,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed64,cooldown_penalty,38.875,38.875,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed64,qos_violation_rate,0.0057482656095143,0.005748265609514371,7.112366251504909e-17,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed64,usr_share,0.0877106045589692,0.08771060455896927,6.938893903907228e-17,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed64,switches,255.0,255.0,0.0,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed64,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed77,reward,-5811.3178357652505,-5811.3178357652505,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed77,energy_wh,1969.8538967167317,1969.8538967167317,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed77,energy_penalty,4280.301717611033,4280.301717611034,9.094947017729282e-13,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed77,qos_penalty,1497.1168645542166,1497.1168645542166,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed77,switch_penalty,4.3992536,4.3992536,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed77,cooldown_penalty,29.5,29.5,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed77,qos_violation_rate,0.0059464816650148,0.005946481665014866,6.591949208711867e-17,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed77,usr_share,0.087215064420218,0.08721506442021804,4.163336342344337e-17,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed77,switches,231.0,231.0,0.0,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed77,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed99,reward,-5886.442708332132,-5886.442708332133,1.8189894035458565e-12,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed99,energy_wh,1971.8178083202931,1971.8178083202938,6.821210263296962e-13,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed99,energy_penalty,4323.762953171583,4323.762953171585,1.8189894035458565e-12,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed99,qos_penalty,1541.2665411605485,1541.266541160549,4.547473508864641e-13,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed99,switch_penalty,3.413214,3.413214,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed99,cooldown_penalty,18.0,18.0,0.0,0.01,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed99,qos_violation_rate,0.0061446977205153,0.006144697720515362,6.158268339717665e-17,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed99,usr_share,0.0851337958374628,0.08513379583746283,2.7755575615628914e-17,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed99,switches,179.0,179.0,0.0,1e-09,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ippo_nr_seed99,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,"legacy IPPO (ippo_nr, paper Table I)"
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed1_20260517T110907,reward,-5708.994804591908,-5708.994804591908,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed1_20260517T110907,energy_wh,1976.0723405906167,1976.0723405906172,4.547473508864641e-13,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed1_20260517T110907,energy_penalty,4354.11136995352,4354.111369953522,1.8189894035458565e-12,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed1_20260517T110907,qos_penalty,1332.7426730383877,1332.7426730383872,4.547473508864641e-13,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed1_20260517T110907,switch_penalty,3.6407616,3.6407616000000003,4.440892098500626e-16,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed1_20260517T110907,cooldown_penalty,18.5,18.5,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed1_20260517T110907,qos_violation_rate,0.0052527254707631,0.005252725470763132,3.209238430557093e-17,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed1_20260517T110907,usr_share,0.0762140733399405,0.07621407333994054,4.163336342344337e-17,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed1_20260517T110907,switches,191.0,191.0,0.0,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed1_20260517T110907,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed7_20260517T091403,reward,-5780.620812784428,-5780.6208127844275,9.094947017729282e-13,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed7_20260517T091403,energy_wh,1972.475998604165,1972.475998604165,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed7_20260517T091403,energy_penalty,4325.160315636542,4325.160315636542,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed7_20260517T091403,qos_penalty,1425.9671879478856,1425.9671879478851,4.547473508864641e-13,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed7_20260517T091403,switch_penalty,3.8683092,3.8683091999999997,4.440892098500626e-16,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed7_20260517T091403,cooldown_penalty,25.625,25.625,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed7_20260517T091403,qos_violation_rate,0.0056491575817641,0.005649157581764123,2.3418766925686896e-17,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed7_20260517T091403,usr_share,0.0812685827552031,0.08126858275520317,6.938893903907228e-17,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed7_20260517T091403,switches,203.0,203.0,0.0,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed7_20260517T091403,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed13_20260517T091403,reward,-5641.102509897598,-5641.102509897597,9.094947017729282e-13,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed13_20260517T091403,energy_wh,1975.0072387865844,1975.0072387865844,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed13_20260517T091403,energy_penalty,4347.990057328148,4347.9900573281475,9.094947017729282e-13,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed13_20260517T091403,qos_penalty,1261.63036956945,1261.63036956945,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed13_20260517T091403,switch_penalty,3.982083,3.982083,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed13_20260517T091403,cooldown_penalty,27.5,27.5,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed13_20260517T091403,qos_violation_rate,0.0049554013875123,0.004955401387512388,8.847089727481716e-17,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed13_20260517T091403,usr_share,0.0769078295341922,0.07690782953419227,6.938893903907228e-17,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed13_20260517T091403,switches,209.0,209.0,0.0,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed13_20260517T091403,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed23_20260517T110907,reward,-5819.775219348036,-5819.7752193480355,9.094947017729282e-13,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed23_20260517T110907,energy_wh,1969.2873329637985,1969.287332963798,4.547473508864641e-13,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed23_20260517T110907,energy_penalty,4311.3488602343805,4311.3488602343805,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed23_20260517T110907,qos_penalty,1475.0046531136563,1475.0046531136559,4.547473508864641e-13,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed23_20260517T110907,switch_penalty,4.171706,4.171706,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed23_20260517T110907,cooldown_penalty,29.25,29.25,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed23_20260517T110907,qos_violation_rate,0.0058473736372646,0.005847373637264618,1.8214596497756474e-17,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed23_20260517T110907,usr_share,0.0849355797819623,0.08493557978196234,4.163336342344337e-17,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed23_20260517T110907,switches,219.0,219.0,0.0,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed23_20260517T110907,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed42_20260517T091403,reward,-5880.004575935089,-5880.004575935089,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed42_20260517T091403,energy_wh,1973.875546291828,1973.875546291828,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed42_20260517T091403,energy_penalty,4328.333179277226,4328.333179277226,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed42_20260517T091403,qos_penalty,1526.3789366578626,1526.3789366578626,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed42_20260517T091403,switch_penalty,3.79246,3.79246,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed42_20260517T091403,cooldown_penalty,21.5,21.5,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed42_20260517T091403,qos_violation_rate,0.0061446977205153,0.006144697720515362,6.158268339717665e-17,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed42_20260517T091403,usr_share,0.0814667988107036,0.08146679881070366,6.938893903907228e-17,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed42_20260517T091403,switches,198.0,198.0,0.0,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed42_20260517T091403,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed64_20260517T110907,reward,-5883.89066559287,-5883.890665592871,9.094947017729282e-13,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed64_20260517T110907,energy_wh,1969.9151644778344,1969.9151644778342,2.2737367544323206e-13,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed64_20260517T110907,energy_penalty,4329.04867072587,4329.04867072587,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed64_20260517T110907,qos_penalty,1525.1590626670015,1525.1590626670018,2.2737367544323206e-13,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed64_20260517T110907,switch_penalty,4.0579322,4.0579322,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed64_20260517T110907,cooldown_penalty,25.625,25.625,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed64_20260517T110907,qos_violation_rate,0.0061446977205153,0.006144697720515362,6.158268339717665e-17,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed64_20260517T110907,usr_share,0.086025768087215,0.08602576808721507,6.938893903907228e-17,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed64_20260517T110907,switches,213.0,213.0,0.0,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed64_20260517T110907,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed77_20260517T110907,reward,-5864.595921473701,-5864.595921473702,9.094947017729282e-13,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed77_20260517T110907,energy_wh,1978.9685007214607,1978.9685007214607,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed77_20260517T110907,energy_penalty,4319.851828569678,4319.851828569678,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed77_20260517T110907,qos_penalty,1517.799934504024,1517.7999345040248,9.094947017729282e-13,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed77_20260517T110907,switch_penalty,3.9441584,3.9441584,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed77_20260517T110907,cooldown_penalty,23.0,23.0,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed77_20260517T110907,qos_violation_rate,0.0059464816650148,0.005946481665014866,6.591949208711867e-17,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed77_20260517T110907,usr_share,0.0827552031714568,0.08275520317145689,8.326672684688674e-17,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed77_20260517T110907,switches,207.0,207.0,0.0,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed77_20260517T110907,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed99_20260517T091403,reward,-5730.12450263679,-5730.124502636791,9.094947017729282e-13,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed99_20260517T091403,energy_wh,1973.177519129974,1973.177519129974,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed99_20260517T091403,energy_penalty,4330.205716654677,4330.205716654678,9.094947017729282e-13,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed99_20260517T091403,qos_penalty,1376.929722782113,1376.9297227821135,4.547473508864641e-13,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed99_20260517T091403,switch_penalty,3.4890632000000004,3.4890632000000004,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed99_20260517T091403,cooldown_penalty,19.5,19.5,0.0,0.01,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed99_20260517T091403,qos_violation_rate,0.0054509415262636,0.005450941526263627,2.688821387764051e-17,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed99_20260517T091403,usr_share,0.0795837462834489,0.07958374628344896,5.551115123125783e-17,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed99_20260517T091403,switches,183.0,183.0,0.0,1e-09,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,IPPO|ppo_single_site_ensemble_seed99_20260517T091403,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,legacy IPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_nr_seed23/mappo_best.pt,reward,-5877.078855026832,-5877.07885502683,1.8189894035458565e-12,0.01,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed23/mappo_best.pt,energy_wh,1966.998517417882,1966.9985174178819,2.2737367544323206e-13,0.01,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed23/mappo_best.pt,energy_penalty,4154.389180187345,4154.389180187345,0.0,0.01,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed23/mappo_best.pt,qos_penalty,1652.1933420394855,1652.1933420394853,2.2737367544323206e-13,0.01,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed23/mappo_best.pt,switch_penalty,6.371332800000001,6.371332800000001,0.0,0.01,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed23/mappo_best.pt,cooldown_penalty,64.125,64.125,0.0,0.01,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed23/mappo_best.pt,qos_violation_rate,0.0064420218037661,0.006442021803766105,5.204170427930421e-18,1e-09,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed23/mappo_best.pt,usr_share,0.0917740336967294,0.09177403369672943,2.7755575615628914e-17,1e-09,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed23/mappo_best.pt,switches,336.0,336.0,0.0,1e-09,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed23/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed64/mappo_best.pt,reward,-5597.98653874555,-5597.986538745549,9.094947017729282e-13,0.01,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed64/mappo_best.pt,energy_wh,1967.8454021712728,1967.845402171273,2.2737367544323206e-13,0.01,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed64/mappo_best.pt,energy_penalty,4232.801591554055,4232.8015915540545,9.094947017729282e-13,0.01,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed64/mappo_best.pt,qos_penalty,1293.4807849914946,1293.4807849914941,4.547473508864641e-13,0.01,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed64/mappo_best.pt,switch_penalty,5.9541622,5.9541622,0.0,0.01,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed64/mappo_best.pt,cooldown_penalty,65.75,65.75,0.0,0.01,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed64/mappo_best.pt,qos_violation_rate,0.0050545094152626,0.005054509415262636,3.642919299551295e-17,1e-09,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed64/mappo_best.pt,usr_share,0.0763131813676907,0.07631318136769079,8.326672684688674e-17,1e-09,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed64/mappo_best.pt,switches,314.0,314.0,0.0,1e-09,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed64/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed99/mappo_best.pt,reward,-5638.285116898305,-5638.285116898305,0.0,0.01,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed99/mappo_best.pt,energy_wh,1971.93397849538,1971.9339784953797,2.2737367544323206e-13,0.01,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed99/mappo_best.pt,energy_penalty,4271.574022769417,4271.574022769417,0.0,0.01,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed99/mappo_best.pt,qos_penalty,1293.5181581288894,1293.518158128889,4.547473508864641e-13,0.01,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed99/mappo_best.pt,switch_penalty,6.067936,6.0679359999999996,8.881784197001252e-16,0.01,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed99/mappo_best.pt,cooldown_penalty,67.125,67.125,0.0,0.01,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed99/mappo_best.pt,qos_violation_rate,0.0050545094152626,0.005054509415262636,3.642919299551295e-17,1e-09,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed99/mappo_best.pt,usr_share,0.0721506442021803,0.07215064420218038,8.326672684688674e-17,1e-09,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed99/mappo_best.pt,switches,320.0,320.0,0.0,1e-09,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_nr_seed99/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,"legacy MAPPO (mappo_nr, June)"
+1a Task-C rollout,MAPPO|mappo_seed1_20260517T110908/mappo_best.pt,reward,-5608.271964274167,-5608.271964274167,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed1_20260517T110908/mappo_best.pt,energy_wh,1975.553423547282,1975.5534235472824,4.547473508864641e-13,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed1_20260517T110908/mappo_best.pt,energy_penalty,4301.655426648443,4301.655426648444,9.094947017729282e-13,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed1_20260517T110908/mappo_best.pt,qos_penalty,1244.4433198257234,1244.443319825723,4.547473508864641e-13,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed1_20260517T110908/mappo_best.pt,switch_penalty,5.4232178,5.4232178,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed1_20260517T110908/mappo_best.pt,cooldown_penalty,56.75,56.75,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed1_20260517T110908/mappo_best.pt,qos_violation_rate,0.0048562933597621,0.0048562933597621405,4.0766001685454967e-17,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed1_20260517T110908/mappo_best.pt,usr_share,0.0684836471754212,0.06848364717542121,1.3877787807814457e-17,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed1_20260517T110908/mappo_best.pt,switches,286.0,286.0,0.0,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed1_20260517T110908/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed7_20260517T003433/mappo_best.pt,reward,-5692.5121071958365,-5692.5121071958365,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed7_20260517T003433/mappo_best.pt,energy_wh,1965.7236673870857,1965.7236673870857,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed7_20260517T003433/mappo_best.pt,energy_penalty,4231.395734563302,4231.395734563302,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed7_20260517T003433/mappo_best.pt,qos_penalty,1403.780230232535,1403.780230232535,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed7_20260517T003433/mappo_best.pt,switch_penalty,5.4611424,5.4611424,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed7_20260517T003433/mappo_best.pt,cooldown_penalty,51.875,51.875,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed7_20260517T003433/mappo_best.pt,qos_violation_rate,0.0055500495540138,0.005550049554013875,7.546047120499111e-17,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed7_20260517T003433/mappo_best.pt,usr_share,0.0812685827552031,0.08126858275520317,6.938893903907228e-17,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed7_20260517T003433/mappo_best.pt,switches,288.0,288.0,0.0,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed7_20260517T003433/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed13_20260517T003433/mappo_best.pt,reward,-5848.028385298792,-5848.028385298791,9.094947017729282e-13,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed13_20260517T003433/mappo_best.pt,energy_wh,1949.1166480460545,1949.1166480460543,2.2737367544323206e-13,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed13_20260517T003433/mappo_best.pt,energy_penalty,4092.084614246782,4092.084614246782,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed13_20260517T003433/mappo_best.pt,qos_penalty,1678.4164938520105,1678.4164938520098,6.821210263296962e-13,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed13_20260517T003433/mappo_best.pt,switch_penalty,6.9022772,6.9022772,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed13_20260517T003433/mappo_best.pt,cooldown_penalty,70.625,70.625,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed13_20260517T003433/mappo_best.pt,qos_violation_rate,0.0067393458870168,0.006739345887016849,4.85722573273506e-17,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed13_20260517T003433/mappo_best.pt,usr_share,0.1016848364717542,0.1016848364717542,0.0,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed13_20260517T003433/mappo_best.pt,switches,364.0,364.0,0.0,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed13_20260517T003433/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed23_20260517T110908/mappo_best.pt,reward,-5636.95577212677,-5636.955772126769,9.094947017729282e-13,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed23_20260517T110908/mappo_best.pt,energy_wh,1958.7820768699785,1958.7820768699785,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed23_20260517T110908/mappo_best.pt,energy_penalty,4161.108869763173,4161.108869763173,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed23_20260517T110908/mappo_best.pt,qos_penalty,1386.6679267635975,1386.6679267635968,6.821210263296962e-13,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed23_20260517T110908/mappo_best.pt,switch_penalty,7.0539756,7.0539756,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed23_20260517T110908/mappo_best.pt,cooldown_penalty,82.125,82.125,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed23_20260517T110908/mappo_best.pt,qos_violation_rate,0.0054509415262636,0.005450941526263627,2.688821387764051e-17,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed23_20260517T110908/mappo_best.pt,usr_share,0.086818632309217,0.08681863230921705,4.163336342344337e-17,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed23_20260517T110908/mappo_best.pt,switches,372.0,372.0,0.0,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed23_20260517T110908/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed42_20260526T143637/mappo_best.pt,reward,-5633.068104826563,-5633.068104826562,9.094947017729282e-13,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed42_20260526T143637/mappo_best.pt,energy_wh,1966.7447283015135,1966.7447283015138,2.2737367544323206e-13,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed42_20260526T143637/mappo_best.pt,energy_penalty,4220.956782628737,4220.956782628737,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed42_20260526T143637/mappo_best.pt,qos_penalty,1337.6304615978263,1337.6304615978265,2.2737367544323206e-13,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed42_20260526T143637/mappo_best.pt,switch_penalty,6.1058606,6.1058606,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed42_20260526T143637/mappo_best.pt,cooldown_penalty,68.375,68.375,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed42_20260526T143637/mappo_best.pt,qos_violation_rate,0.0052527254707631,0.005252725470763132,3.209238430557093e-17,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed42_20260526T143637/mappo_best.pt,usr_share,0.0773042616451932,0.07730426164519326,5.551115123125783e-17,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed42_20260526T143637/mappo_best.pt,switches,322.0,322.0,0.0,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed42_20260526T143637/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed64_20260517T110908/mappo_best.pt,reward,-5535.706798091951,-5535.706798091949,1.8189894035458565e-12,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed64_20260517T110908/mappo_best.pt,energy_wh,1970.895565607229,1970.895565607229,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed64_20260517T110908/mappo_best.pt,energy_penalty,4270.621756328832,4270.621756328833,9.094947017729282e-13,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed64_20260517T110908/mappo_best.pt,qos_penalty,1217.480692963118,1217.4806929631177,2.2737367544323206e-13,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed64_20260517T110908/mappo_best.pt,switch_penalty,4.8543488,4.8543488,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed64_20260517T110908/mappo_best.pt,cooldown_penalty,42.75,42.75,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed64_20260517T110908/mappo_best.pt,qos_violation_rate,0.0047571853320118,0.004757185332011893,9.367506770274758e-17,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed64_20260517T110908/mappo_best.pt,usr_share,0.0739345887016848,0.07393458870168483,2.7755575615628914e-17,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed64_20260517T110908/mappo_best.pt,switches,256.0,256.0,0.0,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed64_20260517T110908/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed77_20260517T110908/mappo_best.pt,reward,-5622.092317579754,-5622.0923175797525,1.8189894035458565e-12,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed77_20260517T110908/mappo_best.pt,energy_wh,1975.6216940549143,1975.621694054914,2.2737367544323206e-13,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed77_20260517T110908/mappo_best.pt,energy_penalty,4308.888245119802,4308.8882451198015,9.094947017729282e-13,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed77_20260517T110908/mappo_best.pt,qos_penalty,1249.4058546599522,1249.4058546599513,9.094947017729282e-13,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed77_20260517T110908/mappo_best.pt,switch_penalty,5.4232178,5.4232178,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed77_20260517T110908/mappo_best.pt,cooldown_penalty,58.375,58.375,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed77_20260517T110908/mappo_best.pt,qos_violation_rate,0.0048562933597621,0.0048562933597621405,4.0766001685454967e-17,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed77_20260517T110908/mappo_best.pt,usr_share,0.0688800792864222,0.0688800792864222,0.0,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed77_20260517T110908/mappo_best.pt,switches,286.0,286.0,0.0,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed77_20260517T110908/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed99_20260517T003433/mappo_best.pt,reward,-5601.241523329916,-5601.241523329915,9.094947017729282e-13,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed99_20260517T003433/mappo_best.pt,energy_wh,1974.49433559609,1974.49433559609,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed99_20260517T003433/mappo_best.pt,energy_penalty,4293.212061104193,4293.212061104192,9.094947017729282e-13,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed99_20260517T003433/mappo_best.pt,qos_penalty,1244.4433198257234,1244.443319825723,4.547473508864641e-13,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed99_20260517T003433/mappo_best.pt,switch_penalty,5.4611424,5.4611424,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed99_20260517T003433/mappo_best.pt,cooldown_penalty,58.125,58.125,0.0,0.01,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed99_20260517T003433/mappo_best.pt,qos_violation_rate,0.0048562933597621,0.0048562933597621405,4.0766001685454967e-17,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed99_20260517T003433/mappo_best.pt,usr_share,0.0694747274529236,0.06947472745292368,8.326672684688674e-17,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed99_20260517T003433/mappo_best.pt,switches,288.0,288.0,0.0,1e-09,True,legacy MAPPO (v0.4 re-scored set)
+1a Task-C rollout,MAPPO|mappo_seed99_20260517T003433/mappo_best.pt,per-step action sequence (T x K),1.0,1.0,0.0,0.0,True,legacy MAPPO (v0.4 re-scored set)
+1b v04twin.json,MAPPO|mappo_seed42_20260526T143637/mappo_best.pt,reward,-5633.068104826563,-5633.068104826565,1.8189894035458565e-12,0.01,True,MAPPO seed 42
+1b v04twin.json,MAPPO|mappo_seed42_20260526T143637/mappo_best.pt,energy_wh,1966.7447283015135,1966.7447283015108,2.7284841053187847e-12,0.01,True,MAPPO seed 42
+1b v04twin.json,MAPPO|mappo_seed42_20260526T143637/mappo_best.pt,qos_violation_rate,0.0052527254707631,0.005252725470763132,3.209238430557093e-17,1e-09,True,MAPPO seed 42
+1b v04twin.json,MAPPO|mappo_seed42_20260526T143637/mappo_best.pt,usr_share,0.0773042616451932,0.07730426164519326,5.551115123125783e-17,1e-09,True,MAPPO seed 42
+1b v04twin.json,MAPPO|mappo_seed42_20260526T143637/mappo_best.pt,switches,322.0,322.0,0.0,1e-09,True,MAPPO seed 42
+1b v04twin.json,MAPPO|mappo_seed42_20260526T143637/mappo_best.pt,per-cluster reward (max over 10),,,1.2505552149377763e-12,0.01,True,MAPPO seed 42
+1b v04twin.json,MAPPO|mappo_seed99_20260517T003433/mappo_best.pt,reward,-5601.241523329916,-5601.241523329917,9.094947017729282e-13,0.01,True,MAPPO seed 99
+1b v04twin.json,MAPPO|mappo_seed99_20260517T003433/mappo_best.pt,energy_wh,1974.49433559609,1974.4943355960866,3.410605131648481e-12,0.01,True,MAPPO seed 99
+1b v04twin.json,MAPPO|mappo_seed99_20260517T003433/mappo_best.pt,qos_violation_rate,0.0048562933597621,0.0048562933597621405,4.0766001685454967e-17,1e-09,True,MAPPO seed 99
+1b v04twin.json,MAPPO|mappo_seed99_20260517T003433/mappo_best.pt,usr_share,0.0694747274529236,0.06947472745292368,8.326672684688674e-17,1e-09,True,MAPPO seed 99
+1b v04twin.json,MAPPO|mappo_seed99_20260517T003433/mappo_best.pt,switches,288.0,288.0,0.0,1e-09,True,MAPPO seed 99
+1b v04twin.json,MAPPO|mappo_seed99_20260517T003433/mappo_best.pt,per-cluster reward (max over 10),,,1.1368683772161603e-12,0.01,True,MAPPO seed 99
+1b v04twin.json,MAPPO|mappo_seed13_20260517T003433/mappo_best.pt,reward,-5848.028385298792,-5848.028385298793,9.094947017729282e-13,0.01,True,MAPPO seed 13
+1b v04twin.json,MAPPO|mappo_seed13_20260517T003433/mappo_best.pt,energy_wh,1949.1166480460545,1949.1166480460522,2.2737367544323206e-12,0.01,True,MAPPO seed 13
+1b v04twin.json,MAPPO|mappo_seed13_20260517T003433/mappo_best.pt,qos_violation_rate,0.0067393458870168,0.006739345887016849,4.85722573273506e-17,1e-09,True,MAPPO seed 13
+1b v04twin.json,MAPPO|mappo_seed13_20260517T003433/mappo_best.pt,usr_share,0.1016848364717542,0.1016848364717542,0.0,1e-09,True,MAPPO seed 13
+1b v04twin.json,MAPPO|mappo_seed13_20260517T003433/mappo_best.pt,switches,364.0,364.0,0.0,1e-09,True,MAPPO seed 13
+1b v04twin.json,MAPPO|mappo_seed13_20260517T003433/mappo_best.pt,per-cluster reward (max over 10),,,6.821210263296962e-13,0.01,True,MAPPO seed 13
+1b v04twin.json,MAPPO|mappo_seed7_20260517T003433/mappo_best.pt,reward,-5692.5121071958365,-5692.512107195838,1.8189894035458565e-12,0.01,True,MAPPO seed 7
+1b v04twin.json,MAPPO|mappo_seed7_20260517T003433/mappo_best.pt,energy_wh,1965.7236673870857,1965.723667387083,2.7284841053187847e-12,0.01,True,MAPPO seed 7
+1b v04twin.json,MAPPO|mappo_seed7_20260517T003433/mappo_best.pt,qos_violation_rate,0.0055500495540138,0.005550049554013875,7.546047120499111e-17,1e-09,True,MAPPO seed 7
+1b v04twin.json,MAPPO|mappo_seed7_20260517T003433/mappo_best.pt,usr_share,0.0812685827552031,0.08126858275520317,6.938893903907228e-17,1e-09,True,MAPPO seed 7
+1b v04twin.json,MAPPO|mappo_seed7_20260517T003433/mappo_best.pt,switches,288.0,288.0,0.0,1e-09,True,MAPPO seed 7
+1b v04twin.json,MAPPO|mappo_seed7_20260517T003433/mappo_best.pt,per-cluster reward (max over 10),,,1.2505552149377763e-12,0.01,True,MAPPO seed 7
+1b v04twin.json,MAPPO|mappo_seed1_20260517T110908/mappo_best.pt,reward,-5608.271964274167,-5608.271964274169,1.8189894035458565e-12,0.01,True,MAPPO seed 1
+1b v04twin.json,MAPPO|mappo_seed1_20260517T110908/mappo_best.pt,energy_wh,1975.553423547282,1975.5534235472792,2.7284841053187847e-12,0.01,True,MAPPO seed 1
+1b v04twin.json,MAPPO|mappo_seed1_20260517T110908/mappo_best.pt,qos_violation_rate,0.0048562933597621,0.0048562933597621405,4.0766001685454967e-17,1e-09,True,MAPPO seed 1
+1b v04twin.json,MAPPO|mappo_seed1_20260517T110908/mappo_best.pt,usr_share,0.0684836471754212,0.06848364717542121,1.3877787807814457e-17,1e-09,True,MAPPO seed 1
+1b v04twin.json,MAPPO|mappo_seed1_20260517T110908/mappo_best.pt,switches,286.0,286.0,0.0,1e-09,True,MAPPO seed 1
+1b v04twin.json,MAPPO|mappo_seed1_20260517T110908/mappo_best.pt,per-cluster reward (max over 10),,,1.3642420526593924e-12,0.01,True,MAPPO seed 1
+1b v04twin.json,MAPPO|mappo_seed23_20260517T110908/mappo_best.pt,reward,-5636.95577212677,-5636.95577212677,0.0,0.01,True,MAPPO seed 23
+1b v04twin.json,MAPPO|mappo_seed23_20260517T110908/mappo_best.pt,energy_wh,1958.7820768699785,1958.7820768699758,2.7284841053187847e-12,0.01,True,MAPPO seed 23
+1b v04twin.json,MAPPO|mappo_seed23_20260517T110908/mappo_best.pt,qos_violation_rate,0.0054509415262636,0.005450941526263627,2.688821387764051e-17,1e-09,True,MAPPO seed 23
+1b v04twin.json,MAPPO|mappo_seed23_20260517T110908/mappo_best.pt,usr_share,0.086818632309217,0.08681863230921705,4.163336342344337e-17,1e-09,True,MAPPO seed 23
+1b v04twin.json,MAPPO|mappo_seed23_20260517T110908/mappo_best.pt,switches,372.0,372.0,0.0,1e-09,True,MAPPO seed 23
+1b v04twin.json,MAPPO|mappo_seed23_20260517T110908/mappo_best.pt,per-cluster reward (max over 10),,,1.0231815394945443e-12,0.01,True,MAPPO seed 23
+1b v04twin.json,MAPPO|mappo_seed77_20260517T110908/mappo_best.pt,reward,-5622.092317579754,-5622.092317579754,0.0,0.01,True,MAPPO seed 77
+1b v04twin.json,MAPPO|mappo_seed77_20260517T110908/mappo_best.pt,energy_wh,1975.6216940549143,1975.621694054911,3.410605131648481e-12,0.01,True,MAPPO seed 77
+1b v04twin.json,MAPPO|mappo_seed77_20260517T110908/mappo_best.pt,qos_violation_rate,0.0048562933597621,0.0048562933597621405,4.0766001685454967e-17,1e-09,True,MAPPO seed 77
+1b v04twin.json,MAPPO|mappo_seed77_20260517T110908/mappo_best.pt,usr_share,0.0688800792864222,0.0688800792864222,0.0,1e-09,True,MAPPO seed 77
+1b v04twin.json,MAPPO|mappo_seed77_20260517T110908/mappo_best.pt,switches,286.0,286.0,0.0,1e-09,True,MAPPO seed 77
+1b v04twin.json,MAPPO|mappo_seed77_20260517T110908/mappo_best.pt,per-cluster reward (max over 10),,,1.2505552149377763e-12,0.01,True,MAPPO seed 77
+1b v04twin.json,MAPPO|mappo_seed64_20260517T110908/mappo_best.pt,reward,-5535.706798091951,-5535.706798091951,0.0,0.01,True,MAPPO seed 64
+1b v04twin.json,MAPPO|mappo_seed64_20260517T110908/mappo_best.pt,energy_wh,1970.895565607229,1970.8955656072262,2.7284841053187847e-12,0.01,True,MAPPO seed 64
+1b v04twin.json,MAPPO|mappo_seed64_20260517T110908/mappo_best.pt,qos_violation_rate,0.0047571853320118,0.004757185332011893,9.367506770274758e-17,1e-09,True,MAPPO seed 64
+1b v04twin.json,MAPPO|mappo_seed64_20260517T110908/mappo_best.pt,usr_share,0.0739345887016848,0.07393458870168483,2.7755575615628914e-17,1e-09,True,MAPPO seed 64
+1b v04twin.json,MAPPO|mappo_seed64_20260517T110908/mappo_best.pt,switches,256.0,256.0,0.0,1e-09,True,MAPPO seed 64
+1b v04twin.json,MAPPO|mappo_seed64_20260517T110908/mappo_best.pt,per-cluster reward (max over 10),,,1.1368683772161603e-12,0.01,True,MAPPO seed 64
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed42_20260517T091403,reward,-5880.004575935089,-5880.0045759350905,1.8189894035458565e-12,0.01,True,IPPO-ensemble seed 42
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed42_20260517T091403,energy_wh,1973.875546291828,1973.8755462918255,2.5011104298755527e-12,0.01,True,IPPO-ensemble seed 42
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed42_20260517T091403,qos_violation_rate,0.0061446977205153,0.006144697720515362,6.158268339717665e-17,1e-09,True,IPPO-ensemble seed 42
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed42_20260517T091403,usr_share,0.0814667988107036,0.08146679881070366,6.938893903907228e-17,1e-09,True,IPPO-ensemble seed 42
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed42_20260517T091403,switches,198.0,198.0,0.0,1e-09,True,IPPO-ensemble seed 42
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed42_20260517T091403,per-cluster reward (max over 10),,,1.1368683772161603e-12,0.01,True,IPPO-ensemble seed 42
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed7_20260517T091403,reward,-5780.620812784428,-5780.620812784427,1.8189894035458565e-12,0.01,True,IPPO-ensemble seed 7
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed7_20260517T091403,energy_wh,1972.475998604165,1972.475998604163,2.0463630789890885e-12,0.01,True,IPPO-ensemble seed 7
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed7_20260517T091403,qos_violation_rate,0.0056491575817641,0.005649157581764123,2.3418766925686896e-17,1e-09,True,IPPO-ensemble seed 7
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed7_20260517T091403,usr_share,0.0812685827552031,0.08126858275520317,6.938893903907228e-17,1e-09,True,IPPO-ensemble seed 7
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed7_20260517T091403,switches,203.0,203.0,0.0,1e-09,True,IPPO-ensemble seed 7
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed7_20260517T091403,per-cluster reward (max over 10),,,6.821210263296962e-13,0.01,True,IPPO-ensemble seed 7
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed13_20260517T091403,reward,-5641.102509897598,-5641.102509897599,9.094947017729282e-13,0.01,True,IPPO-ensemble seed 13
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed13_20260517T091403,energy_wh,1975.0072387865844,1975.0072387865819,2.5011104298755527e-12,0.01,True,IPPO-ensemble seed 13
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed13_20260517T091403,qos_violation_rate,0.0049554013875123,0.004955401387512388,8.847089727481716e-17,1e-09,True,IPPO-ensemble seed 13
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed13_20260517T091403,usr_share,0.0769078295341922,0.07690782953419227,6.938893903907228e-17,1e-09,True,IPPO-ensemble seed 13
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed13_20260517T091403,switches,209.0,209.0,0.0,1e-09,True,IPPO-ensemble seed 13
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed13_20260517T091403,per-cluster reward (max over 10),,,7.958078640513122e-13,0.01,True,IPPO-ensemble seed 13
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed99_20260517T091403,reward,-5730.12450263679,-5730.1245026367915,1.8189894035458565e-12,0.01,True,IPPO-ensemble seed 99
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed99_20260517T091403,energy_wh,1973.177519129974,1973.1775191299714,2.5011104298755527e-12,0.01,True,IPPO-ensemble seed 99
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed99_20260517T091403,qos_violation_rate,0.0054509415262636,0.005450941526263627,2.688821387764051e-17,1e-09,True,IPPO-ensemble seed 99
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed99_20260517T091403,usr_share,0.0795837462834489,0.07958374628344896,5.551115123125783e-17,1e-09,True,IPPO-ensemble seed 99
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed99_20260517T091403,switches,183.0,183.0,0.0,1e-09,True,IPPO-ensemble seed 99
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed99_20260517T091403,per-cluster reward (max over 10),,,1.1368683772161603e-12,0.01,True,IPPO-ensemble seed 99
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed64_20260517T110907,reward,-5883.89066559287,-5883.890665592871,9.094947017729282e-13,0.01,True,IPPO-ensemble seed 64
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed64_20260517T110907,energy_wh,1969.9151644778344,1969.9151644778315,2.9558577807620168e-12,0.01,True,IPPO-ensemble seed 64
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed64_20260517T110907,qos_violation_rate,0.0061446977205153,0.006144697720515362,6.158268339717665e-17,1e-09,True,IPPO-ensemble seed 64
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed64_20260517T110907,usr_share,0.086025768087215,0.08602576808721507,6.938893903907228e-17,1e-09,True,IPPO-ensemble seed 64
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed64_20260517T110907,switches,213.0,213.0,0.0,1e-09,True,IPPO-ensemble seed 64
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed64_20260517T110907,per-cluster reward (max over 10),,,6.821210263296962e-13,0.01,True,IPPO-ensemble seed 64
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed1_20260517T110907,reward,-5708.994804591908,-5708.994804591909,9.094947017729282e-13,0.01,True,IPPO-ensemble seed 1
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed1_20260517T110907,energy_wh,1976.0723405906167,1976.0723405906147,2.0463630789890885e-12,0.01,True,IPPO-ensemble seed 1
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed1_20260517T110907,qos_violation_rate,0.0052527254707631,0.005252725470763132,3.209238430557093e-17,1e-09,True,IPPO-ensemble seed 1
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed1_20260517T110907,usr_share,0.0762140733399405,0.07621407333994054,4.163336342344337e-17,1e-09,True,IPPO-ensemble seed 1
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed1_20260517T110907,switches,191.0,191.0,0.0,1e-09,True,IPPO-ensemble seed 1
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed1_20260517T110907,per-cluster reward (max over 10),,,9.094947017729282e-13,0.01,True,IPPO-ensemble seed 1
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed77_20260517T110907,reward,-5864.595921473701,-5864.595921473701,0.0,0.01,True,IPPO-ensemble seed 77
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed77_20260517T110907,energy_wh,1978.9685007214607,1978.9685007214582,2.5011104298755527e-12,0.01,True,IPPO-ensemble seed 77
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed77_20260517T110907,qos_violation_rate,0.0059464816650148,0.005946481665014866,6.591949208711867e-17,1e-09,True,IPPO-ensemble seed 77
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed77_20260517T110907,usr_share,0.0827552031714568,0.08275520317145689,8.326672684688674e-17,1e-09,True,IPPO-ensemble seed 77
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed77_20260517T110907,switches,207.0,207.0,0.0,1e-09,True,IPPO-ensemble seed 77
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed77_20260517T110907,per-cluster reward (max over 10),,,1.0231815394945443e-12,0.01,True,IPPO-ensemble seed 77
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed23_20260517T110907,reward,-5819.775219348036,-5819.775219348036,0.0,0.01,True,IPPO-ensemble seed 23
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed23_20260517T110907,energy_wh,1969.2873329637985,1969.2873329637957,2.7284841053187847e-12,0.01,True,IPPO-ensemble seed 23
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed23_20260517T110907,qos_violation_rate,0.0058473736372646,0.005847373637264618,1.8214596497756474e-17,1e-09,True,IPPO-ensemble seed 23
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed23_20260517T110907,usr_share,0.0849355797819623,0.08493557978196234,4.163336342344337e-17,1e-09,True,IPPO-ensemble seed 23
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed23_20260517T110907,switches,219.0,219.0,0.0,1e-09,True,IPPO-ensemble seed 23
+1b v04twin.json,IPPO|ppo_single_site_ensemble_seed23_20260517T110907,per-cluster reward (max over 10),,,7.958078640513122e-13,0.01,True,IPPO-ensemble seed 23
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,reward,-11203.796849020411,-11203.796849020408,3.637978807091713e-12,0.01,True,centralised-PPO seed 42
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,energy_wh,2074.1289069121253,2074.128906912122,3.183231456205249e-12,0.01,True,centralised-PPO seed 42
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,qos_violation_rate,0.0249752229930624,0.02497522299306244,3.8163916471489756e-17,1e-09,True,centralised-PPO seed 42
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,usr_share,0.0837462834489593,0.08374628344895936,5.551115123125783e-17,1e-09,True,centralised-PPO seed 42
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,switches,227.0,227.0,0.0,1e-09,True,centralised-PPO seed 42
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,per-cluster reward (max over 10),,,3.183231456205249e-12,0.01,True,centralised-PPO seed 42
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,reward,-12781.039650613237,-12781.039650613227,9.094947017729282e-12,0.01,True,centralised-PPO seed 7
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,energy_wh,2104.2466733949177,2104.246673394913,4.547473508864641e-12,0.01,True,centralised-PPO seed 7
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,qos_violation_rate,0.0294350842418235,0.02943508424182359,9.020562075079397e-17,1e-09,True,centralised-PPO seed 7
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,usr_share,0.0511397423191278,0.05113974231912785,4.85722573273506e-17,1e-09,True,centralised-PPO seed 7
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,switches,245.0,245.0,0.0,1e-09,True,centralised-PPO seed 7
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,per-cluster reward (max over 10),,,4.547473508864641e-12,0.01,True,centralised-PPO seed 7
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,reward,-12718.787759182029,-12718.787759182043,1.4551915228366852e-11,0.01,True,centralised-PPO seed 13
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,energy_wh,2121.2049200313204,2121.204920031316,4.547473508864641e-12,0.01,True,centralised-PPO seed 13
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,qos_violation_rate,0.0285431119920713,0.02854311199207136,5.898059818321144e-17,1e-09,True,centralised-PPO seed 13
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,usr_share,0.0574826560951437,0.057482656095143705,6.938893903907228e-18,1e-09,True,centralised-PPO seed 13
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,switches,51.0,51.0,0.0,1e-09,True,centralised-PPO seed 13
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,per-cluster reward (max over 10),,,1.1823431123048067e-11,0.01,True,centralised-PPO seed 13
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,reward,-21133.539210535368,-21133.539210535368,0.0,0.01,True,centralised-PPO seed 99
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,energy_wh,2220.2941270699066,2220.294127069902,4.547473508864641e-12,0.01,True,centralised-PPO seed 99
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,qos_violation_rate,0.0661050545094152,0.06610505450941526,5.551115123125783e-17,1e-09,True,centralised-PPO seed 99
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,usr_share,0.1788899900891972,0.17888999008919723,2.7755575615628914e-17,1e-09,True,centralised-PPO seed 99
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,switches,152.0,152.0,0.0,1e-09,True,centralised-PPO seed 99
+1b v04twin.json,Centralized PPO|ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,per-cluster reward (max over 10),,,7.275957614183426e-12,0.01,True,centralised-PPO seed 99
+1b v04twin.json,Always-DPDK,reward,-7201.084827726418,-7201.084827726417,9.094947017729282e-13,0.01,True,always-DPDK
+1b v04twin.json,Always-DPDK,energy_wh,2070.724111926966,2070.724111926962,4.092726157978177e-12,0.01,True,always-DPDK
+1c replay == closed loop (pinned),87 controllers x 11 rows,all metrics (relative diff) and per-step actions,,,1.6093951085888475e-15,1e-12,True,actions identical: True; residual is floating-point round-off (<= 2 ulp)

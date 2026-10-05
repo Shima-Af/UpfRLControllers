@@ -1,0 +1,177 @@
+{
+ "generated": "2026-09-14T08:59:37",
+ "repo_head": "71a1b2fc8ab94b33979fc1f399f4c4dacd2e1f57",
+ "repo_branch": "chore/cleanup-research-vs-library",
+ "twin_installed": {
+  "url": "https://github.com/Shima-Af/UpfDigitalTwin.git",
+  "vcs_info": {
+   "commit_id": "95de4569689e1278db4cda7475aa14229da83ba9",
+   "requested_revision": "v0.4.0",
+   "vcs": "git"
+  }
+ },
+ "twin_v030_vendored_commit": "171146a67b855b2c87c779a9552335d6ba2fb8c4",
+ "configs": {
+  "configs/scenario_rl.yaml": "f4637a758a80981016a4b12478311d2aac86f4f36bcfb6361612d4971272e4fa",
+  "configs/digital_twin_paths.yaml": "900e1dd8cd28341dc33b3ac93ce3fd0da255eda4ba59e87de34af2188a25b13d"
+ },
+ "switching_costs": {
+  "pinned (thesis-v1.2)": "dc559bbe04d5c1cf4aceaceef0e08ec2210ba942cf54f39d37af1fc4163acee5",
+  "pre-fix (thesis-v1.1, vendored)": "21bafe0034b05c9f1c356f361f1be3619785d34c28c17ddb1a7dc6fa262001cd"
+ },
+ "traffic": {
+  "predictions_test.npy": "bd679942f8cd3f4b6f254c8243c821274e5c156327518978a9e9dc0a7444551f",
+  "targets_test.npy": "b49aafe548a6d8f6277c9207b0781665e0004b35635568ddf48f404499b51403"
+ },
+ "pinned_models": {
+  "layer1/dpdk__cpu_pct__lite.pkl": "1f2bdf259ed617ce52ec9a104976d9f42a7a63740d85aaf6387d333b7b838eaf",
+  "layer1/dpdk__downlink_one_way_delay_distribution__weighted_mean_delay_us__lite.pkl": "d4d2ead0e8dd2d45031d49411abd8b60e0560db16e583dc79ec27b08f81cc9b9",
+  "layer1/dpdk__gtpu_packets_dn__packets_lost_delta__lite.pkl": "ebadddacc9e45a03bcf87a6e8a0afad97c757c282819f822b1ce0a22a5fa6d17",
+  "layer1/dpdk__throughput_gbps__lite.pkl": "216dacfb68c1fd69506ff4eb165200a2815cdeb0468913dd0ef590c8282ccf16",
+  "layer1/usr_full__cpu_pct__lite.pkl": "ba9c4e7c03d079e9b32dfa789f37c89ad80a640b7fe35625a4a869cdba822301",
+  "layer1/usr_full__downlink_one_way_delay_distribution__weighted_mean_delay_us__lite.pkl": "e6d40860bc2e5007acf477945a0aa13a3b5f2ba548765b2bbc4481824d5d62db",
+  "layer1/usr_full__gtpu_packets_dn__packets_lost_delta__lite.pkl": "5103f5ebdd94dd21046614d1354e842496c541dc34c7f846c0ffea790701d94b",
+  "layer1/usr_full__throughput_gbps__lite.pkl": "0a496d69731cbda2f0462100572c9d7600024778b5f8f0bb9d6f36753c7be3ea",
+  "layer1/usr_safe__cpu_pct__lite.pkl": "782187cc01db6674baa7bbf96dbfc76d9e49d352dd67961dc052169509f79f32",
+  "layer1/usr_safe__downlink_one_way_delay_distribution__weighted_mean_delay_us__lite.pkl": "65b91f3e56dd17b37f763f098c869c359271012f3b0b407b4fe0ba506c6efa5e",
+  "layer1/usr_safe__gtpu_packets_dn__packets_lost_delta__lite.pkl": "c13c18dd22537cd9ad8bc62ace9410db6173101e997585357aab09fb39469d31",
+  "layer1/usr_safe__throughput_gbps__lite.pkl": "7fe395d86499e2a1c5aa923b37e06db8c751850a99abd3b88029a2339c1d96f7",
+  "layer2/dpdk__power_watts__lite.pkl": "608fc1f3ec0c8b242bd8a5f87e4ab63aa05538553b8e2facf313b80c13bf5d6d",
+  "layer2/usr_full__power_watts__lite.pkl": "cb5c9913757bdccf39d299423266cafb9c3a40637101be37e5b6c180183108bf",
+  "layer2/usr_safe__power_watts__lite.pkl": "c76379204e89f9124c517052b2c195abbc992aa3427d2fae5b5d52392f0b1811",
+  "manifest.json": "365391a677b38765e666550c2f0af9c5bed594b74de03754eb59bf46c95859b3"
+ },
+ "code": {
+  "src/envs/single_site_upf_env.py": "f1feb81a68f539910ba33eb81165fdeccbfe4ee01ad23f6cffd34aff6b345e16",
+  "src/envs/multi_agent_upf_env.py": "ab812bb85efe442270c7d082e9cd9c6f0667c559b9bbfdc60a42b5650e6796f9",
+  "src/baselines/hysteresis.py": "3bf0618bcc8a5f958446b59d2ee16745aeeeb2718df97e5b0cdf5379aefbafa8",
+  "src/baselines/threshold_derivation.py": "4cc1d8e6f667a4d110d597e56288b02ae5a8102c2b9a843139c24f6d6c64a9bf",
+  "research/phase7/evaluate_multiseed.py": "03a6c57f7ed7858b552f365ba57a4e7cf48593d4157e59f187e576a4ebd60282",
+  "src/trainers/mappo.py": "fd8d81ab6c5c28d7e8059dab91f5ca56b69df084f2594371d0da4025840c2e74",
+  ".venv/lib/python3.12/site-packages/upf_digital_twin/twin/digital_twin.py": "4c9252433f693be6f29450814834d614161116e3ea3fe6ae91429b2344b8dfa7",
+  ".venv/lib/python3.12/site-packages/upf_digital_twin/twin/upf_profile.py": "5d493bf3940e7132316d1207171d1f0a6f354a387743805036a27cf5a45971fa",
+  "reports/twin-validation-heldout-wcnc2027/common.py": "50790622dd26130161d7ff3a994af1333c491e1e1c34fe57591ad9ecb2677152",
+  "reports/twin-validation-heldout-wcnc2027/s02_heldout_cv.py": "84026d31efc909fcd2daa95474dc6e5233c39fa59a37d92302f03035fbcce44d",
+  "reports/twin-validation-heldout-wcnc2027/s02b_threshold_stability.py": "6d1d57395c4cf12b34881ee5af6eb3fe19f7a7016b7f43dbb2c4edda3bd61c98",
+  "reports/twin-validation-heldout-wcnc2027/heldout_model_selection.json": "7f06fab3aedd23ee694ebe488e4c4497571ff2d1984029f6bf76f8ead5725bab",
+  "reports/twin-validation-heldout-wcnc2027/heldout_predictions.csv.gz": "b03084aeb72ad2870cb08bd30a14fbeab4810edbd4b60bf3e6f897344e571d0f",
+  "reports/twin-validation-heldout-wcnc2027/threshold_stability.csv": "fa3e5852a6f7ec3301c7f590d7119446bf9392489014a51ac96f43222ed7dbbf",
+  "reports/twin-validation-heldout-wcnc2027/threshold_grid_predictions.csv.gz": "4a0c1648cc8836049e0d3c3dea7992d23982cceeacdd64d3f6b229094abc34d0"
+ },
+ "study_scripts": {
+  "evaluate_worlds.py": "f65c7d58cddb6bc27a51bb135ec74841ecbd09a601f0cc50b9ca48be32744d9b",
+  "rb_common.py": "37b8dc394c7d8c38a403500ee25ed80bce37531415930f568be8648eba5ff63e",
+  "s00_inventory.py": "4897de28ed1f19fcce5e1544538e991aa89ba5c617a7490b6ce83468884fb9cb",
+  "s01_build_bundles.py": "53238431ee74ec97e07aea2fefe614a192fbdadc7613226a01f1a540c6232b28",
+  "s02_reproduction_check.py": "fdc1d2f3ceb0ca61ae5d20e99644595e46f4357239045c6acc6bc96f1d82d284",
+  "s03_recalibrated_hysteresis.py": "e2bda7f0d5a0f90ae92258e20717bc9951040cabb1d5af3dc3499763ff4760d6",
+  "s04_analyze.py": "4eb2ea96539689c471b62aee039b98b23ce22093632339f380407c2d662ff048",
+  "s05_figures.py": "ab1bfeb2b579ed56d421b1d2a49b42e45f7fd754856eda3b53de868377b70ccb",
+  "run_all.sh": "a8185b78dd07a6e58cbd766ca23613372bc89202981ce2d5958049b9322d9af2"
+ },
+ "fold_bundles": {
+  "LOLO_deployed_fold0": {
+   "sha256_all_files": "d5f2ce539816f9341b28e7bfcc54c93ad404561cb71668cb020e7acbef5b5e5b",
+   "manifest_sha256": "57b06be3c59b6a328fcbcb1f150f2dcc331f138bd7c442d2123de08ac63cafd2"
+  },
+  "LOLO_deployed_fold1": {
+   "sha256_all_files": "f7036b8c7d95f876e3ece885d610a7cbefa18408e1e956e64f5d0df6ae0cb9ff",
+   "manifest_sha256": "dd9071f62625e33bf1abdee97d29cb55dc4e05bcf54a02606ca38bb9610675ec"
+  },
+  "LOLO_deployed_fold2": {
+   "sha256_all_files": "14d390d5ff188747e4b476e4a8e986d9a5ae51158774238e8618b5fdb23f5b72",
+   "manifest_sha256": "4986647ceff5f28f04e11753a47b55318cc109a29808b5c9251ace842b94203f"
+  },
+  "LOLO_deployed_fold3": {
+   "sha256_all_files": "c8c751ca55247732de58d832aae4f92910a728fe27af57d6d936b69617621e33",
+   "manifest_sha256": "7a1ba7c920acebad90b5eb3f94ec60b236b1fe92dab185127a24fde3bb0bf400"
+  },
+  "LOLO_deployed_fold4": {
+   "sha256_all_files": "edc5e17e720fa3b2d4e02c948f7be8259e94bef41ff69436f4cc4585f501b884",
+   "manifest_sha256": "8509407d97809ba6c865893399449e47e36aa9c7c1e2ab4a0f6266c79096b629"
+  },
+  "LOLO_nested_fold0": {
+   "sha256_all_files": "36ef25399d163b78e60e1a4cb995e8692664a22db966d849e00633e5a95adb68",
+   "manifest_sha256": "24e2ae607a696f061022f0975b5f6ee2fac1cfeb4beb8f9988573747ca60b87c"
+  },
+  "LOLO_nested_fold1": {
+   "sha256_all_files": "36c8217e1ba6f04b1461df6fe023b0ce1abc256b260c49489ce8bcd116f8cef5",
+   "manifest_sha256": "68acc03b104b0bd64a9aa1b52c0692b547d6fd6ff4595a4a81914e5671b0f4d7"
+  },
+  "LOLO_nested_fold2": {
+   "sha256_all_files": "ad002a65115e1184710d9a8222487d5e4b1ddcf5bcb306330512dc80559540d0",
+   "manifest_sha256": "8e6c72a799ca28f9b2e3b530e7c672840a5c4e6e269aec4a28b127c932000e55"
+  },
+  "LOLO_nested_fold3": {
+   "sha256_all_files": "808331021f8a3ddf32fb9945898fcc8d790b3019c19bcf2176052e53612c1291",
+   "manifest_sha256": "84c47e3a9e4c7b494871ad2bcf323cf37cb05457a916709c3720b7da69af7a86"
+  },
+  "LOLO_nested_fold4": {
+   "sha256_all_files": "4a1973ea6a3673fbd16800397bd82cfa5b389dfd01e3a00fcb122285b6aa12cb",
+   "manifest_sha256": "e570fb3b8f1c79857768281b8c145985df98689ae5affdc52e5504223c423fee"
+  },
+  "LOSO_deployed_fold0": {
+   "sha256_all_files": "7270bf9388fa6a56f71309941474ca10d166df73c58bedc0988a05664d574d42",
+   "manifest_sha256": "9f3d8b0001f5b5aae7445f013d0095db6c434debd3b7bc0a2ab85386b9269345"
+  },
+  "LOSO_deployed_fold1": {
+   "sha256_all_files": "65638328b42212a83cc8dda520e194307ad6a45316b358f93ccd4ae18cd97106",
+   "manifest_sha256": "91453cb36855aa1c0dc42327e506c32d3f07f46168d9da199f69a04cfae7f85b"
+  },
+  "LOSO_deployed_fold2": {
+   "sha256_all_files": "6ed647638a9a97de018169c177ab5f7aae800667356e189864b3652774646d6b",
+   "manifest_sha256": "029068d0ea094ea5c14ce74f2fb378d4f3bb2e3adf65cd9ea0bd7a1ad7bff106"
+  },
+  "LOSO_deployed_fold3": {
+   "sha256_all_files": "f01d595bcdf1ed797a0dc5531fd49e3d7e1bacd564cc3a3475ef65df6d63763e",
+   "manifest_sha256": "08d81eac9a22e5219c25ba0f2a7a115cb02fd82a823cc13110731ca86641e70b"
+  },
+  "LOSO_deployed_fold4": {
+   "sha256_all_files": "f31a629760f773d01c703e02924956d84ffffd78acf0db5a1fd0f36f804995d5",
+   "manifest_sha256": "e382392a830517d6d40edacb6617a19a3e8f11070cf9f2e18a4af2c8dba38127"
+  },
+  "LOSO_nested_fold0": {
+   "sha256_all_files": "5f08bf940cbd1560d64885a60f061648c1013bdef294a25ff6b27a14c8de1b42",
+   "manifest_sha256": "a9420d779a8b2800ab9f6683e4c1115805fbf180a4e88ef0103b1d45f314e689"
+  },
+  "LOSO_nested_fold1": {
+   "sha256_all_files": "567996269d24a8f3e58c43ea9daf5700b99cf7eb9ff5f95cc48bbdb7204f206b",
+   "manifest_sha256": "e8e8dfd8b742f6ac6c382c94e7fa6faaf48d4717f74632278502236010e95df5"
+  },
+  "LOSO_nested_fold2": {
+   "sha256_all_files": "1571b6061f0709a103db89ac4266880c9e62770a9dbc70f2c6f84ea68b2b5de1",
+   "manifest_sha256": "3a5d7a711488cc32a4c77f9c475bd39f91cff2bc4c5913b3e609fec59a4c1838"
+  },
+  "LOSO_nested_fold3": {
+   "sha256_all_files": "826136d9d7558601bf2f24858b765dc25e893930a4d9b03b93e14fd72766dae5",
+   "manifest_sha256": "29f089b340e70afcece57c5cad749212784cd3cc0c408183f023caf9ad4c4d40"
+  },
+  "LOSO_nested_fold4": {
+   "sha256_all_files": "9bbaf3e5b636a35596a7f1dab93d51f9d116da631f8481d676d55c4c68bb6fc7",
+   "manifest_sha256": "3f91dfc3de0cab9c5280ca0dbe78e8cf5b901f757d42e891c317c8f4ce61a748"
+  }
+ },
+ "bridge_copies_excluded": [
+  {
+   "copy": "experiments/ppo_multi_site_seed1_bridge/ppo_multi_site.zip",
+   "original": "experiments/central_nr_seed1/ppo_multi_site.zip",
+   "identical": true
+  },
+  {
+   "copy": "experiments/ppo_multi_site_seed23_bridge/ppo_multi_site.zip",
+   "original": "experiments/central_nr_seed23/ppo_multi_site.zip",
+   "identical": true
+  },
+  {
+   "copy": "experiments/ppo_multi_site_seed64_bridge/ppo_multi_site.zip",
+   "original": "experiments/central_nr_seed64/ppo_multi_site.zip",
+   "identical": true
+  },
+  {
+   "copy": "experiments/ppo_multi_site_seed77_bridge/ppo_multi_site.zip",
+   "original": "experiments/central_nr_seed77/ppo_multi_site.zip",
+   "identical": true
+  }
+ ],
+ "normalisation_files_found": []
+}

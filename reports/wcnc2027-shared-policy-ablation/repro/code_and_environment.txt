@@ -1,0 +1,34 @@
+git HEAD: 71a1b2fc8ab94b33979fc1f399f4c4dacd2e1f57
+branch: chore/cleanup-research-vs-library
+python: Python 3.12.3
+twin: {'commit_id': '95de4569689e1278db4cda7475aa14229da83ba9', 'requested_revision': 'v0.4.0', 'vcs': 'git'}
+host: 32 CPU, 251 GB RAM; GPU present but unused (all trainers pinned to CPU)
+--- git status (short) at launch ---
+ M .claude/settings.json
+ M reports/paper-letters/paper.log
+ M reports/paper-letters/paper.pdf
+?? reports/paper-letters/paper.fdb_latexmk
+?? reports/paper-letters/paper.fls
+?? reports/paper-letters/paper.synctex.gz
+?? reports/phase-7/multiseed_summary_n8central.json
+?? reports/sweep-alpha-k/
+?? reports/twin-validation-heldout-wcnc2027/
+?? reports/wcnc2027-shared-policy-ablation/
+?? scripts/train_shared_ppo.py
+?? src/trainers/shared_ppo.py
+--- sha256 of code used ---
+fd8d81ab6c5c28d7e8059dab91f5ca56b69df084f2594371d0da4025840c2e74  src/trainers/mappo.py
+762d9725163a1b3a9c54dd054350584eaf7f58dbd060fac67633b4ce768d9a92  src/trainers/shared_ppo.py
+f2c50553a88760862475f404bc49d4d0445c547f678138bd1637e7372ff755f0  src/trainers/ppo_multi_site.py
+7c7a091651f9af7eac1982a844c57d5a163c1f38e1a6c19e9d577445c07ce4f5  src/trainers/ppo_single_site.py
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  src/envs/__init__.py
+ab812bb85efe442270c7d082e9cd9c6f0667c559b9bbfdc60a42b5650e6796f9  src/envs/multi_agent_upf_env.py
+f16c666c023962326e80da18de5934bd88bcada64e6acae39f849fa22d4de6c3  src/envs/multi_site_upf_env.py
+f1feb81a68f539910ba33eb81165fdeccbfe4ee01ad23f6cffd34aff6b345e16  src/envs/single_site_upf_env.py
+b9282eb62be3b2b9699bb869f44483c08d6151b79dcf502e06fddbaccb3906bc  scripts/train_mappo.py
+e00f3f02b03c83278d5815f77c58d24651e23151177ff8fddff271c2cfdc2ec2  scripts/train_shared_ppo.py
+b3ab6dc84e26730e52b4b8cdd573b8867a48230f3303056042d816d5782f198b  scripts/train_ppo_multi_site.py
+01f6a18f1b315f99c1e5feb8290f8ccbf3b68254bcb1a0d6b55b056eeb917e88  scripts/train_ppo_ensemble.py
+03a6c57f7ed7858b552f365ba57a4e7cf48593d4157e59f187e576a4ebd60282  research/phase7/evaluate_multiseed.py
+f4637a758a80981016a4b12478311d2aac86f4f36bcfb6361612d4971272e4fa  configs/scenario_rl.yaml
+900e1dd8cd28341dc33b3ac93ce3fd0da255eda4ba59e87de34af2188a25b13d  configs/digital_twin_paths.yaml

@@ -1,0 +1,49 @@
+  LOSO nested   DPDK fold 0: train 88 runs / test 22 runs,  11.5s
+  LOSO nested   DPDK fold 1: train 88 runs / test 22 runs,  10.0s
+  LOSO nested   DPDK fold 2: train 88 runs / test 22 runs,  10.1s
+  LOSO nested   DPDK fold 3: train 88 runs / test 22 runs,   9.7s
+  LOSO nested   DPDK fold 4: train 88 runs / test 22 runs,   9.6s
+  LOSO nested   USR  fold 0: train 88 runs / test 22 runs,  17.5s
+  LOSO nested   USR  fold 1: train 88 runs / test 22 runs,  15.4s
+  LOSO nested   USR  fold 2: train 88 runs / test 22 runs,  13.9s
+  LOSO nested   USR  fold 3: train 88 runs / test 22 runs,  13.9s
+  LOSO nested   USR  fold 4: train 88 runs / test 22 runs,  13.4s
+  LOSO deployed DPDK fold 0: train 88 runs / test 22 runs,   1.8s
+  LOSO deployed DPDK fold 1: train 88 runs / test 22 runs,   1.7s
+  LOSO deployed DPDK fold 2: train 88 runs / test 22 runs,   1.7s
+  LOSO deployed DPDK fold 3: train 88 runs / test 22 runs,   1.8s
+  LOSO deployed DPDK fold 4: train 88 runs / test 22 runs,   1.7s
+  LOSO deployed USR  fold 0: train 88 runs / test 22 runs,   4.5s
+  LOSO deployed USR  fold 1: train 88 runs / test 22 runs,   4.5s
+  LOSO deployed USR  fold 2: train 88 runs / test 22 runs,   4.5s
+  LOSO deployed USR  fold 3: train 88 runs / test 22 runs,   4.5s
+  LOSO deployed USR  fold 4: train 88 runs / test 22 runs,   4.5s
+  LOLO nested   DPDK fold 0: train 85 runs / test 25 runs,   8.1s
+  LOLO nested   DPDK fold 1: train 85 runs / test 25 runs,  10.2s
+  LOLO nested   DPDK fold 2: train 90 runs / test 20 runs,  10.3s
+  LOLO nested   DPDK fold 3: train 90 runs / test 20 runs,   9.7s
+  LOLO nested   DPDK fold 4: train 90 runs / test 20 runs,   9.8s
+  LOLO nested   USR  fold 0: train 85 runs / test 25 runs,  12.1s
+  LOLO nested   USR  fold 1: train 85 runs / test 25 runs,  11.6s
+  LOLO nested   USR  fold 2: train 90 runs / test 20 runs,  12.2s
+  LOLO nested   USR  fold 3: train 90 runs / test 20 runs,  14.0s
+  LOLO nested   USR  fold 4: train 90 runs / test 20 runs,  16.7s
+  LOLO deployed DPDK fold 0: train 85 runs / test 25 runs,   1.6s
+  LOLO deployed DPDK fold 1: train 85 runs / test 25 runs,   1.6s
+  LOLO deployed DPDK fold 2: train 90 runs / test 20 runs,   1.6s
+  LOLO deployed DPDK fold 3: train 90 runs / test 20 runs,   1.6s
+  LOLO deployed DPDK fold 4: train 90 runs / test 20 runs,   1.6s
+  LOLO deployed USR  fold 0: train 85 runs / test 25 runs,   3.8s
+  LOLO deployed USR  fold 1: train 85 runs / test 25 runs,   3.8s
+  LOLO deployed USR  fold 2: train 90 runs / test 20 runs,   4.1s
+  LOLO deployed USR  fold 3: train 90 runs / test 20 runs,   4.0s
+  LOLO deployed USR  fold 4: train 90 runs / test 20 runs,   3.9s
+                   size  nunique
+protocol config                 
+LOLO     deployed  8781     8781
+         lookup    8781     8781
+         nested    8781     8781
+LOSO     deployed  8781     8781
+         lookup    8781     8781
+         nested    8781     8781
+exit 0

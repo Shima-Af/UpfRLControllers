@@ -1,0 +1,94 @@
+{
+ "traced": {
+  "MAPPO": {
+   "1": "MAPPO|mappo_pool_off_seed1_20260526T162327/mappo_best.pt",
+   "7": "MAPPO|mappo_pool_off_seed7_20260526T162327/mappo_best.pt",
+   "13": "MAPPO|mappo_pool_off_seed13_20260526T162327/mappo_best.pt",
+   "23": "MAPPO|mappo_nr_seed23/mappo_best.pt",
+   "42": "MAPPO|mappo_seed42_20260526T143637/mappo_best.pt",
+   "64": "MAPPO|mappo_nr_seed64/mappo_best.pt",
+   "77": "MAPPO|mappo_pool_off_seed77_20260526T162327/mappo_best.pt",
+   "99": "MAPPO|mappo_nr_seed99/mappo_best.pt"
+  },
+  "IPPO": {
+   "1": "IPPO|ippo_nr_seed1",
+   "7": "IPPO|ippo_nr_seed7",
+   "13": "IPPO|ippo_nr_seed13",
+   "23": "IPPO|ippo_nr_seed23",
+   "42": "IPPO|ippo_nr_seed42",
+   "64": "IPPO|ippo_nr_seed64",
+   "77": "IPPO|ippo_nr_seed77",
+   "99": "IPPO|ippo_nr_seed99"
+  }
+ },
+ "n_centralized_combinations": 433762,
+ "n_centralized_candidates": 73,
+ "n_centralized_combinations_reward_and_sd_within_tol": 0,
+ "n_centralized_combinations_all_within_tol": 0,
+ "centralized_traced": false,
+ "extra_entries": [
+  {
+   "ckpt_id": "MAPPO|mappo_pool_off_seed1_20260526T162327/mappo_best.pt",
+   "family": "MAPPO",
+   "kind": "mappo",
+   "seed": 1,
+   "path": "/home/ubuntu/UpfRLControllers/experiments/mappo_pool_off_seed1_20260526T162327/mappo_best.pt",
+   "source": "search-only (scenario-variant sweep dir)",
+   "cohorts": [
+    "T"
+   ]
+  },
+  {
+   "ckpt_id": "MAPPO|mappo_pool_off_seed7_20260526T162327/mappo_best.pt",
+   "family": "MAPPO",
+   "kind": "mappo",
+   "seed": 7,
+   "path": "/home/ubuntu/UpfRLControllers/experiments/mappo_pool_off_seed7_20260526T162327/mappo_best.pt",
+   "source": "search-only (scenario-variant sweep dir)",
+   "cohorts": [
+    "T"
+   ]
+  },
+  {
+   "ckpt_id": "MAPPO|mappo_pool_off_seed13_20260526T162327/mappo_best.pt",
+   "family": "MAPPO",
+   "kind": "mappo",
+   "seed": 13,
+   "path": "/home/ubuntu/UpfRLControllers/experiments/mappo_pool_off_seed13_20260526T162327/mappo_best.pt",
+   "source": "search-only (scenario-variant sweep dir)",
+   "cohorts": [
+    "T"
+   ]
+  },
+  {
+   "ckpt_id": "MAPPO|mappo_pool_off_seed77_20260526T162327/mappo_best.pt",
+   "family": "MAPPO",
+   "kind": "mappo",
+   "seed": 77,
+   "path": "/home/ubuntu/UpfRLControllers/experiments/mappo_pool_off_seed77_20260526T162327/mappo_best.pt",
+   "source": "search-only (scenario-variant sweep dir)",
+   "cohorts": [
+    "T"
+   ]
+  }
+ ],
+ "traceable_ckpt_ids": [
+  "MAPPO|mappo_pool_off_seed1_20260526T162327/mappo_best.pt",
+  "MAPPO|mappo_pool_off_seed7_20260526T162327/mappo_best.pt",
+  "MAPPO|mappo_pool_off_seed13_20260526T162327/mappo_best.pt",
+  "MAPPO|mappo_nr_seed23/mappo_best.pt",
+  "MAPPO|mappo_seed42_20260526T143637/mappo_best.pt",
+  "MAPPO|mappo_nr_seed64/mappo_best.pt",
+  "MAPPO|mappo_pool_off_seed77_20260526T162327/mappo_best.pt",
+  "MAPPO|mappo_nr_seed99/mappo_best.pt",
+  "IPPO|ippo_nr_seed1",
+  "IPPO|ippo_nr_seed7",
+  "IPPO|ippo_nr_seed13",
+  "IPPO|ippo_nr_seed23",
+  "IPPO|ippo_nr_seed42",
+  "IPPO|ippo_nr_seed64",
+  "IPPO|ippo_nr_seed77",
+  "IPPO|ippo_nr_seed99"
+ ],
+ "paper_tex_sha256": "7d72e12d99ea0884f5a392569d01996a73a8afe8d00240db342883b262c04a8b"
+}

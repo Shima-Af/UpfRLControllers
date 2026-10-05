@@ -1,0 +1,793 @@
+group,controller,seed,cluster,checkpoint,reward,energy_wh,qos_violation_rate,qscore_below_tau_rate,usr_share,switches,switches_per_cluster_day,switching_energy_wh,mean_load_gbps,cost_energy_term,cost_qos_penalty,cost_switch_penalty,cost_cooldown_penalty
+primary,Centralized PPO,1,all,experiments/wcnc2027_ablation/central_seed1/ppo_multi_site.zip,-20316.8,2201.5,0.0620416,0.0620416,0.13221,150,1.42716,0.720573,0.468471,5756.52,14518,2.88229,39.375
+primary,Centralized PPO,1,0,experiments/wcnc2027_ablation/central_seed1/ppo_multi_site.zip,-1629.73,185.075,0.0346878,0.0346878,0.350842,113,10.7512,0.540426,0.108036,821.263,775.801,2.1617,30.5
+primary,Centralized PPO,1,1,experiments/wcnc2027_ablation/central_seed1/ppo_multi_site.zip,-868.691,206.988,0,0,0,0,0,0,0.279146,868.691,0,0,0
+primary,Centralized PPO,1,2,experiments/wcnc2027_ablation/central_seed1/ppo_multi_site.zip,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+primary,Centralized PPO,1,3,experiments/wcnc2027_ablation/central_seed1/ppo_multi_site.zip,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,Centralized PPO,1,4,experiments/wcnc2027_ablation/central_seed1/ppo_multi_site.zip,-974.561,206.85,0.00099108,0.00099108,0.00297324,2,0.190287,0.00948115,0.199088,952.198,22.0748,0.0379246,0.25
+primary,Centralized PPO,1,5,experiments/wcnc2027_ablation/central_seed1/ppo_multi_site.zip,-443.235,207.068,0,0,0,0,0,0,0.350913,443.235,0,0,0
+primary,Centralized PPO,1,6,experiments/wcnc2027_ablation/central_seed1/ppo_multi_site.zip,-953.99,206.742,0,0,0.00198216,3,0.285431,0.0189623,0.18226,952.915,0,0.0758492,1
+primary,Centralized PPO,1,7,experiments/wcnc2027_ablation/central_seed1/ppo_multi_site.zip,-13548.4,359.503,0.547076,0.547076,0.966303,32,3.0446,0.151704,0.187329,812.111,12728.1,0.606814,7.625
+primary,Centralized PPO,1,8,experiments/wcnc2027_ablation/central_seed1/ppo_multi_site.zip,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+primary,Centralized PPO,1,9,experiments/wcnc2027_ablation/central_seed1/ppo_multi_site.zip,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,Centralized PPO,7,all,experiments/wcnc2027_ablation/central_seed7/ppo_multi_site.zip,-11568.4,2097.63,0.0254708,0.0254708,0.0976214,29,0.275917,0.132741,0.468471,5786.72,5772.74,0.530965,8.375
+primary,Centralized PPO,7,0,experiments/wcnc2027_ablation/central_seed7/ppo_multi_site.zip,-5688.64,233.671,0.217047,0.217047,0.976214,29,2.75917,0.132741,0.108036,899.026,4780.71,0.530965,8.375
+primary,Centralized PPO,7,1,experiments/wcnc2027_ablation/central_seed7/ppo_multi_site.zip,-868.691,206.988,0,0,0,0,0,0,0.279146,868.691,0,0,0
+primary,Centralized PPO,7,2,experiments/wcnc2027_ablation/central_seed7/ppo_multi_site.zip,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+primary,Centralized PPO,7,3,experiments/wcnc2027_ablation/central_seed7/ppo_multi_site.zip,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,Centralized PPO,7,4,experiments/wcnc2027_ablation/central_seed7/ppo_multi_site.zip,-955.91,206.89,0,0,0,0,0,0,0.199088,955.91,0,0,0
+primary,Centralized PPO,7,5,experiments/wcnc2027_ablation/central_seed7/ppo_multi_site.zip,-443.235,207.068,0,0,0,0,0,0,0.350913,443.235,0,0,0
+primary,Centralized PPO,7,6,experiments/wcnc2027_ablation/central_seed7/ppo_multi_site.zip,-956.036,206.861,0,0,0,0,0,0,0.18226,956.036,0,0,0
+primary,Centralized PPO,7,7,experiments/wcnc2027_ablation/central_seed7/ppo_multi_site.zip,-757.714,206.88,0,0,0,0,0,0,0.187329,757.714,0,0,0
+primary,Centralized PPO,7,8,experiments/wcnc2027_ablation/central_seed7/ppo_multi_site.zip,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+primary,Centralized PPO,7,9,experiments/wcnc2027_ablation/central_seed7/ppo_multi_site.zip,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,Centralized PPO,13,all,experiments/wcnc2027_ablation/central_seed13/ppo_multi_site.zip,-11179.3,2089.13,0.023885,0.023885,0.0924678,74,0.704063,0.350808,0.468471,5739.84,5419.84,1.40323,18.25
+primary,Centralized PPO,13,0,experiments/wcnc2027_ablation/central_seed13/ppo_multi_site.zip,-5299.61,225.168,0.201189,0.201189,0.924678,74,7.04063,0.350808,0.108036,852.15,4427.81,1.40323,18.25
+primary,Centralized PPO,13,1,experiments/wcnc2027_ablation/central_seed13/ppo_multi_site.zip,-868.691,206.988,0,0,0,0,0,0,0.279146,868.691,0,0,0
+primary,Centralized PPO,13,2,experiments/wcnc2027_ablation/central_seed13/ppo_multi_site.zip,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+primary,Centralized PPO,13,3,experiments/wcnc2027_ablation/central_seed13/ppo_multi_site.zip,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,Centralized PPO,13,4,experiments/wcnc2027_ablation/central_seed13/ppo_multi_site.zip,-955.91,206.89,0,0,0,0,0,0,0.199088,955.91,0,0,0
+primary,Centralized PPO,13,5,experiments/wcnc2027_ablation/central_seed13/ppo_multi_site.zip,-443.235,207.068,0,0,0,0,0,0,0.350913,443.235,0,0,0
+primary,Centralized PPO,13,6,experiments/wcnc2027_ablation/central_seed13/ppo_multi_site.zip,-956.036,206.861,0,0,0,0,0,0,0.18226,956.036,0,0,0
+primary,Centralized PPO,13,7,experiments/wcnc2027_ablation/central_seed13/ppo_multi_site.zip,-757.714,206.88,0,0,0,0,0,0,0.187329,757.714,0,0,0
+primary,Centralized PPO,13,8,experiments/wcnc2027_ablation/central_seed13/ppo_multi_site.zip,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+primary,Centralized PPO,13,9,experiments/wcnc2027_ablation/central_seed13/ppo_multi_site.zip,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,Centralized PPO,23,all,experiments/wcnc2027_ablation/central_seed23/ppo_multi_site.zip,-18575.4,2137.63,0.0563925,0.0563925,0.150545,712,6.77423,3.38478,0.468471,5187.33,13139.6,13.5391,234.875
+primary,Centralized PPO,23,0,experiments/wcnc2027_ablation/central_seed23/ppo_multi_site.zip,-5170.73,213.685,0.187314,0.187314,0.686819,388,36.9158,1.83935,0.108036,898.873,4121.5,7.35739,143
+primary,Centralized PPO,23,1,experiments/wcnc2027_ablation/central_seed23/ppo_multi_site.zip,-1799.42,203.92,0.0594648,0.0594648,0.271556,31,2.94945,0.151698,0.279146,466.038,1329.52,0.606794,3.25
+primary,Centralized PPO,23,2,experiments/wcnc2027_ablation/central_seed23/ppo_multi_site.zip,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+primary,Centralized PPO,23,3,experiments/wcnc2027_ablation/central_seed23/ppo_multi_site.zip,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,Centralized PPO,23,4,experiments/wcnc2027_ablation/central_seed23/ppo_multi_site.zip,-1188.74,209.843,0.00891972,0.00891972,0.00594648,6,0.570862,0.0284435,0.199088,958.888,228.112,0.113774,1.625
+primary,Centralized PPO,23,5,experiments/wcnc2027_ablation/central_seed23/ppo_multi_site.zip,-579.902,209.739,0.0049554,0.0049554,0.00396432,2,0.190287,0.00948115,0.350913,444.739,135,0.0379246,0.125
+primary,Centralized PPO,23,6,experiments/wcnc2027_ablation/central_seed23/ppo_multi_site.zip,-7132.9,264.219,0.263627,0.263627,0.53221,283,26.9257,1.34632,0.18226,756.265,6284.38,5.38529,86.875
+primary,Centralized PPO,23,7,experiments/wcnc2027_ablation/central_seed23/ppo_multi_site.zip,-757.714,206.88,0,0,0,0,0,0,0.187329,757.714,0,0,0
+primary,Centralized PPO,23,8,experiments/wcnc2027_ablation/central_seed23/ppo_multi_site.zip,-449.718,207.132,0.00198216,0.00198216,0.0049554,2,0.190287,0.00948115,0.349685,400.605,49.0748,0.0379246,0
+primary,Centralized PPO,23,9,experiments/wcnc2027_ablation/central_seed23/ppo_multi_site.zip,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,Centralized PPO,42,all,experiments/wcnc2027_ablation/central_seed42/ppo_multi_site.zip,-7369.53,2062.64,0.00574827,0.00574827,0.0142716,39,0.37106,0.189623,0.468471,5945.2,1415.83,0.758492,7.75
+primary,Centralized PPO,42,0,experiments/wcnc2027_ablation/central_seed42/ppo_multi_site.zip,-1321.36,206.765,0,0,0,0,0,0,0.108036,1321.36,0,0,0
+primary,Centralized PPO,42,1,experiments/wcnc2027_ablation/central_seed42/ppo_multi_site.zip,-868.691,206.988,0,0,0,0,0,0,0.279146,868.691,0,0,0
+primary,Centralized PPO,42,2,experiments/wcnc2027_ablation/central_seed42/ppo_multi_site.zip,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+primary,Centralized PPO,42,3,experiments/wcnc2027_ablation/central_seed42/ppo_multi_site.zip,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,Centralized PPO,42,4,experiments/wcnc2027_ablation/central_seed42/ppo_multi_site.zip,-1124.36,198.805,0.0198216,0.0198216,0.142716,39,3.7106,0.189623,0.199088,692.054,423.796,0.758492,7.75
+primary,Centralized PPO,42,5,experiments/wcnc2027_ablation/central_seed42/ppo_multi_site.zip,-443.235,207.068,0,0,0,0,0,0,0.350913,443.235,0,0,0
+primary,Centralized PPO,42,6,experiments/wcnc2027_ablation/central_seed42/ppo_multi_site.zip,-956.036,206.861,0,0,0,0,0,0,0.18226,956.036,0,0,0
+primary,Centralized PPO,42,7,experiments/wcnc2027_ablation/central_seed42/ppo_multi_site.zip,-757.714,206.88,0,0,0,0,0,0,0.187329,757.714,0,0,0
+primary,Centralized PPO,42,8,experiments/wcnc2027_ablation/central_seed42/ppo_multi_site.zip,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+primary,Centralized PPO,42,9,experiments/wcnc2027_ablation/central_seed42/ppo_multi_site.zip,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,Centralized PPO,64,all,experiments/wcnc2027_ablation/central_seed64/ppo_multi_site.zip,-8207.59,2046.76,0.0117939,0.0117939,0.0515362,89,0.846779,0.436133,0.468471,5433,2758.72,1.74453,14.125
+primary,Centralized PPO,64,0,experiments/wcnc2027_ablation/central_seed64/ppo_multi_site.zip,-1298,191.31,0.012884,0.012884,0.177403,21,1.99802,0.104293,0.108036,1005.76,291.823,0.417171,0
+primary,Centralized PPO,64,1,experiments/wcnc2027_ablation/central_seed64/ppo_multi_site.zip,-868.691,206.988,0,0,0,0,0,0,0.279146,868.691,0,0,0
+primary,Centralized PPO,64,2,experiments/wcnc2027_ablation/central_seed64/ppo_multi_site.zip,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+primary,Centralized PPO,64,3,experiments/wcnc2027_ablation/central_seed64/ppo_multi_site.zip,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,Centralized PPO,64,4,experiments/wcnc2027_ablation/central_seed64/ppo_multi_site.zip,-2031.12,200.733,0.0664024,0.0664024,0.314172,45,4.28147,0.218066,0.199088,568.834,1452.79,0.872266,8.625
+primary,Centralized PPO,64,5,experiments/wcnc2027_ablation/central_seed64/ppo_multi_site.zip,-443.235,207.068,0,0,0,0,0,0,0.350913,443.235,0,0,0
+primary,Centralized PPO,64,6,experiments/wcnc2027_ablation/central_seed64/ppo_multi_site.zip,-910.698,204.513,0.00099108,0.00099108,0.0237859,23,2.18831,0.113774,0.18226,882.668,22.0748,0.455095,5.5
+primary,Centralized PPO,64,7,experiments/wcnc2027_ablation/central_seed64/ppo_multi_site.zip,-757.714,206.88,0,0,0,0,0,0,0.187329,757.714,0,0,0
+primary,Centralized PPO,64,8,experiments/wcnc2027_ablation/central_seed64/ppo_multi_site.zip,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+primary,Centralized PPO,64,9,experiments/wcnc2027_ablation/central_seed64/ppo_multi_site.zip,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,Centralized PPO,77,all,experiments/wcnc2027_ablation/central_seed77/ppo_multi_site.zip,-27822.8,2285.32,0.0970268,0.0970268,0.231615,98,0.932408,0.474068,0.468471,5307.47,22505.6,1.89627,7.875
+primary,Centralized PPO,77,0,experiments/wcnc2027_ablation/central_seed77/ppo_multi_site.zip,-5640.55,230.768,0.217047,0.217047,1,0,0,5.15e-06,0.108036,859.845,4780.71,2.06e-05,0
+primary,Centralized PPO,77,1,experiments/wcnc2027_ablation/central_seed77/ppo_multi_site.zip,-1697.53,203.923,0.0545094,0.0545094,0.245788,23,2.18831,0.113774,0.279146,476.815,1219.26,0.455095,1
+primary,Centralized PPO,77,2,experiments/wcnc2027_ablation/central_seed77/ppo_multi_site.zip,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+primary,Centralized PPO,77,3,experiments/wcnc2027_ablation/central_seed77/ppo_multi_site.zip,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,Centralized PPO,77,4,experiments/wcnc2027_ablation/central_seed77/ppo_multi_site.zip,-1465.55,199.722,0.0386521,0.0386521,0.213082,27,2.56888,0.132736,0.199088,632.636,830.255,0.530944,2.125
+primary,Centralized PPO,77,5,experiments/wcnc2027_ablation/central_seed77/ppo_multi_site.zip,-443.235,207.068,0,0,0,0,0,0,0.350913,443.235,0,0,0
+primary,Centralized PPO,77,6,experiments/wcnc2027_ablation/central_seed77/ppo_multi_site.zip,-3112.22,236.136,0.086224,0.086224,0.0812686,22,2.09316,0.104293,0.18226,992.779,2116.4,0.417171,2.625
+primary,Centralized PPO,77,7,experiments/wcnc2027_ablation/central_seed77/ppo_multi_site.zip,-13510.6,377.975,0.534192,0.534192,0.775025,25,2.37859,0.113779,0.187329,995.577,12513,0.455116,1.625
+primary,Centralized PPO,77,8,experiments/wcnc2027_ablation/central_seed77/ppo_multi_site.zip,-456.911,207.524,0.00198216,0.00198216,0.00099108,1,0.0951437,0.00948115,0.349685,402.373,54,0.0379246,0.5
+primary,Centralized PPO,77,9,experiments/wcnc2027_ablation/central_seed77/ppo_multi_site.zip,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,Centralized PPO,99,all,experiments/wcnc2027_ablation/central_seed99/ppo_multi_site.zip,-15161.2,2132.13,0.0402379,0.0402379,0.117939,205,1.95045,0.976558,0.468471,5683.61,9446.48,3.90623,27.25
+primary,Centralized PPO,99,0,experiments/wcnc2027_ablation/central_seed99/ppo_multi_site.zip,-3968.19,208.508,0.141724,0.141724,0.778989,99,9.41923,0.474058,0.108036,836.294,3114.25,1.89623,15.75
+primary,Centralized PPO,99,1,experiments/wcnc2027_ablation/central_seed99/ppo_multi_site.zip,-868.691,206.988,0,0,0,0,0,0,0.279146,868.691,0,0,0
+primary,Centralized PPO,99,2,experiments/wcnc2027_ablation/central_seed99/ppo_multi_site.zip,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+primary,Centralized PPO,99,3,experiments/wcnc2027_ablation/central_seed99/ppo_multi_site.zip,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,Centralized PPO,99,4,experiments/wcnc2027_ablation/central_seed99/ppo_multi_site.zip,-1712.16,218.009,0.0287413,0.0287413,0.0237859,10,0.951437,0.0474057,0.199088,966.917,743.3,0.189623,1.75
+primary,Centralized PPO,99,5,experiments/wcnc2027_ablation/central_seed99/ppo_multi_site.zip,-443.235,207.068,0,0,0,0,0,0,0.350913,443.235,0,0,0
+primary,Centralized PPO,99,6,experiments/wcnc2027_ablation/central_seed99/ppo_multi_site.zip,-956.036,206.861,0,0,0,0,0,0,0.18226,956.036,0,0,0
+primary,Centralized PPO,99,7,experiments/wcnc2027_ablation/central_seed99/ppo_multi_site.zip,-2586.63,219.841,0.0822597,0.0822597,0.189296,74,7.04063,0.350803,0.187329,696.084,1879.89,1.40321,9.25
+primary,Centralized PPO,99,8,experiments/wcnc2027_ablation/central_seed99/ppo_multi_site.zip,-3130.06,242.647,0.111992,0.111992,0.187314,22,2.09316,0.104293,0.349685,412.143,2717,0.417171,0.5
+primary,Centralized PPO,99,9,experiments/wcnc2027_ablation/central_seed99/ppo_multi_site.zip,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+baseline,Hysteresis (b=50 Mbps),0,all,-,-6262.14,1994.79,0.00683845,0.00683845,0.0747275,111,1.0561,0.530944,0.468471,4583.74,1674.65,2.12378,1.625
+baseline,Hysteresis (b=50 Mbps),0,0,-,-1008.05,182.897,0.00693756,0.00693756,0.224975,23,2.18831,0.113774,0.108036,853.021,154.449,0.455095,0.125
+baseline,Hysteresis (b=50 Mbps),0,1,-,-606.799,194.434,0.0049554,0.0049554,0.125867,20,1.90287,0.0948115,0.279146,491.195,115.225,0.379246,0
+baseline,Hysteresis (b=50 Mbps),0,2,-,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+baseline,Hysteresis (b=50 Mbps),0,3,-,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+baseline,Hysteresis (b=50 Mbps),0,4,-,-776.825,190.505,0.00891972,0.00891972,0.148662,22,2.09316,0.104293,0.199088,583.478,192.304,0.417171,0.625
+baseline,Hysteresis (b=50 Mbps),0,5,-,-438.411,205.065,0.00099108,0.00099108,0.0188305,4,0.380575,0.0189623,0.350913,416.297,22.0375,0.0758492,0
+baseline,Hysteresis (b=50 Mbps),0,6,-,-855.545,195.917,0.00594648,0.00594648,0.123885,24,2.28345,0.113774,0.18226,721.84,132.374,0.455095,0.875
+baseline,Hysteresis (b=50 Mbps),0,7,-,-678.369,196.705,0.00297324,0.00297324,0.105055,18,1.71259,0.0853303,0.187329,611.803,66.2245,0.341321,0
+baseline,Hysteresis (b=50 Mbps),0,8,-,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+baseline,Hysteresis (b=50 Mbps),0,9,-,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,IPPO,1,all,experiments/wcnc2027_ablation/ippo_seed1,-5777.11,1975.02,0.00564916,0.00564916,0.0806739,207,1.96947,0.98604,0.468471,4328.06,1422.48,3.94416,22.625
+primary,IPPO,1,0,experiments/wcnc2027_ablation/ippo_seed1,-852.864,177.472,0.00198216,0.00198216,0.235877,41,3.90089,0.199104,0.108036,804.205,44.1123,0.796417,3.75
+primary,IPPO,1,1,experiments/wcnc2027_ablation/ippo_seed1,-552.194,193.567,0.00297324,0.00297324,0.103072,38,3.61546,0.180142,0.279146,474.986,71.1123,0.720567,5.375
+primary,IPPO,1,2,experiments/wcnc2027_ablation/ippo_seed1,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+primary,IPPO,1,3,experiments/wcnc2027_ablation/ippo_seed1,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,IPPO,1,4,experiments/wcnc2027_ablation/ippo_seed1,-674.156,187.615,0.0049554,0.0049554,0.142716,26,2.47374,0.123255,0.199088,562.364,110.299,0.49302,1
+primary,IPPO,1,5,experiments/wcnc2027_ablation/ippo_seed1,-439.605,201.808,0.00297324,0.00297324,0.0525273,16,1.5223,0.0758492,0.350913,372.277,66.1498,0.303397,0.875
+primary,IPPO,1,6,experiments/wcnc2027_ablation/ippo_seed1,-733.37,189.386,0.00396432,0.00396432,0.157582,48,4.5669,0.227548,0.18226,633.31,93.1498,0.91019,6
+primary,IPPO,1,7,experiments/wcnc2027_ablation/ippo_seed1,-624.201,193.856,0.00198216,0.00198216,0.111992,34,3.23489,0.16118,0.187329,574.657,44.1497,0.644718,4.75
+primary,IPPO,1,8,experiments/wcnc2027_ablation/ippo_seed1,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+primary,IPPO,1,9,experiments/wcnc2027_ablation/ippo_seed1,-1048.63,209.608,0.03667,0.03667,0.00297324,4,0.380575,0.0189623,1.65876,81.1664,966.508,0.0758492,0.875
+primary,IPPO,7,all,experiments/wcnc2027_ablation/ippo_seed7,-5848.01,1975.6,0.00564916,0.00564916,0.0780971,207,1.96947,0.98604,0.468471,4390.9,1421.04,3.94416,32.125
+primary,IPPO,7,0,experiments/wcnc2027_ablation/ippo_seed7,-870.002,177.056,0.00297324,0.00297324,0.24777,35,3.33003,0.170661,0.108036,800.882,66.1871,0.682643,2.25
+primary,IPPO,7,1,experiments/wcnc2027_ablation/ippo_seed7,-544.794,191.808,0.00297324,0.00297324,0.122894,54,5.13776,0.255991,0.279146,458.533,71.1123,1.02396,14.125
+primary,IPPO,7,2,experiments/wcnc2027_ablation/ippo_seed7,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+primary,IPPO,7,3,experiments/wcnc2027_ablation/ippo_seed7,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,IPPO,7,4,experiments/wcnc2027_ablation/ippo_seed7,-650.526,187.41,0.00396432,0.00396432,0.144698,26,2.47374,0.123255,0.199088,560.809,88.2246,0.49302,1
+primary,IPPO,7,5,experiments/wcnc2027_ablation/ippo_seed7,-445.024,203.998,0.00198216,0.00198216,0.0297324,12,1.14172,0.0568869,0.350913,399.434,44.1123,0.227548,1.25
+primary,IPPO,7,6,experiments/wcnc2027_ablation/ippo_seed7,-739.83,194.533,0.00099108,0.00099108,0.0872151,42,3.99604,0.199104,0.18226,708.996,22.0375,0.796417,8
+primary,IPPO,7,7,experiments/wcnc2027_ablation/ippo_seed7,-699.698,191.519,0.00594648,0.00594648,0.148662,38,3.61546,0.180142,0.187329,556.14,137.337,0.720567,5.5
+primary,IPPO,7,8,experiments/wcnc2027_ablation/ippo_seed7,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+primary,IPPO,7,9,experiments/wcnc2027_ablation/ippo_seed7,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,IPPO,13,all,experiments/wcnc2027_ablation/ippo_seed13,-5730.71,1976.57,0.00525273,0.00525273,0.0758176,187,1.77919,0.891228,0.468471,4377.26,1327.89,3.56491,22
+primary,IPPO,13,0,experiments/wcnc2027_ablation/ippo_seed13,-913.091,177.063,0.0049554,0.0049554,0.253717,33,3.13974,0.16118,0.108036,800.234,110.337,0.644718,1.875
+primary,IPPO,13,1,experiments/wcnc2027_ablation/ippo_seed13,-540.173,192.438,0.00297324,0.00297324,0.117939,32,3.0446,0.151698,0.279146,465.829,71.1123,0.606794,2.625
+primary,IPPO,13,2,experiments/wcnc2027_ablation/ippo_seed13,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+primary,IPPO,13,3,experiments/wcnc2027_ablation/ippo_seed13,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,IPPO,13,4,experiments/wcnc2027_ablation/ippo_seed13,-649.974,187.554,0.00396432,0.00396432,0.139742,36,3.42517,0.170661,0.199088,556.567,88.2246,0.682643,4.5
+primary,IPPO,13,5,experiments/wcnc2027_ablation/ippo_seed13,-408.101,204.468,0,0,0.0218038,12,1.14172,0.0568869,0.350913,405.873,0,0.227548,2
+primary,IPPO,13,6,experiments/wcnc2027_ablation/ippo_seed13,-699.082,191.82,0.00099108,0.00099108,0.115956,40,3.80575,0.189623,0.18226,669.661,22.0375,0.758492,6.625
+primary,IPPO,13,7,experiments/wcnc2027_ablation/ippo_seed13,-626.891,194.268,0.00198216,0.00198216,0.107037,32,3.0446,0.151698,0.187329,578.135,44.1497,0.606794,4
+primary,IPPO,13,8,experiments/wcnc2027_ablation/ippo_seed13,-397.163,206.751,0,0,0.00198216,2,0.190287,0.00948115,0.349685,396.75,0,0.0379246,0.375
+primary,IPPO,13,9,experiments/wcnc2027_ablation/ippo_seed13,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,IPPO,23,all,experiments/wcnc2027_ablation/ippo_seed23,-5871.13,1966.92,0.0061447,0.0061447,0.0888008,233,2.21685,1.10929,0.468471,4295.84,1541.23,4.43718,29.625
+primary,IPPO,23,0,experiments/wcnc2027_ablation/ippo_seed23,-853.333,173.818,0.00297324,0.00297324,0.291378,77,7.32607,0.369765,0.108036,772.792,66.1871,1.47906,12.875
+primary,IPPO,23,1,experiments/wcnc2027_ablation/ippo_seed23,-537.496,192.322,0.00297324,0.00297324,0.117939,30,2.85431,0.142217,0.279146,463.815,71.1123,0.568869,2
+primary,IPPO,23,2,experiments/wcnc2027_ablation/ippo_seed23,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+primary,IPPO,23,3,experiments/wcnc2027_ablation/ippo_seed23,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,IPPO,23,4,experiments/wcnc2027_ablation/ippo_seed23,-675.208,187.739,0.0049554,0.0049554,0.144698,26,2.47374,0.123255,0.199088,563.291,110.299,0.49302,1.125
+primary,IPPO,23,5,experiments/wcnc2027_ablation/ippo_seed23,-431.259,202.936,0.00198216,0.00198216,0.03667,10,0.951437,0.0474057,0.350913,386.62,44.0749,0.189623,0.375
+primary,IPPO,23,6,experiments/wcnc2027_ablation/ippo_seed23,-782.07,189.869,0.0049554,0.0049554,0.14668,48,4.5669,0.227548,0.18226,654.51,120.15,0.91019,6.5
+primary,IPPO,23,7,experiments/wcnc2027_ablation/ippo_seed23,-699.07,191.384,0.00594648,0.00594648,0.147671,38,3.61546,0.180142,0.187329,555.1,137.374,0.720567,5.875
+primary,IPPO,23,8,experiments/wcnc2027_ablation/ippo_seed23,-396.458,206.645,0,0,0.00297324,4,0.380575,0.0189623,0.349685,395.507,0,0.0758492,0.875
+primary,IPPO,23,9,experiments/wcnc2027_ablation/ippo_seed23,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,IPPO,42,all,experiments/wcnc2027_ablation/ippo_seed42,-5742.22,1968.76,0.00564916,0.00564916,0.0841427,234,2.22636,1.11878,0.468471,4285.9,1420.97,4.4751,30.875
+primary,IPPO,42,0,experiments/wcnc2027_ablation/ippo_seed42,-844.961,175.947,0.00198216,0.00198216,0.255699,57,5.42319,0.274953,0.108036,791.499,44.1123,1.09981,8.25
+primary,IPPO,42,1,experiments/wcnc2027_ablation/ippo_seed42,-540.59,192.219,0.00297324,0.00297324,0.119921,38,3.61546,0.180142,0.279146,464.507,71.1123,0.720567,4.25
+primary,IPPO,42,2,experiments/wcnc2027_ablation/ippo_seed42,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+primary,IPPO,42,3,experiments/wcnc2027_ablation/ippo_seed42,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,IPPO,42,4,experiments/wcnc2027_ablation/ippo_seed42,-649.04,187.512,0.00396432,0.00396432,0.142716,24,2.28345,0.113774,0.199088,559.736,88.2246,0.455095,0.625
+primary,IPPO,42,5,experiments/wcnc2027_ablation/ippo_seed42,-437.837,201.435,0.00297324,0.00297324,0.0515362,16,1.5223,0.0758492,0.350913,370.259,66.1498,0.303397,1.125
+primary,IPPO,42,6,experiments/wcnc2027_ablation/ippo_seed42,-746.675,190.416,0.00396432,0.00396432,0.136769,57,5.42319,0.274953,0.18226,641.175,93.1498,1.09981,11.25
+primary,IPPO,42,7,experiments/wcnc2027_ablation/ippo_seed42,-620.124,193.498,0.00198216,0.00198216,0.114965,28,2.66402,0.132736,0.187329,572.194,44.1497,0.530944,3.25
+primary,IPPO,42,8,experiments/wcnc2027_ablation/ippo_seed42,-406.754,205.528,0.00099108,0.00099108,0.0198216,14,1.33201,0.0663681,0.349685,382.326,22.0375,0.265472,2.125
+primary,IPPO,42,9,experiments/wcnc2027_ablation/ippo_seed42,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,IPPO,64,all,experiments/wcnc2027_ablation/ippo_seed64,-5763.32,1982.58,0.00505451,0.00505451,0.0685828,185,1.76016,0.881747,0.468471,4453.42,1283.74,3.52699,22.625
+primary,IPPO,64,0,experiments/wcnc2027_ablation/ippo_seed64,-851.357,177.265,0.00198216,0.00198216,0.236868,41,3.90089,0.199104,0.108036,802.198,44.1123,0.796417,4.25
+primary,IPPO,64,1,experiments/wcnc2027_ablation/ippo_seed64,-552.82,193.72,0.00297324,0.00297324,0.106046,32,3.0446,0.151698,0.279146,478.101,71.1123,0.606794,3
+primary,IPPO,64,2,experiments/wcnc2027_ablation/ippo_seed64,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+primary,IPPO,64,3,experiments/wcnc2027_ablation/ippo_seed64,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,IPPO,64,4,experiments/wcnc2027_ablation/ippo_seed64,-676.592,187.96,0.0049554,0.0049554,0.13776,30,2.85431,0.142217,0.199088,563.224,110.299,0.568869,2.5
+primary,IPPO,64,5,experiments/wcnc2027_ablation/ippo_seed64,-426.709,206.27,0,0,0.00594648,2,0.190287,0.00948115,0.350913,426.671,0,0.0379246,0
+primary,IPPO,64,6,experiments/wcnc2027_ablation/ippo_seed64,-734.434,193.993,0.00099108,0.00099108,0.0941526,44,4.18632,0.208585,0.18226,703.562,22.0375,0.834341,8
+primary,IPPO,64,7,experiments/wcnc2027_ablation/ippo_seed64,-632.983,194.972,0.00198216,0.00198216,0.0981169,28,2.66402,0.132736,0.187329,585.053,44.1497,0.530944,3.25
+primary,IPPO,64,8,experiments/wcnc2027_ablation/ippo_seed64,-392.183,206.19,0,0,0.00693756,8,0.76115,0.0379246,0.349685,390.406,0,0.151698,1.625
+primary,IPPO,64,9,experiments/wcnc2027_ablation/ippo_seed64,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,IPPO,77,all,experiments/wcnc2027_ablation/ippo_seed77,-5811.06,1971.8,0.00584737,0.00584737,0.0839445,209,1.9885,0.995521,0.468471,4306.06,1476.52,3.98208,24.5
+primary,IPPO,77,0,experiments/wcnc2027_ablation/ippo_seed77,-865.515,176.802,0.00297324,0.00297324,0.250743,35,3.33003,0.170661,0.108036,796.27,66.1871,0.682643,2.375
+primary,IPPO,77,1,experiments/wcnc2027_ablation/ippo_seed77,-539.545,192.321,0.00297324,0.00297324,0.120912,34,3.23489,0.16118,0.279146,465.163,71.1123,0.644718,2.625
+primary,IPPO,77,2,experiments/wcnc2027_ablation/ippo_seed77,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+primary,IPPO,77,3,experiments/wcnc2027_ablation/ippo_seed77,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,IPPO,77,4,experiments/wcnc2027_ablation/ippo_seed77,-671.343,187.392,0.0049554,0.0049554,0.147671,28,2.66402,0.132736,0.199088,558.762,110.299,0.530944,1.75
+primary,IPPO,77,5,experiments/wcnc2027_ablation/ippo_seed77,-420.407,201.935,0.00198216,0.00198216,0.0465808,16,1.5223,0.0758492,0.350913,374.741,44.1123,0.303397,1.25
+primary,IPPO,77,6,experiments/wcnc2027_ablation/ippo_seed77,-767.57,189.897,0.0049554,0.0049554,0.14668,48,4.5669,0.227548,0.18226,639.76,120.15,0.91019,6.75
+primary,IPPO,77,7,experiments/wcnc2027_ablation/ippo_seed77,-646.553,192.828,0.00297324,0.00297324,0.124876,46,4.37661,0.218066,0.187329,565.156,71.1497,0.872266,9.375
+primary,IPPO,77,8,experiments/wcnc2027_ablation/ippo_seed77,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+primary,IPPO,77,9,experiments/wcnc2027_ablation/ippo_seed77,-1048.03,208.918,0.03667,0.03667,0.00198216,2,0.190287,0.00948115,1.65876,81.1122,966.508,0.0379246,0.375
+primary,IPPO,99,all,experiments/wcnc2027_ablation/ippo_seed99,-25341.1,2393.58,0.077998,0.077998,0.155005,241,2.29296,1.14722,0.468471,4565.44,20747.3,4.58888,23.75
+primary,IPPO,99,0,experiments/wcnc2027_ablation/ippo_seed99,-881.954,175.638,0.00396432,0.00396432,0.268583,51,4.85233,0.24651,0.108036,786.581,88.262,0.98604,6.125
+primary,IPPO,99,1,experiments/wcnc2027_ablation/ippo_seed99,-543.933,192.825,0.00297324,0.00297324,0.115956,32,3.0446,0.151698,0.279146,469.589,71.1123,0.606794,2.625
+primary,IPPO,99,2,experiments/wcnc2027_ablation/ippo_seed99,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+primary,IPPO,99,3,experiments/wcnc2027_ablation/ippo_seed99,-19715.5,629.247,0.723489,0.723489,0.732408,34,3.23489,0.16118,0.917791,388.511,19326.3,0.644718,0
+primary,IPPO,99,4,experiments/wcnc2027_ablation/ippo_seed99,-669.112,187.295,0.0049554,0.0049554,0.145689,30,2.85431,0.142217,0.199088,555.494,110.299,0.568869,2.75
+primary,IPPO,99,5,experiments/wcnc2027_ablation/ippo_seed99,-399.102,202.054,0.00099108,0.00099108,0.0416254,12,1.14172,0.0568869,0.350913,376.337,22.0375,0.227548,0.5
+primary,IPPO,99,6,experiments/wcnc2027_ablation/ippo_seed99,-768.177,190.035,0.0049554,0.0049554,0.144698,46,4.37661,0.218066,0.18226,640.78,120.15,0.872266,6.375
+primary,IPPO,99,7,experiments/wcnc2027_ablation/ippo_seed99,-635.505,195.07,0.00198216,0.00198216,0.0981169,34,3.23489,0.16118,0.187329,585.586,44.1497,0.644718,5.125
+primary,IPPO,99,8,experiments/wcnc2027_ablation/ippo_seed99,-396.553,206.68,0,0,0.00297324,2,0.190287,0.00948115,0.349685,396.265,0,0.0379246,0.25
+primary,IPPO,99,9,experiments/wcnc2027_ablation/ippo_seed99,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,MAPPO,1,all,experiments/wcnc2027_ablation/mappo_seed1/mappo_best.pt,-5579.37,1968.61,0.0049554,0.0049554,0.0764123,286,2.72111,1.3558,0.468471,4249.26,1271.44,5.42322,53.25
+primary,MAPPO,1,0,experiments/wcnc2027_ablation/mappo_seed1/mappo_best.pt,-813.025,178.067,0,0,0.212091,58,5.51833,0.274953,0.108036,802.176,0,1.09981,9.75
+primary,MAPPO,1,1,experiments/wcnc2027_ablation/mappo_seed1/mappo_best.pt,-524.125,192.915,0.00198216,0.00198216,0.102081,42,3.99604,0.199104,0.279146,466.628,49.0748,0.796417,7.625
+primary,MAPPO,1,2,experiments/wcnc2027_ablation/mappo_seed1/mappo_best.pt,-304.011,206.816,0.00099108,0.00099108,0.00297324,6,0.570862,0.0284435,0.4517,280.359,22.0375,0.113774,1.5
+primary,MAPPO,1,3,experiments/wcnc2027_ablation/mappo_seed1/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,MAPPO,1,4,experiments/wcnc2027_ablation/mappo_seed1/mappo_best.pt,-623.982,187.239,0.00297324,0.00297324,0.138751,40,3.80575,0.189623,0.199088,550.198,66.1498,0.758492,6.875
+primary,MAPPO,1,5,experiments/wcnc2027_ablation/mappo_seed1/mappo_best.pt,-363.902,200.716,0,0,0.0505451,18,1.71259,0.0853303,0.350913,361.436,0,0.341321,2.125
+primary,MAPPO,1,6,experiments/wcnc2027_ablation/mappo_seed1/mappo_best.pt,-747.049,190.641,0.00396432,0.00396432,0.119921,62,5.89891,0.293916,0.18226,639.511,93.1124,1.17566,13.25
+primary,MAPPO,1,7,experiments/wcnc2027_ablation/mappo_seed1/mappo_best.pt,-601.89,193.21,0.00099108,0.00099108,0.112983,36,3.42517,0.170661,0.187329,568.208,27,0.682643,6
+primary,MAPPO,1,8,experiments/wcnc2027_ablation/mappo_seed1/mappo_best.pt,-390.438,203.966,0.00099108,0.00099108,0.024777,24,2.28345,0.113774,0.349685,361.821,22.0375,0.455095,6.125
+primary,MAPPO,1,9,experiments/wcnc2027_ablation/mappo_seed1/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,MAPPO,7,all,experiments/wcnc2027_ablation/mappo_seed7/mappo_best.pt,-5622.81,1965,0.00525273,0.00525273,0.0815659,304,2.89237,1.44113,0.468471,4223.42,1337.63,5.76454,56
+primary,MAPPO,7,0,experiments/wcnc2027_ablation/mappo_seed7/mappo_best.pt,-816.605,178.013,0,0,0.214073,70,6.66006,0.33184,0.108036,801.778,0,1.32736,13.5
+primary,MAPPO,7,1,experiments/wcnc2027_ablation/mappo_seed7/mappo_best.pt,-544.489,192.499,0.00297324,0.00297324,0.107037,46,4.37661,0.218066,0.279146,463.129,71.1123,0.872266,9.375
+primary,MAPPO,7,2,experiments/wcnc2027_ablation/mappo_seed7/mappo_best.pt,-304.114,206.752,0.00099108,0.00099108,0.00396432,8,0.76115,0.0379246,0.4517,279.925,22.0375,0.151698,2
+primary,MAPPO,7,3,experiments/wcnc2027_ablation/mappo_seed7/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,MAPPO,7,4,experiments/wcnc2027_ablation/mappo_seed7/mappo_best.pt,-639.715,186.556,0.00396432,0.00396432,0.147671,38,3.61546,0.180142,0.199088,545.52,88.2246,0.720567,5.25
+primary,MAPPO,7,5,experiments/wcnc2027_ablation/mappo_seed7/mappo_best.pt,-361.751,200.355,0,0,0.0555005,20,1.90287,0.0948115,0.350913,358.747,0,0.379246,2.625
+primary,MAPPO,7,6,experiments/wcnc2027_ablation/mappo_seed7/mappo_best.pt,-714.658,189.504,0.00297324,0.00297324,0.135778,60,5.70862,0.284435,0.18226,631.445,71.0749,1.13774,11
+primary,MAPPO,7,7,experiments/wcnc2027_ablation/mappo_seed7/mappo_best.pt,-621.248,192.801,0.00198216,0.00198216,0.119921,36,3.42517,0.170661,0.187329,565.616,49.0748,0.682643,5.875
+primary,MAPPO,7,8,experiments/wcnc2027_ablation/mappo_seed7/mappo_best.pt,-409.279,203.48,0.00198216,0.00198216,0.0317146,26,2.47374,0.123255,0.349685,358.336,44.0749,0.49302,6.375
+primary,MAPPO,7,9,experiments/wcnc2027_ablation/mappo_seed7/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,MAPPO,13,all,experiments/wcnc2027_ablation/mappo_seed13/mappo_best.pt,-5639.97,1970.22,0.00515362,0.00515362,0.0748266,294,2.79722,1.39373,0.468471,4262.3,1315.59,5.57492,56.5
+primary,MAPPO,13,0,experiments/wcnc2027_ablation/mappo_seed13/mappo_best.pt,-820.57,178.887,0,0,0.203171,62,5.89891,0.293916,0.108036,808.02,0,1.17566,11.375
+primary,MAPPO,13,1,experiments/wcnc2027_ablation/mappo_seed13/mappo_best.pt,-548.904,192.924,0.00297324,0.00297324,0.102081,48,4.5669,0.227548,0.279146,466.256,71.1123,0.91019,10.625
+primary,MAPPO,13,2,experiments/wcnc2027_ablation/mappo_seed13/mappo_best.pt,-304.011,206.816,0.00099108,0.00099108,0.00297324,6,0.570862,0.0284435,0.4517,280.359,22.0375,0.113774,1.5
+primary,MAPPO,13,3,experiments/wcnc2027_ablation/mappo_seed13/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,MAPPO,13,4,experiments/wcnc2027_ablation/mappo_seed13/mappo_best.pt,-650.9,187.673,0.00396432,0.00396432,0.134787,46,4.37661,0.218066,0.199088,552.803,88.2246,0.872266,9
+primary,MAPPO,13,5,experiments/wcnc2027_ablation/mappo_seed13/mappo_best.pt,-367.256,200.843,0,0,0.049554,22,2.09316,0.104293,0.350913,363.089,0,0.417171,3.75
+primary,MAPPO,13,6,experiments/wcnc2027_ablation/mappo_seed13/mappo_best.pt,-722.625,190.502,0.00297324,0.00297324,0.121903,56,5.32805,0.265472,0.18226,639.989,71.0749,1.06189,10.5
+primary,MAPPO,13,7,experiments/wcnc2027_ablation/mappo_seed13/mappo_best.pt,-625.549,193.658,0.00198216,0.00198216,0.107037,34,3.23489,0.16118,0.187329,570.08,49.0748,0.644718,5.75
+primary,MAPPO,13,8,experiments/wcnc2027_ablation/mappo_seed13/mappo_best.pt,-389.202,203.878,0.00099108,0.00099108,0.0267592,20,1.90287,0.0948115,0.349685,362.786,22.0375,0.379246,4
+primary,MAPPO,13,9,experiments/wcnc2027_ablation/mappo_seed13/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,MAPPO,23,all,experiments/wcnc2027_ablation/mappo_seed23/mappo_best.pt,-5625.84,1967.82,0.00515362,0.00515362,0.0772052,316,3.00654,1.49802,0.468471,4240.04,1315.56,5.99209,64.25
+primary,MAPPO,23,0,experiments/wcnc2027_ablation/mappo_seed23/mappo_best.pt,-814.287,178.018,0,0,0.213082,64,6.0892,0.303397,0.108036,801.324,0,1.21359,11.75
+primary,MAPPO,23,1,experiments/wcnc2027_ablation/mappo_seed23/mappo_best.pt,-545.03,192.489,0.00297324,0.00297324,0.107037,48,4.5669,0.227548,0.279146,462.883,71.1123,0.91019,10.125
+primary,MAPPO,23,2,experiments/wcnc2027_ablation/mappo_seed23/mappo_best.pt,-303.976,206.752,0.00099108,0.00099108,0.00396432,8,0.76115,0.0379246,0.4517,279.787,22.0375,0.151698,2
+primary,MAPPO,23,3,experiments/wcnc2027_ablation/mappo_seed23/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,MAPPO,23,4,experiments/wcnc2027_ablation/mappo_seed23/mappo_best.pt,-649.68,187.361,0.00396432,0.00396432,0.13776,48,4.5669,0.227548,0.199088,550.295,88.2246,0.91019,10.25
+primary,MAPPO,23,5,experiments/wcnc2027_ablation/mappo_seed23/mappo_best.pt,-364.745,200.724,0,0,0.0505451,20,1.90287,0.0948115,0.350913,361.365,0,0.379246,3
+primary,MAPPO,23,6,experiments/wcnc2027_ablation/mappo_seed23/mappo_best.pt,-746.656,190.361,0.00396432,0.00396432,0.121903,66,6.27948,0.312878,0.18226,637.167,93.1124,1.25151,15.125
+primary,MAPPO,23,7,experiments/wcnc2027_ablation/mappo_seed23/mappo_best.pt,-599.293,193.104,0.00099108,0.00099108,0.111992,38,3.61546,0.180142,0.187329,565.072,27,0.720567,6.5
+primary,MAPPO,23,8,experiments/wcnc2027_ablation/mappo_seed23/mappo_best.pt,-391.224,203.979,0.00099108,0.00099108,0.0257681,24,2.28345,0.113774,0.349685,363.231,22.0375,0.455095,5.5
+primary,MAPPO,23,9,experiments/wcnc2027_ablation/mappo_seed23/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,MAPPO,42,all,experiments/wcnc2027_ablation/mappo_seed42/mappo_best.pt,-5654.44,1975.52,0.00505451,0.00505451,0.0700694,264,2.51179,1.25151,0.468471,4303.33,1298.48,5.00605,47.625
+primary,MAPPO,42,0,experiments/wcnc2027_ablation/mappo_seed42/mappo_best.pt,-835.655,181.01,0,0,0.181368,48,4.5669,0.227548,0.108036,827.12,0,0.91019,7.625
+primary,MAPPO,42,1,experiments/wcnc2027_ablation/mappo_seed42/mappo_best.pt,-529.899,193.398,0.00198216,0.00198216,0.0971259,44,4.18632,0.208585,0.279146,470.99,49.0748,0.834341,9
+primary,MAPPO,42,2,experiments/wcnc2027_ablation/mappo_seed42/mappo_best.pt,-331.807,206.871,0.00198216,0.00198216,0.00297324,6,0.570862,0.0284435,0.4517,281.156,49.0375,0.113774,1.5
+primary,MAPPO,42,3,experiments/wcnc2027_ablation/mappo_seed42/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,MAPPO,42,4,experiments/wcnc2027_ablation/mappo_seed42/mappo_best.pt,-650.03,187.71,0.00396432,0.00396432,0.134787,40,3.80575,0.189623,0.199088,554.672,88.2246,0.758492,6.375
+primary,MAPPO,42,5,experiments/wcnc2027_ablation/mappo_seed42/mappo_best.pt,-369.294,201.298,0,0,0.0455897,16,1.5223,0.0758492,0.350913,367.116,0,0.303397,1.875
+primary,MAPPO,42,6,experiments/wcnc2027_ablation/mappo_seed42/mappo_best.pt,-703.721,191.393,0.00198216,0.00198216,0.111992,54,5.13776,0.255991,0.18226,647.497,44.0749,1.02396,11.125
+primary,MAPPO,42,7,experiments/wcnc2027_ablation/mappo_seed42/mappo_best.pt,-577.344,193.902,0,0,0.104063,34,3.23489,0.16118,0.187329,571.825,0,0.644718,4.875
+primary,MAPPO,42,8,experiments/wcnc2027_ablation/mappo_seed42/mappo_best.pt,-391.116,204.216,0.00099108,0.00099108,0.0218038,20,1.90287,0.0948115,0.349685,363.949,22.0375,0.379246,4.75
+primary,MAPPO,42,9,experiments/wcnc2027_ablation/mappo_seed42/mappo_best.pt,-1100.67,208.247,0.0386521,0.0386521,0.00099108,2,0.190287,0.00948115,1.65876,81.0965,1019.03,0.0379246,0.5
+primary,MAPPO,64,all,experiments/wcnc2027_ablation/mappo_seed64/mappo_best.pt,-5627.01,1959.13,0.00545094,0.00545094,0.0865213,340,3.23489,1.6118,0.468471,4164.95,1381.74,6.44718,73.875
+primary,MAPPO,64,0,experiments/wcnc2027_ablation/mappo_seed64/mappo_best.pt,-801.573,176.221,0,0,0.229931,70,6.66006,0.33184,0.108036,785.246,0,1.32736,15
+primary,MAPPO,64,1,experiments/wcnc2027_ablation/mappo_seed64/mappo_best.pt,-535.37,191.277,0.00297324,0.00297324,0.120912,48,4.5669,0.227548,0.279146,453.348,71.1123,0.91019,10
+primary,MAPPO,64,2,experiments/wcnc2027_ablation/mappo_seed64/mappo_best.pt,-302.669,206.628,0.00099108,0.00099108,0.0049554,8,0.76115,0.0379246,0.4517,278.605,22.0375,0.151698,1.875
+primary,MAPPO,64,3,experiments/wcnc2027_ablation/mappo_seed64/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,MAPPO,64,4,experiments/wcnc2027_ablation/mappo_seed64/mappo_best.pt,-657.69,185.788,0.0049554,0.0049554,0.156591,42,3.99604,0.199104,0.199088,538.969,110.299,0.796417,7.625
+primary,MAPPO,64,5,experiments/wcnc2027_ablation/mappo_seed64/mappo_best.pt,-363.153,200.306,0,0,0.0545094,26,2.47374,0.123255,0.350913,357.535,0,0.49302,5.125
+primary,MAPPO,64,6,experiments/wcnc2027_ablation/mappo_seed64/mappo_best.pt,-730.478,188.432,0.00396432,0.00396432,0.144698,72,6.85035,0.341321,0.18226,619.625,93.1124,1.36529,16.375
+primary,MAPPO,64,7,experiments/wcnc2027_ablation/mappo_seed64/mappo_best.pt,-637.789,191.975,0.00297324,0.00297324,0.123885,46,4.37661,0.218066,0.187329,555.43,71.1123,0.872266,10.375
+primary,MAPPO,64,8,experiments/wcnc2027_ablation/mappo_seed64/mappo_best.pt,-387.339,203.464,0.00099108,0.00099108,0.0297324,28,2.66402,0.132736,0.349685,357.271,22.0375,0.530944,7.5
+primary,MAPPO,64,9,experiments/wcnc2027_ablation/mappo_seed64/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,MAPPO,77,all,experiments/wcnc2027_ablation/mappo_seed77/mappo_best.pt,-5629.12,1967.4,0.00515362,0.00515362,0.077998,338,3.21586,1.60231,0.468471,4237.37,1315.59,6.40926,69.75
+primary,MAPPO,77,0,experiments/wcnc2027_ablation/mappo_seed77/mappo_best.pt,-820.323,178.167,0,0,0.2111,80,7.6115,0.379246,0.108036,801.806,0,1.51698,17
+primary,MAPPO,77,1,experiments/wcnc2027_ablation/mappo_seed77/mappo_best.pt,-547.08,192.582,0.00297324,0.00297324,0.106046,50,4.75719,0.237029,0.279146,463.645,71.1123,0.948115,11.375
+primary,MAPPO,77,2,experiments/wcnc2027_ablation/mappo_seed77/mappo_best.pt,-302.669,206.628,0.00099108,0.00099108,0.0049554,8,0.76115,0.0379246,0.4517,278.605,22.0375,0.151698,1.875
+primary,MAPPO,77,3,experiments/wcnc2027_ablation/mappo_seed77/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,MAPPO,77,4,experiments/wcnc2027_ablation/mappo_seed77/mappo_best.pt,-645.146,186.994,0.00396432,0.00396432,0.141724,46,4.37661,0.218066,0.199088,547.299,88.2246,0.872266,8.75
+primary,MAPPO,77,5,experiments/wcnc2027_ablation/mappo_seed77/mappo_best.pt,-366.602,200.73,0,0,0.0505451,24,2.28345,0.113774,0.350913,361.397,0,0.455095,4.75
+primary,MAPPO,77,6,experiments/wcnc2027_ablation/mappo_seed77/mappo_best.pt,-723.415,190.25,0.00297324,0.00297324,0.124876,64,6.0892,0.303397,0.18226,638.002,71.0749,1.21359,13.125
+primary,MAPPO,77,7,experiments/wcnc2027_ablation/mappo_seed77/mappo_best.pt,-623.064,193.184,0.00198216,0.00198216,0.112983,42,3.99604,0.199104,0.187329,565.568,49.0748,0.796417,7.625
+primary,MAPPO,77,8,experiments/wcnc2027_ablation/mappo_seed77/mappo_best.pt,-389.873,203.831,0.00099108,0.00099108,0.0277502,24,2.28345,0.113774,0.349685,362.13,22.0375,0.455095,5.25
+primary,MAPPO,77,9,experiments/wcnc2027_ablation/mappo_seed77/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,MAPPO,99,all,experiments/wcnc2027_ablation/mappo_seed99/mappo_best.pt,-5610.93,1964.76,0.00525273,0.00525273,0.0815659,280,2.66402,1.32736,0.468471,4218.15,1342.59,5.30944,44.875
+primary,MAPPO,99,0,experiments/wcnc2027_ablation/mappo_seed99/mappo_best.pt,-809.704,177.697,0,0,0.218038,58,5.51833,0.274953,0.108036,799.604,0,1.09981,9
+primary,MAPPO,99,1,experiments/wcnc2027_ablation/mappo_seed99/mappo_best.pt,-517.317,192.196,0.00198216,0.00198216,0.11001,42,3.99604,0.199104,0.279146,460.695,49.0748,0.796417,6.75
+primary,MAPPO,99,2,experiments/wcnc2027_ablation/mappo_seed99/mappo_best.pt,-331.773,206.806,0.00198216,0.00198216,0.00396432,8,0.76115,0.0379246,0.4517,280.584,49.0375,0.151698,2
+primary,MAPPO,99,3,experiments/wcnc2027_ablation/mappo_seed99/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,MAPPO,99,4,experiments/wcnc2027_ablation/mappo_seed99/mappo_best.pt,-637.667,186.419,0.00396432,0.00396432,0.149653,38,3.61546,0.180142,0.199088,543.722,88.2246,0.720567,5
+primary,MAPPO,99,5,experiments/wcnc2027_ablation/mappo_seed99/mappo_best.pt,-364.052,200.749,0,0,0.0505451,16,1.5223,0.0758492,0.350913,362.248,0,0.303397,1.5
+primary,MAPPO,99,6,experiments/wcnc2027_ablation/mappo_seed99/mappo_best.pt,-737.165,189.681,0.00396432,0.00396432,0.132805,60,5.70862,0.284435,0.18226,632.165,93.1124,1.13774,10.75
+primary,MAPPO,99,7,experiments/wcnc2027_ablation/mappo_seed99/mappo_best.pt,-615.938,192.541,0.00198216,0.00198216,0.120912,36,3.42517,0.170661,0.187329,560.93,49.0748,0.682643,5.25
+primary,MAPPO,99,8,experiments/wcnc2027_ablation/mappo_seed99/mappo_best.pt,-386.361,203.638,0.00099108,0.00099108,0.0297324,22,2.09316,0.104293,0.349685,359.281,22.0375,0.417171,4.625
+primary,MAPPO,99,9,experiments/wcnc2027_ablation/mappo_seed99/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,Shared-PPO,1,all,experiments/wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt,-5871.72,1955.54,0.00664024,0.00664024,0.100198,310,2.94945,1.46958,0.468471,4164.59,1651.38,5.87831,49.875
+primary,Shared-PPO,1,0,experiments/wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt,-837.705,174.352,0.00198216,0.00198216,0.278494,78,7.42121,0.369765,0.108036,779.238,44.1123,1.47906,12.875
+primary,Shared-PPO,1,1,experiments/wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt,-524.936,190.611,0.00297324,0.00297324,0.139742,30,2.85431,0.142217,0.279146,450.255,71.1123,0.568869,3
+primary,Shared-PPO,1,2,experiments/wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt,-305.566,206.737,0.00099108,0.00099108,0.00693756,12,1.14172,0.0568869,0.4517,280.301,22.0375,0.227548,3
+primary,Shared-PPO,1,3,experiments/wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt,-165.317,207.459,0.00099108,0.00099108,0.00099108,2,0.190287,0.00948115,0.917791,137.779,27,0.0379246,0.5
+primary,Shared-PPO,1,4,experiments/wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt,-678.224,185.76,0.00594648,0.00594648,0.167493,36,3.42517,0.170661,0.199088,540.667,132.374,0.682643,4.5
+primary,Shared-PPO,1,5,experiments/wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt,-424.601,199.627,0.00297324,0.00297324,0.0693756,24,2.28345,0.113774,0.350913,354.658,66.1124,0.455095,3.375
+primary,Shared-PPO,1,6,experiments/wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt,-824.362,188.747,0.00792864,0.00792864,0.157582,62,5.89891,0.293916,0.18226,626.349,186.337,1.17566,10.5
+primary,Shared-PPO,1,7,experiments/wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt,-655.661,191.393,0.00396432,0.00396432,0.143707,38,3.61546,0.180142,0.187329,555.753,93.1871,0.720567,6
+primary,Shared-PPO,1,8,experiments/wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt,-409.307,203.289,0.00198216,0.00198216,0.0376611,28,2.66402,0.132736,0.349685,358.576,44.0749,0.530944,6.125
+primary,Shared-PPO,1,9,experiments/wcnc2027_ablation/shared_ppo_seed1/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,Shared-PPO,7,all,experiments/wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt,-5626.96,1970.85,0.00505451,0.00505451,0.0741328,304,2.89237,1.44113,0.468471,4270.43,1293.52,5.76454,57.25
+primary,Shared-PPO,7,0,experiments/wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt,-824.414,179.149,0,0,0.199207,66,6.27948,0.312878,0.108036,810.787,0,1.25151,12.375
+primary,Shared-PPO,7,1,experiments/wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt,-531.124,193.488,0.00198216,0.00198216,0.0971259,44,4.18632,0.208585,0.279146,472.715,49.0748,0.834341,8.5
+primary,Shared-PPO,7,2,experiments/wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt,-302.669,206.628,0.00099108,0.00099108,0.0049554,8,0.76115,0.0379246,0.4517,278.605,22.0375,0.151698,1.875
+primary,Shared-PPO,7,3,experiments/wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,Shared-PPO,7,4,experiments/wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt,-648.427,187.346,0.00396432,0.00396432,0.138751,44,4.18632,0.208585,0.199088,551.618,88.2246,0.834341,7.75
+primary,Shared-PPO,7,5,experiments/wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt,-363.418,200.6,0,0,0.0515362,20,1.90287,0.0948115,0.350913,360.288,0,0.379246,2.75
+primary,Shared-PPO,7,6,experiments/wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt,-750.657,190.968,0.00396432,0.00396432,0.116947,60,5.70862,0.284435,0.18226,644.782,93.1124,1.13774,11.625
+primary,Shared-PPO,7,7,experiments/wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt,-603.66,193.61,0.00099108,0.00099108,0.107037,38,3.61546,0.180142,0.187329,569.064,27,0.720567,6.875
+primary,Shared-PPO,7,8,experiments/wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt,-391.639,204.024,0.00099108,0.00099108,0.0257681,24,2.28345,0.113774,0.349685,363.647,22.0375,0.455095,5.5
+primary,Shared-PPO,7,9,experiments/wcnc2027_ablation/shared_ppo_seed7/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,Shared-PPO,13,all,experiments/wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt,-5617.32,1984.2,0.00455897,0.00455897,0.0612488,232,2.20733,1.09981,0.468471,4398.67,1173.37,4.39925,40.875
+primary,Shared-PPO,13,0,experiments/wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt,-842.27,181.763,0,0,0.17443,44,4.18632,0.208585,0.108036,834.56,0,0.834341,6.875
+primary,Shared-PPO,13,1,experiments/wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt,-543.97,194.977,0.00198216,0.00198216,0.0822597,40,3.80575,0.189623,0.279146,486.261,49.0748,0.758492,7.875
+primary,Shared-PPO,13,2,experiments/wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt,-304.75,206.923,0.00099108,0.00099108,0.00198216,4,0.380575,0.0189623,0.4517,281.637,22.0375,0.0758492,1
+primary,Shared-PPO,13,3,experiments/wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,Shared-PPO,13,4,experiments/wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt,-642.763,189.125,0.00297324,0.00297324,0.121903,38,3.61546,0.180142,0.199088,569.893,66.1498,0.720567,6
+primary,Shared-PPO,13,5,experiments/wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt,-374.788,201.957,0,0,0.0396432,12,1.14172,0.0568869,0.350913,373.561,0,0.227548,1
+primary,Shared-PPO,13,6,experiments/wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt,-699.05,193.07,0.00099108,0.00099108,0.0971259,52,4.94747,0.24651,0.18226,664.652,22.0375,0.98604,11.375
+primary,Shared-PPO,13,7,experiments/wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt,-597.001,196.119,0,0,0.0812686,28,2.66402,0.132736,0.187329,593.095,0,0.530944,3.375
+primary,Shared-PPO,13,8,experiments/wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt,-401.774,205.228,0.00099108,0.00099108,0.0138751,14,1.33201,0.0663681,0.349685,376.096,22.0375,0.265472,3.375
+primary,Shared-PPO,13,9,experiments/wcnc2027_ablation/shared_ppo_seed13/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,Shared-PPO,23,all,experiments/wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt,-5701.06,1959.79,0.00574827,0.00574827,0.0890981,316,3.00654,1.49802,0.468471,4189.97,1447.86,5.99209,57.25
+primary,Shared-PPO,23,0,experiments/wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt,-806.603,176.518,0,0,0.235877,72,6.85035,0.341321,0.108036,791.737,0,1.36529,13.5
+primary,Shared-PPO,23,1,experiments/wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt,-533.867,191.281,0.00297324,0.00297324,0.126858,42,3.99604,0.199104,0.279146,455.458,71.1123,0.796417,6.5
+primary,Shared-PPO,23,2,experiments/wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt,-302.996,206.518,0.00099108,0.00099108,0.00693756,12,1.14172,0.0568869,0.4517,277.856,22.0375,0.227548,2.875
+primary,Shared-PPO,23,3,experiments/wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,Shared-PPO,23,4,experiments/wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt,-662.656,186.207,0.0049554,0.0049554,0.154609,38,3.61546,0.180142,0.199088,545.386,110.299,0.720567,6.25
+primary,Shared-PPO,23,5,experiments/wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt,-405.077,199.96,0.00198216,0.00198216,0.061447,26,2.47374,0.123255,0.350913,355.759,44.0749,0.49302,4.75
+primary,Shared-PPO,23,6,experiments/wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt,-732.335,188.965,0.00396432,0.00396432,0.141724,60,5.70862,0.284435,0.18226,627.46,93.1124,1.13774,10.625
+primary,Shared-PPO,23,7,experiments/wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt,-636.73,191.86,0.00297324,0.00297324,0.130823,38,3.61546,0.180142,0.187329,558.272,71.1123,0.720567,6.625
+primary,Shared-PPO,23,8,experiments/wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt,-409.849,203.443,0.00198216,0.00198216,0.0327056,28,2.66402,0.132736,0.349685,359.118,44.0749,0.530944,6.125
+primary,Shared-PPO,23,9,experiments/wcnc2027_ablation/shared_ppo_seed23/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,Shared-PPO,42,all,experiments/wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt,-5700.43,1957.76,0.00584737,0.00584737,0.0900892,322,3.06363,1.52647,0.468471,4164.14,1469.93,6.10586,60.25
+primary,Shared-PPO,42,0,experiments/wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt,-821.359,175.666,0.00099108,0.00099108,0.244797,72,6.85035,0.341321,0.108036,785.044,22.0748,1.36529,12.875
+primary,Shared-PPO,42,1,experiments/wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt,-533.153,191.19,0.00297324,0.00297324,0.125867,44,4.18632,0.208585,0.279146,453.332,71.1123,0.834341,7.875
+primary,Shared-PPO,42,2,experiments/wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt,-304.2,206.706,0.00099108,0.00099108,0.0049554,10,0.951437,0.0474058,0.4517,279.473,22.0375,0.189623,2.5
+primary,Shared-PPO,42,3,experiments/wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,Shared-PPO,42,4,experiments/wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt,-656.547,185.843,0.0049554,0.0049554,0.1556,38,3.61546,0.180142,0.199088,539.527,110.299,0.720567,6
+primary,Shared-PPO,42,5,experiments/wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt,-403.249,199.853,0.00198216,0.00198216,0.061447,24,2.28345,0.113774,0.350913,355.094,44.0749,0.455095,3.625
+primary,Shared-PPO,42,6,experiments/wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt,-731.296,188.844,0.00396432,0.00396432,0.141724,62,5.89891,0.293916,0.18226,625.258,93.1124,1.17566,11.75
+primary,Shared-PPO,42,7,experiments/wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt,-633.857,191.653,0.00297324,0.00297324,0.129832,42,3.99604,0.199104,0.187329,553.698,71.1123,0.796417,8.25
+primary,Shared-PPO,42,8,experiments/wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt,-405.818,202.971,0.00198216,0.00198216,0.03667,30,2.85431,0.142217,0.349685,353.799,44.0749,0.568869,7.375
+primary,Shared-PPO,42,9,experiments/wcnc2027_ablation/shared_ppo_seed42/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,Shared-PPO,64,all,experiments/wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt,-5720.37,1955.38,0.00594648,0.00594648,0.0911794,376,3.5774,1.78246,0.468471,4135.86,1492,7.12982,85.375
+primary,Shared-PPO,64,0,experiments/wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt,-797.013,174.794,0,0,0.24777,92,8.75322,0.436133,0.108036,773.644,0,1.74453,21.625
+primary,Shared-PPO,64,1,experiments/wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt,-534.832,191.009,0.00297324,0.00297324,0.121903,52,4.94747,0.24651,0.279146,450.733,71.1123,0.98604,12
+primary,Shared-PPO,64,2,experiments/wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt,-302.773,206.564,0.00099108,0.00099108,0.00594648,10,0.951437,0.0474058,0.4517,278.171,22.0375,0.189623,2.375
+primary,Shared-PPO,64,3,experiments/wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,Shared-PPO,64,4,experiments/wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt,-659.056,185.957,0.0049554,0.0049554,0.153617,42,3.99604,0.199104,0.199088,540.085,110.299,0.796417,7.875
+primary,Shared-PPO,64,5,experiments/wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt,-405.019,199.75,0.00198216,0.00198216,0.0624381,30,2.85431,0.142217,0.350913,353.625,44.0749,0.568869,6.75
+primary,Shared-PPO,64,6,experiments/wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt,-725.391,187.874,0.00396432,0.00396432,0.149653,72,6.85035,0.341321,0.18226,614.913,93.1124,1.36529,16
+primary,Shared-PPO,64,7,experiments/wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt,-677.89,191.337,0.0049554,0.0049554,0.134787,46,4.37661,0.218066,0.187329,551.505,115.262,0.872266,10.25
+primary,Shared-PPO,64,8,experiments/wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt,-407.444,203.053,0.00198216,0.00198216,0.0356789,32,3.0446,0.151698,0.349685,354.263,44.0749,0.606794,8.5
+primary,Shared-PPO,64,9,experiments/wcnc2027_ablation/shared_ppo_seed64/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,Shared-PPO,77,all,experiments/wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt,-5706.61,1961.6,0.00574827,0.00574827,0.087116,306,2.9114,1.45062,0.468471,4197.5,1452.93,5.80246,50.375
+primary,Shared-PPO,77,0,experiments/wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt,-829.471,176.968,0.00099108,0.00099108,0.22894,68,6.46977,0.322359,0.108036,794.732,22.0748,1.28944,11.375
+primary,Shared-PPO,77,1,experiments/wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt,-536.272,191.636,0.00297324,0.00297324,0.121903,44,4.18632,0.208585,0.279146,456.826,71.1123,0.834341,7.5
+primary,Shared-PPO,77,2,experiments/wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt,-351.582,206.558,0.00297324,0.00297324,0.00693756,10,0.951437,0.0474058,0.4517,278.03,71.1123,0.189623,2.25
+primary,Shared-PPO,77,3,experiments/wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,Shared-PPO,77,4,experiments/wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt,-638.075,186.552,0.00396432,0.00396432,0.149653,36,3.42517,0.170661,0.199088,545.293,88.2246,0.682643,3.875
+primary,Shared-PPO,77,5,experiments/wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt,-382.868,200.008,0.00099108,0.00099108,0.061447,26,2.47374,0.123255,0.350913,356.3,22.0748,0.49302,4
+primary,Shared-PPO,77,6,experiments/wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt,-735.316,189.151,0.00396432,0.00396432,0.140733,64,6.0892,0.303397,0.18226,629.115,93.1124,1.21359,11.875
+primary,Shared-PPO,77,7,experiments/wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt,-636.696,192.257,0.00297324,0.00297324,0.127849,36,3.42517,0.170661,0.187329,559.364,71.1497,0.682643,5.5
+primary,Shared-PPO,77,8,experiments/wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt,-385.381,203.432,0.00099108,0.00099108,0.0336967,22,2.09316,0.104293,0.349685,358.927,22.0375,0.417171,4
+primary,Shared-PPO,77,9,experiments/wcnc2027_ablation/shared_ppo_seed77/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+primary,Shared-PPO,99,all,experiments/wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt,-5708.18,1959.69,0.00574827,0.00574827,0.0875124,358,3.40614,1.69713,0.468471,4174.08,1452.82,6.7885,74.5
+primary,Shared-PPO,99,0,experiments/wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt,-807.815,176.447,0,0,0.230922,84,7.99207,0.398208,0.108036,787.472,0,1.59283,18.75
+primary,Shared-PPO,99,1,experiments/wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt,-537.34,191.457,0.00297324,0.00297324,0.119921,50,4.75719,0.237029,0.279146,454.779,71.1123,0.948115,10.5
+primary,Shared-PPO,99,2,experiments/wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt,-329.705,206.507,0.00198216,0.00198216,0.00792864,12,1.14172,0.0568869,0.4517,277.69,49.0375,0.227548,2.75
+primary,Shared-PPO,99,3,experiments/wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+primary,Shared-PPO,99,4,experiments/wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt,-638.965,186.411,0.00396432,0.00396432,0.148662,42,3.99604,0.199104,0.199088,543.194,88.2246,0.796417,6.75
+primary,Shared-PPO,99,5,experiments/wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt,-404.935,199.869,0.00198216,0.00198216,0.0624381,30,2.85431,0.142217,0.350913,354.754,44.1123,0.568869,5.5
+primary,Shared-PPO,99,6,experiments/wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt,-735.003,188.84,0.00396432,0.00396432,0.140733,70,6.66006,0.33184,0.18226,625.188,93.1124,1.32736,15.375
+primary,Shared-PPO,99,7,experiments/wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt,-635.974,191.895,0.00297324,0.00297324,0.130823,42,3.99604,0.199104,0.187329,556.191,71.1123,0.796417,7.875
+primary,Shared-PPO,99,8,experiments/wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt,-407.495,203.23,0.00198216,0.00198216,0.0336967,28,2.66402,0.132736,0.349685,355.889,44.0749,0.530944,7
+primary,Shared-PPO,99,9,experiments/wcnc2027_ablation/shared_ppo_seed99/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+baseline,always-DPDK,0,all,-,-7201.08,2070.72,0.00376611,0.00376611,0,0,0,0,0.468471,6209.05,992.031,0,0
+baseline,always-DPDK,0,0,-,-1321.36,206.765,0,0,0,0,0,0,0.108036,1321.36,0,0,0
+baseline,always-DPDK,0,1,-,-868.691,206.988,0,0,0,0,0,0,0.279146,868.691,0,0,0
+baseline,always-DPDK,0,2,-,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+baseline,always-DPDK,0,3,-,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+baseline,always-DPDK,0,4,-,-955.91,206.89,0,0,0,0,0,0,0.199088,955.91,0,0,0
+baseline,always-DPDK,0,5,-,-443.235,207.068,0,0,0,0,0,0,0.350913,443.235,0,0,0
+baseline,always-DPDK,0,6,-,-956.036,206.861,0,0,0,0,0,0,0.18226,956.036,0,0,0
+baseline,always-DPDK,0,7,-,-757.714,206.88,0,0,0,0,0,0,0.187329,757.714,0,0,0
+baseline,always-DPDK,0,8,-,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+baseline,always-DPDK,0,9,-,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",1,all,experiments/central_nr_seed1/ppo_multi_site.zip,-27441.5,2261.61,0.0942517,0.0942517,0.243806,210,1.99802,1.00501,0.468471,5491.52,21896.7,4.02005,49.25
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",1,0,experiments/central_nr_seed1/ppo_multi_site.zip,-4300.53,211.852,0.157582,0.157582,0.880079,46,4.37661,0.218072,0.108036,821.808,3470.35,0.872286,7.5
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",1,1,experiments/central_nr_seed1/ppo_multi_site.zip,-913.991,207.238,0.00198216,0.00198216,0.00099108,1,0.0951437,0.00948115,0.279146,869.304,44.1497,0.0379246,0.5
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",1,2,experiments/central_nr_seed1/ppo_multi_site.zip,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",1,3,experiments/central_nr_seed1/ppo_multi_site.zip,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",1,4,experiments/central_nr_seed1/ppo_multi_site.zip,-955.91,206.89,0,0,0,0,0,0,0.199088,955.91,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",1,5,experiments/central_nr_seed1/ppo_multi_site.zip,-443.235,207.068,0,0,0,0,0,0,0.350913,443.235,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",1,6,experiments/central_nr_seed1/ppo_multi_site.zip,-5008.02,233.531,0.185332,0.185332,0.594648,105,9.99009,0.502501,0.18226,674.831,4306.17,2.01,25
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",1,7,experiments/central_nr_seed1/ppo_multi_site.zip,-13921.7,365.762,0.55996,0.55996,0.962339,58,5.51833,0.274958,0.187329,820.328,13084,1.09983,16.25
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",1,8,experiments/central_nr_seed1/ppo_multi_site.zip,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",1,9,experiments/central_nr_seed1/ppo_multi_site.zip,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",7,all,experiments/central_nr_seed7/ppo_multi_site.zip,-7522.75,2073.74,0.00515362,0.00515362,0.00109019,12,0.114172,0.0568869,0.468471,6213.94,1305.71,0.227548,2.875
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",7,0,experiments/central_nr_seed7/ppo_multi_site.zip,-1321.36,206.765,0,0,0,0,0,0,0.108036,1321.36,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",7,1,experiments/central_nr_seed7/ppo_multi_site.zip,-868.691,206.988,0,0,0,0,0,0,0.279146,868.691,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",7,2,experiments/central_nr_seed7/ppo_multi_site.zip,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",7,3,experiments/central_nr_seed7/ppo_multi_site.zip,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",7,4,experiments/central_nr_seed7/ppo_multi_site.zip,-1000.97,207.15,0.00198216,0.00198216,0.00099108,2,0.190287,0.00948115,0.199088,956.324,44.1123,0.0379246,0.5
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",7,5,experiments/central_nr_seed7/ppo_multi_site.zip,-443.235,207.068,0,0,0,0,0,0,0.350913,443.235,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",7,6,experiments/central_nr_seed7/ppo_multi_site.zip,-956.036,206.861,0,0,0,0,0,0,0.18226,956.036,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",7,7,experiments/central_nr_seed7/ppo_multi_site.zip,-1034.31,209.638,0.011893,0.011893,0.0099108,10,0.951437,0.0474058,0.187329,762.188,269.562,0.189623,2.375
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",7,8,experiments/central_nr_seed7/ppo_multi_site.zip,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",7,9,experiments/central_nr_seed7/ppo_multi_site.zip,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",13,all,experiments/central_nr_seed13/ppo_multi_site.zip,-7967.98,2057.4,0.00941526,0.00941526,0.0320119,69,0.656492,0.33184,0.468471,5699.78,2260.37,1.32736,6.5
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",13,0,experiments/central_nr_seed13/ppo_multi_site.zip,-1321.36,206.765,0,0,0,0,0,0,0.108036,1321.36,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",13,1,experiments/central_nr_seed13/ppo_multi_site.zip,-1082.87,197.35,0.0267592,0.0267592,0.176412,27,2.56888,0.132736,0.279146,486.744,593.095,0.530944,2.5
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",13,2,experiments/central_nr_seed13/ppo_multi_site.zip,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",13,3,experiments/central_nr_seed13/ppo_multi_site.zip,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",13,4,experiments/central_nr_seed13/ppo_multi_site.zip,-1287.83,209.745,0.0148662,0.0148662,0.0198216,14,1.33201,0.0663681,0.199088,961.001,324.566,0.265472,2
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",13,5,experiments/central_nr_seed13/ppo_multi_site.zip,-443.235,207.068,0,0,0,0,0,0,0.350913,443.235,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",13,6,experiments/central_nr_seed13/ppo_multi_site.zip,-1011.16,207.463,0.00198216,0.00198216,0.00099108,2,0.190287,0.00948115,0.18226,956.62,54,0.0379246,0.5
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",13,7,experiments/central_nr_seed13/ppo_multi_site.zip,-923.382,199.734,0.012884,0.012884,0.122894,26,2.47374,0.123255,0.187329,624.716,296.674,0.49302,1.5
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",13,8,experiments/central_nr_seed13/ppo_multi_site.zip,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",13,9,experiments/central_nr_seed13/ppo_multi_site.zip,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",23,all,experiments/central_nr_seed23/ppo_multi_site.zip,-27425.2,2251.87,0.0964321,0.0964321,0.267691,354,3.36809,1.69713,0.468471,5043.19,22293.2,6.78852,82
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",23,0,experiments/central_nr_seed23/ppo_multi_site.zip,-5658.82,223.495,0.217047,0.217047,0.946482,107,10.1804,0.511982,0.108036,846.315,4780.71,2.04793,29.75
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",23,1,experiments/central_nr_seed23/ppo_multi_site.zip,-735.525,199.907,0.00594648,0.00594648,0.074331,25,2.37859,0.123255,0.279146,594.945,137.337,0.49302,2.75
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",23,2,experiments/central_nr_seed23/ppo_multi_site.zip,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",23,3,experiments/central_nr_seed23/ppo_multi_site.zip,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",23,4,experiments/central_nr_seed23/ppo_multi_site.zip,-1026.22,193.748,0.0178394,0.0178394,0.175421,57,5.42319,0.274953,0.199088,603.599,406.898,1.09981,14.625
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",23,5,experiments/central_nr_seed23/ppo_multi_site.zip,-1475.35,210.507,0.049554,0.049554,0.158573,23,2.18831,0.113774,0.350913,373.499,1100.14,0.455095,1.25
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",23,6,experiments/central_nr_seed23/ppo_multi_site.zip,-11944.3,361.112,0.455897,0.455897,0.81665,51,4.85233,0.237034,0.18226,1101.73,10829.8,0.948136,11.875
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",23,7,experiments/central_nr_seed23/ppo_multi_site.zip,-4686.76,233.829,0.180377,0.180377,0.505451,91,8.65808,0.436133,0.187329,617.005,4046.26,1.74453,21.75
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",23,8,experiments/central_nr_seed23/ppo_multi_site.zip,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",23,9,experiments/central_nr_seed23/ppo_multi_site.zip,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",42,all,experiments/central_nr_seed42/ppo_multi_site.zip,-11520.3,2094.73,0.0254708,0.0254708,0.1,0,0,5.15e-06,0.468471,5747.54,5772.74,2.06e-05,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",42,0,experiments/central_nr_seed42/ppo_multi_site.zip,-5640.55,230.768,0.217047,0.217047,1,0,0,5.15e-06,0.108036,859.845,4780.71,2.06e-05,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",42,1,experiments/central_nr_seed42/ppo_multi_site.zip,-868.691,206.988,0,0,0,0,0,0,0.279146,868.691,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",42,2,experiments/central_nr_seed42/ppo_multi_site.zip,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",42,3,experiments/central_nr_seed42/ppo_multi_site.zip,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",42,4,experiments/central_nr_seed42/ppo_multi_site.zip,-955.91,206.89,0,0,0,0,0,0,0.199088,955.91,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",42,5,experiments/central_nr_seed42/ppo_multi_site.zip,-443.235,207.068,0,0,0,0,0,0,0.350913,443.235,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",42,6,experiments/central_nr_seed42/ppo_multi_site.zip,-956.036,206.861,0,0,0,0,0,0,0.18226,956.036,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",42,7,experiments/central_nr_seed42/ppo_multi_site.zip,-757.714,206.88,0,0,0,0,0,0,0.187329,757.714,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",42,8,experiments/central_nr_seed42/ppo_multi_site.zip,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",42,9,experiments/central_nr_seed42/ppo_multi_site.zip,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",64,all,experiments/central_nr_seed64/ppo_multi_site.zip,-24040.2,2235.98,0.0791873,0.0791873,0.184044,233,2.21685,1.1093,0.468471,5527,18443.6,4.4372,65.125
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",64,0,experiments/central_nr_seed64/ppo_multi_site.zip,-5640.55,230.768,0.217047,0.217047,1,0,0,5.15e-06,0.108036,859.845,4780.71,2.06e-05,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",64,1,experiments/central_nr_seed64/ppo_multi_site.zip,-3816.12,225.235,0.145689,0.145689,0.383548,65,6.18434,0.312878,0.279146,503.449,3293.79,1.25151,17.625
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",64,2,experiments/central_nr_seed64/ppo_multi_site.zip,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",64,3,experiments/central_nr_seed64/ppo_multi_site.zip,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",64,4,experiments/central_nr_seed64/ppo_multi_site.zip,-10528.4,329.9,0.391477,0.391477,0.456888,168,15.9841,0.796417,0.199088,1100.62,9377.07,3.18567,47.5
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",64,5,experiments/central_nr_seed64/ppo_multi_site.zip,-443.235,207.068,0,0,0,0,0,0,0.350913,443.235,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",64,6,experiments/central_nr_seed64/ppo_multi_site.zip,-956.036,206.861,0,0,0,0,0,0,0.18226,956.036,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",64,7,experiments/central_nr_seed64/ppo_multi_site.zip,-757.714,206.88,0,0,0,0,0,0,0.187329,757.714,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",64,8,experiments/central_nr_seed64/ppo_multi_site.zip,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",64,9,experiments/central_nr_seed64/ppo_multi_site.zip,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",77,all,experiments/central_nr_seed77/ppo_multi_site.zip,-23281.8,2207.74,0.0789891,0.0789891,0.210406,126,1.19881,0.606799,0.468471,5148.34,18113.9,2.4272,17.125
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",77,0,experiments/central_nr_seed77/ppo_multi_site.zip,-5640.55,230.768,0.217047,0.217047,1,0,0,5.15e-06,0.108036,859.845,4780.71,2.06e-05,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",77,1,experiments/central_nr_seed77/ppo_multi_site.zip,-1860.34,205.613,0.061447,0.061447,0.255699,33,3.13974,0.16118,0.279146,483.065,1373.63,0.644718,3
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",77,2,experiments/central_nr_seed77/ppo_multi_site.zip,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",77,3,experiments/central_nr_seed77/ppo_multi_site.zip,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",77,4,experiments/central_nr_seed77/ppo_multi_site.zip,-10689,310.398,0.43112,0.43112,0.806739,55,5.2329,0.265472,0.199088,729.106,9952.63,1.06189,6.25
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",77,5,experiments/central_nr_seed77/ppo_multi_site.zip,-443.235,207.068,0,0,0,0,0,0,0.350913,443.235,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",77,6,experiments/central_nr_seed77/ppo_multi_site.zip,-1992.81,217.742,0.0426165,0.0426165,0.0416254,38,3.61546,0.180142,0.18226,969.272,1014.95,0.720567,7.875
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",77,7,experiments/central_nr_seed77/ppo_multi_site.zip,-757.714,206.88,0,0,0,0,0,0,0.187329,757.714,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",77,8,experiments/central_nr_seed77/ppo_multi_site.zip,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+legacy,"legacy Centralized PPO (central_nr, June+Aug)",77,9,experiments/central_nr_seed77/ppo_multi_site.zip,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),7,all,experiments/ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,-12781,2104.25,0.0294351,0.0294351,0.0511397,245,2.33102,1.16618,0.468471,5870.38,6849.49,4.66473,56.5
+legacy,legacy Centralized PPO (v0.4 re-scored set),7,0,experiments/ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,-2131.2,212.613,0.0356789,0.0356789,0.0475719,64,6.0892,0.303397,0.108036,1332.15,779.833,1.21359,18
+legacy,legacy Centralized PPO (v0.4 re-scored set),7,1,experiments/ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,-868.691,206.988,0,0,0,0,0,0,0.279146,868.691,0,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),7,2,experiments/ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),7,3,experiments/ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),7,4,experiments/ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,-4560.23,226.068,0.172448,0.172448,0.412289,108,10.2755,0.511982,0.199088,600.78,3938.9,2.04793,18.5
+legacy,legacy Centralized PPO (v0.4 re-scored set),7,5,experiments/ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,-443.235,207.068,0,0,0,0,0,0,0.350913,443.235,0,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),7,6,experiments/ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,-956.036,206.861,0,0,0,0,0,0,0.18226,956.036,0,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),7,7,experiments/ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,-1923.52,215.376,0.0485629,0.0485629,0.0515362,73,6.94549,0.350803,0.187329,763.387,1138.73,1.40321,20
+legacy,legacy Centralized PPO (v0.4 re-scored set),7,8,experiments/ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),7,9,experiments/ppo_multi_site_seed7_20260517T004954/ppo_multi_site.zip,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),13,all,experiments/ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,-12718.8,2121.2,0.0285431,0.0285431,0.0574827,51,0.485233,0.24651,0.468471,6109.45,6605.47,0.98604,2.875
+legacy,legacy Centralized PPO (v0.4 re-scored set),13,0,experiments/ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,-1321.36,206.765,0,0,0,0,0,0,0.108036,1321.36,0,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),13,1,experiments/ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,-868.691,206.988,0,0,0,0,0,0,0.279146,868.691,0,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),13,2,experiments/ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),13,3,experiments/ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),13,4,experiments/ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,-1252.26,209.901,0.012884,0.012884,0.0109019,6,0.570862,0.0284435,0.199088,960.84,290.304,0.113774,1
+legacy,legacy Centralized PPO (v0.4 re-scored set),13,5,experiments/ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,-443.235,207.068,0,0,0,0,0,0,0.350913,443.235,0,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),13,6,experiments/ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,-956.036,206.861,0,0,0,0,0,0,0.18226,956.036,0,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),13,7,experiments/ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,-5979.07,254.35,0.234886,0.234886,0.563925,45,4.28147,0.218066,0.187329,653.184,5323.14,0.872266,1.875
+legacy,legacy Centralized PPO (v0.4 re-scored set),13,8,experiments/ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),13,9,experiments/ppo_multi_site_seed13_20260517T004954/ppo_multi_site.zip,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),42,all,experiments/ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,-11203.8,2074.13,0.0249752,0.0249752,0.0837463,227,2.15976,1.09034,0.468471,5427.26,5728.55,4.36135,43.625
+legacy,legacy Centralized PPO (v0.4 re-scored set),42,0,experiments/ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,-3520.36,225.684,0.0971259,0.0971259,0.170466,108,10.2755,0.511987,0.108036,1336.12,2159.32,2.04795,22.875
+legacy,legacy Centralized PPO (v0.4 re-scored set),42,1,experiments/ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,-1122.41,197.695,0.0277502,0.0277502,0.154609,53,5.04262,0.255991,0.279146,492.747,616.39,1.02396,12.25
+legacy,legacy Centralized PPO (v0.4 re-scored set),42,2,experiments/ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),42,3,experiments/ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),42,4,experiments/ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,-955.91,206.89,0,0,0,0,0,0,0.199088,955.91,0,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),42,5,experiments/ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,-443.235,207.068,0,0,0,0,0,0,0.350913,443.235,0,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),42,6,experiments/ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,-1037.48,197.853,0.0138751,0.0138751,0.166501,27,2.56888,0.132736,0.18226,710.561,323.636,0.530944,2.75
+legacy,legacy Centralized PPO (v0.4 re-scored set),42,7,experiments/ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,-2226.26,209.666,0.0733399,0.0733399,0.345887,39,3.7106,0.189623,0.187329,582.591,1637.16,0.758492,5.75
+legacy,legacy Centralized PPO (v0.4 re-scored set),42,8,experiments/ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),42,9,experiments/ppo_multi_site_seed42_20260517T004954/ppo_multi_site.zip,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),99,all,experiments/ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,-21133.5,2220.29,0.0661051,0.0661051,0.17889,152,1.44618,0.730054,0.468471,5180.92,15933.8,2.92021,15.875
+legacy,legacy Centralized PPO (v0.4 re-scored set),99,0,experiments/ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,-1952.23,185.908,0.0515362,0.0515362,0.491576,77,7.32607,0.369765,0.108036,792.869,1149.63,1.47906,8.25
+legacy,legacy Centralized PPO (v0.4 re-scored set),99,1,experiments/ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,-868.691,206.988,0,0,0,0,0,0,0.279146,868.691,0,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),99,2,experiments/ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),99,3,experiments/ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),99,4,experiments/ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,-1289.19,194.192,0.0336967,0.0336967,0.244797,31,2.94945,0.151698,0.199088,560.419,726.287,0.606794,1.875
+legacy,legacy Centralized PPO (v0.4 re-scored set),99,5,experiments/ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,-443.235,207.068,0,0,0,0,0,0,0.350913,443.235,0,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),99,6,experiments/ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,-11706.4,346.228,0.457879,0.457879,0.983152,22,2.09316,0.104298,0.18226,822.354,10878.9,0.417191,4.75
+legacy,legacy Centralized PPO (v0.4 re-scored set),99,7,experiments/ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,-757.714,206.88,0,0,0,0,0,0,0.187329,757.714,0,0,0
+legacy,legacy Centralized PPO (v0.4 re-scored set),99,8,experiments/ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,-2619.85,250.823,0.0802775,0.0802775,0.0693756,22,2.09316,0.104293,0.349685,431.433,2187,0.417171,1
+legacy,legacy Centralized PPO (v0.4 re-scored set),99,9,experiments/ppo_multi_site_seed99_20260517T004954/ppo_multi_site.zip,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",1,all,experiments/ippo_nr_seed1,-6064.79,1984.15,0.00654113,0.00654113,0.0776016,183,1.74113,0.872266,0.468471,4368.28,1673.89,3.48906,19.125
+legacy,"legacy IPPO (ippo_nr, paper Table I)",1,0,experiments/ippo_nr_seed1,-917.765,177.677,0.0049554,0.0049554,0.24777,29,2.75917,0.142217,0.108036,806.109,110.337,0.568869,0.75
+legacy,"legacy IPPO (ippo_nr, paper Table I)",1,1,experiments/ippo_nr_seed1,-545.824,192.993,0.00297324,0.00297324,0.114965,32,3.0446,0.151698,0.279146,471.355,71.1123,0.606794,2.75
+legacy,"legacy IPPO (ippo_nr, paper Table I)",1,2,experiments/ippo_nr_seed1,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",1,3,experiments/ippo_nr_seed1,-492.898,214.83,0.012884,0.012884,0.0109019,2,0.190287,0.00948115,0.917791,141.86,351,0.0379246,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",1,4,experiments/ippo_nr_seed1,-630.72,188.038,0.00297324,0.00297324,0.134787,32,3.0446,0.151698,0.199088,561.213,66.1498,0.606794,2.75
+legacy,"legacy IPPO (ippo_nr, paper Table I)",1,5,experiments/ippo_nr_seed1,-443.886,204.099,0.00198216,0.00198216,0.0307235,10,0.951437,0.0474057,0.350913,398.959,44.1123,0.189623,0.625
+legacy,"legacy IPPO (ippo_nr, paper Table I)",1,6,experiments/ippo_nr_seed1,-697.674,191.11,0.00198216,0.00198216,0.124876,38,3.61546,0.180142,0.18226,648.628,44.0749,0.720567,4.25
+legacy,"legacy IPPO (ippo_nr, paper Table I)",1,7,experiments/ippo_nr_seed1,-602.796,193.599,0.00099108,0.00099108,0.111992,40,3.80575,0.189623,0.187329,571.963,22.0748,0.758492,8
+legacy,"legacy IPPO (ippo_nr, paper Table I)",1,8,experiments/ippo_nr_seed1,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",1,9,experiments/ippo_nr_seed1,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",7,all,experiments/ippo_nr_seed7,-5806.65,1973.35,0.00574827,0.00574827,0.0809713,195,1.8553,0.929153,0.468471,4333.02,1448.04,3.71661,21.875
+legacy,"legacy IPPO (ippo_nr, paper Table I)",7,0,experiments/ippo_nr_seed7,-870.183,177.107,0.00297324,0.00297324,0.249752,35,3.33003,0.170661,0.108036,801.064,66.1871,0.682643,2.25
+legacy,"legacy IPPO (ippo_nr, paper Table I)",7,1,experiments/ippo_nr_seed7,-549.757,193.417,0.00297324,0.00297324,0.11001,30,2.85431,0.142217,0.279146,475.701,71.1123,0.568869,2.375
+legacy,"legacy IPPO (ippo_nr, paper Table I)",7,2,experiments/ippo_nr_seed7,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",7,3,experiments/ippo_nr_seed7,-210.075,207.724,0.00297324,0.00297324,0.00099108,2,0.190287,0.00948115,0.917791,138.425,71.1123,0.0379246,0.5
+legacy,"legacy IPPO (ippo_nr, paper Table I)",7,4,experiments/ippo_nr_seed7,-672.954,187.352,0.0049554,0.0049554,0.145689,28,2.66402,0.132736,0.199088,560.248,110.299,0.530944,1.875
+legacy,"legacy IPPO (ippo_nr, paper Table I)",7,5,experiments/ippo_nr_seed7,-428.962,204.782,0.00099108,0.00099108,0.0237859,8,0.76115,0.0379246,0.350913,406.111,22.0748,0.151698,0.625
+legacy,"legacy IPPO (ippo_nr, paper Table I)",7,6,experiments/ippo_nr_seed7,-737.13,188.868,0.00396432,0.00396432,0.153617,56,5.32805,0.265472,0.18226,628.368,98.0749,1.06189,9.625
+legacy,"legacy IPPO (ippo_nr, paper Table I)",7,7,experiments/ippo_nr_seed7,-621.412,193.567,0.00198216,0.00198216,0.114965,32,3.0446,0.151698,0.187329,572.281,44.1497,0.606794,4.375
+legacy,"legacy IPPO (ippo_nr, paper Table I)",7,8,experiments/ippo_nr_seed7,-384.847,205.796,0,0,0.0109019,4,0.380575,0.0189623,0.349685,384.521,0,0.0758492,0.25
+legacy,"legacy IPPO (ippo_nr, paper Table I)",7,9,experiments/ippo_nr_seed7,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",13,all,experiments/ippo_nr_seed13,-5762.55,1975.43,0.00535183,0.00535183,0.0769078,207,1.96947,0.98604,0.468471,4374.25,1354.85,3.94416,29.5
+legacy,"legacy IPPO (ippo_nr, paper Table I)",13,0,experiments/ippo_nr_seed13,-854.824,177.936,0.00198216,0.00198216,0.234886,35,3.33003,0.170661,0.108036,807.904,44.1123,0.682643,2.125
+legacy,"legacy IPPO (ippo_nr, paper Table I)",13,1,experiments/ippo_nr_seed13,-537.573,191.986,0.00297324,0.00297324,0.124876,36,3.42517,0.170661,0.279146,462.153,71.1123,0.682643,3.625
+legacy,"legacy IPPO (ippo_nr, paper Table I)",13,2,experiments/ippo_nr_seed13,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",13,3,experiments/ippo_nr_seed13,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",13,4,experiments/ippo_nr_seed13,-675.27,187.738,0.0049554,0.0049554,0.141724,26,2.47374,0.123255,0.199088,563.353,110.299,0.49302,1.125
+legacy,"legacy IPPO (ippo_nr, paper Table I)",13,5,experiments/ippo_nr_seed13,-410.636,204.835,0,0,0.0198216,6,0.570862,0.0284434,0.350913,410.147,0,0.113774,0.375
+legacy,"legacy IPPO (ippo_nr, paper Table I)",13,6,experiments/ippo_nr_seed13,-744.86,190.662,0.00297324,0.00297324,0.124876,66,6.27948,0.312878,0.18226,657.158,71.0749,1.25151,15.375
+legacy,"legacy IPPO (ippo_nr, paper Table I)",13,7,experiments/ippo_nr_seed13,-641.252,192.998,0.00297324,0.00297324,0.122894,38,3.61546,0.180142,0.187329,567.432,66.2245,0.720567,6.875
+legacy,"legacy IPPO (ippo_nr, paper Table I)",13,8,experiments/ippo_nr_seed13,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",13,9,experiments/ippo_nr_seed13,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",23,all,experiments/ippo_nr_seed23,-5717.73,1975.08,0.00515362,0.00515362,0.0777007,223,2.1217,1.06189,0.468471,4374.29,1305.82,4.24756,33.375
+legacy,"legacy IPPO (ippo_nr, paper Table I)",23,0,experiments/ippo_nr_seed23,-879.285,175.035,0.00396432,0.00396432,0.278494,57,5.42319,0.274953,0.108036,782.423,88.262,1.09981,7.5
+legacy,"legacy IPPO (ippo_nr, paper Table I)",23,1,experiments/ippo_nr_seed23,-538.592,192.435,0.00297324,0.00297324,0.115956,32,3.0446,0.151698,0.279146,464.248,71.1123,0.606794,2.625
+legacy,"legacy IPPO (ippo_nr, paper Table I)",23,2,experiments/ippo_nr_seed23,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",23,3,experiments/ippo_nr_seed23,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",23,4,experiments/ippo_nr_seed23,-675.904,187.754,0.0049554,0.0049554,0.144698,26,2.47374,0.123255,0.199088,564.112,110.299,0.49302,1
+legacy,"legacy IPPO (ippo_nr, paper Table I)",23,5,experiments/ippo_nr_seed23,-390.778,203.119,0,0,0.0327056,14,1.33201,0.066368,0.350913,388.513,0,0.265472,2
+legacy,"legacy IPPO (ippo_nr, paper Table I)",23,6,experiments/ippo_nr_seed23,-730.57,193.74,0.00099108,0.00099108,0.0951437,44,4.18632,0.208585,0.18226,699.323,22.0375,0.834341,8.375
+legacy,"legacy IPPO (ippo_nr, paper Table I)",23,7,experiments/ippo_nr_seed23,-610.741,194.255,0.00099108,0.00099108,0.106046,44,4.18632,0.208585,0.187329,577.332,22.0748,0.834341,10.5
+legacy,"legacy IPPO (ippo_nr, paper Table I)",23,8,experiments/ippo_nr_seed23,-395.622,206.537,0,0,0.00396432,6,0.570862,0.0284435,0.349685,394.133,0,0.113774,1.375
+legacy,"legacy IPPO (ippo_nr, paper Table I)",23,9,experiments/ippo_nr_seed23,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",42,all,experiments/ippo_nr_seed42,-5698.17,1972.7,0.00525273,0.00525273,0.0806739,201,1.91239,0.957596,0.468471,4331.64,1337.71,3.83038,25
+legacy,"legacy IPPO (ippo_nr, paper Table I)",42,0,experiments/ippo_nr_seed42,-862.367,175.797,0.00297324,0.00297324,0.264618,47,4.47175,0.227548,0.108036,790.395,66.1871,0.91019,4.875
+legacy,"legacy IPPO (ippo_nr, paper Table I)",42,1,experiments/ippo_nr_seed42,-534.068,191.935,0.00297324,0.00297324,0.123885,30,2.85431,0.142217,0.279146,460.512,71.1123,0.568869,1.875
+legacy,"legacy IPPO (ippo_nr, paper Table I)",42,2,experiments/ippo_nr_seed42,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",42,3,experiments/ippo_nr_seed42,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",42,4,experiments/ippo_nr_seed42,-637.456,188.429,0.00297324,0.00297324,0.133796,26,2.47374,0.123255,0.199088,569.563,66.1498,0.49302,1.25
+legacy,"legacy IPPO (ippo_nr, paper Table I)",42,5,experiments/ippo_nr_seed42,-405.742,204.552,0,0,0.0198216,4,0.380575,0.0189623,0.350913,405.666,0,0.0758492,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",42,6,experiments/ippo_nr_seed42,-718.487,190.145,0.00297324,0.00297324,0.138751,46,4.37661,0.218066,0.18226,639.665,71.0749,0.872266,6.875
+legacy,"legacy IPPO (ippo_nr, paper Table I)",42,7,experiments/ippo_nr_seed42,-649.879,193.201,0.00297324,0.00297324,0.11893,40,3.80575,0.189623,0.187329,569.471,71.1497,0.758492,8.5
+legacy,"legacy IPPO (ippo_nr, paper Table I)",42,8,experiments/ippo_nr_seed42,-393.935,206.438,0,0,0.00693756,8,0.76115,0.0379246,0.349685,392.158,0,0.151698,1.625
+legacy,"legacy IPPO (ippo_nr, paper Table I)",42,9,experiments/ippo_nr_seed42,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",64,all,experiments/ippo_nr_seed64,-5761.42,1966.57,0.00574827,0.00574827,0.0877106,255,2.42616,1.21359,0.468471,4285.75,1431.93,4.85435,38.875
+legacy,"legacy IPPO (ippo_nr, paper Table I)",64,0,experiments/ippo_nr_seed64,-858.368,173.433,0.00396432,0.00396432,0.299306,67,6.37463,0.322359,0.108036,768.749,77.0797,1.28944,11.25
+legacy,"legacy IPPO (ippo_nr, paper Table I)",64,1,experiments/ippo_nr_seed64,-539.174,192.483,0.00297324,0.00297324,0.117939,32,3.0446,0.151698,0.279146,464.955,71.1123,0.606794,2.5
+legacy,"legacy IPPO (ippo_nr, paper Table I)",64,2,experiments/ippo_nr_seed64,-308.535,207.133,0.00099108,0.00099108,0.00297324,6,0.570862,0.0284435,0.4517,284.847,22.0748,0.113774,1.5
+legacy,"legacy IPPO (ippo_nr, paper Table I)",64,3,experiments/ippo_nr_seed64,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",64,4,experiments/ippo_nr_seed64,-658.637,188.328,0.00396432,0.00396432,0.130823,40,3.80575,0.189623,0.199088,562.779,88.2246,0.758492,6.875
+legacy,"legacy IPPO (ippo_nr, paper Table I)",64,5,experiments/ippo_nr_seed64,-411.111,201.052,0.00198216,0.00198216,0.0555005,16,1.5223,0.0758492,0.350913,365.82,44.1123,0.303397,0.875
+legacy,"legacy IPPO (ippo_nr, paper Table I)",64,6,experiments/ippo_nr_seed64,-714.749,192.251,0.00099108,0.00099108,0.11001,46,4.37661,0.218066,0.18226,683.589,22.0375,0.872266,8.25
+legacy,"legacy IPPO (ippo_nr, paper Table I)",64,7,experiments/ippo_nr_seed64,-675.078,191.31,0.0049554,0.0049554,0.148662,34,3.23489,0.16118,0.187329,554.422,115.262,0.644718,4.75
+legacy,"legacy IPPO (ippo_nr, paper Table I)",64,8,experiments/ippo_nr_seed64,-384.811,205.544,0,0,0.011893,14,1.33201,0.0663681,0.349685,381.671,0,0.265472,2.875
+legacy,"legacy IPPO (ippo_nr, paper Table I)",64,9,experiments/ippo_nr_seed64,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",77,all,experiments/ippo_nr_seed77,-5811.32,1969.85,0.00594648,0.00594648,0.0872151,231,2.19782,1.09981,0.468471,4280.3,1497.12,4.39925,29.5
+legacy,"legacy IPPO (ippo_nr, paper Table I)",77,0,experiments/ippo_nr_seed77,-873.761,174.244,0.00396432,0.00396432,0.283449,63,5.99405,0.303397,0.108036,774.91,88.262,1.21359,9.375
+legacy,"legacy IPPO (ippo_nr, paper Table I)",77,1,experiments/ippo_nr_seed77,-528.004,191.034,0.00297324,0.00297324,0.134787,32,3.0446,0.151698,0.279146,453.535,71.1123,0.606794,2.75
+legacy,"legacy IPPO (ippo_nr, paper Table I)",77,2,experiments/ippo_nr_seed77,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",77,3,experiments/ippo_nr_seed77,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",77,4,experiments/ippo_nr_seed77,-671.572,187.322,0.0049554,0.0049554,0.14668,32,3.0446,0.151698,0.199088,557.291,110.299,0.606794,3.375
+legacy,"legacy IPPO (ippo_nr, paper Table I)",77,5,experiments/ippo_nr_seed77,-419.717,202.042,0.00198216,0.00198216,0.0485629,16,1.5223,0.0758492,0.350913,374.177,44.1123,0.303397,1.125
+legacy,"legacy IPPO (ippo_nr, paper Table I)",77,6,experiments/ippo_nr_seed77,-761.733,189.263,0.0049554,0.0049554,0.151635,52,4.94747,0.24651,0.18226,632.972,120.15,0.98604,7.625
+legacy,"legacy IPPO (ippo_nr, paper Table I)",77,7,experiments/ippo_nr_seed77,-630.929,194.657,0.00198216,0.00198216,0.104063,34,3.23489,0.16118,0.187329,581.135,44.1497,0.644718,5
+legacy,"legacy IPPO (ippo_nr, paper Table I)",77,8,experiments/ippo_nr_seed77,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",77,9,experiments/ippo_nr_seed77,-1073.51,209.584,0.0376611,0.0376611,0.00297324,2,0.190287,0.00948115,1.65876,81.188,992.031,0.0379246,0.25
+legacy,"legacy IPPO (ippo_nr, paper Table I)",99,all,experiments/ippo_nr_seed99,-5886.44,1971.82,0.0061447,0.0061447,0.0851338,179,1.70307,0.853303,0.468471,4323.76,1541.27,3.41321,18
+legacy,"legacy IPPO (ippo_nr, paper Table I)",99,0,experiments/ippo_nr_seed99,-913.374,177.394,0.0049554,0.0049554,0.251734,29,2.75917,0.142217,0.108036,801.343,110.337,0.568869,1.125
+legacy,"legacy IPPO (ippo_nr, paper Table I)",99,1,experiments/ippo_nr_seed99,-548.022,193.301,0.00297324,0.00297324,0.11001,30,2.85431,0.142217,0.279146,473.966,71.1123,0.568869,2.375
+legacy,"legacy IPPO (ippo_nr, paper Table I)",99,2,experiments/ippo_nr_seed99,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",99,3,experiments/ippo_nr_seed99,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",99,4,experiments/ippo_nr_seed99,-671.728,187.383,0.0049554,0.0049554,0.148662,30,2.85431,0.142217,0.199088,558.11,110.299,0.568869,2.75
+legacy,"legacy IPPO (ippo_nr, paper Table I)",99,5,experiments/ippo_nr_seed99,-410.557,204.873,0,0,0.0178394,4,0.380575,0.0189623,0.350913,410.482,0,0.0758492,0
+legacy,"legacy IPPO (ippo_nr, paper Table I)",99,6,experiments/ippo_nr_seed99,-740.176,189.517,0.00396432,0.00396432,0.144698,48,4.5669,0.227548,0.18226,633.816,98.0749,0.91019,7.375
+legacy,"legacy IPPO (ippo_nr, paper Table I)",99,7,experiments/ippo_nr_seed99,-712.773,190.729,0.00693756,0.00693756,0.173439,34,3.23489,0.16118,0.187329,548.966,159.412,0.644718,3.75
+legacy,"legacy IPPO (ippo_nr, paper Table I)",99,8,experiments/ippo_nr_seed99,-393.573,206.413,0,0,0.0049554,4,0.380575,0.0189623,0.349685,392.872,0,0.0758492,0.625
+legacy,"legacy IPPO (ippo_nr, paper Table I)",99,9,experiments/ippo_nr_seed99,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,legacy IPPO (v0.4 re-scored set),1,all,experiments/ppo_single_site_ensemble_seed1_20260517T110907,-5708.99,1976.07,0.00525273,0.00525273,0.0762141,191,1.81724,0.91019,0.468471,4354.11,1332.74,3.64076,18.5
+legacy,legacy IPPO (v0.4 re-scored set),1,0,experiments/ppo_single_site_ensemble_seed1_20260517T110907,-874.096,177.591,0.00297324,0.00297324,0.244797,35,3.33003,0.170661,0.108036,805.476,66.1871,0.682643,1.75
+legacy,legacy IPPO (v0.4 re-scored set),1,1,experiments/ppo_single_site_ensemble_seed1_20260517T110907,-553.281,193.836,0.00297324,0.00297324,0.103072,32,3.0446,0.151698,0.279146,478.936,71.1123,0.606794,2.625
+legacy,legacy IPPO (v0.4 re-scored set),1,2,experiments/ppo_single_site_ensemble_seed1_20260517T110907,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,legacy IPPO (v0.4 re-scored set),1,3,experiments/ppo_single_site_ensemble_seed1_20260517T110907,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,legacy IPPO (v0.4 re-scored set),1,4,experiments/ppo_single_site_ensemble_seed1_20260517T110907,-640.669,188.832,0.00297324,0.00297324,0.12884,30,2.85431,0.142217,0.199088,572.075,66.1498,0.568869,1.875
+legacy,legacy IPPO (v0.4 re-scored set),1,5,experiments/ppo_single_site_ensemble_seed1_20260517T110907,-409.565,202.921,0.00099108,0.00099108,0.0346878,10,0.951437,0.0474057,0.350913,386.838,22.0375,0.189623,0.5
+legacy,legacy IPPO (v0.4 re-scored set),1,6,experiments/ppo_single_site_ensemble_seed1_20260517T110907,-715.96,189.834,0.00297324,0.00297324,0.141724,48,4.5669,0.227548,0.18226,636.974,71.0749,0.91019,7
+legacy,legacy IPPO (v0.4 re-scored set),1,7,experiments/ppo_single_site_ensemble_seed1_20260517T110907,-634.396,195.038,0.00198216,0.00198216,0.0971259,32,3.0446,0.151698,0.187329,585.015,44.1497,0.606794,4.625
+legacy,legacy IPPO (v0.4 re-scored set),1,8,experiments/ppo_single_site_ensemble_seed1_20260517T110907,-384.789,205.813,0,0,0.011893,4,0.380575,0.0189623,0.349685,384.588,0,0.0758492,0.125
+legacy,legacy IPPO (v0.4 re-scored set),1,9,experiments/ppo_single_site_ensemble_seed1_20260517T110907,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,legacy IPPO (v0.4 re-scored set),7,all,experiments/ppo_single_site_ensemble_seed7_20260517T091403,-5780.62,1972.48,0.00564916,0.00564916,0.0812686,203,1.93142,0.967077,0.468471,4325.16,1425.97,3.86831,25.625
+legacy,legacy IPPO (v0.4 re-scored set),7,0,experiments/ppo_single_site_ensemble_seed7_20260517T091403,-864.496,176.661,0.00297324,0.00297324,0.255699,37,3.52032,0.180142,0.108036,794.838,66.1871,0.720567,2.75
+legacy,legacy IPPO (v0.4 re-scored set),7,1,experiments/ppo_single_site_ensemble_seed7_20260517T091403,-534.143,190.992,0.00297324,0.00297324,0.131814,48,4.5669,0.227548,0.279146,452.246,71.1123,0.91019,9.875
+legacy,legacy IPPO (v0.4 re-scored set),7,2,experiments/ppo_single_site_ensemble_seed7_20260517T091403,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,legacy IPPO (v0.4 re-scored set),7,3,experiments/ppo_single_site_ensemble_seed7_20260517T091403,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,legacy IPPO (v0.4 re-scored set),7,4,experiments/ppo_single_site_ensemble_seed7_20260517T091403,-694.43,187.401,0.00594648,0.00594648,0.148662,26,2.47374,0.123255,0.199088,560.687,132.374,0.49302,0.875
+legacy,legacy IPPO (v0.4 re-scored set),7,5,experiments/ppo_single_site_ensemble_seed7_20260517T091403,-411.119,203.144,0.00099108,0.00099108,0.0336967,10,0.951437,0.0474057,0.350913,388.517,22.0375,0.189623,0.375
+legacy,legacy IPPO (v0.4 re-scored set),7,6,experiments/ppo_single_site_ensemble_seed7_20260517T091403,-764.476,189.698,0.0049554,0.0049554,0.147671,50,4.75719,0.237029,0.18226,636.129,120.15,0.948115,7.25
+legacy,legacy IPPO (v0.4 re-scored set),7,7,experiments/ppo_single_site_ensemble_seed7_20260517T091403,-613.819,195.307,0.00099108,0.00099108,0.0951437,32,3.0446,0.151698,0.187329,586.638,22.0748,0.606794,4.5
+legacy,legacy IPPO (v0.4 re-scored set),7,8,experiments/ppo_single_site_ensemble_seed7_20260517T091403,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+legacy,legacy IPPO (v0.4 re-scored set),7,9,experiments/ppo_single_site_ensemble_seed7_20260517T091403,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,legacy IPPO (v0.4 re-scored set),13,all,experiments/ppo_single_site_ensemble_seed13_20260517T091403,-5641.1,1975.01,0.0049554,0.0049554,0.0769078,209,1.9885,0.995521,0.468471,4347.99,1261.63,3.98208,27.5
+legacy,legacy IPPO (v0.4 re-scored set),13,0,experiments/ppo_single_site_ensemble_seed13_20260517T091403,-845.671,176.722,0.00198216,0.00198216,0.242815,47,4.47175,0.227548,0.108036,795.148,44.1123,0.91019,5.5
+legacy,legacy IPPO (v0.4 re-scored set),13,1,experiments/ppo_single_site_ensemble_seed13_20260517T091403,-539.213,191.884,0.00297324,0.00297324,0.127849,40,3.80575,0.189623,0.279146,461.592,71.1123,0.758492,5.75
+legacy,legacy IPPO (v0.4 re-scored set),13,2,experiments/ppo_single_site_ensemble_seed13_20260517T091403,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,legacy IPPO (v0.4 re-scored set),13,3,experiments/ppo_single_site_ensemble_seed13_20260517T091403,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,legacy IPPO (v0.4 re-scored set),13,4,experiments/ppo_single_site_ensemble_seed13_20260517T091403,-633.278,188.059,0.00297324,0.00297324,0.13776,24,2.28345,0.113774,0.199088,566.048,66.1498,0.455095,0.625
+legacy,legacy IPPO (v0.4 re-scored set),13,5,experiments/ppo_single_site_ensemble_seed13_20260517T091403,-429.755,204.836,0.00099108,0.00099108,0.024777,10,0.951437,0.0474057,0.350913,406.615,22.0748,0.189623,0.875
+legacy,legacy IPPO (v0.4 re-scored set),13,6,experiments/ppo_single_site_ensemble_seed13_20260517T091403,-700.702,190.907,0.00198216,0.00198216,0.121903,56,5.32805,0.265472,0.18226,644.565,44.0749,1.06189,11
+legacy,legacy IPPO (v0.4 re-scored set),13,7,experiments/ppo_single_site_ensemble_seed13_20260517T091403,-599.749,193.694,0.00099108,0.00099108,0.11001,30,2.85431,0.142217,0.187329,573.481,22.0748,0.568869,3.625
+legacy,legacy IPPO (v0.4 re-scored set),13,8,experiments/ppo_single_site_ensemble_seed13_20260517T091403,-396.495,206.697,0,0,0.00396432,2,0.190287,0.00948115,0.349685,396.332,0,0.0379246,0.125
+legacy,legacy IPPO (v0.4 re-scored set),13,9,experiments/ppo_single_site_ensemble_seed13_20260517T091403,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,legacy IPPO (v0.4 re-scored set),23,all,experiments/ppo_single_site_ensemble_seed23_20260517T110907,-5819.78,1969.29,0.00584737,0.00584737,0.0849356,219,2.08365,1.04293,0.468471,4311.35,1475,4.17171,29.25
+legacy,legacy IPPO (v0.4 re-scored set),23,0,experiments/ppo_single_site_ensemble_seed23_20260517T110907,-865.281,176.49,0.00297324,0.00297324,0.255699,43,4.09118,0.208585,0.108036,793.634,66.1871,0.834341,4.625
+legacy,legacy IPPO (v0.4 re-scored set),23,1,experiments/ppo_single_site_ensemble_seed23_20260517T110907,-534.565,191.873,0.00297324,0.00297324,0.126858,30,2.85431,0.142217,0.279146,461.259,71.1123,0.568869,1.625
+legacy,legacy IPPO (v0.4 re-scored set),23,2,experiments/ppo_single_site_ensemble_seed23_20260517T110907,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,legacy IPPO (v0.4 re-scored set),23,3,experiments/ppo_single_site_ensemble_seed23_20260517T110907,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,legacy IPPO (v0.4 re-scored set),23,4,experiments/ppo_single_site_ensemble_seed23_20260517T110907,-673.166,187.495,0.0049554,0.0049554,0.144698,26,2.47374,0.123255,0.199088,561.374,110.299,0.49302,1
+legacy,legacy IPPO (v0.4 re-scored set),23,5,experiments/ppo_single_site_ensemble_seed23_20260517T110907,-421.99,202.109,0.00198216,0.00198216,0.0455897,12,1.14172,0.0568869,0.350913,377.312,44.0749,0.227548,0.375
+legacy,legacy IPPO (v0.4 re-scored set),23,6,experiments/ppo_single_site_ensemble_seed23_20260517T110907,-780.089,189.559,0.0049554,0.0049554,0.151635,50,4.75719,0.237029,0.18226,652.241,120.15,0.948115,6.75
+legacy,legacy IPPO (v0.4 re-scored set),23,7,experiments/ppo_single_site_ensemble_seed23_20260517T110907,-652.597,192.981,0.00297324,0.00297324,0.120912,54,5.13776,0.255991,0.187329,566.299,71.1497,1.02396,14.125
+legacy,legacy IPPO (v0.4 re-scored set),23,8,experiments/ppo_single_site_ensemble_seed23_20260517T110907,-395.849,206.573,0,0,0.00396432,4,0.380575,0.0189623,0.349685,395.023,0,0.0758492,0.75
+legacy,legacy IPPO (v0.4 re-scored set),23,9,experiments/ppo_single_site_ensemble_seed23_20260517T110907,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,legacy IPPO (v0.4 re-scored set),42,all,experiments/ppo_single_site_ensemble_seed42_20260517T091403,-5880,1973.88,0.0061447,0.0061447,0.0814668,198,1.88385,0.948115,0.468471,4328.33,1526.38,3.79246,21.5
+legacy,legacy IPPO (v0.4 re-scored set),42,0,experiments/ppo_single_site_ensemble_seed42_20260517T091403,-910.793,177.163,0.0049554,0.0049554,0.258672,27,2.56888,0.132736,0.108036,799.676,110.337,0.530944,0.25
+legacy,legacy IPPO (v0.4 re-scored set),42,1,experiments/ppo_single_site_ensemble_seed42_20260517T091403,-551.077,193.359,0.00297324,0.00297324,0.111001,34,3.23489,0.16118,0.279146,475.32,71.1123,0.644718,4
+legacy,legacy IPPO (v0.4 re-scored set),42,2,experiments/ppo_single_site_ensemble_seed42_20260517T091403,-353.624,207.702,0.00297324,0.00297324,0.00297324,4,0.380575,0.0189623,0.4517,286.486,66.1871,0.0758492,0.875
+legacy,legacy IPPO (v0.4 re-scored set),42,3,experiments/ppo_single_site_ensemble_seed42_20260517T091403,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,legacy IPPO (v0.4 re-scored set),42,4,experiments/ppo_single_site_ensemble_seed42_20260517T091403,-653.408,187.796,0.00396432,0.00396432,0.140733,24,2.28345,0.113774,0.199088,564.103,88.2246,0.455095,0.625
+legacy,legacy IPPO (v0.4 re-scored set),42,5,experiments/ppo_single_site_ensemble_seed42_20260517T091403,-436.917,201.55,0.00297324,0.00297324,0.0555005,16,1.5223,0.0758492,0.350913,369.589,66.1498,0.303397,0.875
+legacy,legacy IPPO (v0.4 re-scored set),42,6,experiments/ppo_single_site_ensemble_seed42_20260517T091403,-719.705,190.467,0.00297324,0.00297324,0.136769,55,5.2329,0.265472,0.18226,642.493,66.1498,1.06189,10
+legacy,legacy IPPO (v0.4 re-scored set),42,7,experiments/ppo_single_site_ensemble_seed42_20260517T091403,-632.106,194.874,0.00198216,0.00198216,0.100099,28,2.66402,0.132736,0.187329,584.8,44.1497,0.530944,2.625
+legacy,legacy IPPO (v0.4 re-scored set),42,8,experiments/ppo_single_site_ensemble_seed42_20260517T091403,-411.424,205.929,0.00099108,0.00099108,0.00891972,10,0.951437,0.0474058,0.349685,386.947,22.0375,0.189623,2.25
+legacy,legacy IPPO (v0.4 re-scored set),42,9,experiments/ppo_single_site_ensemble_seed42_20260517T091403,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,legacy IPPO (v0.4 re-scored set),64,all,experiments/ppo_single_site_ensemble_seed64_20260517T110907,-5883.89,1969.92,0.0061447,0.0061447,0.0860258,213,2.02656,1.01448,0.468471,4329.05,1525.16,4.05793,25.625
+legacy,legacy IPPO (v0.4 re-scored set),64,0,experiments/ppo_single_site_ensemble_seed64_20260517T110907,-922.634,173.614,0.00693756,0.00693756,0.308226,61,5.80377,0.293916,0.108036,770.067,143.267,1.17566,8.125
+legacy,legacy IPPO (v0.4 re-scored set),64,1,experiments/ppo_single_site_ensemble_seed64_20260517T110907,-550.665,193.636,0.00297324,0.00297324,0.107037,28,2.66402,0.132736,0.279146,477.147,71.1123,0.530944,1.875
+legacy,legacy IPPO (v0.4 re-scored set),64,2,experiments/ppo_single_site_ensemble_seed64_20260517T110907,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,legacy IPPO (v0.4 re-scored set),64,3,experiments/ppo_single_site_ensemble_seed64_20260517T110907,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,legacy IPPO (v0.4 re-scored set),64,4,experiments/ppo_single_site_ensemble_seed64_20260517T110907,-675.283,187.741,0.0049554,0.0049554,0.142716,26,2.47374,0.123255,0.199088,563.366,110.299,0.49302,1.125
+legacy,legacy IPPO (v0.4 re-scored set),64,5,experiments/ppo_single_site_ensemble_seed64_20260517T110907,-415.096,201.454,0.00198216,0.00198216,0.049554,14,1.33201,0.066368,0.350913,369.968,44.1123,0.265472,0.75
+legacy,legacy IPPO (v0.4 re-scored set),64,6,experiments/ppo_single_site_ensemble_seed64_20260517T110907,-761.051,192.147,0.00297324,0.00297324,0.122894,34,3.23489,0.16118,0.18226,686.294,71.1123,0.644718,3
+legacy,legacy IPPO (v0.4 re-scored set),64,7,experiments/ppo_single_site_ensemble_seed64_20260517T110907,-667.739,192.726,0.00396432,0.00396432,0.124876,40,3.80575,0.189623,0.187329,565.506,93.2245,0.758492,8.25
+legacy,legacy IPPO (v0.4 re-scored set),64,8,experiments/ppo_single_site_ensemble_seed64_20260517T110907,-395.183,206.39,0,0,0.0049554,10,0.951437,0.0474058,0.349685,392.493,0,0.189623,2.5
+legacy,legacy IPPO (v0.4 re-scored set),64,9,experiments/ppo_single_site_ensemble_seed64_20260517T110907,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,legacy IPPO (v0.4 re-scored set),77,all,experiments/ppo_single_site_ensemble_seed77_20260517T110907,-5864.6,1978.97,0.00594648,0.00594648,0.0827552,207,1.96947,0.98604,0.468471,4319.85,1517.8,3.94416,23
+legacy,legacy IPPO (v0.4 re-scored set),77,0,experiments/ppo_single_site_ensemble_seed77_20260517T110907,-852.744,177.552,0.00198216,0.00198216,0.240833,37,3.52032,0.180142,0.108036,805.161,44.1123,0.720567,2.75
+legacy,legacy IPPO (v0.4 re-scored set),77,1,experiments/ppo_single_site_ensemble_seed77_20260517T110907,-545.155,192.927,0.00297324,0.00297324,0.111992,32,3.0446,0.151698,0.279146,470.311,71.1123,0.606794,3.125
+legacy,legacy IPPO (v0.4 re-scored set),77,2,experiments/ppo_single_site_ensemble_seed77_20260517T110907,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,legacy IPPO (v0.4 re-scored set),77,3,experiments/ppo_single_site_ensemble_seed77_20260517T110907,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,legacy IPPO (v0.4 re-scored set),77,4,experiments/ppo_single_site_ensemble_seed77_20260517T110907,-653.231,187.799,0.00396432,0.00396432,0.141724,24,2.28345,0.113774,0.199088,563.926,88.2246,0.455095,0.625
+legacy,legacy IPPO (v0.4 re-scored set),77,5,experiments/ppo_single_site_ensemble_seed77_20260517T110907,-411.276,200.868,0.00198216,0.00198216,0.0574827,20,1.90287,0.0948115,0.350913,364.91,44.1123,0.379246,1.875
+legacy,legacy IPPO (v0.4 re-scored set),77,6,experiments/ppo_single_site_ensemble_seed77_20260517T110907,-768.932,190.214,0.0049554,0.0049554,0.141724,44,4.18632,0.208585,0.18226,642.448,120.15,0.834341,5.5
+legacy,legacy IPPO (v0.4 re-scored set),77,7,experiments/ppo_single_site_ensemble_seed77_20260517T110907,-645.877,192.935,0.00297324,0.00297324,0.122894,42,3.99604,0.199104,0.187329,566.306,71.1497,0.796417,7.625
+legacy,legacy IPPO (v0.4 re-scored set),77,8,experiments/ppo_single_site_ensemble_seed77_20260517T110907,-401.897,207.065,0,0,0,0,0,0,0.349685,401.897,0,0,0
+legacy,legacy IPPO (v0.4 re-scored set),77,9,experiments/ppo_single_site_ensemble_seed77_20260517T110907,-1135.28,214.964,0.0396432,0.0396432,0.0109019,8,0.76115,0.0379246,1.65876,81.6942,1051.94,0.151698,1.5
+legacy,legacy IPPO (v0.4 re-scored set),99,all,experiments/ppo_single_site_ensemble_seed99_20260517T091403,-5730.12,1973.18,0.00545094,0.00545094,0.0795837,183,1.74113,0.872266,0.468471,4330.21,1376.93,3.48906,19.5
+legacy,legacy IPPO (v0.4 re-scored set),99,0,experiments/ppo_single_site_ensemble_seed99_20260517T091403,-913.374,177.394,0.0049554,0.0049554,0.251734,29,2.75917,0.142217,0.108036,801.343,110.337,0.568869,1.125
+legacy,legacy IPPO (v0.4 re-scored set),99,1,experiments/ppo_single_site_ensemble_seed99_20260517T091403,-535.496,191.937,0.00297324,0.00297324,0.122894,36,3.42517,0.170661,0.279146,459.951,71.1123,0.682643,3.75
+legacy,legacy IPPO (v0.4 re-scored set),99,2,experiments/ppo_single_site_ensemble_seed99_20260517T091403,-285.289,207.171,0,0,0,0,0,0,0.4517,285.289,0,0,0
+legacy,legacy IPPO (v0.4 re-scored set),99,3,experiments/ppo_single_site_ensemble_seed99_20260517T091403,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,legacy IPPO (v0.4 re-scored set),99,4,experiments/ppo_single_site_ensemble_seed99_20260517T091403,-652.711,187.843,0.00396432,0.00396432,0.139742,26,2.47374,0.123255,0.199088,562.493,88.2246,0.49302,1.5
+legacy,legacy IPPO (v0.4 re-scored set),99,5,experiments/ppo_single_site_ensemble_seed99_20260517T091403,-382.096,202.568,0,0,0.0356789,10,0.951437,0.0474058,0.350913,381.406,0,0.189623,0.5
+legacy,legacy IPPO (v0.4 re-scored set),99,6,experiments/ppo_single_site_ensemble_seed99_20260517T091403,-717.334,189.991,0.00297324,0.00297324,0.139742,46,4.37661,0.218066,0.18226,639.012,71.0749,0.872266,6.375
+legacy,legacy IPPO (v0.4 re-scored set),99,7,experiments/ppo_single_site_ensemble_seed99_20260517T091403,-637.025,194.662,0.00198216,0.00198216,0.102081,32,3.0446,0.151698,0.187329,586.769,44.1497,0.606794,5.5
+legacy,legacy IPPO (v0.4 re-scored set),99,8,experiments/ppo_single_site_ensemble_seed99_20260517T091403,-395.849,206.573,0,0,0.00396432,4,0.380575,0.0189623,0.349685,395.023,0,0.0758492,0.75
+legacy,legacy IPPO (v0.4 re-scored set),99,9,experiments/ppo_single_site_ensemble_seed99_20260517T091403,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,"legacy MAPPO (mappo_nr, June)",23,all,experiments/mappo_nr_seed23/mappo_best.pt,-5877.08,1967,0.00644202,0.00644202,0.091774,336,3.19683,1.59283,0.468471,4154.39,1652.19,6.37133,64.125
+legacy,"legacy MAPPO (mappo_nr, June)",23,0,experiments/mappo_nr_seed23/mappo_best.pt,-817.849,175.16,0.00099108,0.00099108,0.246779,80,7.6115,0.379246,0.108036,778.257,22.0748,1.51698,16
+legacy,"legacy MAPPO (mappo_nr, June)",23,1,experiments/mappo_nr_seed23/mappo_best.pt,-529.744,190.749,0.00297324,0.00297324,0.127849,44,4.18632,0.208585,0.279146,449.547,71.1123,0.834341,8.25
+legacy,"legacy MAPPO (mappo_nr, June)",23,2,experiments/mappo_nr_seed23/mappo_best.pt,-302.669,206.628,0.00099108,0.00099108,0.0049554,8,0.76115,0.0379246,0.4517,278.605,22.0375,0.151698,1.875
+legacy,"legacy MAPPO (mappo_nr, June)",23,3,experiments/mappo_nr_seed23/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,"legacy MAPPO (mappo_nr, June)",23,4,experiments/mappo_nr_seed23/mappo_best.pt,-656.204,185.769,0.0049554,0.0049554,0.156591,38,3.61546,0.180142,0.199088,539.059,110.299,0.720567,6.125
+legacy,"legacy MAPPO (mappo_nr, June)",23,5,experiments/mappo_nr_seed23/mappo_best.pt,-382.248,199.994,0.00099108,0.00099108,0.0594648,24,2.28345,0.113774,0.350913,355.631,22.0375,0.455095,4.125
+legacy,"legacy MAPPO (mappo_nr, June)",23,6,experiments/mappo_nr_seed23/mappo_best.pt,-729.151,188.603,0.00396432,0.00396432,0.143707,64,6.0892,0.303397,0.18226,622.575,93.1124,1.21359,12.25
+legacy,"legacy MAPPO (mappo_nr, June)",23,7,experiments/mappo_nr_seed23/mappo_best.pt,-611.807,191.857,0.00198216,0.00198216,0.12884,36,3.42517,0.170661,0.187329,556.05,49.0748,0.682643,6
+legacy,"legacy MAPPO (mappo_nr, June)",23,8,experiments/mappo_nr_seed23/mappo_best.pt,-406.197,203.107,0.00198216,0.00198216,0.0346878,28,2.66402,0.132736,0.349685,354.716,44.0749,0.530944,6.875
+legacy,"legacy MAPPO (mappo_nr, June)",23,9,experiments/mappo_nr_seed23/mappo_best.pt,-1276.3,217.659,0.0445986,0.0445986,0.0148662,14,1.33201,0.066368,1.65876,82.041,1191.37,0.265472,2.625
+legacy,"legacy MAPPO (mappo_nr, June)",64,all,experiments/mappo_nr_seed64/mappo_best.pt,-5597.99,1967.85,0.00505451,0.00505451,0.0763132,314,2.98751,1.48854,0.468471,4232.8,1293.48,5.95416,65.75
+legacy,"legacy MAPPO (mappo_nr, June)",64,0,experiments/mappo_nr_seed64/mappo_best.pt,-818.135,178.568,0,0,0.206145,60,5.70862,0.284435,0.108036,805.122,0,1.13774,11.875
+legacy,"legacy MAPPO (mappo_nr, June)",64,1,experiments/mappo_nr_seed64/mappo_best.pt,-544.92,192.399,0.00297324,0.00297324,0.107037,50,4.75719,0.237029,0.279146,461.61,71.1123,0.948115,11.25
+legacy,"legacy MAPPO (mappo_nr, June)",64,2,experiments/mappo_nr_seed64/mappo_best.pt,-303.976,206.752,0.00099108,0.00099108,0.00396432,8,0.76115,0.0379246,0.4517,279.787,22.0375,0.151698,2
+legacy,"legacy MAPPO (mappo_nr, June)",64,3,experiments/mappo_nr_seed64/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,"legacy MAPPO (mappo_nr, June)",64,4,experiments/mappo_nr_seed64/mappo_best.pt,-622.913,186.971,0.00297324,0.00297324,0.140733,44,4.18632,0.208585,0.199088,547.179,66.1498,0.834341,8.75
+legacy,"legacy MAPPO (mappo_nr, June)",64,5,experiments/mappo_nr_seed64/mappo_best.pt,-365.419,200.916,0,0,0.0475719,22,2.09316,0.104293,0.350913,361.377,0,0.417171,3.625
+legacy,"legacy MAPPO (mappo_nr, June)",64,6,experiments/mappo_nr_seed64/mappo_best.pt,-743.363,190.21,0.00396432,0.00396432,0.121903,68,6.46977,0.322359,0.18226,633.336,93.1124,1.28944,15.625
+legacy,"legacy MAPPO (mappo_nr, June)",64,7,experiments/mappo_nr_seed64/mappo_best.pt,-598.609,193.014,0.00099108,0.00099108,0.111992,40,3.80575,0.189623,0.187329,563.85,27,0.758492,7
+legacy,"legacy MAPPO (mappo_nr, June)",64,8,experiments/mappo_nr_seed64/mappo_best.pt,-389.701,203.977,0.00099108,0.00099108,0.0237859,22,2.09316,0.104293,0.349685,361.622,22.0375,0.417171,5.625
+legacy,"legacy MAPPO (mappo_nr, June)",64,9,experiments/mappo_nr_seed64/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,"legacy MAPPO (mappo_nr, June)",99,all,experiments/mappo_nr_seed99/mappo_best.pt,-5638.29,1971.93,0.00505451,0.00505451,0.0721506,320,3.0446,1.51698,0.468471,4271.57,1293.52,6.06794,67.125
+legacy,"legacy MAPPO (mappo_nr, June)",99,0,experiments/mappo_nr_seed99/mappo_best.pt,-824.311,179.443,0,0,0.194252,62,5.89891,0.293916,0.108036,811.635,0,1.17566,11.5
+legacy,"legacy MAPPO (mappo_nr, June)",99,1,experiments/mappo_nr_seed99/mappo_best.pt,-531.17,193.414,0.00198216,0.00198216,0.0971259,48,4.5669,0.227548,0.279146,470.935,49.0748,0.91019,10.25
+legacy,"legacy MAPPO (mappo_nr, June)",99,2,experiments/mappo_nr_seed99/mappo_best.pt,-302.669,206.628,0.00099108,0.00099108,0.0049554,8,0.76115,0.0379246,0.4517,278.605,22.0375,0.151698,1.875
+legacy,"legacy MAPPO (mappo_nr, June)",99,3,experiments/mappo_nr_seed99/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,"legacy MAPPO (mappo_nr, June)",99,4,experiments/mappo_nr_seed99/mappo_best.pt,-651.659,187.589,0.00396432,0.00396432,0.134787,50,4.75719,0.237029,0.199088,551.736,88.2246,0.948115,10.75
+legacy,"legacy MAPPO (mappo_nr, June)",99,5,experiments/mappo_nr_seed99/mappo_best.pt,-364.505,200.61,0,0,0.0515362,22,2.09316,0.104293,0.350913,360.338,0,0.417171,3.75
+legacy,"legacy MAPPO (mappo_nr, June)",99,6,experiments/mappo_nr_seed99/mappo_best.pt,-753.303,191.155,0.00396432,0.00396432,0.112983,66,6.27948,0.312878,0.18226,643.814,93.1124,1.25151,15.125
+legacy,"legacy MAPPO (mappo_nr, June)",99,7,experiments/mappo_nr_seed99/mappo_best.pt,-604.839,193.741,0.00099108,0.00099108,0.104063,40,3.80575,0.189623,0.187329,569.706,27,0.758492,7.375
+legacy,"legacy MAPPO (mappo_nr, June)",99,8,experiments/mappo_nr_seed99/mappo_best.pt,-394.878,204.317,0.00099108,0.00099108,0.0218038,24,2.28345,0.113774,0.349685,365.886,22.0375,0.455095,6.5
+legacy,"legacy MAPPO (mappo_nr, June)",99,9,experiments/mappo_nr_seed99/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,legacy MAPPO (v0.4 re-scored set),1,all,experiments/mappo_seed1_20260517T110908/mappo_best.pt,-5608.27,1975.55,0.00485629,0.00485629,0.0684836,286,2.72111,1.3558,0.468471,4301.66,1244.44,5.42322,56.75
+legacy,legacy MAPPO (v0.4 re-scored set),1,0,experiments/mappo_seed1_20260517T110908/mappo_best.pt,-832.484,180.426,0,0,0.185332,58,5.51833,0.274953,0.108036,820.51,0,1.09981,10.875
+legacy,legacy MAPPO (v0.4 re-scored set),1,1,experiments/mappo_seed1_20260517T110908/mappo_best.pt,-530.686,193.721,0.00198216,0.00198216,0.0931615,40,3.80575,0.189623,0.279146,473.728,49.0748,0.758492,7.125
+legacy,legacy MAPPO (v0.4 re-scored set),1,2,experiments/mappo_seed1_20260517T110908/mappo_best.pt,-304.011,206.816,0.00099108,0.00099108,0.00297324,6,0.570862,0.0284435,0.4517,280.359,22.0375,0.113774,1.5
+legacy,legacy MAPPO (v0.4 re-scored set),1,3,experiments/mappo_seed1_20260517T110908/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,legacy MAPPO (v0.4 re-scored set),1,4,experiments/mappo_seed1_20260517T110908/mappo_best.pt,-637.616,188.562,0.00297324,0.00297324,0.125867,46,4.37661,0.218066,0.199088,560.719,66.1498,0.872266,9.875
+legacy,legacy MAPPO (v0.4 re-scored set),1,5,experiments/mappo_seed1_20260517T110908/mappo_best.pt,-366.636,201.057,0,0,0.0465808,18,1.71259,0.0853303,0.350913,363.795,0,0.341321,2.5
+legacy,legacy MAPPO (v0.4 re-scored set),1,6,experiments/mappo_seed1_20260517T110908/mappo_best.pt,-727.082,191.08,0.00297324,0.00297324,0.112983,62,5.89891,0.293916,0.18226,641.081,71.0749,1.17566,13.75
+legacy,legacy MAPPO (v0.4 re-scored set),1,7,experiments/mappo_seed1_20260517T110908/mappo_best.pt,-602.557,194.274,0.00099108,0.00099108,0.099108,34,3.23489,0.16118,0.187329,574.75,22.0375,0.644718,5.125
+legacy,legacy MAPPO (v0.4 re-scored set),1,8,experiments/mappo_seed1_20260517T110908/mappo_best.pt,-396.249,204.581,0.00099108,0.00099108,0.0188305,22,2.09316,0.104293,0.349685,367.794,22.0375,0.417171,6
+legacy,legacy MAPPO (v0.4 re-scored set),1,9,experiments/mappo_seed1_20260517T110908/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,legacy MAPPO (v0.4 re-scored set),7,all,experiments/mappo_seed7_20260517T003433/mappo_best.pt,-5692.51,1965.72,0.00555005,0.00555005,0.0812686,288,2.74014,1.36529,0.468471,4231.4,1403.78,5.46114,51.875
+legacy,legacy MAPPO (v0.4 re-scored set),7,0,experiments/mappo_seed7_20260517T003433/mappo_best.pt,-812.522,177.914,0,0,0.217047,58,5.51833,0.274953,0.108036,802.173,0,1.09981,9.25
+legacy,legacy MAPPO (v0.4 re-scored set),7,1,experiments/mappo_seed7_20260517T003433/mappo_best.pt,-538.801,192.114,0.00297324,0.00297324,0.114965,38,3.61546,0.180142,0.279146,460.843,71.1123,0.720567,6.125
+legacy,legacy MAPPO (v0.4 re-scored set),7,2,experiments/mappo_seed7_20260517T003433/mappo_best.pt,-304.854,206.859,0.00099108,0.00099108,0.00297324,6,0.570862,0.0284435,0.4517,281.203,22.0375,0.113774,1.5
+legacy,legacy MAPPO (v0.4 re-scored set),7,3,experiments/mappo_seed7_20260517T003433/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,legacy MAPPO (v0.4 re-scored set),7,4,experiments/mappo_seed7_20260517T003433/mappo_best.pt,-665.721,186.654,0.0049554,0.0049554,0.14668,42,3.99604,0.199104,0.199088,546.5,110.299,0.796417,8.125
+legacy,legacy MAPPO (v0.4 re-scored set),7,5,experiments/mappo_seed7_20260517T003433/mappo_best.pt,-384.587,200.42,0.00099108,0.00099108,0.0555005,20,1.90287,0.0948115,0.350913,359.545,22.0375,0.379246,2.625
+legacy,legacy MAPPO (v0.4 re-scored set),7,6,experiments/mappo_seed7_20260517T003433/mappo_best.pt,-741.649,190.075,0.00396432,0.00396432,0.12884,60,5.70862,0.284435,0.18226,635.774,93.1124,1.13774,11.625
+legacy,legacy MAPPO (v0.4 re-scored set),7,7,experiments/mappo_seed7_20260517T003433/mappo_best.pt,-624.307,193.11,0.00198216,0.00198216,0.115956,38,3.61546,0.180142,0.187329,567.887,49.0748,0.720567,6.625
+legacy,legacy MAPPO (v0.4 re-scored set),7,8,experiments/mappo_seed7_20260517T003433/mappo_best.pt,-409.12,203.541,0.00198216,0.00198216,0.0307235,26,2.47374,0.123255,0.349685,358.552,44.0749,0.49302,6
+legacy,legacy MAPPO (v0.4 re-scored set),7,9,experiments/mappo_seed7_20260517T003433/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,legacy MAPPO (v0.4 re-scored set),13,all,experiments/mappo_seed13_20260517T003433/mappo_best.pt,-5848.03,1949.12,0.00673935,0.00673935,0.101685,364,3.46323,1.72557,0.468471,4092.08,1678.42,6.90228,70.625
+legacy,legacy MAPPO (v0.4 re-scored set),13,0,experiments/mappo_seed13_20260517T003433/mappo_best.pt,-825.205,173.19,0.00198216,0.00198216,0.273538,80,7.6115,0.379246,0.108036,763.701,44.1123,1.51698,15.875
+legacy,legacy MAPPO (v0.4 re-scored set),13,1,experiments/mappo_seed13_20260517T003433/mappo_best.pt,-523.29,189.995,0.00297324,0.00297324,0.139742,42,3.99604,0.199104,0.279146,444.631,71.1123,0.796417,6.75
+legacy,legacy MAPPO (v0.4 re-scored set),13,2,experiments/mappo_seed13_20260517T003433/mappo_best.pt,-373.653,206.432,0.00396432,0.00396432,0.0099108,14,1.33201,0.0663681,0.4517,277.075,93.1871,0.265472,3.125
+legacy,legacy MAPPO (v0.4 re-scored set),13,3,experiments/mappo_seed13_20260517T003433/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,legacy MAPPO (v0.4 re-scored set),13,4,experiments/mappo_seed13_20260517T003433/mappo_best.pt,-650.474,185.273,0.0049554,0.0049554,0.164519,36,3.42517,0.170661,0.199088,535.117,110.299,0.682643,4.375
+legacy,legacy MAPPO (v0.4 re-scored set),13,5,experiments/mappo_seed13_20260517T003433/mappo_best.pt,-420.112,198.968,0.00297324,0.00297324,0.0763132,32,3.0446,0.151698,0.350913,347.48,66.1498,0.606794,5.875
+legacy,legacy MAPPO (v0.4 re-scored set),13,6,experiments/mappo_seed13_20260517T003433/mappo_best.pt,-747.886,187.136,0.0049554,0.0049554,0.163528,78,7.42121,0.369765,0.18226,609.42,120.112,1.47906,16.875
+legacy,legacy MAPPO (v0.4 re-scored set),13,7,experiments/mappo_seed13_20260517T003433/mappo_best.pt,-673.475,190.656,0.0049554,0.0049554,0.143707,52,4.94747,0.24651,0.187329,545.602,115.262,0.98604,11.625
+legacy,legacy MAPPO (v0.4 re-scored set),13,8,experiments/mappo_seed13_20260517T003433/mappo_best.pt,-422.984,202.431,0.00297324,0.00297324,0.0455897,30,2.85431,0.142217,0.349685,350.14,66.1498,0.568869,6.125
+legacy,legacy MAPPO (v0.4 re-scored set),13,9,experiments/mappo_seed13_20260517T003433/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,legacy MAPPO (v0.4 re-scored set),23,all,experiments/mappo_seed23_20260517T110908/mappo_best.pt,-5636.96,1958.78,0.00545094,0.00545094,0.0868186,372,3.53935,1.76349,0.468471,4161.11,1386.67,7.05398,82.125
+legacy,legacy MAPPO (v0.4 re-scored set),23,0,experiments/mappo_seed23_20260517T110908/mappo_best.pt,-800.002,175.295,0,0,0.242815,90,8.56293,0.426652,0.108036,778.42,0,1.70661,19.875
+legacy,legacy MAPPO (v0.4 re-scored set),23,1,experiments/mappo_seed23_20260517T110908/mappo_best.pt,-538.613,191.611,0.00297324,0.00297324,0.114965,50,4.75719,0.237029,0.279146,455.303,71.1123,0.948115,11.25
+legacy,legacy MAPPO (v0.4 re-scored set),23,2,experiments/mappo_seed23_20260517T110908/mappo_best.pt,-329.726,206.576,0.00198216,0.00198216,0.00594648,10,0.951437,0.0474058,0.4517,278.124,49.0375,0.189623,2.375
+legacy,legacy MAPPO (v0.4 re-scored set),23,3,experiments/mappo_seed23_20260517T110908/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,legacy MAPPO (v0.4 re-scored set),23,4,experiments/mappo_seed23_20260517T110908/mappo_best.pt,-638.797,186.145,0.00396432,0.00396432,0.150644,46,4.37661,0.218066,0.199088,540.7,88.2246,0.872266,9
+legacy,legacy MAPPO (v0.4 re-scored set),23,5,experiments/mappo_seed23_20260517T110908/mappo_best.pt,-384.306,200.166,0.00099108,0.00099108,0.0564916,26,2.47374,0.123255,0.350913,356.651,22.0375,0.49302,5.125
+legacy,legacy MAPPO (v0.4 re-scored set),23,6,experiments/mappo_seed23_20260517T110908/mappo_best.pt,-733.115,188.654,0.00396432,0.00396432,0.140733,76,7.23092,0.360284,0.18226,620.811,93.1124,1.44113,17.75
+legacy,legacy MAPPO (v0.4 re-scored set),23,7,experiments/mappo_seed23_20260517T110908/mappo_best.pt,-614.674,191.991,0.00198216,0.00198216,0.123885,44,4.18632,0.208585,0.187329,555.89,49.0748,0.834341,8.875
+legacy,legacy MAPPO (v0.4 re-scored set),23,8,experiments/mappo_seed23_20260517T110908/mappo_best.pt,-386.773,203.307,0.00099108,0.00099108,0.0327056,30,2.85431,0.142217,0.349685,356.292,22.0375,0.568869,7.875
+legacy,legacy MAPPO (v0.4 re-scored set),23,9,experiments/mappo_seed23_20260517T110908/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,legacy MAPPO (v0.4 re-scored set),42,all,experiments/mappo_seed42_20260526T143637/mappo_best.pt,-5633.07,1966.74,0.00525273,0.00525273,0.0773043,322,3.06363,1.52647,0.468471,4220.96,1337.63,6.10586,68.375
+legacy,legacy MAPPO (v0.4 re-scored set),42,0,experiments/mappo_seed42_20260526T143637/mappo_best.pt,-819.501,178.844,0,0,0.201189,60,5.70862,0.284435,0.108036,806.238,0,1.13774,12.125
+legacy,legacy MAPPO (v0.4 re-scored set),42,1,experiments/mappo_seed42_20260526T143637/mappo_best.pt,-520.287,192.244,0.00198216,0.00198216,0.108028,46,4.37661,0.218066,0.279146,460.714,49.0748,0.872266,9.625
+legacy,legacy MAPPO (v0.4 re-scored set),42,2,experiments/mappo_seed42_20260526T143637/mappo_best.pt,-329.726,206.576,0.00198216,0.00198216,0.00594648,10,0.951437,0.0474058,0.4517,278.124,49.0375,0.189623,2.375
+legacy,legacy MAPPO (v0.4 re-scored set),42,3,experiments/mappo_seed42_20260526T143637/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,legacy MAPPO (v0.4 re-scored set),42,4,experiments/mappo_seed42_20260526T143637/mappo_best.pt,-645.91,186.882,0.00396432,0.00396432,0.142716,48,4.5669,0.227548,0.199088,546.275,88.2246,0.91019,10.5
+legacy,legacy MAPPO (v0.4 re-scored set),42,5,experiments/mappo_seed42_20260526T143637/mappo_best.pt,-363.42,200.645,0,0,0.0505451,22,2.09316,0.104293,0.350913,359.377,0,0.417171,3.625
+legacy,legacy MAPPO (v0.4 re-scored set),42,6,experiments/mappo_seed42_20260526T143637/mappo_best.pt,-734.835,189.556,0.00396432,0.00396432,0.12884,74,7.04063,0.350803,0.18226,627.12,88.1872,1.40321,18.125
+legacy,legacy MAPPO (v0.4 re-scored set),42,7,experiments/mappo_seed42_20260526T143637/mappo_best.pt,-621.435,193.167,0.00198216,0.00198216,0.11001,40,3.80575,0.189623,0.187329,564.764,49.0375,0.758492,6.875
+legacy,legacy MAPPO (v0.4 re-scored set),42,8,experiments/mappo_seed42_20260526T143637/mappo_best.pt,-387.004,203.794,0.00099108,0.00099108,0.0257681,22,2.09316,0.104293,0.349685,359.425,22.0375,0.417171,5.125
+legacy,legacy MAPPO (v0.4 re-scored set),42,9,experiments/mappo_seed42_20260526T143637/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,legacy MAPPO (v0.4 re-scored set),64,all,experiments/mappo_seed64_20260517T110908/mappo_best.pt,-5535.71,1970.9,0.00475719,0.00475719,0.0739346,256,2.43568,1.21359,0.468471,4270.62,1217.48,4.85435,42.75
+legacy,legacy MAPPO (v0.4 re-scored set),64,0,experiments/mappo_seed64_20260517T110908/mappo_best.pt,-824.996,179.828,0,0,0.194252,48,4.5669,0.227548,0.108036,817.586,0,0.91019,6.5
+legacy,legacy MAPPO (v0.4 re-scored set),64,1,experiments/mappo_seed64_20260517T110908/mappo_best.pt,-526.114,193.168,0.00198216,0.00198216,0.099108,40,3.80575,0.189623,0.279146,469.156,49.0748,0.758492,7.125
+legacy,legacy MAPPO (v0.4 re-scored set),64,2,experiments/mappo_seed64_20260517T110908/mappo_best.pt,-304.75,206.923,0.00099108,0.00099108,0.00198216,4,0.380575,0.0189623,0.4517,281.637,22.0375,0.0758492,1
+legacy,legacy MAPPO (v0.4 re-scored set),64,3,experiments/mappo_seed64_20260517T110908/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,legacy MAPPO (v0.4 re-scored set),64,4,experiments/mappo_seed64_20260517T110908/mappo_best.pt,-620.178,186.858,0.00297324,0.00297324,0.142716,40,3.80575,0.189623,0.199088,546.894,66.1498,0.758492,6.375
+legacy,legacy MAPPO (v0.4 re-scored set),64,5,experiments/mappo_seed64_20260517T110908/mappo_best.pt,-365.628,200.945,0,0,0.0485629,16,1.5223,0.0758492,0.350913,363.7,0,0.303397,1.625
+legacy,legacy MAPPO (v0.4 re-scored set),64,6,experiments/mappo_seed64_20260517T110908/mappo_best.pt,-693.661,190.407,0.00198216,0.00198216,0.121903,54,5.13776,0.255991,0.18226,637.937,44.0749,1.02396,10.625
+legacy,legacy MAPPO (v0.4 re-scored set),64,7,experiments/mappo_seed64_20260517T110908/mappo_best.pt,-593.611,193.193,0.00099108,0.00099108,0.111001,34,3.23489,0.16118,0.187329,566.017,22.0748,0.644718,4.875
+legacy,legacy MAPPO (v0.4 re-scored set),64,8,experiments/mappo_seed64_20260517T110908/mappo_best.pt,-395.817,204.536,0.00099108,0.00099108,0.0198216,20,1.90287,0.0948115,0.349685,368.775,22.0375,0.379246,4.625
+legacy,legacy MAPPO (v0.4 re-scored set),64,9,experiments/mappo_seed64_20260517T110908/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,legacy MAPPO (v0.4 re-scored set),77,all,experiments/mappo_seed77_20260517T110908/mappo_best.pt,-5622.09,1975.62,0.00485629,0.00485629,0.0688801,286,2.72111,1.3558,0.468471,4308.89,1249.41,5.42322,58.375
+legacy,legacy MAPPO (v0.4 re-scored set),77,0,experiments/mappo_seed77_20260517T110908/mappo_best.pt,-828.681,180.088,0,0,0.189296,56,5.32805,0.265472,0.108036,817.495,0,1.06189,10.125
+legacy,legacy MAPPO (v0.4 re-scored set),77,1,experiments/mappo_seed77_20260517T110908/mappo_best.pt,-533.773,193.832,0.00198216,0.00198216,0.0921705,46,4.37661,0.218066,0.279146,473.826,49.0748,0.872266,10
+legacy,legacy MAPPO (v0.4 re-scored set),77,2,experiments/mappo_seed77_20260517T110908/mappo_best.pt,-303.443,206.8,0.00099108,0.00099108,0.00297324,4,0.380575,0.0189623,0.4517,280.455,22.0375,0.0758492,0.875
+legacy,legacy MAPPO (v0.4 re-scored set),77,3,experiments/mappo_seed77_20260517T110908/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,legacy MAPPO (v0.4 re-scored set),77,4,experiments/mappo_seed77_20260517T110908/mappo_best.pt,-630.675,187.908,0.00297324,0.00297324,0.131814,44,4.18632,0.208585,0.199088,554.816,66.1498,0.834341,8.875
+legacy,legacy MAPPO (v0.4 re-scored set),77,5,experiments/mappo_seed77_20260517T110908/mappo_best.pt,-371.9,201.442,0,0,0.0436075,18,1.71259,0.0853303,0.350913,368.809,0,0.341321,2.75
+legacy,legacy MAPPO (v0.4 re-scored set),77,6,experiments/mappo_seed77_20260517T110908/mappo_best.pt,-738.252,191.617,0.00297324,0.00297324,0.111001,64,6.0892,0.303397,0.18226,651.089,71.0749,1.21359,14.875
+legacy,legacy MAPPO (v0.4 re-scored set),77,7,experiments/mappo_seed77_20260517T110908/mappo_best.pt,-607.365,194.212,0.00099108,0.00099108,0.100099,34,3.23489,0.16118,0.187329,574.095,27,0.644718,5.625
+legacy,legacy MAPPO (v0.4 re-scored set),77,8,experiments/mappo_seed77_20260517T110908/mappo_best.pt,-397.052,204.687,0.00099108,0.00099108,0.0178394,20,1.90287,0.0948115,0.349685,369.385,22.0375,0.379246,5.25
+legacy,legacy MAPPO (v0.4 re-scored set),77,9,experiments/mappo_seed77_20260517T110908/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0
+legacy,legacy MAPPO (v0.4 re-scored set),99,all,experiments/mappo_seed99_20260517T003433/mappo_best.pt,-5601.24,1974.49,0.00485629,0.00485629,0.0694747,288,2.74014,1.36529,0.468471,4293.21,1244.44,5.46114,58.125
+legacy,legacy MAPPO (v0.4 re-scored set),99,0,experiments/mappo_seed99_20260517T003433/mappo_best.pt,-829.818,180.328,0,0,0.186323,52,4.94747,0.24651,0.108036,819.832,0,0.98604,9
+legacy,legacy MAPPO (v0.4 re-scored set),99,1,experiments/mappo_seed99_20260517T003433/mappo_best.pt,-530.11,193.528,0.00198216,0.00198216,0.0941526,44,4.18632,0.208585,0.279146,471.201,49.0748,0.834341,9
+legacy,legacy MAPPO (v0.4 re-scored set),99,2,experiments/mappo_seed99_20260517T003433/mappo_best.pt,-331.773,206.806,0.00198216,0.00198216,0.00396432,8,0.76115,0.0379246,0.4517,280.584,49.0375,0.151698,2
+legacy,legacy MAPPO (v0.4 re-scored set),99,3,experiments/mappo_seed99_20260517T003433/mappo_best.pt,-164.908,207.474,0.00099108,0.00099108,0,0,0,0,0.917791,137.908,27,0,0
+legacy,legacy MAPPO (v0.4 re-scored set),99,4,experiments/mappo_seed99_20260517T003433/mappo_best.pt,-631.037,187.838,0.00297324,0.00297324,0.132805,46,4.37661,0.218066,0.199088,554.39,66.1498,0.872266,9.625
+legacy,legacy MAPPO (v0.4 re-scored set),99,5,experiments/mappo_seed99_20260517T003433/mappo_best.pt,-371.176,201.462,0,0,0.0426165,20,1.90287,0.0948115,0.350913,367.547,0,0.379246,3.25
+legacy,legacy MAPPO (v0.4 re-scored set),99,6,experiments/mappo_seed99_20260517T003433/mappo_best.pt,-726.809,191.298,0.00297324,0.00297324,0.111992,62,5.89891,0.293916,0.18226,645.271,66.1124,1.17566,14.25
+legacy,legacy MAPPO (v0.4 re-scored set),99,7,experiments/mappo_seed99_20260517T003433/mappo_best.pt,-576.398,193.854,0,0,0.102081,34,3.23489,0.16118,0.187329,570.628,0,0.644718,5.125
+legacy,legacy MAPPO (v0.4 re-scored set),99,8,experiments/mappo_seed99_20260517T003433/mappo_best.pt,-393.17,204.344,0.00099108,0.00099108,0.0208127,22,2.09316,0.104293,0.349685,364.84,22.0375,0.417171,5.875
+legacy,legacy MAPPO (v0.4 re-scored set),99,9,experiments/mappo_seed99_20260517T003433/mappo_best.pt,-1046.04,207.563,0.03667,0.03667,0,0,0,0,1.65876,81.0105,965.031,0,0

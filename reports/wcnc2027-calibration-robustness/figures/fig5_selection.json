@@ -1,0 +1,22 @@
+{
+ "cluster": 0,
+ "median_load_mbps": 99.84800219535828,
+ "window_start_step": 553,
+ "window_steps": 192,
+ "steps_in_region": 161,
+ "worlds": [
+  "pinned",
+  "LOLO-dep-f2",
+  "LOLO-dep-f3"
+ ],
+ "world_qos_limits_mbps": {
+  "pinned": 149.0,
+  "LOLO-dep-f2": 81.0,
+  "LOLO-dep-f3": 170.0
+ },
+ "controllers": [
+  "MAPPO seed 1 (S1)",
+  "IPPO seed 1 (S1)",
+  "Hysteresis (fixed)"
+ ]
+}

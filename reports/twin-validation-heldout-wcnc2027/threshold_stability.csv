@@ -1,0 +1,22 @@
+source,protocol,config,outer_fold,energy_breakeven_mbps,qos_limit_mbps,decision_mbps,usr_safe_flips_on_grid,usr_unsafe_share_100_400mbps
+pinned (manuscript twin),-,deployed,-1,91.0,149.0,81.0,3,0.82
+refit on training runs of outer fold,LOSO,nested,0,93.0,149.0,83.0,3,0.8333333333333334
+refit on training runs of outer fold,LOSO,nested,1,93.0,149.0,83.0,3,0.82
+refit on training runs of outer fold,LOSO,nested,2,93.0,153.0,83.0,3,0.82
+refit on training runs of outer fold,LOSO,nested,3,90.0,150.0,80.0,3,0.4766666666666667
+refit on training runs of outer fold,LOSO,nested,4,93.0,149.0,83.0,3,0.48
+refit on training runs of outer fold,LOSO,deployed,0,93.0,149.0,83.0,3,0.8333333333333334
+refit on training runs of outer fold,LOSO,deployed,1,93.0,149.0,83.0,3,0.82
+refit on training runs of outer fold,LOSO,deployed,2,93.0,153.0,83.0,3,0.82
+refit on training runs of outer fold,LOSO,deployed,3,91.0,150.0,81.0,3,0.49666666666666665
+refit on training runs of outer fold,LOSO,deployed,4,91.0,149.0,81.0,3,0.7666666666666667
+refit on training runs of outer fold,LOLO,nested,0,62.0,149.0,52.0,3,0.82
+refit on training runs of outer fold,LOLO,nested,1,61.0,149.0,51.0,3,0.8333333333333334
+refit on training runs of outer fold,LOLO,nested,2,70.0,0.0,0.0,0,1.0
+refit on training runs of outer fold,LOLO,nested,3,72.00000000000001,0.0,0.0,1,1.0
+refit on training runs of outer fold,LOLO,nested,4,81.0,149.0,71.00000000000001,1,0.8366666666666667
+refit on training runs of outer fold,LOLO,deployed,0,90.0,149.0,80.0,3,0.82
+refit on training runs of outer fold,LOLO,deployed,1,80.0,149.0,70.0,3,0.82
+refit on training runs of outer fold,LOLO,deployed,2,81.0,81.0,71.00000000000001,3,0.9966666666666667
+refit on training runs of outer fold,LOLO,deployed,3,93.0,170.0,83.0,1,0.7666666666666667
+refit on training runs of outer fold,LOLO,deployed,4,93.0,149.0,83.0,3,0.8333333333333334

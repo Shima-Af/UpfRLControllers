@@ -75,10 +75,32 @@
       "Bash(python scripts/train_ppo_single_site.py --total-timesteps 200000 --n-steps 1024 --ent-coef 0.15 --learning-rate 1e-4 --no-progress)",
       "Bash(.venv/bin/python /home/ubuntu/UpfRLControllers/scripts/evaluate_phase7_multiseed.py --help)",
       "Bash(time CUDA_VISIBLE_DEVICES=\"\" OMP_NUM_THREADS=1 .venv/bin/python /home/ubuntu/UpfRLControllers/scripts/evaluate_phase7_multiseed.py --tuned-band-mbps 5 --out-json /tmp/p1_train_logs/hyst_sweep/band_5.json)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(echo \"=== ROOT ===\" && ls -la /home/ubuntu/ && echo \"=== Current repo ===\" && ls -la /home/ubuntu/UpfRLControllers)",
+      "Bash(cd /home/ubuntu/UpfProfilingCampaign/UpfProfilingCampaign && echo \"=== README ===\" && cat README.md 2>/dev/null | head -200)",
+      "Read(//home/ubuntu/UpfProfilingCampaign/UpfProfilingCampaign/**)",
+      "Bash(cd /home/ubuntu/UpfProfilingCampaign/UpfProfilingCampaign && echo \"=== TREE ===\" && find . -maxdepth 3 -not -path '*/\\\\.git*' -not -path '*/\\\\.dvc*' | sort)",
+      "Bash(cd /home/ubuntu/UpfProfilingCampaign/UpfProfilingCampaign && echo \"=== dvc.yaml ===\" && cat dvc.yaml && echo \"=== params.yaml ===\" && cat params.yaml)",
+      "Read(//home/ubuntu/UpfProfilingCampaign/**)",
+      "Bash(cd /home/ubuntu/UpfProfilingCampaign/UpfProfilingCampaign && find . -maxdepth 4 -iname \"data\" -o -iname \"models\" 2>/dev/null *)",
+      "Read(//home/ubuntu/UPF_NDT/**)",
+      "Bash(echo \"=== UPF_NDT fetch_data.py ===\" && grep -n \"UpfProfilingCampaign\\\\|upf-energy-profiling\\\\|s3://upf-profiling\" -A3 -B3 /home/ubuntu/UPF_NDT/scripts/fetch_data.py 2>/dev/null | head -40 *)",
+      "Read(//home/ubuntu/UPF_NDT/scripts/**)",
+      "Bash(cd /home/ubuntu/UPF_Forecasting/UpfTrafficForecaster && echo \"=== ls ===\" && ls -la && echo \"=== README ===\" && cat README.md 2>/dev/null | head -200)",
+      "Read(//home/ubuntu/UPF_Forecasting/UpfTrafficForecaster/**)",
+      "Bash(cd /home/ubuntu/UPF_Forecasting/UpfTrafficForecaster && echo \"=== rest of README ===\" && tail -30 README.md && echo \"=== PROJECT_SUMMARY ===\" && cat PROJECT_SUMMARY.md && echo \"=== PIPELINE.md ===\" && cat PIPELINE.md)",
+      "Bash(cd /home/ubuntu/UPF_Forecasting/UpfTrafficForecaster && echo \"=== config.yaml ===\" && cat config.yaml && echo \"=== params.yaml ===\" && cat params.yaml && echo \"=== dvc.yaml ===\" && cat dvc.yaml)",
+      "Bash(cd /home/ubuntu/UPF_Forecasting/UpfTrafficForecaster && echo \"=== src tree ===\" && find src -type f -name \"*.py\" | sort && echo \"=== exports ===\" && find exports -type f | sort && echo \"=== checkpoints ===\" && find checkpoints -maxdepth 3 && echo \"=== results ===\" && find results -maxdepth 3 -type f | head -30)",
+      "Bash(cd /home/ubuntu/UPF_Forecasting/UpfTrafficForecaster && echo \"=== EXPORT_MANIFEST ===\" && cat exports/traffic_forecaster/EXPORT_MANIFEST.json && echo \"=== grep sibling repos ===\" && grep -rin \"UPF_NDT\\\\|EnergyAwareUPF\\\\|UpfProfilingCampaign\\\\|UpfRLControllers\\\\|dynamic-upf-selection-rl\\\\|DDT_UPF_Selection_DRL\\\\|xRL_UpfSelection\" --include='*.py' --include='*.yaml' --include='*.md' --include='*.json' . )",
+      "Bash(cd /home/ubuntu/UPF_Forecasting/UpfTrafficForecaster && sed -n '1,40p' src/evaluate_forecast.py && echo \"=== export_for_twin.py ===\" && cat scripts/export_for_twin.py)",
+      "Read(//home/ubuntu/EnergyAwareUPF/traffic_predictor/**)",
+      "Bash(grep -n \"csv\\\\|dataset\\\\|source\" /home/ubuntu/EnergyAwareUPF/traffic_predictor/run_improved_traffic_predictor.py | grep -i \"data/\\\\|processed_traffic\" | head -10)",
+      "Bash(timeout 180 pdflatex -interaction=nonstopmode chapter_controllers.tex)",
+      "Bash(grep -oE \"Reference \\\\`[a-z:_]+' \" build2.log)"
     ],
     "additionalDirectories": [
-      "/tmp"
+      "/tmp",
+      "/home/ubuntu/UpfRLControllers/reports/chapter-controllers"
     ]
   }
 }

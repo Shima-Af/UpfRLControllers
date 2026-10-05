@@ -1,0 +1,3791 @@
+[
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 0.01
+  },
+  "inner_cv_r2": {
+   "ridge": 0.9989902785312836,
+   "random_forest": 0.9980492336745664,
+   "gradient_boosting": 0.9980126273729798
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 100,
+   "max_depth": 3,
+   "learning_rate": 0.01
+  },
+  "inner_cv_r2": {
+   "ridge": 0.00020459906885100798,
+   "random_forest": -0.0023525788170226103,
+   "gradient_boosting": 0.001608183611447822
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "constant",
+  "constant": 0.0
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3499,
+  "n_train_runs": 88,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 100,
+   "max_depth": 3,
+   "learning_rate": 0.01
+  },
+  "inner_cv_r2": {
+   "ridge": -12.939036116068923,
+   "random_forest": -28.776311011459473,
+   "gradient_boosting": -10.953535866470713
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 0,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 100,
+   "max_depth": 3,
+   "learning_rate": 0.01
+  },
+  "inner_cv_r2": {
+   "ridge": 0.13118283566649033,
+   "random_forest": 0.08916789689797841,
+   "gradient_boosting": 0.16116435096413484
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 0.01
+  },
+  "inner_cv_r2": {
+   "ridge": 0.9990551731710327,
+   "random_forest": 0.9979087349789426,
+   "gradient_boosting": 0.99772665504151
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 1.0
+  },
+  "inner_cv_r2": {
+   "ridge": -2.2644431710766577e-05,
+   "random_forest": -0.0046016536688783805,
+   "gradient_boosting": -0.0020089391292097414
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "constant",
+  "constant": 0.0
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3500,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 1000.0
+  },
+  "inner_cv_r2": {
+   "ridge": -1.4001929235853479,
+   "random_forest": -4.732946061684415,
+   "gradient_boosting": -1.7004023382081506
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 1,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.85,
+   "n_estimators": 100,
+   "max_depth": 5,
+   "learning_rate": 0.01
+  },
+  "inner_cv_r2": {
+   "ridge": 0.10854507251501466,
+   "random_forest": 0.09181855109738968,
+   "gradient_boosting": 0.10929521843236706
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3509,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 5,
+   "max_features": 0.5,
+   "max_depth": 6
+  },
+  "inner_cv_r2": {
+   "ridge": 0.9999772974943191,
+   "random_forest": 0.9999779951792916,
+   "gradient_boosting": 0.9999680423557539
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3509,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 0.1
+  },
+  "inner_cv_r2": {
+   "ridge": -0.00039641946883609003,
+   "random_forest": -0.005073472685993119,
+   "gradient_boosting": -0.001968343743531664
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3509,
+  "n_train_runs": 88,
+  "model_type": "constant",
+  "constant": 0.0
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3500,
+  "n_train_runs": 88,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 1.0,
+   "n_estimators": 100,
+   "max_depth": 5,
+   "learning_rate": 0.01
+  },
+  "inner_cv_r2": {
+   "ridge": -68.53116434215363,
+   "random_forest": -103.09348093796355,
+   "gradient_boosting": -41.61052561586956
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 2,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3509,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 1000.0
+  },
+  "inner_cv_r2": {
+   "ridge": 0.12533680634177663,
+   "random_forest": 0.10474985560890002,
+   "gradient_boosting": 0.11587644762246621
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 10.0
+  },
+  "inner_cv_r2": {
+   "ridge": 0.9980440945357796,
+   "random_forest": 0.9979265743411219,
+   "gradient_boosting": 0.9976831231337838
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 1.0
+  },
+  "inner_cv_r2": {
+   "ridge": 3.960277787970479e-05,
+   "random_forest": -0.006554842818130763,
+   "gradient_boosting": -0.0018233928422918821
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "constant",
+  "constant": 0.0
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3500,
+  "n_train_runs": 88,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 100,
+   "max_depth": 3,
+   "learning_rate": 0.01
+  },
+  "inner_cv_r2": {
+   "ridge": -65.01317446547074,
+   "random_forest": -105.63246888599997,
+   "gradient_boosting": -39.67686147502965
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 3,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 1000.0
+  },
+  "inner_cv_r2": {
+   "ridge": 0.09343203979530068,
+   "random_forest": 0.05402264307417473,
+   "gradient_boosting": 0.07615550630453405
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3510,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 0.01
+  },
+  "inner_cv_r2": {
+   "ridge": 0.9992916093317809,
+   "random_forest": 0.9981154531850434,
+   "gradient_boosting": 0.9979167273299127
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3510,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 0.1
+  },
+  "inner_cv_r2": {
+   "ridge": -0.00015996411678428912,
+   "random_forest": -0.004110445081927899,
+   "gradient_boosting": -0.0010420688512400023
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3510,
+  "n_train_runs": 88,
+  "model_type": "constant",
+  "constant": 0.0
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3497,
+  "n_train_runs": 88,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 100,
+   "max_depth": 3,
+   "learning_rate": 0.01
+  },
+  "inner_cv_r2": {
+   "ridge": -65.76822476981081,
+   "random_forest": -135.43228843805161,
+   "gradient_boosting": -54.115060784380525
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 4,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3510,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 1000.0
+  },
+  "inner_cv_r2": {
+   "ridge": 0.1447751236558729,
+   "random_forest": 0.09035951666419104,
+   "gradient_boosting": 0.13004651585187083
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "inner_cv_r2": {
+   "ridge": 0.904665684276093,
+   "random_forest": 0.9965687542858404,
+   "gradient_boosting": 0.9964479328891386
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "inner_cv_r2": {
+   "ridge": 0.42245143246609285,
+   "random_forest": 0.9721003775341338,
+   "gradient_boosting": 0.9708144547192052
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "inner_cv_r2": {
+   "ridge": 0.8721492938907958,
+   "random_forest": 0.9955972041681007,
+   "gradient_boosting": 0.995382005146464
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3509,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "inner_cv_r2": {
+   "ridge": 0.7402382484482977,
+   "random_forest": 0.9537012922023973,
+   "gradient_boosting": 0.9515158052474035
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 0,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 5,
+   "max_features": 1.0,
+   "max_depth": 15
+  },
+  "inner_cv_r2": {
+   "ridge": 0.9614854162795771,
+   "random_forest": 0.9730671652447298,
+   "gradient_boosting": 0.9702149833043839
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 10,
+   "max_features": 1.0,
+   "max_depth": 15
+  },
+  "inner_cv_r2": {
+   "ridge": 0.9065662348766057,
+   "random_forest": 0.9972099656358726,
+   "gradient_boosting": 0.9971331380592067
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 200,
+   "max_depth": 3,
+   "learning_rate": 0.05
+  },
+  "inner_cv_r2": {
+   "ridge": 0.4264100436707825,
+   "random_forest": 0.9774591334869986,
+   "gradient_boosting": 0.9778128066532599
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "inner_cv_r2": {
+   "ridge": 0.8734807695812945,
+   "random_forest": 0.9963829856020405,
+   "gradient_boosting": 0.9959904226647371
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3510,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 10,
+   "max_features": 0.7,
+   "max_depth": 10
+  },
+  "inner_cv_r2": {
+   "ridge": 0.7342626940836838,
+   "random_forest": 0.9079704148691478,
+   "gradient_boosting": 0.9058441108746776
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 1,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "inner_cv_r2": {
+   "ridge": 0.9691168387203069,
+   "random_forest": 0.9759692312077811,
+   "gradient_boosting": 0.9736576334996081
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 1.0,
+   "n_estimators": 100,
+   "max_depth": 3,
+   "learning_rate": 0.1
+  },
+  "inner_cv_r2": {
+   "ridge": 0.9057581920284566,
+   "random_forest": 0.9953181616133184,
+   "gradient_boosting": 0.995400376981497
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "inner_cv_r2": {
+   "ridge": 0.417388637227343,
+   "random_forest": 0.9723712354228681,
+   "gradient_boosting": 0.970257558124931
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 10,
+   "max_features": 0.7,
+   "max_depth": 15
+  },
+  "inner_cv_r2": {
+   "ridge": 0.8778326315716687,
+   "random_forest": 0.9952436860316219,
+   "gradient_boosting": 0.9949341432955692
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3508,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 10,
+   "max_features": 0.7,
+   "max_depth": 10
+  },
+  "inner_cv_r2": {
+   "ridge": 0.7356100101010512,
+   "random_forest": 0.883116205471823,
+   "gradient_boosting": 0.8818829282095892
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 2,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 5,
+   "max_features": 0.5,
+   "max_depth": 10
+  },
+  "inner_cv_r2": {
+   "ridge": 0.9614633069860499,
+   "random_forest": 0.9755799064538926,
+   "gradient_boosting": 0.9716547671745535
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3513,
+  "n_train_runs": 88,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 1.0,
+   "n_estimators": 100,
+   "max_depth": 3,
+   "learning_rate": 0.1
+  },
+  "inner_cv_r2": {
+   "ridge": 0.905928161241225,
+   "random_forest": 0.9954922310090702,
+   "gradient_boosting": 0.9955179981956332
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3513,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 5,
+   "max_features": 0.5,
+   "max_depth": 6
+  },
+  "inner_cv_r2": {
+   "ridge": 0.4217137981414151,
+   "random_forest": 0.9682758603890621,
+   "gradient_boosting": 0.9680383149261367
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3513,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 10,
+   "max_features": 0.7,
+   "max_depth": 10
+  },
+  "inner_cv_r2": {
+   "ridge": 0.8769896544970976,
+   "random_forest": 0.9950714049151138,
+   "gradient_boosting": 0.994917800404435
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3508,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 5,
+   "max_features": 0.5,
+   "max_depth": 6
+  },
+  "inner_cv_r2": {
+   "ridge": 0.7518237264045429,
+   "random_forest": 0.8928839387436884,
+   "gradient_boosting": 0.8895267730168339
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 3,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3513,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "inner_cv_r2": {
+   "ridge": 0.9563145470175364,
+   "random_forest": 0.9667401768884938,
+   "gradient_boosting": 0.9606316180041766
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3514,
+  "n_train_runs": 88,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 1.0,
+   "n_estimators": 100,
+   "max_depth": 3,
+   "learning_rate": 0.1
+  },
+  "inner_cv_r2": {
+   "ridge": 0.9072485452114917,
+   "random_forest": 0.9951416987261505,
+   "gradient_boosting": 0.9952737978343477
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3514,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "inner_cv_r2": {
+   "ridge": 0.41832413356789455,
+   "random_forest": 0.9718719944398126,
+   "gradient_boosting": 0.9716444423371368
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3514,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 10,
+   "max_features": 0.7,
+   "max_depth": 15
+  },
+  "inner_cv_r2": {
+   "ridge": 0.8767215690839167,
+   "random_forest": 0.9946902606560803,
+   "gradient_boosting": 0.9943839297276194
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3509,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 10,
+   "max_features": 0.7,
+   "max_depth": 15
+  },
+  "inner_cv_r2": {
+   "ridge": 0.7372594920935696,
+   "random_forest": 0.8908457792387559,
+   "gradient_boosting": 0.8886654400118873
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 4,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3514,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 5,
+   "max_features": 0.5,
+   "max_depth": 10
+  },
+  "inner_cv_r2": {
+   "ridge": 0.9629682811295865,
+   "random_forest": 0.9742397133725479,
+   "gradient_boosting": 0.9694746730215602
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 0.01
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 1000.0
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "constant",
+  "constant": 0.0
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3499,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 0,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 5,
+   "max_features": 0.5,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 0.01
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 1000.0
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "constant",
+  "constant": 0.0
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3500,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 1,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 5,
+   "max_features": 0.5,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3509,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 0.01
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3509,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 1000.0
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3509,
+  "n_train_runs": 88,
+  "model_type": "constant",
+  "constant": 0.0
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3500,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 2,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3509,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 5,
+   "max_features": 0.5,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 0.01
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 1000.0
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "constant",
+  "constant": 0.0
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3500,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 3,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3511,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 5,
+   "max_features": 0.5,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3510,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 0.01
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3510,
+  "n_train_runs": 88,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 1000.0
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3510,
+  "n_train_runs": 88,
+  "model_type": "constant",
+  "constant": 0.0
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3497,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 4,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3510,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 5,
+   "max_features": 0.5,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 2,
+   "max_features": 1.0,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 200,
+   "max_depth": 3,
+   "learning_rate": 0.05
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3509,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 0,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 2,
+   "max_features": 1.0,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 200,
+   "max_depth": 3,
+   "learning_rate": 0.05
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3510,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 1,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 2,
+   "max_features": 1.0,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 200,
+   "max_depth": 3,
+   "learning_rate": 0.05
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3508,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 2,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3515,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3513,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 2,
+   "max_features": 1.0,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3513,
+  "n_train_runs": 88,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 200,
+   "max_depth": 3,
+   "learning_rate": 0.05
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3513,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3508,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 3,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3513,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3514,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 2,
+   "max_features": 1.0,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3514,
+  "n_train_runs": 88,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 200,
+   "max_depth": 3,
+   "learning_rate": 0.05
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3514,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3509,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOSO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 4,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3514,
+  "n_train_runs": 88,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3393,
+  "n_train_runs": 85,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 0.01
+  },
+  "inner_cv_r2": {
+   "ridge": 0.9979866186310685,
+   "random_forest": 0.8990673852710607,
+   "gradient_boosting": 0.8011655311151884
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3393,
+  "n_train_runs": 85,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 1000.0
+  },
+  "inner_cv_r2": {
+   "ridge": -0.0002811604072498475,
+   "random_forest": -0.009610411908221983,
+   "gradient_boosting": -0.0021423544344287004
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3393,
+  "n_train_runs": 85,
+  "model_type": "constant",
+  "constant": 0.0
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3382,
+  "n_train_runs": 85,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 1.0,
+   "n_estimators": 100,
+   "max_depth": 3,
+   "learning_rate": 0.2
+  },
+  "inner_cv_r2": {
+   "ridge": -25479.23606674039,
+   "random_forest": -68.93048432569377,
+   "gradient_boosting": -0.8537890466496738
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 0,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3393,
+  "n_train_runs": 85,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 2,
+   "max_features": 0.5,
+   "max_depth": 6
+  },
+  "inner_cv_r2": {
+   "ridge": 0.12417633097720926,
+   "random_forest": 0.15869644156218257,
+   "gradient_boosting": 0.14577060467446668
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3389,
+  "n_train_runs": 85,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 0.01
+  },
+  "inner_cv_r2": {
+   "ridge": 0.997970611008234,
+   "random_forest": 0.8835263367622148,
+   "gradient_boosting": 0.7524224128051855
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3389,
+  "n_train_runs": 85,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 1000.0
+  },
+  "inner_cv_r2": {
+   "ridge": -0.0002994828708351993,
+   "random_forest": -0.010597514388278495,
+   "gradient_boosting": -0.002481123318981815
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3389,
+  "n_train_runs": 85,
+  "model_type": "constant",
+  "constant": 0.0
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3380,
+  "n_train_runs": 85,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.85,
+   "n_estimators": 300,
+   "max_depth": 7,
+   "learning_rate": 0.2
+  },
+  "inner_cv_r2": {
+   "ridge": -1538.6250173966796,
+   "random_forest": -108.81445903941808,
+   "gradient_boosting": -3.5698830399103354
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 1,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3389,
+  "n_train_runs": 85,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.85,
+   "n_estimators": 200,
+   "max_depth": 3,
+   "learning_rate": 0.01
+  },
+  "inner_cv_r2": {
+   "ridge": 0.12185316789830622,
+   "random_forest": 0.13640749632544294,
+   "gradient_boosting": 0.14793184271838875
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3589,
+  "n_train_runs": 90,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 0.01
+  },
+  "inner_cv_r2": {
+   "ridge": 0.9979770846407515,
+   "random_forest": 0.8384851039613563,
+   "gradient_boosting": 0.8907414359044733
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3589,
+  "n_train_runs": 90,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 1000.0
+  },
+  "inner_cv_r2": {
+   "ridge": -0.00026578087482967416,
+   "random_forest": -0.0034619003557289085,
+   "gradient_boosting": -0.0015757927706972485
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3589,
+  "n_train_runs": 90,
+  "model_type": "constant",
+  "constant": 0.0
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3576,
+  "n_train_runs": 90,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 200,
+   "max_depth": 3,
+   "learning_rate": 0.05
+  },
+  "inner_cv_r2": {
+   "ridge": -16076.735346934114,
+   "random_forest": -62.03868831570776,
+   "gradient_boosting": -8.735598563067915
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 2,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3589,
+  "n_train_runs": 90,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.85,
+   "n_estimators": 200,
+   "max_depth": 3,
+   "learning_rate": 0.01
+  },
+  "inner_cv_r2": {
+   "ridge": 0.1976567171443594,
+   "random_forest": 0.20386064090863856,
+   "gradient_boosting": 0.22065837505246527
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3590,
+  "n_train_runs": 90,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 0.01
+  },
+  "inner_cv_r2": {
+   "ridge": 0.9999866669546422,
+   "random_forest": 0.9237080993674054,
+   "gradient_boosting": 0.9207802138765191
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3590,
+  "n_train_runs": 90,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 1000.0
+  },
+  "inner_cv_r2": {
+   "ridge": -0.00017065758968920486,
+   "random_forest": -0.0068971119722944785,
+   "gradient_boosting": -0.003041021389667886
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3590,
+  "n_train_runs": 90,
+  "model_type": "constant",
+  "constant": 0.0
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3580,
+  "n_train_runs": 90,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 200,
+   "max_depth": 3,
+   "learning_rate": 0.05
+  },
+  "inner_cv_r2": {
+   "ridge": -16603.043702744424,
+   "random_forest": -70.46909244291574,
+   "gradient_boosting": -22.836136604252967
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 3,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3590,
+  "n_train_runs": 90,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.85,
+   "n_estimators": 200,
+   "max_depth": 3,
+   "learning_rate": 0.01
+  },
+  "inner_cv_r2": {
+   "ridge": 0.20506873370943732,
+   "random_forest": 0.2556012146765511,
+   "gradient_boosting": 0.259059570584368
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3591,
+  "n_train_runs": 90,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 0.01
+  },
+  "inner_cv_r2": {
+   "ridge": 0.9979718276797702,
+   "random_forest": 0.8813722470508504,
+   "gradient_boosting": 0.8556162687584247
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3591,
+  "n_train_runs": 90,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 1.0
+  },
+  "inner_cv_r2": {
+   "ridge": -0.00016329694388081406,
+   "random_forest": -0.004459175563882589,
+   "gradient_boosting": -0.0025034363607624455
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3591,
+  "n_train_runs": 90,
+  "model_type": "constant",
+  "constant": 0.0
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3578,
+  "n_train_runs": 90,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 1.0,
+   "n_estimators": 300,
+   "max_depth": 3,
+   "learning_rate": 0.1
+  },
+  "inner_cv_r2": {
+   "ridge": -2247.877307723017,
+   "random_forest": -2.8266092080298533,
+   "gradient_boosting": -0.5894179313271254
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "DPDK",
+  "outer_fold": 4,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3591,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 5,
+   "max_features": 0.5,
+   "max_depth": 6
+  },
+  "inner_cv_r2": {
+   "ridge": 0.16203924344851472,
+   "random_forest": 0.20667317596884952,
+   "gradient_boosting": 0.19808280642982362
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3393,
+  "n_train_runs": 85,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 10,
+   "max_features": 1.0,
+   "max_depth": 15
+  },
+  "inner_cv_r2": {
+   "ridge": 0.7143443307336527,
+   "random_forest": 0.9700509724545524,
+   "gradient_boosting": 0.9638273992258186
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3393,
+  "n_train_runs": 85,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 1.0,
+   "n_estimators": 100,
+   "max_depth": 3,
+   "learning_rate": 0.2
+  },
+  "inner_cv_r2": {
+   "ridge": 0.2957465193605771,
+   "random_forest": 0.8707462100455252,
+   "gradient_boosting": 0.8817788554407445
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3393,
+  "n_train_runs": 85,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "inner_cv_r2": {
+   "ridge": -18.21993372681983,
+   "random_forest": -0.24671321925347559,
+   "gradient_boosting": -2.722843149240448
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3387,
+  "n_train_runs": 85,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 100,
+   "max_depth": 7,
+   "learning_rate": 0.05
+  },
+  "inner_cv_r2": {
+   "ridge": 0.46517169029913696,
+   "random_forest": 0.8698500485573402,
+   "gradient_boosting": 0.8740933726761845
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 0,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3393,
+  "n_train_runs": 85,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 100.0
+  },
+  "inner_cv_r2": {
+   "ridge": 0.8981380669126251,
+   "random_forest": 0.8465396898343331,
+   "gradient_boosting": 0.8518266411602136
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3396,
+  "n_train_runs": 85,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 5,
+   "max_features": 0.7,
+   "max_depth": 15
+  },
+  "inner_cv_r2": {
+   "ridge": 0.865144018619932,
+   "random_forest": 0.9400574518221094,
+   "gradient_boosting": 0.9359513804685451
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3396,
+  "n_train_runs": 85,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 5,
+   "max_features": 0.5,
+   "max_depth": 6
+  },
+  "inner_cv_r2": {
+   "ridge": 0.3984595214294115,
+   "random_forest": 0.8933294371593077,
+   "gradient_boosting": 0.8758959199644184
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3396,
+  "n_train_runs": 85,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 10,
+   "max_features": 0.7,
+   "max_depth": 15
+  },
+  "inner_cv_r2": {
+   "ridge": -10.996755423926295,
+   "random_forest": -0.21774097467240483,
+   "gradient_boosting": -1.7697121518583558
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3392,
+  "n_train_runs": 85,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 200,
+   "max_depth": 3,
+   "learning_rate": 0.05
+  },
+  "inner_cv_r2": {
+   "ridge": 0.6978471875895529,
+   "random_forest": 0.7404173383113815,
+   "gradient_boosting": 0.7518432016939346
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 1,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3396,
+  "n_train_runs": 85,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 100.0
+  },
+  "inner_cv_r2": {
+   "ridge": 0.909482677768567,
+   "random_forest": 0.8995529426176494,
+   "gradient_boosting": 0.8700376846020067
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3593,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 5,
+   "max_features": 0.7,
+   "max_depth": null
+  },
+  "inner_cv_r2": {
+   "ridge": 0.8419434950001774,
+   "random_forest": 0.9785263873675893,
+   "gradient_boosting": 0.9719675492601192
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3593,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 10,
+   "max_features": 0.7,
+   "max_depth": 15
+  },
+  "inner_cv_r2": {
+   "ridge": 0.38697120327509704,
+   "random_forest": 0.8899385532059492,
+   "gradient_boosting": 0.8767406241172386
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3593,
+  "n_train_runs": 90,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 100,
+   "max_depth": 3,
+   "learning_rate": 0.01
+  },
+  "inner_cv_r2": {
+   "ridge": -4.658208769038918,
+   "random_forest": -5.274737064602544,
+   "gradient_boosting": -3.3040499909632466
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3587,
+  "n_train_runs": 90,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 100,
+   "max_depth": 3,
+   "learning_rate": 0.2
+  },
+  "inner_cv_r2": {
+   "ridge": 0.7088651923428908,
+   "random_forest": 0.8692036950355885,
+   "gradient_boosting": 0.874963960532781
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 2,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3593,
+  "n_train_runs": 90,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 100.0
+  },
+  "inner_cv_r2": {
+   "ridge": 0.9273373045103092,
+   "random_forest": 0.8985252877802175,
+   "gradient_boosting": 0.8672159040927747
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3595,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 5,
+   "max_features": 0.7,
+   "max_depth": null
+  },
+  "inner_cv_r2": {
+   "ridge": 0.8532467653837107,
+   "random_forest": 0.9795124911223372,
+   "gradient_boosting": 0.9745438112314093
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3595,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 10,
+   "max_features": 0.7,
+   "max_depth": 15
+  },
+  "inner_cv_r2": {
+   "ridge": 0.3557649869486271,
+   "random_forest": 0.9439835319045643,
+   "gradient_boosting": 0.9074478115760835
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3595,
+  "n_train_runs": 90,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 1.0,
+   "n_estimators": 300,
+   "max_depth": 3,
+   "learning_rate": 0.1
+  },
+  "inner_cv_r2": {
+   "ridge": -17.798913344994887,
+   "random_forest": 0.5210159011383524,
+   "gradient_boosting": 0.5384536725837317
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3590,
+  "n_train_runs": 90,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 1.0,
+   "n_estimators": 200,
+   "max_depth": 5,
+   "learning_rate": 0.2
+  },
+  "inner_cv_r2": {
+   "ridge": 0.6944273445813214,
+   "random_forest": 0.8642886203014135,
+   "gradient_boosting": 0.8775536744666789
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 3,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3595,
+  "n_train_runs": 90,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 10.0
+  },
+  "inner_cv_r2": {
+   "ridge": 0.9558442336876041,
+   "random_forest": 0.8721455741260166,
+   "gradient_boosting": 0.7861652861295062
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3595,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "inner_cv_r2": {
+   "ridge": 0.8101349823134706,
+   "random_forest": 0.903874983422062,
+   "gradient_boosting": 0.8967669201375583
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3595,
+  "n_train_runs": 90,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 1.0,
+   "n_estimators": 300,
+   "max_depth": 7,
+   "learning_rate": 0.1
+  },
+  "inner_cv_r2": {
+   "ridge": 0.3638420167111823,
+   "random_forest": 0.8933769447843677,
+   "gradient_boosting": 0.9165402173778854
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3595,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 2,
+   "max_features": 0.5,
+   "max_depth": null
+  },
+  "inner_cv_r2": {
+   "ridge": -22.754872899699286,
+   "random_forest": 0.8481821839442598,
+   "gradient_boosting": 0.7939464683635821
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3588,
+  "n_train_runs": 90,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 1.0,
+   "n_estimators": 300,
+   "max_depth": 7,
+   "learning_rate": 0.1
+  },
+  "inner_cv_r2": {
+   "ridge": 0.6017860271898635,
+   "random_forest": 0.8781086238770037,
+   "gradient_boosting": 0.8899871879531469
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "nested",
+  "upf": "USR",
+  "outer_fold": 4,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3595,
+  "n_train_runs": 90,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 100.0
+  },
+  "inner_cv_r2": {
+   "ridge": 0.940331166431918,
+   "random_forest": 0.8968633973661304,
+   "gradient_boosting": 0.91813401480927
+  },
+  "selected_by": "inner grouped CV R2"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3393,
+  "n_train_runs": 85,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 0.01
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3393,
+  "n_train_runs": 85,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 1000.0
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3393,
+  "n_train_runs": 85,
+  "model_type": "constant",
+  "constant": 0.0
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3382,
+  "n_train_runs": 85,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 0,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3393,
+  "n_train_runs": 85,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 5,
+   "max_features": 0.5,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3389,
+  "n_train_runs": 85,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 0.01
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3389,
+  "n_train_runs": 85,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 1000.0
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3389,
+  "n_train_runs": 85,
+  "model_type": "constant",
+  "constant": 0.0
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3380,
+  "n_train_runs": 85,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 1,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3389,
+  "n_train_runs": 85,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 5,
+   "max_features": 0.5,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3589,
+  "n_train_runs": 90,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 0.01
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3589,
+  "n_train_runs": 90,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 1000.0
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3589,
+  "n_train_runs": 90,
+  "model_type": "constant",
+  "constant": 0.0
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3576,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 2,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3589,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 5,
+   "max_features": 0.5,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3590,
+  "n_train_runs": 90,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 0.01
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3590,
+  "n_train_runs": 90,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 1000.0
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3590,
+  "n_train_runs": 90,
+  "model_type": "constant",
+  "constant": 0.0
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3580,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 3,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3590,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 5,
+   "max_features": 0.5,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3591,
+  "n_train_runs": 90,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 0.01
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3591,
+  "n_train_runs": 90,
+  "model_type": "ridge",
+  "params": {
+   "alpha": 1000.0
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3591,
+  "n_train_runs": 90,
+  "model_type": "constant",
+  "constant": 0.0
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3578,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "DPDK",
+  "outer_fold": 4,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3591,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 5,
+   "max_features": 0.5,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3393,
+  "n_train_runs": 85,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 2,
+   "max_features": 1.0,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3393,
+  "n_train_runs": 85,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 200,
+   "max_depth": 3,
+   "learning_rate": 0.05
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3393,
+  "n_train_runs": 85,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 0,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3387,
+  "n_train_runs": 85,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 0,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3393,
+  "n_train_runs": 85,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3396,
+  "n_train_runs": 85,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 2,
+   "max_features": 1.0,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3396,
+  "n_train_runs": 85,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 200,
+   "max_depth": 3,
+   "learning_rate": 0.05
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3396,
+  "n_train_runs": 85,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 1,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3392,
+  "n_train_runs": 85,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 1,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3396,
+  "n_train_runs": 85,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3593,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 2,
+   "max_features": 1.0,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3593,
+  "n_train_runs": 90,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 200,
+   "max_depth": 3,
+   "learning_rate": 0.05
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3593,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 2,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3587,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 2,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3593,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3595,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 2,
+   "max_features": 1.0,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3595,
+  "n_train_runs": 90,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 200,
+   "max_depth": 3,
+   "learning_rate": 0.05
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3595,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 3,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3590,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 3,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3595,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "throughput_gbps",
+  "n_train_rows": 3595,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 100,
+   "min_samples_leaf": 2,
+   "max_features": 1.0,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "cpu_pct",
+  "n_train_rows": 3595,
+  "n_train_runs": 90,
+  "model_type": "gradient_boosting",
+  "params": {
+   "subsample": 0.7,
+   "n_estimators": 200,
+   "max_depth": 3,
+   "learning_rate": 0.05
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "gtpu_packets_dn__packets_lost_delta",
+  "n_train_rows": 3595,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 4,
+  "layer": "layer1",
+  "target": "downlink_one_way_delay_distribution__weighted_mean_delay_us",
+  "n_train_rows": 3588,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 200,
+   "min_samples_leaf": 2,
+   "max_features": 0.7,
+   "max_depth": 6
+  },
+  "selected_by": "pinned manifest"
+ },
+ {
+  "protocol": "LOLO",
+  "config": "deployed",
+  "upf": "USR",
+  "outer_fold": 4,
+  "layer": "layer2",
+  "target": "power_watts",
+  "n_train_rows": 3595,
+  "n_train_runs": 90,
+  "model_type": "random_forest",
+  "params": {
+   "n_estimators": 300,
+   "min_samples_leaf": 10,
+   "max_features": 0.5,
+   "max_depth": 15
+  },
+  "selected_by": "pinned manifest"
+ }
+]

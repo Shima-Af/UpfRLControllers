@@ -1,0 +1,40 @@
+{
+  "materiality_M": 56.2368665098373,
+  "delta_crit": {
+    "mean": 82.89409323999018,
+    "ci": [
+      31.00148685413751,
+      150.90545780908758
+    ],
+    "p": 0.0234375,
+    "significant": true
+  },
+  "delta_share": {
+    "mean": 2529.006562170837,
+    "ci": [
+      34.5860221057992,
+      7433.438287732206
+    ],
+    "p": 0.0390625,
+    "significant": true
+  },
+  "G": {
+    "mean": 2611.9006554108273,
+    "ci": [
+      136.90821934324276,
+      7514.09693510856
+    ],
+    "p": 0.0078125,
+    "significant": true
+  },
+  "S1": true,
+  "S4": false,
+  "S2_conditions_hold": true,
+  "outcome": "S1",
+  "statements": {
+    "S1": "The centralized critic materially improves over a shared local critic.",
+    "S2": "Parameter sharing explains most of MAPPO's advantage.",
+    "S3": "The ablation is inconclusive.",
+    "S4": "MAPPO does not outperform the ablation."
+  }
+}
